@@ -1,0 +1,27 @@
+<aura:component extends="forceCommunity:navigationMenuBase" >
+    <ltng:require styles="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/css/uswds.min.css'}" />
+	<ltng:require scripts="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/js/uswds.min.js'}" />
+    <ul class="usa-nav__primary usa-accordion" onclick="{!c.onClick}">
+                    <aura:iteration items="{!v.menuItems}" var="item" start="{!v.startNumber}" indexVar="index" >
+                        <aura:if isTrue="{!item.subMenu}">
+                            <li class="usa-nav__primary-item">
+                                <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="{! 'extended-nav-section-'+index}">
+                                    <span>{!item.label}</span>
+                                </button>
+                                <ul id="{! 'extended-nav-section-'+index}" class="usa-nav__submenu">
+                                    <aura:iteration items="{!item.subMenu}" var="subItem">
+                                        <li class="usa-nav__submenu-item">
+                                            <a data-menu-item-id="{!subItem.id}" href="">{!subItem.label}</a>
+                                        </li>
+                                    </aura:iteration>
+                                </ul>
+                            </li>
+                        <aura:set attribute="else">
+                            <li class="usa-nav__primary-item">
+                                <a data-menu-item-id="{!item.id}" href="">{!item.label}</a>
+                            </li>
+                        </aura:set>
+                        </aura:if>
+                    </aura:iteration>
+                </ul>
+</aura:component>

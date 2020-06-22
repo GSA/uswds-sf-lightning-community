@@ -1,0 +1,25 @@
+<aura:component extends="forceCommunity:navigationMenuBase" access="global" >
+  <ltng:require styles="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/js/uswds.min.js'}" />
+    <!-- if you are having trouble finding the navigationLinkSetId, run the following query:
+		SELECT Id, DeveloperName, MasterLabel FROM NavigationLinkSet
+	-->
+    <aura:attribute name="navigationLinkSetId" type="String" />
+    <aura:attribute name="startNumber" type="Integer" default="1" description="Start number for the navigation menu. Default = 1 which skips the first entry, Home. Changing to 0 will include a link to Home in the navigation menu output." />
+    
+    <!-- if a value is not specified in the Theme Layout Settings, don't display -->
+    <aura:if isTrue="{! not(empty(v.navigationLinkSetId))}">
+        <div onclick="{!c.onClick}" class="usa-footer__social-links grid-row grid-gap-1" aura:id="socialnav">
+            <!-- start at 1 to skip the home nav item -->
+            <aura:iteration items="{!v.menuItems}" var="item" start="{! v.startNumber }">
+                <div class="grid-col-auto">
+                    <a class="usa-social-link" data-menu-item-id="{!item.id}">
+                        <c:fontAwesomeIcon properName="{!item.label}" />
+                        <span>{!item.label}</span>
+                    </a>
+                </div> 
+            </aura:iteration>
+        </div>
+    </aura:if>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+</aura:component>

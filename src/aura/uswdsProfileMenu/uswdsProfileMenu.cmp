@@ -1,0 +1,21 @@
+<aura:component extends="forceCommunity:navigationMenuBase" implements="forceCommunity:profileMenuInterface" access="global">
+    <ltng:require styles="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/css/uswds.min.css'}" />
+    <ltng:require scripts="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/js/uswds.min.js'}" />
+    
+    <aura:attribute name="loggedIn" type="Boolean" default="false" />
+    <aura:attribute name="navigationLinkSetId" type="String" default="profileMenu" />
+	<aura:attribute name="startNumber" type="Integer" default="1" description="Start number for the navigation menu. Default = 1 which skips the first entry, Home. Changing to 0 will include a link to Home in the navigation menu output." />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:if isTrue="{!v.loggedIn}">
+        <lightning:buttonMenu iconName="action:user" label="My Account" onselect="{! c.handleMenuSelect }" >
+            <aura:iteration items="{!v.menuItems}" var="item" start="{! v.startNumber }" >
+                <lightning:menuItem label="{!item.label}" value="{!item.id}"/>
+            </aura:iteration>
+        </lightning:buttonMenu>
+        <aura:set attribute="else">
+            <a href="login">Login</a>
+        </aura:set>
+    </aura:if>
+</aura:component>

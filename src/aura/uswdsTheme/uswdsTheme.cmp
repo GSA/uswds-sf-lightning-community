@@ -1,0 +1,188 @@
+<aura:component implements="forceCommunity:themeLayout" extends="forceCommunity:navigationMenuBase" access="global" description="A USWDS Theme Layout">
+    <ltng:require styles="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/css/uswds.min.css'}" />
+	<ltng:require scripts="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/js/uswds.min.js'}" />
+    
+    <!-- component drop zones and toggles -->
+    	<!-- navBar options -->
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="customNavToggle" type="String" default="Off"/>
+    <aura:attribute name="customNavBar" type="Aura.Component[]" />
+    	<!-- profileMenu options -->
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="customUserProfileToggle" type="String" default="Off"/>
+    <aura:attribute name="customUserProfile" type="Aura.Component[]"/>
+    	<!-- search options -->
+    <aura:attribute name="search" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="customSearchToggle" type="String" default="Off"/>
+    <aura:attribute name="customSearch" type="Aura.Component[]"/>
+		<!-- footer email signup -->
+    <aura:attribute name="footerEmailSignUp" type="Aura.Component[]"/>
+    <aura:attribute name="footerEmailSignUpToggle" type="String" default="Off"/>
+    
+    <!-- main site header attributes -->
+    <aura:attribute name="homePath" type="String" default="/s"/>
+    <aura:attribute name="siteName" type="String" default=""/>
+    <aura:attribute name="secondaryNavigationLinkSetId" type="String" default="" />
+    
+	<!--Footer Attributes-->
+    <aura:attribute name="footerMenuNavigationLinkSetId" type="String" default="" />
+    <aura:attribute name="boilerplateLinkNavigationLinkSetId" type="String" default="" />
+    <aura:attribute name="socialMediaNavigationLinkSetId" type="String" default="" />
+    <aura:attribute name="agencyName" type="String" default="" />
+    <aura:attribute name="agencyURL" type="String" default="" />
+    <aura:attribute name="contactCenterName" type="String" default="" />
+    <aura:attribute name="contactEmail" type="String" default="" />
+    <aura:attribute name="contactPhone" type="String" default="" />
+	<!-- END attributes -->
+
+	<a class="usa-skipnav" href="#mainContent">Skip to Main Content</a>
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-1">
+			<!-- US Website Banner -->
+            <c:uswdsUSABanner siteName="{!v.siteName}" />
+			<!-- Site Header -->
+            <div class="usa-overlay"></div>
+            <header class="usa-header usa-header--extended">
+                <div class="usa-navbar">
+                  <div class="usa-logo" id="extended-logo">
+                    <em class="usa-logo__text">
+                        <div class="slds-media slds-media_center">
+                            <div class="slds-media__figure">
+                              <span class="slds-avatar slds-avatar_large logoContainer">
+                                <a href="{!v.homePath}" title="Home" aria-label="Home">
+                                    <img class="logoContainer" alt="{!v.siteName}" src="" title="Home" />
+                                </a>
+                              </span>
+                            </div>
+                            <div class="slds-media__body">
+                                <a href="{!v.homePath}" title="Home" aria-label="Home">
+                                    {!v.siteName}
+                                </a>
+                            </div>
+                        </div>
+                      </em>
+                  </div>
+          		<button class="usa-menu-btn">Menu</button>
+        	</div>
+           <!-- nav menu start -->
+    		<nav aria-label="Primary navigation" class="usa-nav">
+                <div class="usa-nav__inner">
+                    <button class="usa-nav__close">
+                        <img src="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/img/close.svg'}" alt="close" />
+                    </button>
+                    <!-- section let's you turn on/off the inherent Salesforce navBar zone and replace it
+						with an aura.component[] zone which lets you drop in your own custom styled nav menu --> 
+                    <aura:if isTrue="{!v.customNavToggle == 'On'}">
+                        {!v.customNavBar}
+                    	<aura:set attribute="else">
+                        	{!v.navBar}
+                        </aura:set>
+                    </aura:if>
+                    
+                    
+                    <div class="usa-nav__secondary">
+                        <!-- inline style to keep SF User Profile Menu from being squished -->
+                      <div style="line-height: normal; margin-bottom: 10px;">
+                          <!-- section let's you turn on/off the inherent Salesforce User Profile Menu zone 
+							and replace it with an aura.component[] zone which lets you drop in your own 
+							custom styled User Profile Menu  -->
+                          	<aura:if isTrue="{!v.customUserProfileToggle == 'On'}">
+                        		{!v.customUserProfile}
+                                <aura:set attribute="else">
+                                	{!v.profileMenu}
+                                </aura:set>
+                    		</aura:if>
+                       </div>
+                       <!-- section let's you turn on/off the inherent Salesforce Search zone 
+							and replace it with an aura.component[] zone which lets you drop in your own 
+							custom styled Search box -->
+                        <aura:if isTrue="{!v.customSearchToggle == 'On'}">
+                            {!v.customSearch}
+                            <aura:set attribute="else">
+                                {!v.search}
+                            </aura:set>
+                        </aura:if>
+                        <!-- custom margin-top since USWDS template places secondary-links above Search
+							in this case, we are putting it below -->
+                        <ul class="usa-nav__secondary-links" style="margin-top:.25rem" >
+                            <c:uswdsNavSecondaryLinks navigationLinkSetId="{!v.secondaryNavigationLinkSetId}"/>
+                        </ul>
+                    </div>
+                    </div>
+              </nav>
+            </header>
+        </div>
+    </div>
+    <!-- main body -->
+    <div id="mainContent" class="mainContentArea">
+        {!v.body}
+    </div>
+    
+    <!-- FOOTER -->
+    <div class="usa-footer usa-footer--big">  
+      <div class="grid-container usa-footer__return-to-top">
+        <a href="#">Return to top</a>
+      </div>
+      <div class="usa-footer__primary-section">
+        <div class="grid-container">
+          <div class="grid-row grid-gap">
+            <div class="tablet:grid-col-10">
+              <nav class="usa-footer__nav" aria-label="Footer navigation">
+                <div class="grid-row grid-gap-4">
+                    <c:uswdsFooterNavMenu navigationLinkSetId="{!v.footerMenuNavigationLinkSetId}"/>
+                </div>
+              </nav>
+            </div>
+            <div class="tablet:grid-col-2">
+                <aura:if isTrue="{!v.footerEmailSignUpToggle == 'On'}">
+                    {!v.footerEmailSignUp}
+                <aura:set attribute="else">
+                    <nav class="usa-footer__nav" aria-label="Footer navigation" data-aura-rendered-by="264:0">
+                        <c:uswdsFooterNavMenuSmall navigationLinkSetId="{!v.boilerplateLinkNavigationLinkSetId}" alignment="Vertical" />
+                    </nav>
+                </aura:set>
+                </aura:if>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="usa-footer__secondary-section">
+        <div class="grid-container">
+          <div class="grid-row grid-gap">
+            <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+              <div class="mobile-lg:grid-col-auto">
+                  <a href="{!v.agencyURL}">
+                      <div class="logoFooter"></div>
+                  </a>
+              </div>
+              <div class="mobile-lg:grid-col-auto">
+                <h3 class="usa-footer__logo-heading">{!v.agencyName}</h3>
+              </div>
+            </div>
+            <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+                <c:uswdsSocialMediaNavMenu navigationLinkSetId="{!v.socialMediaNavigationLinkSetId}" />
+                
+              <h3 class="usa-footer__contact-heading">{!v.contactCenterName}</h3>
+              <address class="usa-footer__address">
+                  <div class="usa-footer__contact-info grid-row grid-gap">
+                    <aura:if isTrue="{! not(empty(v.contactPhone))}" >
+                        <div class="grid-col-auto">
+                            <a href="{!'tel:'+ v.contactPhone}">{!v.contactPhone}</a>
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{! and(not(empty(v.contactEmail)), not(empty(v.contactPhone)))}">
+                      |
+                    </aura:if>
+                      <aura:if isTrue="{! not(empty(v.contactEmail))}">
+                        <div class="grid-col-auto">
+                            <a href="{!'mailto:'+v.contactEmail}">{!v.contactEmail}</a>
+                        </div>
+                    </aura:if>
+                </div>
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</aura:component>

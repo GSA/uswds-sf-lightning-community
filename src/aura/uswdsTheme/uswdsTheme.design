@@ -1,0 +1,18 @@
+<design:component label="USWDS Theme Layout">
+    <design:attribute name="siteName" label="Website/ Application Name" description="What is the name of your website/ community? This will be displayed at the top of all pages"/>
+    <design:attribute name="homePath" label="Path to home page" default="/s" description="Defaults to /s but can be changed if your site uses a longer URI path such as abc.gov/myAppName/s. In which case, your home path would be /myAppName/s"/>
+    <design:attribute name="secondaryNavigationLinkSetId" label="Header Secondary Nav Menu Name" description="Allows you to add links below the search box such as 'advanced search' or others that may be relevant" />
+    <design:attribute name="customNavToggle" label="Custom Navigation Toggle" datasource="Off, On" default="Off" description="Turn on to substitute a custom styled Navigation Menu. If on, site will hide the SF generated Navigation Bar and selections in Theme Settings for Navigation Component will not be honored."/>
+    <design:attribute name="customUserProfileToggle" label="Custom User Profile Menu Toggle" datasource="Off, On" default="Off" description="Turn on to substitute a custom styled User Profile Menu. If on, site will hide the SF generated User Profile Menu and selections in Theme Settings for User Profile Component will not be honored."/>
+    <design:attribute name="customSearchToggle" label="Custom Search Toggle" datasource="Off, On" default="Off" description="Turn on to substitute a custom styled Search box. If on, site will hide the SF generated Search and selections in Theme Settings for Search will not be honored."/>
+    <design:attribute name="footerEmailSignUpToggle" label="Footer Region Toggle" datasource="Off, On" default="Off" description="Turn on to substitute another component into the right-hand side of the footer. If on, footer will display an Aura.Component[] drop zone that can take in a custom component such as an e-mail signup box."/>
+    
+    <design:attribute name="footerMenuNavigationLinkSetId" label="Footer Main Nav Menu Name"  default="" />
+    <design:attribute name="boilerplateLinkNavigationLinkSetId" label="Footer Secondary Nav Menu Name" default="" />
+    <design:attribute name="socialMediaNavigationLinkSetId" label="Footer Social Nav Menu Name" default="" />
+    <design:attribute name="agencyName" label="Agency Name" default="" description="Name of agency/ organization."/>
+    <design:attribute name="agencyURL" label="Agency URL" placeholder="https://mysite.gov" default="" description="URL for your agency's primary website (e.g. https://gsa.gov)"/>
+    <design:attribute name="contactCenterName" label="Contact Center Name" default="" description="If your contact center/ help desk has a name, enter here. Otherwise, defaults to Contact Us"/>
+    <design:attribute name="contactEmail" label="Contact Center Email" default="" description="Enter an email address your contact center/ help desk (if applicable)."/>
+    <design:attribute name="contactPhone" label="Contact Center Phone" default="" description="Enter a phone number for your contact center/ help desk (if applicable)."/>
+</design:component>

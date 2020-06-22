@@ -1,0 +1,11 @@
+<aura:documentation>
+	<aura:description>
+    	<code>c:uswdsVerticalNavigation</code> displays a multi-tiered navigation menu (labels and sub-items). Component expects a navigation menu made up of both top-tier menu items and series of labels and sub-items. For additional examples and details, see <a href="https://github.com/GSA/sf-lightning-components/tree/master/uswdsVerticalNavigation">https://github.com/GSA/sf-lightning-components/tree/master/uswdsVerticalNavigation</a>.
+    
+    	<h5>Other Requirements</h5>
+        <ul>
+        	<li>Page must load US Web Design System CSS and JS v2.5 or greater</li>
+        </ul>
+    </aura:description>
+
+</aura:documentation>

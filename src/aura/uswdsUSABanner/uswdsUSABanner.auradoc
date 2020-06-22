@@ -1,0 +1,8 @@
+<aura:documentation>
+	<aura:description>
+        <p>A <code>c:uswdsUSABanner</code> component resides at the top of a community and informs users that the community is a genuine US Government website. </p>
+    
+
+    </aura:description>
+    <aura:example name="uswdsUSABanner" ref="c:uswdsUSABanner" label="Code"><p>Code that renders the component.</p></aura:example>
+</aura:documentation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <description>component to display various social media icons and underlying links based off of Navigation Menu&apos;s created within a community. This component is convention based and keys off of icon names from Font Awesome.</description>
+</AuraDefinitionBundle>

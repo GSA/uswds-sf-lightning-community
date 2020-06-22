@@ -1,0 +1,4 @@
+<design:component label="uswds Social Media Nav Menu">
+	<design:attribute name="navigationLinkSetId" default="Default_Navigation" label="Navigation Set Name" required="true"></design:attribute>
+    <design:attribute name="startNumber" default="1" label="Navigation Menu Start Number" description="Start number for the navigation menu. Default = 1 which skips the first entry, Home. Changing to 0 will include a link to Home in the navigation menu output." ></design:attribute>
+</design:component>

@@ -1,0 +1,10 @@
+<aura:documentation>
+	<aura:description>
+    	<code>c:fontAwesomeIcon</code> is used to render social media and other web icons as links. Component is convention-based and relies on input of to the properName or iconName to map to a specific icon as hosted by Font Awesome. For additional examples and details, see <a href="https://github.com/GSA/sf-lightning-components/tree/master/fontAwesomeIcon">https://github.com/GSA/sf-lightning-components/tree/master/fontAwesomeIcon</a>. 
+
+		<h5>Other Requirements</h5>
+        <ul>
+        	<li>User must sign up with Font Awesome at <a href="https://fontawesome.com/start">https://fontawesome.com/start</a> to generate a Kit Code. Kit Code must be included in the header of the site.</li>
+        </ul>
+    </aura:description>
+</aura:documentation>

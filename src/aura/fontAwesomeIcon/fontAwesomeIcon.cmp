@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="prefix" type="String" default="" description="FontAwesome prefix for the given icon. Values include fas, fab, fad, far, fal. Defaults to 'fab'"/>
+    <aura:attribute name="properName" type="String" required="true" description="Proper name of icon (E.g. Twitter) versus it's CSS name, twitter"/>
+    <aura:attribute name="iconName" type="String" default="" description="Name of the Font Awesome icon (E.g. 'facebook-square'). Should be in lower-case. If not supplied, component takes the properName and converts it to a css name (converts to lowercase and exchanges spaces for hyphens)."/>
+    
+    <aura:attribute name="size" type="String" default="fa-2x" description="name of the Font Awesome icon"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <i class="{! v.prefix + ' fa-'+ v.iconName + ' ' + v.size}">
+        <span>{! v.properName }</span>
+    </i>
+
+</aura:component>

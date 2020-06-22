@@ -1,0 +1,28 @@
+<aura:component extends="forceCommunity:navigationMenuBase" implements="forceCommunity:availableForAllPageTypes" access="global">
+  <ltng:require styles="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/js/uswds.min.js'}" />
+    
+  <aura:attribute name="navigationLinkSetId" type="String" description="Accepts navigationLinkSetId or Developer Name of the corresponding Navigation Menu. This component expects a multi-tiered menu, menu and sub-menu items." />
+  <aura:attribute name="startNumber" type="Integer" default="1" description="Start number for the navigation menu. Default = 1 which skips the first entry, Home. Changing to 0 will include a link to Home in the navigation menu output." />
+
+  <aura:iteration items="{!v.menuItems}" var="item" start="{! v.startNumber }">
+    <div class="mobile-lg:grid-col desktop:grid-col">
+      <section class="usa-footer__primary-content usa-footer__primary-content--collapsible" >
+        <aura:if isTrue="{!item.subMenu}">
+          <h4 class="usa-footer__primary-link" data-menu-item-id="{!item.id}">
+            {!item.label}
+          </h4>
+          <ul class="usa-list usa-list--unstyled">
+            <aura:iteration items="{!item.subMenu}" var="subItem">
+              <li onclick="{!c.onClick}" class="usa-footer__secondary-link">
+                <a data-menu-item-id="{!subItem.id}" href="">
+                    {!subItem.label}
+                </a>
+              </li>
+            </aura:iteration>
+          </ul>
+        </aura:if>
+      </section>
+    </div>
+  </aura:iteration>
+</aura:component>

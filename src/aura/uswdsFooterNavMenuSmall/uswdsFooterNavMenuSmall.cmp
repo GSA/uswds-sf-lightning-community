@@ -1,0 +1,27 @@
+<aura:component extends="forceCommunity:navigationMenuBase" implements="forceCommunity:availableForAllPageTypes" access="global">
+	<ltng:require styles="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/css/uswds.min.css'}" />
+	<ltng:require scripts="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/js/uswds.min.js'}" />
+    
+	<aura:attribute name="navigationLinkSetId" type="String" description="Accepts navigationLinkSetId or Developer Name of the corresponding Navigation Menu. This component expects a single-tiered menu, no sub-menu items." />
+    <aura:attribute name="alignment" type="String" default="Horizontal" description="Allows for a menu to be displayed vertically or horizontally. At smaller viewport sizes, section defaults to vertical stacking menu."/>
+    <aura:attribute name="startNumber" type="Integer" default="1" description="Start number for the navigation menu. Default = 1 which skips the first entry, Home. Changing to 0 will include a link to Home in the navigation menu output." />
+    
+    <aura:if isTrue="{! v.alignment == 'Horizontal' }">
+        <ul onclick="{!c.onClick}" class="grid-row grid-gap">
+            <aura:iteration items="{!v.menuItems}" var="item" start="{! v.startNumber }">
+                <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                    <a class="usa-footer__primary-link" data-menu-item-id="{!item.id}" >{!item.label}</a>
+                </li>
+            </aura:iteration>
+        </ul>
+        <aura:set attribute="else"> 
+            <ul onclick="{!c.onClick}" class="grid-row grid-gap">
+                <aura:iteration items="{!v.menuItems}" var="item" start="{! v.startNumber }">
+                    <li class="mobile-lg:grid-col-12 desktop:grid-col-12 usa-footer__primary-content">
+                        <a class="usa-footer__primary-link" data-menu-item-id="{!item.id}" href="">{!item.label}</a>
+                    </li>
+                </aura:iteration>  
+            </ul>
+        </aura:set> 
+     </aura:if>
+</aura:component>

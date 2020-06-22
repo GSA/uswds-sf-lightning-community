@@ -1,0 +1,10 @@
+<aura:documentation>
+	<aura:description>
+        <code>c:uswdsFooterNavMenuSmall</code> is used to display single-tier menus (no sub-items). Users can select vertical or horizontal alignment for the menu. For additional examples and details, see <a href="https://github.com/GSA/sf-lightning-components/tree/master/uswdsFooterNavMenuSmall">https://github.com/GSA/sf-lightning-components/tree/master/uswdsFooterNavMenuSmall</a>.
+        
+        <h5>Other Requirements</h5>
+        <ul>
+        	<li>Page must load US Web Design System CSS and JS v2.5 or greater</li>
+        </ul>
+    </aura:description>
+</aura:documentation>

@@ -1,0 +1,10 @@
+<aura:documentation>
+	<aura:description>
+    	<code>c:uswdsFooterNavMenu</code> displays a multi-tiered navigation menu (labels and sub-items). Component expects a navigation menu made up of solely labels and sub-items. First tier navigation links will not be displayed. For menus made up of only first tier links, use <code>c:uswdsFooterNavMenuSmall</code>. For additional examples and details, see <a href="https://github.com/GSA/sf-lightning-components/tree/master/uswdsFooterNavMenu">https://github.com/GSA/sf-lightning-components/tree/master/uswdsFooterNavMenu</a>.
+    
+    	<h5>Other Requirements</h5>
+        <ul>
+        	<li>Page must load US Web Design System CSS and JS v2.5 or greater</li>
+        </ul>
+    </aura:description>
+</aura:documentation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <description>Renders navigation components either as a horizontal list or vertical. Does not support subMenu items</description>
+</AuraDefinitionBundle>

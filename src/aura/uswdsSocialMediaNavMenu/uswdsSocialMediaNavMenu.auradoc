@@ -1,0 +1,11 @@
+<aura:documentation>
+	<aura:description>
+        <code>c:uswdsSocialMediaMenu</code> is used to display single-tier menus (no sub-items) for social media and other web links. Menu Item Name's must correspond to Font Awesome Icon names. The sub-component, <code>c:fontAwesomeIcon</code> handles the prefixes and sizing. For additional examples and details, see <a href="https://github.com/GSA/sf-lightning-components/tree/master/uswdsSocialMediaNavMenu">https://github.com/GSA/sf-lightning-components/tree/master/uswdsSocialMediaNavMenu</a>.
+        
+        <h5>Other Requirements</h5>
+        <ul>
+        	<li>Page must load US Web Design System CSS and JS v2.5 or greater</li>
+        </ul>
+
+    </aura:description>
+</aura:documentation>
