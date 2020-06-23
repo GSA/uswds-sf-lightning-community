@@ -45,6 +45,8 @@
       * If you created a community specific URL ...force.com/blah, update the Path to Home Page section to include beginning of URI path
       * Enter navigation menu names for each Nav Menu Name section
       * If you plan to override a particular section, toggle the section on to reveal an Aura.Component[] drop zone
+    * Update Theme Colors
+      * Change Overlay Text Color from its default value of white to another color. Otherwise, users will not be able to find the Login and User Profile Menu sections of the theme.
   * Add Font Awesome JS
     * From Experience Builder > Advanced > Edit Head Markup. Paste in the JS snippet from Font Awesome.
 * BRANDING
