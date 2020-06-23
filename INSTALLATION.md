@@ -9,11 +9,11 @@
 ## Instructions
 
 * Two methods available to push code to your sandbox
-  * Install via https://test.salesforce.com/packaging/installPackage.apexp?p0=04t350000001l0y
+  * Install via https://test.salesforce.com/packaging/installPackage.apexp?p0=04t350000001l13
   * Clone this repository and push
 * Enable Communities in your Salesforce org
 * Create new community (Setup > Communities > New)
-* Select Customer Account Portal
+* Select USWDS Lightning Community
 * Enter name of community and a community specific url (if desired)
 * From Workspaces, navigate to Administration
   * Login & Registration
@@ -22,7 +22,7 @@
     * Set Logout Page URL
     * Save
   * Update other settings as needed.
-  
+
 ### Experience Builder Setup
 
 Navigate to Experience Builder by clicking Administration in the top left, and clicking Builder
@@ -36,7 +36,7 @@ This theme relies on five navigation menus:
   * Limit this nav to three or fewer entries
 * Main Footer Nav
 * Footer Secondary Nav
-  * Many agencies require standard links on every website such as Privacy Policy, Accessibility, SORN, etc. 
+  * Many agencies require standard links on every website such as Privacy Policy, Accessibility, SORN, etc.
 * Social Media Nav
 
 #### Change Theme Layout and Settings
@@ -44,7 +44,7 @@ This theme relies on five navigation menus:
 * Settings > Theme > Configure
 * Change Theme Layout Component for the Default and Login Theme Layouts to USWDS Theme Layout. Accept alert and click OK.
   * Add Theme Images
-    * Navigate to Theme (paint brush) 
+    * Navigate to Theme (paint brush)
     * Update Images
       * Upload your organization logo under Company Logo. Update Login Page Background Image if desired.
         * A logo with transparent background is best.
@@ -54,7 +54,14 @@ This theme relies on five navigation menus:
       * Enter navigation menu names for each Nav Menu Name section
       * If you plan to override a particular section, toggle the section on to reveal an Aura.Component[] drop zone
     * Update Theme Colors
-      * Change Overlay Text Color from its default value of white to another color. Otherwise, users will not be able to find the Login and User Profile Menu sections of the theme.
+      * This repository ships with base theme colors but can be customized to specific needs. While not comprehensive, the following maps color settings to components in the community.
+        * Action Color
+          * Tab Component (specifically active tab)
+          * Tile Menu
+        * Overlay Text Color
+          * User Profile Menu
+        * Detail Text Color
+          * Tabs (inactive)
 
 #### Add Font Awesome JS
 
@@ -85,5 +92,3 @@ From Settings>Advanced.
 When saved you should not get any CSP errors.  
 
 ### To Do
-
-* Branding
