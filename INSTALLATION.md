@@ -22,20 +22,22 @@
     * Set Logout Page URL
     * Save
   * Update other settings as needed.
+  
 ### Experience Builder Setup
 
 Navigate to Experience Builder by clicking Administration in the top left, and clicking Builder
 
 #### Navigation Menu Setup
 
-* This theme relies on five navigation menus. 
-  * Main Navigation
-  * Header Secondary Navigation - below Search 
-    * Limit this nav to three or fewer entries
-  * Main Footer Nav
-  * Footer Secondary Nav
-    * Many agencies require standard links on every website such as Privacy Policy, Accessibility, SORN, etc. 
-  * Social Media Nav
+This theme relies on five navigation menus:
+
+* Main Navigation
+* Header Secondary Navigation - below Search
+  * Limit this nav to three or fewer entries
+* Main Footer Nav
+* Footer Secondary Nav
+  * Many agencies require standard links on every website such as Privacy Policy, Accessibility, SORN, etc. 
+* Social Media Nav
 
 #### Change Theme Layout and Settings
 
@@ -56,6 +58,32 @@ Navigate to Experience Builder by clicking Administration in the top left, and c
 
 #### Add Font Awesome JS
 
-From Experience Builder > Advanced > Edit Head Markup. Paste in the JS snippet from Font Awesome.
+Fontawsome needs to be a trusted site for both scripts and other resources.  There are two sites that need to be defined by Salesforce:
 
-* BRANDING
+1. Under Salesforce Setup (Not in Experience Builder) search for CSP Trusted Sites.
+1. Click New Trusted Site.
+    1. Trusted Site Name: kitfreefontawsome
+    1. Trusted Site URL: https://kit-free.fontawesome.com
+    1. Context: Communities
+    1. Leave all other boxes checked
+1. Click Save
+
+Back in Experience Builder > Settings > Security.  
+
+1. Change the Content Secuirty Policy (CSP) to "Allow Inline Scripts and Script Access to Whitelisted Third-party Hosts
+1. Click + Add Trusted Site.
+    1. Name: fontawesome
+    1. URL: https://kit.fontawesome.com
+
+Enter the header script Tag:
+From Settings>Advanced.  
+
+1. Click Edit Head Markup.  
+1. Paste the script tag.  
+1. Click Save
+
+When saved you should not get any CSP errors.  
+
+### To Do
+
+* Branding
