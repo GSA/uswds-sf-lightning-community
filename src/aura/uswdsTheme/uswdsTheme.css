@@ -24,3 +24,16 @@
     height: 70px;
     width: 70px;
 }
+
+.THIS .open-source-banner {
+    background-color: #252f3e;
+    color: white;
+    font-size: small;
+    text-align: center;
+    padding: .5rem 0rem;
+}
+
+.THIS .open-source-banner a {
+    color: #d3d3d3;
+    text-decoration: underline;
+}

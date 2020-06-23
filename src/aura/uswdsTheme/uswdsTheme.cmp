@@ -184,5 +184,10 @@
           </div>
         </div>
       </div>
+      <div class="open-source-banner">
+        <p>
+          This site template is open sourced! Learn more at <a href="https://github.com/GSA/uswds-sf-lightning-community">https://github.com/GSA/uswds-sf-lightning-community</a>
+        </p>
+      </div>
     </div>
 </aura:component>

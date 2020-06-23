@@ -75,3 +75,6 @@ typings/
 
 # .DS_Store
 .DS_Store
+
+# Salesforce
+*.properties
