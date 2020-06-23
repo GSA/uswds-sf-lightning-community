@@ -22,19 +22,25 @@
     * Set Logout Page URL
     * Save
   * Update other settings as needed.
-* Navigate to Experience Builder by clicking Administration in the top left, and clicking Builder
-  * Setup Navigation Menus
-    * This theme relies on five navigation menus. 
-      * Main Navigation
-      * Header Secondary Navigation - below Search 
-        * Limit this nav to three or fewer entries
-        * Main Footer Nav
-        * Footer Secondary Nav
-          * Many agencies require standard links on every website such as Privacy Policy, Accessibility, SORN, etc. 
-        * Social Media Nav
-  * Change Theme Layout to USWDS
-    * Settings > Theme > Configure
-    * Change Theme Layout Component for the Default and Login Theme Layouts to USWDS Theme Layout. Accept alert and click OK.
+### Experience Builder Setup
+
+Navigate to Experience Builder by clicking Administration in the top left, and clicking Builder
+
+#### Navigation Menu Setup
+
+* This theme relies on five navigation menus. 
+  * Main Navigation
+  * Header Secondary Navigation - below Search 
+    * Limit this nav to three or fewer entries
+  * Main Footer Nav
+  * Footer Secondary Nav
+    * Many agencies require standard links on every website such as Privacy Policy, Accessibility, SORN, etc. 
+  * Social Media Nav
+
+#### Change Theme Layout and Settings
+
+* Settings > Theme > Configure
+* Change Theme Layout Component for the Default and Login Theme Layouts to USWDS Theme Layout. Accept alert and click OK.
   * Add Theme Images
     * Navigate to Theme (paint brush) 
     * Update Images
@@ -47,6 +53,9 @@
       * If you plan to override a particular section, toggle the section on to reveal an Aura.Component[] drop zone
     * Update Theme Colors
       * Change Overlay Text Color from its default value of white to another color. Otherwise, users will not be able to find the Login and User Profile Menu sections of the theme.
-  * Add Font Awesome JS
-    * From Experience Builder > Advanced > Edit Head Markup. Paste in the JS snippet from Font Awesome.
+
+#### Add Font Awesome JS
+
+From Experience Builder > Advanced > Edit Head Markup. Paste in the JS snippet from Font Awesome.
+
 * BRANDING
