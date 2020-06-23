@@ -19,8 +19,27 @@
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
+        <members>USWDS_Lightning_Community</members>
+        <name>BrandingSet</name>
+    </types>
+    <types>
+        <members>USWDS_Lightning_Community</members>
+        <name>CommunityThemeDefinition</name>
+    </types>
+    <types>
+        <members>logo</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
+        <members>USWDS_Lightning_Community_themeLayout_Default</members>
+        <members>USWDS_Lightning_Community_themeLayout_Login</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>siteAsset_6defa8943c1147a29c8eb9a3ff4cbc4e</members>
+        <members>siteAsset_73208940f50844eb9e9d529e49f3b79a</members>
         <members>uswds_v_2_7</members>
         <name>StaticResource</name>
     </types>
-    <version>37.0</version>
+    <version>48.0</version>
 </Package>

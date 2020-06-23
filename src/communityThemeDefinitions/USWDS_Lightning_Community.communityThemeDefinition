@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommunityThemeDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <bundlesInfo>
+        <description>Header section allows for OOTB Salesforce Nav, User Profile, and Search as well as custom overrides for each.</description>
+        <order>1</order>
+        <title>Dynamic Header</title>
+        <type>Highlight</type>
+    </bundlesInfo>
+    <bundlesInfo>
+        <description>Builds off mobile styling from US Web Design System and provides users a mobile first experience.</description>
+        <order>2</order>
+        <title>Mobile Ready</title>
+        <type>Highlight</type>
+    </bundlesInfo>
+    <bundlesInfo>
+        <description>Base theme and components tested for 508 compliance and meets WCAG AA standard.</description>
+        <order>3</order>
+        <title>508 Compliant</title>
+        <type>Highlight</type>
+    </bundlesInfo>
+    <bundlesInfo>
+        <image>siteAsset_73208940f50844eb9e9d529e49f3b79a</image>
+        <order>1</order>
+        <title>siteAsset_73208940f50844eb9e9d529e49f3b79a</title>
+        <type>PreviewImage</type>
+    </bundlesInfo>
+    <bundlesInfo>
+        <image>siteAsset_6defa8943c1147a29c8eb9a3ff4cbc4e</image>
+        <order>2</order>
+        <title>siteAsset_6defa8943c1147a29c8eb9a3ff4cbc4e</title>
+        <type>PreviewImage</type>
+    </bundlesInfo>
+    <defaultBrandingSet>USWDS_Lightning_Community</defaultBrandingSet>
+    <description>A US Web Design System Theme for Lightning Communities. https://designsystem.digital.gov/</description>
+    <enableExtendedCleanUpOnDelete>true</enableExtendedCleanUpOnDelete>
+    <masterLabel>USWDS Lightning Community</masterLabel>
+    <publisher>U.S. GSA</publisher>
+    <themeSetting>
+        <themeLayout>USWDS_Lightning_Community_themeLayout_Login</themeLayout>
+        <themeLayoutType>Login</themeLayoutType>
+    </themeSetting>
+    <themeSetting>
+        <themeLayout>USWDS_Lightning_Community_themeLayout_Default</themeLayout>
+        <themeLayoutType>Inner</themeLayoutType>
+    </themeSetting>
+</CommunityThemeDefinition>
