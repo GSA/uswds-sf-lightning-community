@@ -10,15 +10,15 @@
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>DetailTextColor</propertyName>
-        <propertyValue>#5A5A5A</propertyValue>
+        <propertyValue>rgb(90, 90, 90)</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>BorderColor</propertyName>
-        <propertyValue>#D4D4D4</propertyValue>
+        <propertyValue>rgb(212, 212, 212)</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>HeaderFonts</propertyName>
-        <propertyValue>Ek Mukta</propertyValue>
+        <propertyValue>Source Sans Pro</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>CardBackgroundColor</propertyName>
@@ -42,7 +42,7 @@
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>_HeaderTextColor</propertyName>
-        <propertyValue>rgba(34,34,34,.8)</propertyValue>
+        <propertyValue>rgb(34,34,34)</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>_NavigationMenuHoverColor</propertyName>
@@ -70,7 +70,7 @@
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>ActionColor</propertyName>
-        <propertyValue>#0099DE</propertyValue>
+        <propertyValue>rgb(204, 204, 204)</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>CompanyLogo</propertyName>
@@ -94,15 +94,15 @@
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>OverlayTextColor</propertyName>
-        <propertyValue>rgb(0, 27, 255)</propertyValue>
+        <propertyValue>rgb(0, 60, 113)</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>PrimaryFont</propertyName>
-        <propertyValue>Ek Mukta</propertyValue>
+        <propertyValue>Source Sans Pro</propertyValue>
     </brandingSetProperty>
     <brandingSetProperty>
         <propertyName>LinkColor</propertyName>
-        <propertyValue>#3558D6</propertyValue>
+        <propertyValue>rgb(0, 94, 162)</propertyValue>
     </brandingSetProperty>
     <masterLabel>USWDS_Lightning_Community</masterLabel>
     <type>cpt:branding-cpt</type>
