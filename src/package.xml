@@ -27,10 +27,6 @@
         <name>CommunityThemeDefinition</name>
     </types>
     <types>
-        <members>logo</members>
-        <name>ContentAsset</name>
-    </types>
-    <types>
         <members>USWDS_Lightning_Community_themeLayout_Default</members>
         <members>USWDS_Lightning_Community_themeLayout_Login</members>
         <name>FlexiPage</name>

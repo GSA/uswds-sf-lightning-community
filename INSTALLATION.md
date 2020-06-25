@@ -3,13 +3,13 @@
 ## Dependencies
 
 * Font Awesome
-  * **Required For** fontAwesomeIcon and socialMediaNavMenu components. 
+  * **Required For** fontAwesomeIcon and socialMediaNavMenu components.
   * Register with Font Awesome to create icon kits, [https://fontawesome.com/start](https://fontawesome.com/start). You'll receive a JS snippet to include in your site. Hold onto that for later.
 
 ## Instructions
 
 * Two methods available to push code to your sandbox
-  * Install via https://test.salesforce.com/packaging/installPackage.apexp?p0=04t350000001l13
+  * Install via [https://test.salesforce.com/packaging/installPackage.apexp?p0=04t350000001lQx](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t350000001lQx)
   * Clone this repository and push
 * Enable Communities in your Salesforce org
 * Create new community (Setup > Communities > New)
@@ -18,7 +18,7 @@
 * From Workspaces, navigate to Administration
   * Login & Registration
     * Update Logo to use Agency-specific logo
-    * Update Footer text. Note, US Government agencies do not hold copyright, see (https://www.usa.gov/government-works). Entering © My Agency is improper. Instead, just enter the agency name.
+    * Update Footer text. Note, US Government agencies do not hold copyright, see [Government Works](https://www.usa.gov/government-works). Entering © My Agency is improper. Instead, just enter the agency name.
     * Set Logout Page URL
     * Save
   * Update other settings as needed.
@@ -47,7 +47,7 @@ This theme relies on five navigation menus:
     * Navigate to Theme (paint brush)
     * Update Images
       * Upload your organization logo under Company Logo. Update Login Page Background Image if desired.
-        * A logo with transparent background is best.
+        * A logo with transparent background is best as the header and footer are different colors.
     * Update Theme Settings
       * Work down the list of theme settings. As you tab through, the underlying page will update after each field.
       * If you created a community specific URL ...force.com/blah, update the Path to Home Page section to include beginning of URI path
@@ -70,7 +70,7 @@ Fontawsome needs to be a trusted site for both scripts and other resources.  The
 1. Under Salesforce Setup (Not in Experience Builder) search for CSP Trusted Sites.
 1. Click New Trusted Site.
     1. Trusted Site Name: kitfreefontawsome
-    1. Trusted Site URL: https://kit-free.fontawesome.com
+    1. Trusted Site URL: [https://kit-free.fontawesome.com](https://kit-free.fontawesome.com)
     1. Context: Communities
     1. Leave all other boxes checked
 1. Click Save
@@ -80,7 +80,7 @@ Back in Experience Builder > Settings > Security.
 1. Change the Content Secuirty Policy (CSP) to "Allow Inline Scripts and Script Access to Whitelisted Third-party Hosts
 1. Click + Add Trusted Site.
     1. Name: fontawesome
-    1. URL: https://kit.fontawesome.com
+    1. URL: [https://kit.fontawesome.com](https://kit.fontawesome.com)
 
 Enter the header script Tag:
 From Settings>Advanced.  
@@ -90,5 +90,3 @@ From Settings>Advanced.
 1. Click Save
 
 When saved you should not get any CSP errors.  
-
-### To Do
