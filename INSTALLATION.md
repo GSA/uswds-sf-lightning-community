@@ -13,8 +13,12 @@
   * Clone this repository and push
 * Enable Communities in your Salesforce org
 * For new communities 
-* Create new community (Setup > Communities > New)
-* Select USWDS Lightning Community
+  * Create new community (Setup > Communities > New Template (for e.g. Customer Account Portal)
+  * Provide Name > Builder > Theme 
+  * Select USWDS Lightning Community
+* For existing communities
+  * (Setup > Communities> Builder > Theme)
+  * Select USWDS Lightning Community
 * Enter name of community and a community specific url (if desired)
 * From Workspaces, navigate to Administration
   * Login & Registration
