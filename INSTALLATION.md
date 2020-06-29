@@ -12,6 +12,7 @@
   * Install via [https://test.salesforce.com/packaging/installPackage.apexp?p0=04t350000001lQx](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t350000001lQx)
   * Clone this repository and push
 * Enable Communities in your Salesforce org
+* For new communities 
 * Create new community (Setup > Communities > New)
 * Select USWDS Lightning Community
 * Enter name of community and a community specific url (if desired)
