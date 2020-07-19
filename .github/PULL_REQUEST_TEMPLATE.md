@@ -11,11 +11,11 @@ For more information, see the `CONTRIBUTING` guide. -->
 
 This PR fixes/implements the following **bugs/features**
 
-* [ ] Bug 1
-* [ ] Bug 2
-* [ ] Feature 1
-* [ ] Feature 2
-* [ ] Breaking changes
+- [ ] Bug 1
+- [ ] Bug 2
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Breaking changes
 
 <!-- You can skip this if you're fixing a typo or adding an app to the Showcase. -->
 
@@ -25,16 +25,12 @@ Explain the **motivation** for making this change. What existing problem does th
 
 **Test plan (required)**
 
-Demonstrate the code is solid. 
+Demonstrate the code is solid.
+
 <!-- Example: The exact commands you ran and their output, screenshots / videos if the pull request changes UI. -->
-
-<!-- Make sure tests pass on Circle CI. -->
-
-**Code formatting**
-
-<!-- See the simple style guide. -->
 
 **Closing issues**
 
 <!-- Put `closes #XXXX` in your comment to auto-close the issue that your PR fixes (if such). -->
+
 Fixes #
