@@ -12,7 +12,7 @@
                     <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="{! 'extended-nav-section-'+index}">
                         <span>{!item.label}</span>
                     </button>
-                    <ul id="{! 'extended-nav-section-'+index}" class="usa-nav__submenu">
+                    <ul id="{! 'extended-nav-section-'+index}" class="usa-nav__submenu" hidden="true">
                         <aura:iteration items="{!item.subMenu}" var="subItem">
                             <li class="usa-nav__submenu-item">
                                 <a data-menu-item-id="{!subItem.id}" href="">{!subItem.label}</a>
@@ -28,6 +28,4 @@
             </aura:if>
         </aura:iteration>
     </ul>
-
-      
 </aura:component>
