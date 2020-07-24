@@ -7,7 +7,8 @@
     <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
     <aura:attribute name="customNavToggle" type="String" default="Off"/>
     <aura:attribute name="customNavBar" type="Aura.Component[]" />
-    	<!-- profileMenu options -->
+      <!-- profileMenu options -->
+    <aura:attribute name="displayLogin" type="String" default="Yes"/>
     <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
     <aura:attribute name="customUserProfileToggle" type="String" default="Off"/>
     <aura:attribute name="customUserProfile" type="Aura.Component[]"/>
@@ -83,15 +84,18 @@
                     <div class="usa-nav__secondary">
                         <!-- inline style to keep SF User Profile Menu from being squished -->
                       <div style="line-height: normal; margin-bottom: 10px;">
+                        <!-- toggle allows community manager to remove the login/ User profile section from theme - for unauthenticated communities -->
+                        <aura:if isTrue="{!v.displayLogin == 'Yes'}">
                           <!-- section let's you turn on/off the inherent Salesforce User Profile Menu zone 
-							and replace it with an aura.component[] zone which lets you drop in your own 
-							custom styled User Profile Menu  -->
-                          	<aura:if isTrue="{!v.customUserProfileToggle == 'On'}">
-                        		{!v.customUserProfile}
-                                <aura:set attribute="else">
-                                	{!v.profileMenu}
-                                </aura:set>
-                    		</aura:if>
+                and replace it with an aura.component[] zone which lets you drop in your own 
+                custom styled User Profile Menu  -->
+                          <aura:if isTrue="{!v.customUserProfileToggle == 'On'}">
+                            {!v.customUserProfile}
+                            <aura:set attribute="else">
+                              {!v.profileMenu}
+                            </aura:set>
+                          </aura:if>
+                        </aura:if>
                        </div>
                        <!-- section let's you turn on/off the inherent Salesforce Search zone 
 							and replace it with an aura.component[] zone which lets you drop in your own 
