@@ -1,6 +1,6 @@
 <aura:component implements="forceCommunity:themeLayout" extends="forceCommunity:navigationMenuBase" access="global" description="A USWDS Theme Layout">
-    <ltng:require styles="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/css/uswds.min.css'}" />
-	<ltng:require scripts="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/js/uswds.min.js'}" />
+    <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+	<ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
     
     <!-- component drop zones and toggles -->
     	<!-- navBar options -->
@@ -69,7 +69,7 @@
     		<nav aria-label="Primary navigation" class="usa-nav">
                 <div class="usa-nav__inner">
                     <button class="usa-nav__close">
-                        <img src="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/img/close.svg'}" alt="close" />
+                        <img src="{!$Resource.uswds_2_x+'/img/close.svg'}" alt="close" />
                     </button>
                     <!-- section let's you turn on/off the inherent Salesforce navBar zone and replace it
 						with an aura.component[] zone which lets you drop in your own custom styled nav menu --> 

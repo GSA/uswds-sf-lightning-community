@@ -1,6 +1,6 @@
 <aura:component extends="forceCommunity:navigationMenuBase" implements="forceCommunity:availableForAllPageTypes" access="global">
-	<ltng:require styles="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/css/uswds.min.css'}" />
-	<ltng:require scripts="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/js/uswds.min.js'}" />
+	<ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+	<ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
     
 	<aura:attribute name="navigationLinkSetId" type="String" description="Accepts navigationLinkSetId or Developer Name of the corresponding Navigation Menu. This component expects a single-tiered menu, no sub-menu items." />
     <aura:attribute name="alignment" type="String" default="Horizontal" description="Allows for a menu to be displayed vertically or horizontally. At smaller viewport sizes, section defaults to vertical stacking menu."/>
