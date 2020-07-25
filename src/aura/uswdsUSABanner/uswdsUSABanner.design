@@ -1,3 +1,3 @@
 <design:component label="USA Website Banner" >
-	
+	<design:attribute name="bannerType" default="Gov English" required="true" label="USA Banner Type" datasource="Gov English, Gov Spanish, Mil English, Mil Spanish" description="Toggle between various USA Banner types to support .gov, .mil as well as English and Spanish language sites."/>
 </design:component>
