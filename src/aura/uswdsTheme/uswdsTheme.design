@@ -1,5 +1,6 @@
 <design:component label="USWDS Theme Layout">
     <design:attribute name="siteName" label="Website/ Application Name" description="What is the name of your website/ community? This will be displayed at the top of all pages"/>
+    <design:attribute name="bannerType" label="USA Banner Type" datasource="Gov English, Gov Spanish, Mil English, Mil Spanish" description="Toggle between various USA Banner types to support .gov, .mil as well as English and Spanish language sites."/>
     <design:attribute name="homePath" label="Path to home page" default="/s" description="Defaults to /s but can be changed if your site uses a longer URI path such as abc.gov/myAppName/s. In which case, your home path would be /myAppName/s"/>
     <design:attribute name="secondaryNavigationLinkSetId" label="Header Secondary Nav Menu Name" description="Allows you to add links below the search box such as 'advanced search' or others that may be relevant" />
     <design:attribute name="customNavToggle" label="Custom Navigation Toggle" datasource="Off, On" default="Off" description="Turn on to substitute a custom styled Navigation Menu. If on, site will hide the SF generated Navigation Bar and selections in Theme Settings for Navigation Component will not be honored."/>

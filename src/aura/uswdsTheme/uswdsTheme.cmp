@@ -23,6 +23,7 @@
     <!-- main site header attributes -->
     <aura:attribute name="homePath" type="String" default="/s"/>
     <aura:attribute name="siteName" type="String" default=""/>
+    <aura:attribute name="bannerType" type="String" default="Gov English"/>
     <aura:attribute name="secondaryNavigationLinkSetId" type="String" default="" />
     
 	<!--Footer Attributes-->
@@ -40,7 +41,7 @@
     <div class="slds-grid">
         <div class="slds-col slds-size_1-of-1">
 			<!-- US Website Banner -->
-            <c:uswdsUSABanner siteName="{!v.siteName}" />
+            <c:uswdsUSABanner siteName="{!v.siteName}" bannerType="{!v.bannerType}" />
 			<!-- Site Header -->
             <div class="usa-overlay"></div>
             <header class="usa-header usa-header--extended">
