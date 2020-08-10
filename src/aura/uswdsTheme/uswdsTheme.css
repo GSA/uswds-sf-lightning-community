@@ -37,3 +37,9 @@
     color: #d3d3d3;
     text-decoration: underline;
 }
+
+.THIS .usa-social-link a {
+    height: unset;
+    width: unset;
+    padding-left: 1em;
+}
