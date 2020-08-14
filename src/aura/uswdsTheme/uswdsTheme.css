@@ -37,3 +37,16 @@
     color: #d3d3d3;
     text-decoration: underline;
 }
+
+.THIS .usa-footer__nav.boilerplate {
+    padding-top: 1rem;
+}
+
+.THIS .usa-footer__nav.boilerplate ul li a {
+    cursor: pointer;
+    font-family: Source Sans Pro Web,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    font-size: .9rem;
+    font-weight: inherit;
+    text-decoration: underline;
+    
+}

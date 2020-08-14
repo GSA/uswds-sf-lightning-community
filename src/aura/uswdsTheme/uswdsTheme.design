@@ -10,6 +10,8 @@
     <design:attribute name="customSearchToggle" label="Custom Search Toggle" datasource="Off, On" default="Off" description="Turn on to substitute a custom styled Search box. If on, site will hide the SF generated Search and selections in Theme Settings for Search will not be honored."/>
     <design:attribute name="footerEmailSignUpToggle" label="Footer Region Toggle" datasource="Off, On" default="Off" description="Turn on to substitute another component into the right-hand side of the footer. If on, footer will display an Aura.Component[] drop zone that can take in a custom component such as an e-mail signup box."/>
     
+    <!-- Footer design Attributes -->
+    <design:attribute name="footerNavType" label="Footer Navigation Menu Type"  datasource="Big, Small" default="Big" description="Choose between a menu with sub-items (big) or one without (small). Menu should either use only label and sub-item or top level nav items- do not mix." />
     <design:attribute name="footerMenuNavigationLinkSetId" label="Footer Main Nav Menu Name"  default="" />
     <design:attribute name="boilerplateLinkNavigationLinkSetId" label="Footer Secondary Nav Menu Name" default="" />
     <design:attribute name="socialMediaNavigationLinkSetId" label="Footer Social Nav Menu Name" default="" />
