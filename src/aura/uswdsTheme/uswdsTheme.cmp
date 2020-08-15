@@ -185,7 +185,7 @@
             </div>
             <!-- collapsable section which opens up to a drop zone for components-->
             <aura:if isTrue="{!v.footerEmailSignUpToggle == 'On'}">
-              <div aura:id="footer_secondary_3" class="mobile-lg:grid-col-4">
+              <div aura:id="footer_secondary_3" class="card:grid-col-12 margin-top-3 mobile-lg:margin-top-0 mobile-lg:grid-col-4">
                 {!v.footerEmailSignUp}
               </div>
             </aura:if>
