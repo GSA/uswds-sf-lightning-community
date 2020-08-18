@@ -1,0 +1,32 @@
+{
+  "name": "uswds-sf-lightning-community",
+  "version": "1.0.0",
+  "description": "A Salesforce Lightning Community Theme and related components built upon US Web Design System",
+  "main": "",
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.5.0"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5",
+    "prettier-plugin-apex": "1.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSA/uswds-sf-lightning-community.git"
+  },
+  "keywords": [
+    "salesforce",
+    "salesforce-community-theme",
+    "uswds"
+  ],
+  "author": "U.S. General Services Administration",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/GSA/uswds-sf-lightning-community/issues"
+  },
+  "homepage": "https://github.com/GSA/uswds-sf-lightning-community#readme"
+}
