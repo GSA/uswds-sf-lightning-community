@@ -1,3 +1,7 @@
 <design:component label="uswds Mega Menu (header)">
-	<design:attribute name="navigationLinkSetId" label="Main Nav Menu Name" default="" />
+  <design:attribute
+    name="navigationLinkSetId"
+    label="Main Nav Menu Name"
+    default=""
+  />
 </design:component>
