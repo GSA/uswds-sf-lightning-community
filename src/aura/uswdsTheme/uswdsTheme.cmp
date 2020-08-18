@@ -1,13 +1,14 @@
 <aura:component implements="forceCommunity:themeLayout" extends="forceCommunity:navigationMenuBase" access="global" description="A USWDS Theme Layout">
-    <ltng:require styles="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/css/uswds.min.css'}" />
-	<ltng:require scripts="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/js/uswds.min.js'}" />
+    <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+	<ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
     
     <!-- component drop zones and toggles -->
     	<!-- navBar options -->
     <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
     <aura:attribute name="customNavToggle" type="String" default="Off"/>
     <aura:attribute name="customNavBar" type="Aura.Component[]" />
-    	<!-- profileMenu options -->
+      <!-- profileMenu options -->
+    <aura:attribute name="displayLogin" type="String" default="Yes"/>
     <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
     <aura:attribute name="customUserProfileToggle" type="String" default="Off"/>
     <aura:attribute name="customUserProfile" type="Aura.Component[]"/>
@@ -22,6 +23,7 @@
     <!-- main site header attributes -->
     <aura:attribute name="homePath" type="String" default="/s"/>
     <aura:attribute name="siteName" type="String" default=""/>
+    <aura:attribute name="bannerType" type="String" default="Gov English"/>
     <aura:attribute name="secondaryNavigationLinkSetId" type="String" default="" />
     
 	<!--Footer Attributes-->
@@ -39,7 +41,7 @@
     <div class="slds-grid">
         <div class="slds-col slds-size_1-of-1">
 			<!-- US Website Banner -->
-            <c:uswdsUSABanner siteName="{!v.siteName}" />
+            <c:uswdsUSABanner siteName="{!v.siteName}" bannerType="{!v.bannerType}" />
 			<!-- Site Header -->
             <div class="usa-overlay"></div>
             <header class="usa-header usa-header--extended">
@@ -68,7 +70,7 @@
     		<nav aria-label="Primary navigation" class="usa-nav">
                 <div class="usa-nav__inner">
                     <button class="usa-nav__close">
-                        <img src="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/img/close.svg'}" alt="close" />
+                        <img src="{!$Resource.uswds_2_x+'/img/close.svg'}" alt="close" />
                     </button>
                     <!-- section let's you turn on/off the inherent Salesforce navBar zone and replace it
 						with an aura.component[] zone which lets you drop in your own custom styled nav menu --> 
@@ -83,15 +85,18 @@
                     <div class="usa-nav__secondary">
                         <!-- inline style to keep SF User Profile Menu from being squished -->
                       <div style="line-height: normal; margin-bottom: 10px;">
+                        <!-- toggle allows community manager to remove the login/ User profile section from theme - for unauthenticated communities -->
+                        <aura:if isTrue="{!v.displayLogin == 'Yes'}">
                           <!-- section let's you turn on/off the inherent Salesforce User Profile Menu zone 
-							and replace it with an aura.component[] zone which lets you drop in your own 
-							custom styled User Profile Menu  -->
-                          	<aura:if isTrue="{!v.customUserProfileToggle == 'On'}">
-                        		{!v.customUserProfile}
-                                <aura:set attribute="else">
-                                	{!v.profileMenu}
-                                </aura:set>
-                    		</aura:if>
+                and replace it with an aura.component[] zone which lets you drop in your own 
+                custom styled User Profile Menu  -->
+                          <aura:if isTrue="{!v.customUserProfileToggle == 'On'}">
+                            {!v.customUserProfile}
+                            <aura:set attribute="else">
+                              {!v.profileMenu}
+                            </aura:set>
+                          </aura:if>
+                        </aura:if>
                        </div>
                        <!-- section let's you turn on/off the inherent Salesforce Search zone 
 							and replace it with an aura.component[] zone which lets you drop in your own 

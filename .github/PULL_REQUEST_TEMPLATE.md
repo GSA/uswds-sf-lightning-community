@@ -17,7 +17,7 @@ This PR fixes/implements the following **bugs/features**
 - [ ] Feature 2
 - [ ] Breaking changes
 
-<!-- You can skip this if you're fixing a typo or adding an app to the Showcase. -->
+
 
 Explain the **motivation** for making this change. What existing problem does the pull request solve?
 
@@ -25,9 +25,14 @@ Explain the **motivation** for making this change. What existing problem does th
 
 **Test plan (required)**
 
-Demonstrate the code is solid.
 
+Demonstrate the code is solid. 
 <!-- Example: The exact commands you ran and their output, screenshots / videos if the pull request changes UI. -->
+
+**Code formatting**
+
+<!-- We use Prettier and so should you. -->
+
 
 **Closing issues**
 
