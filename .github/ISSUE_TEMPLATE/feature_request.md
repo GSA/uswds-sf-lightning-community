@@ -4,7 +4,7 @@ about: Suggest an idea for this project
 
 ---
 
-<!-- Issues should follow our Issue Guidelines, which are at https://github.com/GSA/code-gov-front-end/blob/master/CONTRIBUTING.md#issue-guidelines -->
+<!-- Issues should follow our Issue Guidelines, which are at https://github.com/GSA/uswds-sf-lightning-community/blob/master/CONTRIBUTING.md#issue-guidelines -->
 
 **Is your feature request related to a problem? Please describe.**
 <!-- A clear and concise description of what the problem is. Ex. I'm always frustrated when [...] -->

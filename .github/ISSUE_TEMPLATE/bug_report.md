@@ -4,7 +4,7 @@ about: Create a report to help us improve
 
 ---
 
-<!-- Issues should follow our Issue Guidelines, which are at https://github.com/GSA/code-gov-front-end/blob/master/CONTRIBUTING.md#issue-guidelines -->
+<!-- Issues should follow our Issue Guidelines, which are at https://github.com/GSA/uswds-sf-lightning-community/blob/master/CONTRIBUTING.md#issue-guidelines -->
 
 **Describe the bug**
 <!-- A clear and concise description of what the bug is. -->

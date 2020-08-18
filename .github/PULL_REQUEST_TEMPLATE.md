@@ -17,7 +17,7 @@ This PR fixes/implements the following **bugs/features**
 * [ ] Feature 2
 * [ ] Breaking changes
 
-<!-- You can skip this if you're fixing a typo or adding an app to the Showcase. -->
+
 
 Explain the **motivation** for making this change. What existing problem does the pull request solve?
 
@@ -28,11 +28,9 @@ Explain the **motivation** for making this change. What existing problem does th
 Demonstrate the code is solid. 
 <!-- Example: The exact commands you ran and their output, screenshots / videos if the pull request changes UI. -->
 
-<!-- Make sure tests pass on Circle CI. -->
-
 **Code formatting**
 
-<!-- See the simple style guide. -->
+<!-- We use Prettier and so should you. -->
 
 **Closing issues**
 
