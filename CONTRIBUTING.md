@@ -1,4 +1,4 @@
-# Welcome!
+# Welcome
 
 We're so glad you're thinking about contributing to a U.S. Government open source project! If you're unsure about anything, just ask -- or submit the issue or pull request anyway. The worst that can happen is you'll be politely asked to change something. We love all friendly contributions.
 
@@ -19,7 +19,7 @@ As noted in [LICENSE](LICENSE.md), this project is in the worldwide public domai
 
 All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of copyright interest.
 
-# Issue Guidelines
+## Issue Guidelines
 
 In the interest of making it easier for our contributors to manage site issues, we request that issues follow certain guidelines. Our developers mainly use [issues](/issues) to identify and prioritize their work. If you have questions about code.gov or would like start a general discussion, we kindly request that you email us at code@gsa.gov. Our issue guidelines are a living document and a work in progress, so feel free to offer feedback on it, by emailing us at code@gsa.gov
 
