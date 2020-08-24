@@ -1,60 +1,100 @@
-<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
-	<ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
-	<ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
-    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>    
-    <aura:attribute name="siteName" type="String" default="U.S. Government Website"/>
-    <aura:attribute name="bannerType" type="String" default="Gov English"/>
-    <aura:attribute name="bannerContent" type="Map"/>
+<aura:component
+  implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <aura:attribute
+    name="siteName"
+    type="String"
+    default="U.S. Government Website"
+  />
+  <aura:attribute name="bannerType" type="String" default="Gov English" />
+  <aura:attribute name="bannerContent" type="Map" />
 
-    <section class="usa-banner" aria-label="{!v.siteName}">
-      <div class="usa-accordion">
-        <header class="usa-banner__header">
-          <div class="usa-banner__inner">
-            <div class="grid-col-auto">
-                <img class="usa-banner__header-flag" src="{!$Resource.uswds_2_x+'/img/us_flag_small.png'}" alt="U.S. flag"/>
-            </div>
-            <div class="grid-col-fill tablet:grid-col-auto">
-              <p class="usa-banner__header-text">{!v.bannerContent.headerText}</p>
-              <p class="usa-banner__header-action" aria-hidden="true">{!v.bannerContent.headerAction}</p>
-            </div>
-            <button class="usa-accordion__button usa-banner__button"
-              aria-expanded="false" aria-controls="gov-banner-demo">
-              <span class="usa-banner__button-text">{!v.bannerContent.headerAction}</span>
-            </button>
+  <section class="usa-banner" aria-label="{!v.siteName}">
+    <div class="usa-accordion">
+      <header class="usa-banner__header">
+        <div class="usa-banner__inner">
+          <div class="grid-col-auto">
+            <img
+              class="usa-banner__header-flag"
+              src="{!$Resource.uswds_2_x+'/img/us_flag_small.png'}"
+              alt="U.S. flag"
+            />
           </div>
-        </header>
-        <div class="usa-banner__content usa-accordion__content" id="gov-banner-demo">
-          <div class="grid-row grid-gap-lg">
-            <div class="usa-banner__guidance tablet:grid-col-6">
-                <img class="usa-banner__icon usa-media-block__img" src="{!$Resource.uswds_2_x+'/img/icon-dot-gov.svg'}" alt="Dot gov" />
-              <div class="usa-media-block__body">
-                <p>
-                  <strong>{!v.bannerContent.officialTop}</strong>
-                    <br />
-                    <aura:unescapedHtml value="{!v.bannerContent.officialContent}"/>
-                </p>
-              </div>
+          <div class="grid-col-fill tablet:grid-col-auto">
+            <p class="usa-banner__header-text">{!v.bannerContent.headerText}</p>
+            <p class="usa-banner__header-action" aria-hidden="true">
+              {!v.bannerContent.headerAction}
+            </p>
+          </div>
+          <button
+            class="usa-accordion__button usa-banner__button"
+            aria-expanded="false"
+            aria-controls="gov-banner-demo"
+          >
+            <span class="usa-banner__button-text"
+              >{!v.bannerContent.headerAction}</span
+            >
+          </button>
+        </div>
+      </header>
+      <div
+        class="usa-banner__content usa-accordion__content"
+        id="gov-banner-demo"
+      >
+        <div class="grid-row grid-gap-lg">
+          <div class="usa-banner__guidance tablet:grid-col-6">
+            <img
+              class="usa-banner__icon usa-media-block__img"
+              src="{!$Resource.uswds_2_x+'/img/icon-dot-gov.svg'}"
+              alt="Dot gov"
+            />
+            <div class="usa-media-block__body">
+              <p>
+                <strong>{!v.bannerContent.officialTop}</strong>
+                <br />
+                <aura:unescapedHtml
+                  value="{!v.bannerContent.officialContent}"
+                />
+              </p>
             </div>
-            <div class="usa-banner__guidance tablet:grid-col-6">
-                <img class="usa-banner__icon usa-media-block__img" src="{!$Resource.uswds_2_x+'/img/icon-https.svg'}" alt="Https" />
-              <div class="usa-media-block__body">
-                <p>
-                  <strong>{!v.bannerContent.secureTop}</strong>
-                    <br />
-                    <!-- splitting logic for bannerType since the section relies on static resources -->
-                    <aura:if isTrue="{! or(v.bannerType == 'Gov English',v.bannerType == 'Mil English')}">
-                        A (<img class="usa-banner__lock-image" src="{!$Resource.uswds_2_x+'/img/lock.svg'}" alt="Lock" />) or 
-                    	<aura:set attribute="else">
-                    	Un (<img class="usa-banner__lock-image" src="{!$Resource.uswds_2_x+'/img/lock.svg'}" alt="candado " />) o
-                        </aura:set>
-                    </aura:if>
-                    <aura:unescapedHtml value="{!v.bannerContent.secureContent}"/>
-                </p>
-              </div>
+          </div>
+          <div class="usa-banner__guidance tablet:grid-col-6">
+            <img
+              class="usa-banner__icon usa-media-block__img"
+              src="{!$Resource.uswds_2_x+'/img/icon-https.svg'}"
+              alt="Https"
+            />
+            <div class="usa-media-block__body">
+              <p>
+                <strong>{!v.bannerContent.secureTop}</strong>
+                <br />
+                <!-- splitting logic for bannerType since the section relies on static resources -->
+                <aura:if
+                  isTrue="{! or(v.bannerType == 'Gov English',v.bannerType == 'Mil English')}"
+                >
+                  A (<img
+                    class="usa-banner__lock-image"
+                    src="{!$Resource.uswds_2_x+'/img/lock.svg'}"
+                    alt="Lock"
+                  />) or
+                  <aura:set attribute="else">
+                    Un (<img
+                      class="usa-banner__lock-image"
+                      src="{!$Resource.uswds_2_x+'/img/lock.svg'}"
+                      alt="candado "
+                    />) o
+                  </aura:set>
+                </aura:if>
+                <aura:unescapedHtml value="{!v.bannerContent.secureContent}" />
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>    
-    
+    </div>
+  </section>
 </aura:component>
