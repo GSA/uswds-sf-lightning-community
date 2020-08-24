@@ -1,3 +1,6 @@
 .THIS .usa-social-link {
-    background-color:transparent;
+  background-color: transparent;
+  height: unset;
+  width: unset;
+  margin-left: 1em;
 }

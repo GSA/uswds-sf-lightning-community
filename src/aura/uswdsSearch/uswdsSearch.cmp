@@ -1,11 +1,18 @@
-<aura:component implements="forceCommunity:searchInterface" access="global" >
-    <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
-	<ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+<aura:component implements="forceCommunity:searchInterface" access="global">
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
 
-    <form class="usa-search usa-search--small" role="search">
-      <label class="usa-sr-only" for="extended-search-field-small">Search</label>
-        <input class="usa-input" id="extended-search-field-small" type="search" name="search" />
-        <input type="hidden" name="language" value="en" />
-      <button class="usa-button" type="submit"><span class="usa-sr-only">Search</span></button>
-	</form>
+  <form class="usa-search usa-search--small" role="search">
+    <label class="usa-sr-only" for="extended-search-field-small">Search</label>
+    <input
+      class="usa-input"
+      id="extended-search-field-small"
+      type="search"
+      name="search"
+    />
+    <input type="hidden" name="language" value="en" />
+    <button class="usa-button" type="submit">
+      <span class="usa-sr-only">Search</span>
+    </button>
+  </form>
 </aura:component>

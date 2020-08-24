@@ -1,6 +1,28 @@
 <design:component label="uswds Footer Navigation Menu Small">
-	<design:attribute name="navigationLinkSetId" default="Default_Navigation" label="Navigation Menu" required="true"></design:attribute>
-    <design:attribute name="alignment" datasource="Horizontal,Vertical" default="Horizontal" label="Menu Alignment" required="true"></design:attribute>
-    <design:attribute name="startNumber" default="1" label="Navigation Menu Start Number" description="Start number for the navigation menu. Default = 1 which skips the first entry, Home. Changing to 0 will include a link to Home in the navigation menu output." ></design:attribute>
-
+  <design:attribute
+    name="navigationLinkSetId"
+    default="Default_Navigation"
+    label="Navigation Menu"
+    required="true"
+  ></design:attribute>
+  <design:attribute
+    name="alignment"
+    datasource="Horizontal,Vertical"
+    default="Horizontal"
+    label="Menu Alignment"
+    required="true"
+  ></design:attribute>
+  <design:attribute
+    name="startNumber"
+    default="1"
+    label="Navigation Menu Start Number"
+    description="Start number for the navigation menu. Default = 1 which skips the first entry, Home. Changing to 0 will include a link to Home in the navigation menu output."
+  ></design:attribute>
+  <design:attribute
+    name="menuJustification"
+    default="Left"
+    datasource="Left, Center, Right"
+    label="Menu justification"
+    description="Only supported on Horizontal alignment. Allows you to justify the list left, right, or center."
+  ></design:attribute>
 </design:component>

@@ -1,39 +1,54 @@
 .THIS .logoContainer {
-    border-radius:0rem;
+  border-radius: 0rem;
 }
 @media (min-width: 64em) {
-    .THIS .logoContainer {
-    	width: 5rem;
-    	height: 5rem;
-	}
+  .THIS .logoContainer {
+    width: 5rem;
+    height: 5rem;
+  }
 }
+/* prettier-ignore */
 .THIS .logoContainer img {
-    content: t('url(' + brandLogoImage  + ')');
+  content: t('url(' + brandLogoImage + ')');
 }
+/* prettier-ignore */
 .THIS .logoFooter {
-    background-image: t('url(' + brandLogoImage  + ')');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 99;
-    cursor: pointer;
-    position: relative;
-    max-width: 100%;
-    display: block;
-    outline: 0;
-    height: 70px;
-    width: 70px;
+  background-image: t('url(' + brandLogoImage + ')');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 99;
+  cursor: pointer;
+  position: relative;
+  max-width: 100%;
+  display: block;
+  outline: 0;
+  height: 70px;
+  width: 70px;
 }
 
 .THIS .open-source-banner {
-    background-color: #252f3e;
-    color: white;
-    font-size: small;
-    text-align: center;
-    padding: .5rem 0rem;
+  background-color: #252f3e;
+  color: white;
+  font-size: small;
+  text-align: center;
+  padding: 0.5rem 0rem;
 }
 
 .THIS .open-source-banner a {
-    color: #d3d3d3;
-    text-decoration: underline;
+  color: #d3d3d3;
+  text-decoration: underline;
+}
+
+.THIS .usa-footer__nav.boilerplate {
+  padding-top: 1rem;
+}
+
+.THIS .usa-footer__nav.boilerplate ul li a {
+  cursor: pointer;
+  font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial,
+    sans-serif;
+  font-size: 0.9rem;
+  font-weight: inherit;
+  text-decoration: underline;
 }
