@@ -118,12 +118,12 @@
               <!-- inline style to keep SF User Profile Menu from being squished -->
               <div style="line-height: normal; margin-bottom: 10px;">
                 <div class="grid-row">
-                  <div class="grid-col-auto">
+                  <div aura:id="shoppingCart" class="grid-col-auto">
                     {!v.shoppingCart}
                   </div>
-                  <div class="grid-col-fill">
-                    <!-- toggle allows community manager to remove the login/ User profile section from theme - for unauthenticated communities -->
-                    <aura:if isTrue="{!v.displayLogin == 'Yes'}">
+                  <!-- toggle allows community manager to remove the login/ User profile section from theme - for unauthenticated communities -->
+                  <aura:if isTrue="{!v.displayLogin == 'Yes'}">
+                    <div class="grid-col-fill">
                       <!-- section let's you turn on/off the inherent Salesforce User Profile Menu zone 
                 and replace it with an aura.component[] zone which lets you drop in your own 
                 custom styled User Profile Menu  -->
@@ -133,8 +133,8 @@
                           {!v.profileMenu}
                         </aura:set>
                       </aura:if>
-                    </aura:if>
-                  </div>
+                    </div>
+                  </aura:if>
                 </div>
               </div>
               <!-- section let's you turn on/off the inherent Salesforce Search zone 
