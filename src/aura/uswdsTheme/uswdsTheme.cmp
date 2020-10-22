@@ -160,7 +160,7 @@
     </div>
   </div>
   <!-- main body -->
-  <div id="mainContent" class="mainContentArea">
+  <div aura:id="mainContent" id="mainContent" class="grid-container">
     {!v.body}
   </div>
 
