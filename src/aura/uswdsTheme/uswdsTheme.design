@@ -51,6 +51,15 @@
     description="Turn on to substitute a custom styled Search box. If on, site will hide the SF generated Search and selections in Theme Settings for Search will not be honored."
   />
 
+  <!-- body design attributes-->
+  <design:attribute
+    name="containerWidth"
+    label="Body Width"
+    datasource="Full, Standard, Wide"
+    default="Standard"
+    description="Global change for all pages in the community. Allows you to control the body width of the page. Standard keeps content within the vertical bounds of the header and footer. Wide stretches content to 1400px. Full allows full screen width for body content."
+  />
+
   <!-- Footer design Attributes -->
   <design:attribute
     name="footerNavType"

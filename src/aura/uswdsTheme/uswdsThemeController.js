@@ -15,5 +15,15 @@
       var shoppingCart = cmp.find("shoppingCart");
       $A.util.addClass(shoppingCart, "grid-offset-10");
     }
+
+    /* Container Width */
+    var containerWidth = cmp.get("v.containerWidth");
+    var mainContent = cmp.find("mainContent");
+    var containerToClasses = {
+      Full: "",
+      Standard: "grid-container",
+      Wide: "grid-container-widescreen"
+    };
+    $A.util.addClass(mainContent, containerToClasses[containerWidth]);
   }
 });

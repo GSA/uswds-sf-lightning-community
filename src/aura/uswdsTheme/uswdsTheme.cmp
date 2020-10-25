@@ -27,6 +27,8 @@
   <aura:attribute name="search" type="Aura.Component[]" required="false" />
   <aura:attribute name="customSearchToggle" type="String" default="Off" />
   <aura:attribute name="customSearch" type="Aura.Component[]" />
+  <!-- body layout -->
+  <aura:attribute name="containerWidth" type="String" default="Standard" />
   <!-- footer email signup -->
   <aura:attribute name="footerEmailSignUp" type="Aura.Component[]" />
   <aura:attribute name="footerEmailSignUpToggle" type="String" default="Off" />
@@ -160,7 +162,7 @@
     </div>
   </div>
   <!-- main body -->
-  <div id="mainContent" class="mainContentArea">
+  <div aura:id="mainContent" id="mainContent" class="">
     {!v.body}
   </div>
 
