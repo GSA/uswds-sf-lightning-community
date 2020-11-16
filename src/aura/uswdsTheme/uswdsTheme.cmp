@@ -29,6 +29,12 @@
   <aura:attribute name="customSearch" type="Aura.Component[]" />
   <!-- body layout -->
   <aura:attribute name="containerWidth" type="String" default="Standard" />
+  <aura:attribute
+    name="announcementBanner"
+    type="Aura.Component[]"
+    required="false"
+    description="A drop zone to hold a site-wide announcement banner."
+  />
   <!-- footer email signup -->
   <aura:attribute name="footerEmailSignUp" type="Aura.Component[]" />
   <aura:attribute name="footerEmailSignUpToggle" type="String" default="Off" />
@@ -163,7 +169,12 @@
   </div>
   <!-- main body -->
   <div aura:id="mainContent" id="mainContent" class="">
-    {!v.body}
+    <div>
+      {!v.announcementBanner}
+    </div>
+    <div>
+      {!v.body}
+    </div>
   </div>
 
   <!-- FOOTER -->
