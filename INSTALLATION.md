@@ -1,23 +1,25 @@
 # Installation
 
+Installation of this repository requires a working knowledge of the Salesforce Ant Migration Tool. More details can be found at [https://help.salesforce.com/articleView?id=sf.code_tools_ant_using.htm&type=5](https://help.salesforce.com/articleView?id=sf.code_tools_ant_using.htm&type=5).
+
 ## Dependencies
 
 - Font Awesome
   - **Required For** fontAwesomeIcon and socialMediaNavMenu components.
   - Register with Font Awesome to create icon kits, [https://fontawesome.com/start](https://fontawesome.com/start). You'll receive a JS snippet to include in your site. Hold onto that for later.
+- Ant-salesforce.jar >49.0
 
 ## Instructions
 
-- Two methods available to push code to your sandbox
-  - Install via [https://test.salesforce.com/packaging/installPackage.apexp?p0=04t350000001lQx](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t350000001lQx)
-  - Clone this repository and push
+- Clone this repository
+- Set local build.properties to point at sandbox, `ant deployCode`
 - Enable Communities in your Salesforce org
 - For new communities
-  - Create new community (Setup > Communities > New Template (for e.g. Customer Account Portal)
+  - Create new community (Setup > Digital Experiences > All Sites > New > Select Customer Account Portal
   - Provide Name > Builder > Theme
   - Select USWDS Lightning Community
 - For existing communities
-  - (Setup > Communities> Builder > Theme)
+  - (Setup > Digital Experiences > All Communities > Builder > Theme)
   - Select USWDS Lightning Community
 - Enter name of community and a community specific url (if desired)
 - From Workspaces, navigate to Administration
