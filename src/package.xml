@@ -32,7 +32,10 @@
     <types>
         <members>siteAsset_6defa8943c1147a29c8eb9a3ff4cbc4e</members>
         <members>siteAsset_73208940f50844eb9e9d529e49f3b79a</members>
-        <members>uswds_2_x</members>
+        <members>uswds_2_x_css</members>
+        <members>uswds_2_x_fonts</members>
+        <members>uswds_2_x_img</members>
+        <members>uswds_2_x_js</members>
         <name>StaticResource</name>
     </types>
     <version>48.0</version>

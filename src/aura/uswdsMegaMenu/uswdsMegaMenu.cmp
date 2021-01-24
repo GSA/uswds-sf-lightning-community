@@ -3,8 +3,8 @@
   implements="forceCommunity:availableForAllPageTypes"
   access="global"
 >
-  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
-  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+  <ltng:require styles="{!$Resource.uswds_2_x_css+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x_js+'/js/uswds.min.js'}" />
 
   <aura:attribute name="navigationLinkSetId" type="String" default="" />
   <aura:attribute

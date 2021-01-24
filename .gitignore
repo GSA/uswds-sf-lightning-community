@@ -79,3 +79,5 @@ typings/
 # Salesforce
 *.properties
 build.xml
+retrieveUnpackagedstatic/
+static/
