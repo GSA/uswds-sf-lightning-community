@@ -2,8 +2,8 @@
   implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
   access="global"
 >
-  <ltng:require styles="{!$Resource.uswds_2_x_css+'/css/uswds.min.css'}" />
-  <ltng:require scripts="{!$Resource.uswds_2_x_js+'/js/uswds.min.js'}" />
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
   <aura:attribute
     name="siteName"
@@ -20,7 +20,7 @@
           <div class="grid-col-auto">
             <img
               class="usa-banner__header-flag"
-              src="{!$Resource.uswds_2_x_img+'/img/us_flag_small.png'}"
+              src="{!$Resource.uswds_2_x+'/img/us_flag_small.png'}"
               alt="U.S. flag"
             />
           </div>
@@ -49,7 +49,7 @@
           <div class="usa-banner__guidance tablet:grid-col-6">
             <img
               class="usa-banner__icon usa-media-block__img"
-              src="{!$Resource.uswds_2_x_img+'/img/icon-dot-gov.svg'}"
+              src="{!$Resource.uswds_2_x+'/img/icon-dot-gov.svg'}"
               alt="" 
               role="img"
               aria-hidden="true"
@@ -67,7 +67,7 @@
           <div class="usa-banner__guidance tablet:grid-col-6">
             <img
               class="usa-banner__icon usa-media-block__img"
-              src="{!$Resource.uswds_2_x_img+'/img/icon-https.svg'}"
+              src="{!$Resource.uswds_2_x+'/img/icon-https.svg'}"
               alt=""
               role="img"
               aria-hidden="true"
@@ -82,7 +82,7 @@
                 >
                   A <strong>lock</strong> (<img
                     class="usa-banner__lock-image"
-                    src="{!$Resource.uswds_2_x_img+'/img/lock.svg'}"
+                    src="{!$Resource.uswds_2_x+'/img/lock.svg'}"
                     alt=""
                     role="img"
                     aria-labelledby="banner-lock-title banner-lock-description"
@@ -91,7 +91,7 @@
                   <aura:set attribute="else">
                     Un <strong>candado</strong> (<img
                       class="usa-banner__lock-image"
-                      src="{!$Resource.uswds_2_x_img+'/img/lock.svg'}"
+                      src="{!$Resource.uswds_2_x+'/img/lock.svg'}"
                       alt=""
                       role="img"
                       aria-labelledby="banner-lock-title banner-lock-description"
