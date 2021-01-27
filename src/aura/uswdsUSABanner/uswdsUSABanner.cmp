@@ -50,7 +50,9 @@
             <img
               class="usa-banner__icon usa-media-block__img"
               src="{!$Resource.uswds_2_x+'/img/icon-dot-gov.svg'}"
-              alt="Dot gov"
+              alt="" 
+              role="img"
+              aria-hidden="true"
             />
             <div class="usa-media-block__body">
               <p>
@@ -66,7 +68,9 @@
             <img
               class="usa-banner__icon usa-media-block__img"
               src="{!$Resource.uswds_2_x+'/img/icon-https.svg'}"
-              alt="Https"
+              alt=""
+              role="img"
+              aria-hidden="true"
             />
             <div class="usa-media-block__body">
               <p>
@@ -76,16 +80,22 @@
                 <aura:if
                   isTrue="{! or(v.bannerType == 'Gov English',v.bannerType == 'Mil English')}"
                 >
-                  A (<img
+                  A <strong>lock</strong> (<img
                     class="usa-banner__lock-image"
                     src="{!$Resource.uswds_2_x+'/img/lock.svg'}"
-                    alt="Lock"
+                    alt=""
+                    role="img"
+                    aria-labelledby="banner-lock-title banner-lock-description"
+                    focusable="false"
                   />) or
                   <aura:set attribute="else">
-                    Un (<img
+                    Un <strong>candado</strong> (<img
                       class="usa-banner__lock-image"
                       src="{!$Resource.uswds_2_x+'/img/lock.svg'}"
-                      alt="candado "
+                      alt=""
+                      role="img"
+                      aria-labelledby="banner-lock-title banner-lock-description"
+                      focusable="false"
                     />) o
                   </aura:set>
                 </aura:if>
