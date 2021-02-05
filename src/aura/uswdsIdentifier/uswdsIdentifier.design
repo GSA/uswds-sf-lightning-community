@@ -1,0 +1,53 @@
+<design:component label="Identifier">
+  <design:attribute
+    name="identifierType"
+    default="English"
+    required="true"
+    label="Identifier Type"
+    datasource="English,Spanish,Multi w Logo English, Multi w Logo Spanish, No Logo English, No Logo Spanish, Taxpayer Disclaimer English, Taxpayer Disclaimer Spanish"
+    description="Choose from a selection of English, Spanish, and multi-agency Identifier types. Maps to https://designsystem.digital.gov/components/identifier/"
+  />
+  <design:attribute
+    name="identityDomain"
+    label="Site Domain"
+    placeholder="labs.gsa.gov"
+    default=""
+    description="URL for this site"
+  />
+  <design:attribute
+    name="navigationLinkSetId"
+    default="Default_Navigation"
+    label="Navigation Set Name"
+    required="true"
+  />
+  <design:attribute
+    name="agencyName"
+    label="Agency Name"
+    default=""
+    description="Name of agency/ organization."
+  />
+  <design:attribute
+    name="agencyURL"
+    label="Agency URL"
+    placeholder="https://mysite.gov"
+    default=""
+    description="URL for your agency's primary website (e.g. https://gsa.gov)"
+  />
+  <design:attribute
+    name="agencyName2"
+    label="Second Agency Name"
+    default=""
+    description="If choosing a 'Multi' option from Identifier Type, enter name of the second agency"
+  />
+  <design:attribute
+    name="agencyURL2"
+    default=""
+    placeholder="https://agency2.gov"
+    description="If choosing a 'Multi' option from Identifier Type, enter primary website of second agency"
+  />
+  <design:attribute
+    name="agencyLogo2"
+    default=""
+    description="If choosing a 'Multi' option from Identifier Type, enter name of ContentAsset. Instructions at https://github.com/GSA/uswds-sf-lightning-community/wiki/Theme-Settings"
+  />
+</design:component>

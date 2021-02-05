@@ -75,7 +75,7 @@
   />
   <design:attribute
     name="boilerplateLinkNavigationLinkSetId"
-    label="Footer Secondary Nav Menu Name"
+    label="Identifier Nav Menu Name"
     default=""
   />
   <design:attribute
@@ -120,5 +120,38 @@
     datasource="Off, On"
     default="Off"
     description="Turn on to substitute another component into the right-hand side of the footer. If on, footer will display an Aura.Component[] drop zone that can take in a custom component such as an e-mail signup box."
+  />
+  <design:attribute
+    name="identifierType"
+    default="English"
+    required="true"
+    label="Identifier Type"
+    datasource="English,Spanish,Multi w Logo English, Multi w Logo Spanish, No Logo English, No Logo Spanish, Taxpayer Disclaimer English, Taxpayer Disclaimer Spanish"
+    description="Choose from a selection of English, Spanish, and multi-agency Identifier types. Maps to https://designsystem.digital.gov/components/identifier/"
+  />
+  <design:attribute
+    name="identityDomain"
+    label="Site Domain"
+    placeholder="labs.gsa.gov"
+    default=""
+    description="URL for this site"
+  />
+  <design:attribute
+    name="agencyName2"
+    label="Second Agency Name"
+    default=""
+    description="If choosing a 'Multi' option from Identifier Type, enter name of the second agency"
+  />
+  <design:attribute
+    name="agencyURL2"
+    default=""
+    placeholder="https://agency2.gov"
+    description="If choosing a 'Multi' option from Identifier Type, enter primary website of second agency"
+  />
+  <design:attribute
+    name="agencyLogo2"
+    label="Agency Logo Name"
+    default=""
+    description="If choosing a 'Multi' option from Identifier Type, enter name of ContentAsset. Instructions at https://github.com/GSA/uswds-sf-lightning-community/wiki/Theme-Settings"
   />
 </design:component>

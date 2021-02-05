@@ -1,0 +1,12 @@
+/* .THIS .usa-identifier__logos {
+  width: 3rem;
+  height: 3rem;
+}
+.THIS .usa-identifier__logos_multi {
+  width: 7rem;
+}*/
+/* prettier-ignore */
+.THIS .usa-identifier__logo.logo-one img {
+  content: t('url(' + brandLogoImage + ')');
+  max-height: 100%;
+}
