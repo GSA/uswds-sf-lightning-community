@@ -40,15 +40,12 @@
   text-decoration: underline;
 }
 
-.THIS .usa-footer__nav.boilerplate {
-  padding-top: 1rem;
+.THIS .margin-auto {
+    margin: auto;
 }
-
-.THIS .usa-footer__nav.boilerplate ul li a {
-  cursor: pointer;
-  font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial,
-    sans-serif;
-  font-size: 0.9rem;
-  font-weight: inherit;
-  text-decoration: underline;
+.THIS .zero-padding-bottom>div {
+    padding-bottom: 0px;
+}
+.THIS .footer-float-left>div {
+    float:left;
 }

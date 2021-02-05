@@ -1,14 +1,22 @@
 ({
   doInit: function (cmp, event, helper) {
     var footerEmailSignUpToggle = cmp.get("v.footerEmailSignUpToggle");
-    if (footerEmailSignUpToggle == "On") {
       var footerSecondary1 = cmp.find("footer_secondary_1");
-      var footerSecondary2 = cmp.find("footer_secondary_2");
-      $A.util.removeClass(footerSecondary1, "mobile-lg:grid-col-6");
-      $A.util.removeClass(footerSecondary2, "mobile-lg:grid-col-6");
-      $A.util.addClass(footerSecondary1, "mobile-lg:grid-col-4");
-      $A.util.addClass(footerSecondary2, "mobile-lg:grid-col-4");
-    }
+        var footer_socialMediaNav = cmp.find("footer_socialMediaNav");
+        var footer_ContactCenter = cmp.find("footer_ContactCenter");
+        if (footerEmailSignUpToggle == "On") {          
+          $A.util.removeClass(footerSecondary1, "mobile-lg:grid-col-12");
+          $A.util.addClass(footerSecondary1, "mobile-lg:grid-col-6");
+          $A.util.addClass(footer_socialMediaNav,"mobile-lg:grid-col-12");
+          $A.util.addClass(footer_ContactCenter,"mobile-lg:grid-col-12");
+        }
+      else {
+          $A.util.addClass(footer_socialMediaNav,"mobile-lg:grid-col-6");
+          $A.util.addClass(footer_socialMediaNav,"margin-auto");
+          $A.util.addClass(footer_socialMediaNav,"zero-padding-bottom");
+          $A.util.addClass(footer_socialMediaNav,"footer-float-left");
+          $A.util.addClass(footer_ContactCenter,"mobile-lg:grid-col-6");
+      }
 
     var loginToggle = cmp.get("v.displayLogin");
     if (loginToggle == "No") {

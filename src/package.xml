@@ -5,6 +5,7 @@
         <members>fontAwesomeIcon</members>
         <members>uswdsFooterNavMenu</members>
         <members>uswdsFooterNavMenuSmall</members>
+        <members>uswdsIdentifier</members>
         <members>uswdsMegaMenu</members>
         <members>uswdsNavBar</members>
         <members>uswdsNavSecondaryLinks</members>
