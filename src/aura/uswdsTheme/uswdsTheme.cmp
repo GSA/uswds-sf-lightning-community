@@ -267,20 +267,12 @@
     agencyURL2="{!v.agencyURL2}"
     agencyLogo2="{!v.agencyLogo2}"
   />
-  <div
-    style="
-      background-color: #252f3e;
-      color: white;
-      font-size: small;
-      text-align: center;
-      padding: 0.5rem 0rem;
-    "
-  >
+  <div class="bg-primary-lighter padding-1 font-mono-3xs text-center">
     <p>
-      This site template is open sourced! Learn more at&nbsp;
+      This site template is open sourced! Learn more at
       <a
         href="https://github.com/GSA/uswds-sf-lightning-community"
-        style="color: #d3d3d3; text-decoration: underline"
+        class="text-gray-70 usa-link"
         >https://github.com/GSA/uswds-sf-lightning-community</a
       >
     </p>
