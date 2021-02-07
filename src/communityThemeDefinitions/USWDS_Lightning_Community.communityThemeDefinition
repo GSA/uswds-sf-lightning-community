@@ -13,25 +13,37 @@
         <type>Highlight</type>
     </bundlesInfo>
     <bundlesInfo>
-        <description>Base theme and components tested for 508 compliance and meets WCAG AA standard.</description>
+        <description>The Identifier component helps agencies clearly denote ownership of the site as well as providing links to key resources such as Privacy Policy, FOIA Requests, Accessibility statements, and USA.gov. https://designsystem.digital.gov/components/identifier/</description>
         <order>3</order>
-        <title>508 Compliant</title>
+        <title>Identifier</title>
         <type>Highlight</type>
     </bundlesInfo>
     <bundlesInfo>
-        <image>siteAsset_978c64ad909c4f83b4d7289b28dd6525</image>
+        <description>Starting from a mobile-first base, the desktop experience can be adjusted to provide standard page width (936px), widescreen (1312px), or full width.</description>
+        <order>4</order>
+        <title>Widescreen View</title>
+        <type>Highlight</type>
+    </bundlesInfo>
+    <bundlesInfo>
+        <image>siteAsset_6269382aeaeb4500860a2db12f34b873</image>
         <order>1</order>
-        <title>siteAsset_978c64ad909c4f83b4d7289b28dd6525</title>
+        <title>siteAsset_6269382aeaeb4500860a2db12f34b873</title>
+        <type>PreviewImage</type>
+    </bundlesInfo>
+    <bundlesInfo>
+        <image>siteAsset_60bed73cf7234f8ea58510320465d20c</image>
+        <order>2</order>
+        <title>siteAsset_60bed73cf7234f8ea58510320465d20c</title>
         <type>PreviewImage</type>
     </bundlesInfo>
     <bundlesInfo>
         <image>siteAsset_6defa8943c1147a29c8eb9a3ff4cbc4e</image>
-        <order>2</order>
+        <order>3</order>
         <title>siteAsset_6defa8943c1147a29c8eb9a3ff4cbc4e</title>
         <type>PreviewImage</type>
     </bundlesInfo>
     <defaultBrandingSet>USWDS_Lightning_Community</defaultBrandingSet>
-    <description>A US Web Design System Theme for Lightning Communities. https://designsystem.digital.gov/</description>
+    <description>A US Web Design System Theme for Lightning Communities. Contribute at https://github.com/GSA/uswds-sf-lightning-community</description>
     <enableExtendedCleanUpOnDelete>true</enableExtendedCleanUpOnDelete>
     <masterLabel>USWDS Lightning Community</masterLabel>
     <publisher>U.S. GSA</publisher>
