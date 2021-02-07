@@ -144,13 +144,14 @@
   />
   <design:attribute
     name="agencyURL2"
+    label="Second Agency URL"
     default=""
     placeholder="https://agency2.gov"
     description="If choosing a 'Multi' option from Identifier Type, enter primary website of second agency"
   />
   <design:attribute
     name="agencyLogo2"
-    label="Agency Logo Name"
+    label="Second Agency Logo Asset Name"
     default=""
     description="If choosing a 'Multi' option from Identifier Type, enter name of ContentAsset. Instructions at https://github.com/GSA/uswds-sf-lightning-community/wiki/Theme-Settings"
   />
