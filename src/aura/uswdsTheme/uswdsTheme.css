@@ -41,11 +41,11 @@
 }
 
 .THIS .margin-auto {
-    margin: auto;
+  margin: auto;
 }
-.THIS .zero-padding-bottom>div {
-    padding-bottom: 0px;
+.THIS .zero-padding-bottom > div {
+  padding-bottom: 0px;
 }
-.THIS .footer-float-left>div {
-    float:left;
+.THIS .footer-float-left > div {
+  float: left;
 }
