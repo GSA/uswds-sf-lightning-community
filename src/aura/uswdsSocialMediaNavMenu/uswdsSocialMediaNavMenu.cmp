@@ -26,9 +26,14 @@
         start="{! v.startNumber }"
       >
         <div class="grid-col-auto">
-          <a class="usa-social-link" data-menu-item-id="{!item.id}">
+          <a
+            class="usa-social-link"
+            data-menu-item-id="{!item.id}"
+            href=""
+            onclick="{!c.onClick}"
+            data-row-index="{!item.id}"
+          >
             <c:fontAwesomeIcon properName="{!item.label}" />
-            <span>{!item.label}</span>
           </a>
         </div>
       </aura:iteration>
