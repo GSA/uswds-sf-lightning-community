@@ -32,6 +32,7 @@
             href=""
             onclick="{!c.onClick}"
             data-row-index="{!item.id}"
+            aria-label="{!item.label}"
           >
             <c:fontAwesomeIcon properName="{!item.label}" />
           </a>
