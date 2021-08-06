@@ -82,6 +82,8 @@
   <!-- END attributes -->
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
+  <aura:attribute name="logotype" type="String" default="wide" />
+
   <a class="usa-skipnav" href="#mainContent">Skip to Main Content</a>
   <div class="slds-grid">
     <div class="slds-col slds-size_1-of-1">
@@ -106,11 +108,13 @@
                     </a>
                   </span>
                 </div>
+                <aura:if isTrue="{!v.logotype == 'narrow'}">
                 <div class="slds-media__body">
                   <a href="{!v.homePath}" title="Home" aria-label="Home">
                     {!v.siteName}
                   </a>
                 </div>
+              </aura:if>
               </div>
             </em>
           </div>
