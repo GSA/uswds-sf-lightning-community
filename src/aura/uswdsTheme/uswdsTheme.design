@@ -99,7 +99,8 @@
   <design:attribute
     name="contactCenterName"
     label="Contact Center Name"
-    default="Contact Us"
+    placeholder="Contact Us"
+    default=""
     description="If your contact center/ help desk has a name, enter here. Otherwise, defaults to Contact Us"
   />
   <design:attribute
@@ -113,6 +114,18 @@
     label="Contact Center Phone"
     default=""
     description="Enter a phone number for your contact center/ help desk (if applicable)."
+  />
+  <design:attribute
+    name="contactLink"
+    label="Contact Center URL"
+    default=""
+    description="Enter a URL of a contact center webform where folks can request support. If a page on the current site, do not include leading '/'. Also supports full URL's such as https://blah.gov/."
+  />
+  <design:attribute
+    name="contactLinkText"
+    label="Contact Center Link Text"
+    default=""
+    description="Enter the name of the URL or form 'Submit Case' or similar. Name must be completed for link to display."
   />
   <design:attribute
     name="footerEmailSignUpToggle"
