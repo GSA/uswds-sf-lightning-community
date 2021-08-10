@@ -71,6 +71,8 @@
   <aura:attribute name="contactCenterName" type="String" default="" />
   <aura:attribute name="contactEmail" type="String" default="" />
   <aura:attribute name="contactPhone" type="String" default="" />
+  <aura:attribute name="contactLink" type="String" default="" />
+  <aura:attribute name="contactLinkText" type="String" default="" />
   <!-- Identifier -->
   <aura:attribute name="identifierType" type="string" default="English" />
   <aura:attribute name="identityDomain" type="string" default="labs.gsa.gov" />
@@ -245,6 +247,19 @@
                       <div class="grid-col-auto">
                         <a href="{!'mailto:'+v.contactEmail}"
                           >{!v.contactEmail}</a
+                        >
+                      </div>
+                    </aura:if>
+                    <aura:if
+                      isTrue="{! and(or(not(empty(v.contactEmail)), not(empty(v.contactPhone))),and(not(empty(v.contactLink)),not(empty(v.contactLinkText))))}"
+                    >
+                      |
+                    </aura:if>
+                    <!-- don't display link if ContactLink and ContactLinkText are both empty-->
+                    <aura:if isTrue="{! and(not(empty(v.contactLink)),not(empty(v.contactLinkText))) }">
+                      <div class="grid-col-auto">
+                        <a href="{! v.contactLink }"
+                          >{! v.contactLinkText }</a
                         >
                       </div>
                     </aura:if>
