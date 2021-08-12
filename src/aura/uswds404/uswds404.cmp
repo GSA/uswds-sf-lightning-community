@@ -58,22 +58,28 @@
           </div>
 
           <!-- List additional support channels -->
-          <p>{!v.pageContent.immediateAssistance}</p>
-          <ul class="list">
-            <li>
-              <a href="{! 'mailto:' + v.contactEmail}" class="usa-link"
-                >{!v.contactEmail}</a
-              >
-            </li>
-
-            <li>
-              {!v.pageContent.call}
-              <a href="{!'tel:'+ v.contactPhone}" class="usa-link"
-                >{!v.contactPhone}</a
-              >
-            </li>
-          </ul>
-
+          <aura:if
+            isTrue="{! or(not(empty(v.contactEmail)),not(empty(v.contactPhone))) }"
+          >
+            <p>{!v.pageContent.immediateAssistance}</p>
+            <ul class="list">
+              <aura:if isTrue="{! or(not(empty(v.contactEmail))) }">
+                <li>
+                  <a href="{! 'mailto:' + v.contactEmail}" class="usa-link"
+                    >{!v.contactEmail}</a
+                  >
+                </li>
+              </aura:if>
+              <aura:if isTrue="{! or(not(empty(v.contactPhone))) }">
+                <li>
+                  {!v.pageContent.call}
+                  <a href="{!'tel:'+ v.contactPhone}" class="usa-link"
+                    >{!v.contactPhone}</a
+                  >
+                </li>
+              </aura:if>
+            </ul>
+          </aura:if>
           <!-- Error code if appropriate -->
           <p class="text-base"
             ><strong>{!v.pageContent.errorCodeText}</strong> 404</p

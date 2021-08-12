@@ -3,7 +3,7 @@
         var content = {
             "English": {
                 "heading": "Page Note Found", 
-                "intro": "We’re sorry, we can’t find the page you&#39;re looking for. It might have been removed, changed its name, or is otherwise unavailable.",
+                "intro": "We’re sorry, we can’t find the page you're looking for. It might have been removed, changed its name, or is otherwise unavailable.",
                 "instructions": "If you typed the URL directly, check your spelling and capitalization. Our URLs look like this:",
                 "additionalInstructions": "Visit our homepage for helpful tools and resources, or contact us and we’ll point you in the right direction.", 
                 "homePageText": "Visit homepage",
