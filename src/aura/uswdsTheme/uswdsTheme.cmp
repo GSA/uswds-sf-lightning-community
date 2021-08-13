@@ -251,16 +251,16 @@
                       </div>
                     </aura:if>
                     <aura:if
-                      isTrue="{! and(or(not(empty(v.contactEmail)), not(empty(v.contactPhone))),and(not(empty(v.contactLink)),not(empty(v.contactLinkText))))}"
+                      isTrue="{! and(or(not(empty(v.contactEmail)), not(empty(v.contactPhone))), and(not(empty(v.contactLink)), not(empty(v.contactLinkText))))}"
                     >
                       |
                     </aura:if>
                     <!-- don't display link if ContactLink and ContactLinkText are both empty-->
-                    <aura:if isTrue="{! and(not(empty(v.contactLink)),not(empty(v.contactLinkText))) }">
+                    <aura:if
+                      isTrue="{! and(not(empty(v.contactLink)), not(empty(v.contactLinkText))) }"
+                    >
                       <div class="grid-col-auto">
-                        <a href="{! v.contactLink }"
-                          >{! v.contactLinkText }</a
-                        >
+                        <a href="{! v.contactLink }">{! v.contactLinkText }</a>
                       </div>
                     </aura:if>
                   </div>
