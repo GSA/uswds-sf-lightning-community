@@ -1,4 +1,4 @@
-<design:component label="Identifier">
+<design:component label="Identifier - USWDS">
   <design:attribute
     name="identifierType"
     default="English"
