@@ -1,0 +1,91 @@
+<aura:component
+  implements="forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds-init.min.js'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+  <aura:attribute name="language" type="String" default="English" />
+  <aura:attribute name="urlPattern" type="String" default="/s/" />
+  <aura:attribute name="formName" type="String" default="" />
+  <aura:attribute name="formUrl" type="String" default="" />
+  <aura:attribute name="contactEmail" type="String" default="" />
+  <aura:attribute name="contactPhone" type="String" default="" />
+  <aura:attribute name="pageContent" type="Map" />
+
+  <div class="usa-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-prose">
+          <!-- This template can be used for most types of error pages -->
+          <!-- Remove these comments when you build your error pages -->
+
+          <!-- Describe the error in the main heading -->
+          <h1>{!v.pageContent.heading}</h1>
+
+          <!-- Explain what caused the error in the lead text -->
+          <p class="usa-intro"> {!v.pageContent.intro} </p>
+
+          <!-- Provide instructions how the user can address or fix the error -->
+          <p>
+            {!v.pageContent.instructions}&nbsp;
+            <strong>{!v.urlPattern}</strong>.
+          </p>
+          <p> {!v.pageContent.additionalInstructions} </p>
+
+          <!-- Use buttons for main actions user can take, such as visiting the homepage or a contact page -->
+          <div class="margin-y-5">
+            <ul class="usa-button-group">
+              <li class="usa-button-group__item">
+                <a href="javascript:void();" class="usa-button">
+                  {!v.pageContent.homePageText}
+                </a>
+              </li>
+              <aura:if isTrue="{! not(empty(v.formName))}">
+                <li class="usa-button-group__item">
+                  <button
+                    class="usa-button usa-button--outline"
+                    type="button"
+                    onclick="{!c.gotoForm}"
+                  >
+                    {!v.formName}
+                  </button>
+                </li>
+              </aura:if>
+            </ul>
+          </div>
+
+          <!-- List additional support channels -->
+          <aura:if
+            isTrue="{! or(not(empty(v.contactEmail)),not(empty(v.contactPhone))) }"
+          >
+            <p>{!v.pageContent.immediateAssistance}</p>
+            <ul class="list">
+              <aura:if isTrue="{! or(not(empty(v.contactEmail))) }">
+                <li>
+                  <a href="{! 'mailto:' + v.contactEmail}" class="usa-link"
+                    >{!v.contactEmail}</a
+                  >
+                </li>
+              </aura:if>
+              <aura:if isTrue="{! or(not(empty(v.contactPhone))) }">
+                <li>
+                  {!v.pageContent.call}
+                  <a href="{!'tel:'+ v.contactPhone}" class="usa-link"
+                    >{!v.contactPhone}</a
+                  >
+                </li>
+              </aura:if>
+            </ul>
+          </aura:if>
+          <!-- Error code if appropriate -->
+          <p class="text-base"
+            ><strong>{!v.pageContent.errorCodeText}</strong> 404</p
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</aura:component>
