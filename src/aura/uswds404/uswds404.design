@@ -1,4 +1,4 @@
-<design:component label="404 Template">
+<design:component label="404 Template - USWDS">
   <design:attribute
     name="language"
     default="English"

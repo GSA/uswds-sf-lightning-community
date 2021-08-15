@@ -3,6 +3,7 @@
     <types>
         <members>defaultTokens</members>
         <members>fontAwesomeIcon</members>
+        <members>uswds404</members>
         <members>uswdsFooterNavMenu</members>
         <members>uswdsFooterNavMenuSmall</members>
         <members>uswdsIdentifier</members>
