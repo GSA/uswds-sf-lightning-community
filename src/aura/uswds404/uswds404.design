@@ -1,0 +1,36 @@
+<design:component label="404 Template - USWDS">
+  <design:attribute
+    name="language"
+    default="English"
+    required="true"
+    label="USA Banner Type"
+    datasource="English, Spanish"
+    description="Toggle between English and Spanish language versions of the 404 page."
+  />
+  <design:attribute
+    name="urlPattern"
+    label="URL Pattern"
+    description="Enter a typical URL pattern that is used for this site e.g. '/s/my-page/00100000acdEF'"
+  />
+  <design:attribute
+    name="formName"
+    label="Form Name"
+    description="Text to appear in button that links to form"
+  />
+  <design:attribute
+    name="formUrl"
+    label="Form URL"
+    default=""
+    description="Enter either a relative URL '/form-name' or fully qualified URL 'https://blah.gov/xyz'."
+  />
+  <design:attribute
+    name="contactEmail"
+    label="Contact Email"
+    description="Email address to contact with questions"
+  />
+  <design:attribute
+    name="contactPhone"
+    label="Contact Phone Number"
+    description="Phone number to contact with questions"
+  />
+</design:component>
