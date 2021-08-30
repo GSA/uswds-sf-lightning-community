@@ -1,0 +1,213 @@
+<aura:component
+  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+  access="global"
+>
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+
+  <aura:attribute name="data" type="Object" />
+  <aura:attribute name="columns" type="List" />
+  <aura:attribute name="recordId" type="String" />
+
+  <aura:attribute name="allData" type="List" />
+  <aura:attribute name="currentPageNumber" type="Integer" default="1" />
+  <aura:attribute name="pageSize" type="Integer" default="20" />
+  <aura:attribute name="totalPages" type="Integer" default="0" />
+  <aura:attribute name="pageList" type="List" />
+  <aura:attribute name="lastPage" type="Boolean" default="false" />
+  <aura:attribute name="showPagination" type="Boolean" default="" />
+  <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+
+  <aura:if isTrue="{!v.showPagination}">
+    <nav aria-label="Pagination" class="usa-pagination">
+      <ul class="usa-pagination__list">
+        <li class="usa-pagination__item usa-pagination__arrow">
+          <a
+            href="javascript:void(0);"
+            class="usa-pagination__link usa-pagination__previous-page"
+            aria-label="Previous page"
+          >
+            <!--<svg class="usa-icon" aria-hidden="true" role="img">
+              <use xlink:href="/assets/img/sprite.svg#navigate_before"></use>
+            </svg>-->
+
+            <span class="usa-pagination__link-text"> Previous </span>
+          </a>
+        </li>
+
+        <li class="usa-pagination__item usa-pagination__page-no">
+          <a
+            href="javascript:void(0);"
+            class="usa-pagination__button"
+            aria-label="Page 1"
+          >
+            1
+          </a>
+        </li>
+
+        <li
+          class="usa-pagination__item usa-pagination__overflow"
+          role="presentation"
+        >
+          <span> … </span>
+        </li>
+
+        <li class="usa-pagination__item usa-pagination__page-no">
+          <a
+            href="javascript:void(0);"
+            class="usa-pagination__button"
+            aria-label="Page 9"
+          >
+            9
+          </a>
+        </li>
+
+        <li class="usa-pagination__item usa-pagination__page-no">
+          <a
+            href="javascript:void(0);"
+            class="usa-pagination__button usa-current"
+            aria-label="Page 10"
+            aria-current="page"
+          >
+            10
+          </a>
+        </li>
+
+        <li class="usa-pagination__item usa-pagination__page-no">
+          <a
+            href="javascript:void(0);"
+            class="usa-pagination__button"
+            aria-label="Page 11"
+          >
+            11
+          </a>
+        </li>
+
+        <li
+          class="usa-pagination__item usa-pagination__overflow"
+          role="presentation"
+        >
+          <span> … </span>
+        </li>
+
+        <li class="usa-pagination__item usa-pagination__page-no">
+          <a
+            href="javascript:void(0);"
+            class="usa-pagination__button"
+            aria-label="Last page, page 24"
+          >
+            24
+          </a>
+        </li>
+
+        <li class="usa-pagination__item usa-pagination__arrow">
+          <a
+            href="javascript:void(0);"
+            class="usa-pagination__link usa-pagination__next-page"
+            aria-label="Next page"
+          >
+            <span class="usa-pagination__link-text"> Next </span>
+
+            <!--<svg class="usa-icon" aria-hidden="true" role="img">
+              <use xlink:href="/assets/img/sprite.svg#navigate_next"></use>
+            </svg>-->
+          </a>
+        </li>
+      </ul>
+
+      <lightning:layout multipleRows="true" horizontalAlign="center">
+        <lightning:layoutItem padding="around-small" flexibility="auto">
+          <lightning:button
+            label="First"
+            iconName="utility:left"
+            iconPosition="left"
+            onclick="{!c.onFirst}"
+            disabled="{! v.currentPageNumber == 1}"
+          />
+          <lightning:button
+            iconName="utility:chevronleft"
+            iconPosition="left"
+            onclick="{!c.onPrev}"
+            disabled="{! v.currentPageNumber == 1}"
+          />
+
+          <aura:iteration items="{!v.pageList}" var="item">
+            <aura:if isTrue="{!v.totalPages >11}">
+              <aura:if
+                isTrue="{! and(greaterthanorequal(v.currentPageNumber, 7),lessthanorequal(v.currentPageNumber, (v.totalPages-6)))}"
+              >
+                <aura:if
+                  isTrue="{! and(lessthanorequal(item, (v.currentPageNumber+5)), greaterthanorequal(item, (v.currentPageNumber-5)))}"
+                >
+                  <span class="slds-p-horizontal_x-small">
+                    <a
+                      onclick="{!c.processMe}"
+                      name="{!item}"
+                      class="{! (v.currentPageNumber == item) ? 'selected' : ''}"
+                      >{!item}</a
+                    >
+                  </span>
+                </aura:if>
+              </aura:if>
+
+              <aura:if
+                isTrue="{! and(lessthanorequal(v.currentPageNumber, 6), lessthanorequal(item, 11))}"
+              >
+                <span class="slds-p-horizontal_x-small">
+                  <a
+                    onclick="{!c.processMe}"
+                    name="{!item}"
+                    class="{! (v.currentPageNumber == item) ? 'selected' : ''}"
+                    >{!item}</a
+                  >
+                </span>
+              </aura:if>
+
+              <aura:if
+                isTrue="{! and(greaterthanorequal(v.currentPageNumber, (v.totalPages-5)), greaterthanorequal(item, (v.totalPages-10)))}"
+              >
+                <span class="slds-p-horizontal_x-small">
+                  <a
+                    onclick="{!c.processMe}"
+                    name="{!item}"
+                    class="{! (v.currentPageNumber == item) ? 'selected' : ''}"
+                    >{!item}</a
+                  >
+                </span>
+              </aura:if>
+
+              <aura:set attribute="else">
+                <span class="slds-p-horizontal_x-small">
+                  <a
+                    onclick="{!c.processMe}"
+                    name="{!item}"
+                    class="{! (v.currentPageNumber == item) ? 'selected' : ''}"
+                    >{!item}</a
+                  >
+                </span>
+              </aura:set>
+            </aura:if>
+          </aura:iteration>
+
+          <!-- <span class="slds-p-horizontal_x-small">
+                    <a onclick="{!c.processMe}" name="{!v.totalPages}"
+                       class="{! (v.currentPageNumber == v.totalPages) ? 'selected' : ''}">{!v.totalPages}</a>
+                </span> -->
+          <lightning:button
+            iconName="utility:chevronright"
+            iconPosition="right"
+            disabled="{! v.currentPageNumber == v.totalPages}"
+            onclick="{!c.onNext}"
+          />
+          <lightning:button
+            label="Last"
+            iconName="utility:right"
+            iconPosition="right"
+            disabled="{! v.currentPageNumber == v.totalPages}"
+            onclick="{!c.onLast}"
+          />
+        </lightning:layoutItem>
+      </lightning:layout>
+    </nav>
+  </aura:if>
+</aura:component>

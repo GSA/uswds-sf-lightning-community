@@ -12,6 +12,7 @@
         <members>uswdsMegaMenu</members>
         <members>uswdsNavBar</members>
         <members>uswdsNavSecondaryLinks</members>
+        <members>uswdsPagination</members>
         <members>uswdsProfileMenu</members>
         <members>uswdsSearch</members>
         <members>uswdsSocialMediaNavMenu</members>
