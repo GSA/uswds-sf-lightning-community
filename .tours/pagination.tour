@@ -1,0 +1,81 @@
+{
+  "title": "Pagination",
+  "steps": [
+    {
+      "file": "src/aura/uswdsPagination/uswdsPagination.cmp",
+      "description": "This is the pagination component which mimics the functionality provided by https://designsystem.digital.gov/components/pagination/. In addition to the files contained within the `uswdsPagination` aura component, the [uswds_pagionation](https://github.com/GSA/uswds-sf-lightning-community/blob/HEAD/./src/staticresources/uswds_pagination.resource) static resource is also employed. Broadly speaking, the aura component handles the creation of markup while the static resource produces the data structure.",
+      "line": 1,
+      "title": "Component Intro"
+    },
+    {
+      "file": "src/aura/uswdsPagination/uswdsPaginationController.js",
+      "line": 2,
+      "description": "`doInit` is run immediately after the component is created. Here we just set the language preference and wait for remaining javascript files to load.",
+      "selection": {
+        "start": {
+          "line": 2,
+          "character": 3
+        },
+        "end": {
+          "line": 2,
+          "character": 9
+        }
+      },
+      "title": "doInit"
+    },
+    {
+      "file": "src/aura/uswdsPagination/uswdsPaginationController.js",
+      "selection": {
+        "start": {
+          "line": 39,
+          "character": 3
+        },
+        "end": {
+          "line": 47,
+          "character": 4
+        }
+      },
+      "description": "Runs the `init` function from the uswds_pagination static resource. Init returns an array containing the data structure for the helper.createPagination function.",
+      "title": "Pagination Setup",
+      "line": 31
+    },
+    {
+      "file": "src/aura/uswdsPagination/uswdsPaginationHelper.js",
+      "line": 2,
+      "description": "Loops through the pagination array and calls pagination type-specific functions (createPageNo, createOverflow, createPrevious, createNext). The pagination type-specific functions return an array of arrays containing aura:html. Once data is returned, calls `createPaginationItem` which renders the HTML and injects it into the component body.",
+      "selection": {
+        "start": {
+          "line": 2,
+          "character": 3
+        },
+        "end": {
+          "line": 19,
+          "character": 5
+        }
+      },
+      "title": "Create Pagination"
+    },
+    {
+      "file": "src/aura/uswdsPagination/uswdsPaginationHelper.js",
+      "description": "A typical pagination slot is made up of a list item (`<li>`) with a nested anchor element (`<a>`). Previous and Next slots have an outer span (`<span>`) element which is handled conditionally.",
+      "selection": {
+        "start": {
+          "line": 142,
+          "character": 3
+        },
+        "end": {
+          "line": 168,
+          "character": 4
+        }
+      },
+      "line": null,
+      "title": "Create Pagination Item"
+    },
+    {
+      "file": "src/aura/uswdsPagination/uswdsPaginationRenderer.js",
+      "line": 2,
+      "description": "rerender is run following any changes to the component or data inputs. The component body is set to \"\" before calling `helper.createPagination`. Otherwise, the component repeats on the page.",
+      "title": "Re-Renderer"
+    }
+  ]
+}
