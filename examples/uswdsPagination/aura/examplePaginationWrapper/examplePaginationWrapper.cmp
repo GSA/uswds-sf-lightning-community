@@ -1,0 +1,36 @@
+<aura:component
+  implements="forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <aura:handler name="init" value="this" action="{!c.doInit}"></aura:handler>
+  <aura:attribute name="allData" type="List" />
+  <aura:attribute name="currentPageNumber" type="Integer" default="1" />
+  <aura:attribute name="pageSize" type="Integer" default="5" />
+  <aura:attribute name="totalPages" type="Integer" default="0" />
+  <aura:attribute name="pageData" type="List" />
+  <aura:handler
+    name="change"
+    value="{!v.currentPageNumber}"
+    action="{!c.handleCurrentPageNumberChange}"
+  />
+
+  <div class="wrapper">
+    <h1>Pagination Wrapper Example</h1>
+    <p>
+      Current Page Number: {! v.currentPageNumber}<br /> Page Size: {!
+      v.pageSize }<br /> Total Pages: {! v.totalPages} <br />
+    </p>
+    <aura:iteration items="{!v.pageData}" var="county" indexVar="i">
+      <h1>{!i} - {! county.countyName}</h1>
+      <p><b>2019 Population: </b>{! county[2019]}</p>
+    </aura:iteration>
+    <aura:if isTrue="{!v.totalPages >0 }">
+      <c:uswdsPagination
+        currentPageNumber="{!v.currentPageNumber}"
+        pageSize="{!v.pageSize}"
+        totalPages="{!v.totalPages}"
+        paginationAria="Georgia counties list page"
+      />
+    </aura:if>
+  </div>
+</aura:component>
