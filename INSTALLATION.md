@@ -12,8 +12,10 @@ Installation of this repository requires a working knowledge of the Salesforce A
 ## Instructions
 
 - Clone this repository
-- Set local build.properties to point at sandbox, `ant deployCode`
-- Enable Communities in your Salesforce org
+- Enable Communities in your Salesforce org (Setup > Digital Experiences > Settings. Select Enable Digital Experiences.)
+- Set local build.properties to point at sandbox.
+- Deploy `ant deployCode`
+  - Example files can also be deployed by entering, `ant deployCode -Dsf.deployRoot="/example"`
 - For new communities
   - Create new community (Setup > Digital Experiences > All Sites > New > Select Customer Account Portal
   - Provide Name > Builder > Theme
