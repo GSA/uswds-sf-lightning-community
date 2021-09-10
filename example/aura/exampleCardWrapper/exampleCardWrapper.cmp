@@ -1,0 +1,25 @@
+<aura:component
+  implements="forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <aura:attribute name="cardData" type="List" />
+  <aura:handler name="init" value="this" action="{!c.doInit}"></aura:handler>
+
+  <div class="wrapper">
+    <ul class="usa-card-group">
+      <aura:iteration items="{!v.cardData}" var="card" indexVar="i">
+        <c:uswdsCard
+          cardType="{!card.cardType}"
+          cardsPerRow="{!card.cardsPerRow}"
+          cardHeader="{!card.header}"
+          cardBody="{!card.body}"
+          buttonLinkUrl="{!card.buttonLinkUrl}"
+          buttonLinkText="{!card.buttonLinkText}"
+          mediaUrl="{!card.mediaUrl}"
+          mediaAltText="{!card.mediaAltText}"
+          cardIndex="{!i}"
+        />
+      </aura:iteration>
+    </ul>
+  </div>
+</aura:component>
