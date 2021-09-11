@@ -1,5 +1,5 @@
 ({
-  generateData: function () {
+  generateDataMapped: function () {
     return [
       {
         cardType: "Card",
@@ -19,7 +19,7 @@
         body:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
         buttonLinkUrl: "/contactsupport",
-        buttonLinkText: "Contact Suppoert",
+        buttonLinkText: "Contact Support",
         mediaUrl: $A.get("$ContentAsset.ex_uswdsCard"),
         mediaAltText: "A placeholder image"
       },
@@ -57,50 +57,6 @@
         mediaAltText: "A placeholder image"
       },
       {
-        cardType: "Card with Media",
-        cardsPerRow: "4",
-        header: "Card with Media",
-        body:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-        buttonLinkUrl: "/files",
-        buttonLinkText: "Link to Files",
-        mediaUrl: $A.get("$ContentAsset.ex_uswdsCard"),
-        mediaAltText: "A placeholder image"
-      },
-      {
-        cardType: "Card with Media",
-        cardsPerRow: "4",
-        header: "Card with Media",
-        body:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-        buttonLinkUrl: "/files",
-        buttonLinkText: "Link to Files",
-        mediaUrl: $A.get("$ContentAsset.ex_uswdsCard"),
-        mediaAltText: "A placeholder image"
-      },
-      {
-        cardType: "Card with Media",
-        cardsPerRow: "4",
-        header: "Card with Media",
-        body:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-        buttonLinkUrl: "/files",
-        buttonLinkText: "Link to Files",
-        mediaUrl: $A.get("$ContentAsset.ex_uswdsCard"),
-        mediaAltText: "A placeholder image"
-      },
-      {
-        cardType: "Card with Media",
-        cardsPerRow: "4",
-        header: "Card with Media",
-        body:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-        buttonLinkUrl: "/files",
-        buttonLinkText: "Link to Files",
-        mediaUrl: $A.get("$ContentAsset.ex_uswdsCard"),
-        mediaAltText: "A placeholder image"
-      },
-      {
         cardType: "Flag Left",
         cardsPerRow: "2",
         header: "Flag Left",
@@ -123,5 +79,67 @@
         mediaAltText: "A placeholder image"
       }
     ];
+  },
+  generateDataNotMapped: function () {
+    return [
+      {
+        fieldA: "Card with Media",
+        fieldB: "4",
+        fieldC: "Card with Media",
+        fieldD:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        fieldE: "/files",
+        fieldF: "Link to Files",
+        fieldG: $A.get("$ContentAsset.ex_uswdsCard"),
+        fieldH: "A placeholder image"
+      },
+      {
+        fieldA: "Card with Media",
+        fieldB: "4",
+        fieldC: "Card with Media",
+        fieldD:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        fieldE: "/files",
+        fieldF: "Link to Files",
+        fieldG: $A.get("$ContentAsset.ex_uswdsCard"),
+        fieldH: "A placeholder image"
+      },
+      {
+        fieldA: "Card with Media",
+        fieldB: "4",
+        fieldC: "Card with Media",
+        fieldD:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        fieldE: "/files",
+        fieldF: "Link to Files",
+        fieldG: $A.get("$ContentAsset.ex_uswdsCard"),
+        fieldH: "A placeholder image"
+      },
+      {
+        fieldA: "Card with Media",
+        fieldB: "4",
+        fieldC: "Card with Media",
+        fieldD:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        fieldE: "/files",
+        fieldF: "Link to Files",
+        fieldG: $A.get("$ContentAsset.ex_uswdsCard"),
+        fieldH: "A placeholder image"
+      }
+    ];
+  },
+  generateMap: function () {
+    // keys should contain the custom field names
+    // values should contain the cardElement key values
+    return {
+      fieldA: "cardType",
+      fieldB: "cardsPerRow",
+      fieldC: "header",
+      fieldD: "body",
+      fieldE: "buttonLinkUrl",
+      fieldF: "buttonLinkText",
+      fieldG: "mediaUrl",
+      fieldH: "mediaAltText"
+    };
   }
 });

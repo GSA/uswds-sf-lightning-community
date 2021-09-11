@@ -1,7 +1,16 @@
 ({
-  doInit: function (cmp, event, helper) {
-    var cardType = cmp.get("v.cardType");
-    var cardsPerRow = cmp.get("v.cardsPerRow");
+  doInit: function (cmp, event, helper) {},
+  navigate: function (cmp, event, helper) {
+    var destination = event.target.id;
+    var urlEvent = $A.get("e.force:navigateToURL");
+    urlEvent.setParams({
+      url: destination
+    });
+    urlEvent.fire();
+  },
+  updateCard: function (cmp, event, helper) {
+    var cardType = cmp.get("v.cardElement.cardType");
+    var cardsPerRow = cmp.get("v.cardElement.cardsPerRow");
 
     var cardLi = cmp.find("uswdsCard-li");
     var cardHeaderTop = cmp.find("uswdsCard-headerTop");
@@ -41,13 +50,5 @@
     if (cardType == "Flag Right") {
       $A.util.addClass(flagLi, "usa-card--media-right");
     }
-  },
-  navigate: function (cmp, event, helper) {
-    var destination = event.target.id;
-    var urlEvent = $A.get("e.force:navigateToURL");
-    urlEvent.setParams({
-      url: destination
-    });
-    urlEvent.fire();
   }
 });

@@ -2,24 +2,24 @@
   implements="forceCommunity:availableForAllPageTypes"
   access="global"
 >
-  <aura:attribute name="cardData" type="List" />
+  <aura:attribute name="cardDataMapped" type="List" />
+  <aura:attribute name="cardDataNotMapped" type="List" />
+  <aura:attribute name="dataMap" type="Map" />
   <aura:handler name="init" value="this" action="{!c.doInit}"></aura:handler>
 
   <div class="wrapper">
-    <ul class="usa-card-group">
-      <aura:iteration items="{!v.cardData}" var="card" indexVar="i">
-        <c:uswdsCard
-          cardType="{!card.cardType}"
-          cardsPerRow="{!card.cardsPerRow}"
-          cardHeader="{!card.header}"
-          cardBody="{!card.body}"
-          buttonLinkUrl="{!card.buttonLinkUrl}"
-          buttonLinkText="{!card.buttonLinkText}"
-          mediaUrl="{!card.mediaUrl}"
-          mediaAltText="{!card.mediaAltText}"
-          cardIndex="{!i}"
-        />
-      </aura:iteration>
-    </ul>
+    <h1>Card Data no Map</h1>
+    <c:uswdsCardList cardData="{!v.cardDataMapped}" aura:id="cardList" />
+    <h1>Card Data with Map</h1>
+    <p>
+      In this instance, the data provided to the cardList component does not
+      leverage keys that can be interpreted by the component. An additional
+      javascript object is passed which maps the fields to cardElement fields.
+    </p>
+    <c:uswdsCardList
+      cardData="{!v.cardDataNotMapped}"
+      dataMap="{!v.dataMap}"
+      aura:id="cardListNotMapped"
+    />
   </div>
 </aura:component>
