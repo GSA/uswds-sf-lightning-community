@@ -9,5 +9,10 @@
     component.set("v.dataMap", helper.generateMap());
     var cardListNotMapped = component.find("cardListNotMapped");
     cardListNotMapped.processCardData();
+
+    // create data without Card Type attribute
+    component.set("v.cardDataNoCardType", helper.generateDataNoCardType());
+    var cardListNoCardType = component.find("cardListNoCardType");
+    cardListNoCardType.processCardData();
   }
 });

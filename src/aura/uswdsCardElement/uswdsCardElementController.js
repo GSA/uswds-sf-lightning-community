@@ -1,5 +1,4 @@
 ({
-  doInit: function (cmp, event, helper) {},
   navigate: function (cmp, event, helper) {
     var destination = event.target.id;
     var urlEvent = $A.get("e.force:navigateToURL");

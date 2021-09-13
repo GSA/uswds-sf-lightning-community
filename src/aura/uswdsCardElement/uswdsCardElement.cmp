@@ -5,7 +5,7 @@
 
   <aura:attribute name="cardElement" type="Map" />
   <aura:attribute name="dataMap" type="Map" />
-  <aura:handler name="init" value="this" action="{!c.doInit}"></aura:handler>
+
   <aura:handler name="render" value="{!this}" action="{!c.updateCard}" />
   <!-- regular cards-->
   <aura:if

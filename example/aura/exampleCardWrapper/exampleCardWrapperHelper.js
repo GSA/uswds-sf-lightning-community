@@ -141,5 +141,29 @@
       fieldG: "mediaUrl",
       fieldH: "mediaAltText"
     };
+  },
+  generateDataNoCardType: function () {
+    return [
+      {
+        cardsPerRow: "2",
+        header: "Card",
+        body:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        buttonLinkUrl: "/contactsupport",
+        buttonLinkText: "Contact Support",
+        mediaUrl: $A.get("$ContentAsset.ex_uswdsCard"),
+        mediaAltText: "A placeholder image"
+      },
+      {
+        cardsPerRow: "2",
+        header: "Card with Media",
+        body:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        buttonLinkUrl: "/contactsupport",
+        buttonLinkText: "Contact Support",
+        mediaUrl: $A.get("$ContentAsset.ex_uswdsCard"),
+        mediaAltText: "A placeholder image"
+      }
+    ];
   }
 });

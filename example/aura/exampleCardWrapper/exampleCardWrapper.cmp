@@ -5,21 +5,44 @@
   <aura:attribute name="cardDataMapped" type="List" />
   <aura:attribute name="cardDataNotMapped" type="List" />
   <aura:attribute name="dataMap" type="Map" />
+
+  <aura:attribute name="cardDataNoCardType" type="List" />
   <aura:handler name="init" value="this" action="{!c.doInit}"></aura:handler>
 
   <div class="wrapper">
     <h1>Card Data no Map</h1>
     <c:uswdsCardList cardData="{!v.cardDataMapped}" aura:id="cardList" />
     <h1>Card Data with Map</h1>
-    <p>
-      In this instance, the data provided to the cardList component does not
-      leverage keys that can be interpreted by the component. An additional
-      javascript object is passed which maps the fields to cardElement fields.
-    </p>
+    <div class="usa-alert usa-alert--info usa-alert--no-icon">
+      <div class="usa-alert__body">
+        <p class="usa-alert__text">
+          In this instance, the data provided to the cardList component does not
+          leverage keys that can be interpreted by the component. An additional
+          javascript object is passed which maps the fields to cardElement
+          fields.
+        </p>
+      </div>
+    </div>
+
     <c:uswdsCardList
       cardData="{!v.cardDataNotMapped}"
       dataMap="{!v.dataMap}"
       aura:id="cardListNotMapped"
+    />
+    <h1>Card Data without Card Type Attribute</h1>
+    <div class="usa-alert usa-alert--info usa-alert--no-icon">
+      <div class="usa-alert__body">
+        <p class="usa-alert__text">
+          In this instance, the card data dataset does not include a cardType
+          attribute. Instead, the cardType attribute is provided to the
+          uswdsCardList component directly.
+        </p>
+      </div>
+    </div>
+    <c:uswdsCardList
+      cardData="{!v.cardDataNoCardType}"
+      cardType="Card with Media"
+      aura:id="cardListNoCardType"
     />
   </div>
 </aura:component>

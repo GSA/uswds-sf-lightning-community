@@ -9,6 +9,8 @@
   <aura:attribute name="cardData" type="List" />
   <aura:attribute name="processedCardData" type="List" />
   <aura:attribute name="dataMap" type="Map" />
+  <aura:attribute name="cardType" type="String" default="Card with Media" />
+
   <aura:method name="processCardData" action="{!c.processCardData}" />
 
   <ul class="usa-card-group">
