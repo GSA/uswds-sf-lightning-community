@@ -9,20 +9,24 @@
       if (cardDataMap != null) {
         // user passed a data map, rename keys on their behalf and then pass to v.processedCardData
         for (const property in cardDataMap) {
+          // only try to replace the property if the object contains it. Otherwise, error gets thrown
           if (cardData[i].hasOwnProperty(property)) {
             Object.defineProperty(
               cardData[i],
               cardDataMap[property],
               Object.getOwnPropertyDescriptor(cardData[i], property)
             );
+            // delete the property that was replaced
             delete cardData[i][property];
           }
         }
       }
+      // if cardType property does not exist, add it
       if (!cardData[i].hasOwnProperty("cardType")) {
         cardData[i].cardType = cardType;
       }
     }
+    // now that all of the cardData is processed, set the attribute
     cmp.set("v.processedCardData", cardData);
   }
 });

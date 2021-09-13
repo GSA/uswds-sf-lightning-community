@@ -17,7 +17,6 @@
         <header class="usa-card__header" aura:id="uswdsCard-headerTop">
           <h2 class="usa-card__heading">{! v.cardElement.header }</h2>
         </header>
-
         <div class="usa-card__media" aura:id="uswdsCard-media">
           <div class="usa-card__img">
             <img
@@ -26,11 +25,9 @@
             />
           </div>
         </div>
-
         <header class="usa-card__header" aura:id="uswdsCard-headerLower">
           <h2 class="usa-card__heading">{! v.cardElement.header }</h2>
         </header>
-
         <div class="usa-card__body">
           <p>{! v.cardElement.body }</p>
         </div>
@@ -56,6 +53,7 @@
       aura:id="uswdsFlag-li"
     >
       <div class="usa-card__container">
+        <div style="display: none">{!v.cardElement.cardType}</div>
         <header class="usa-card__header">
           <h2 class="usa-card__heading">{! v.cardElement.header }</h2>
         </header>
@@ -67,7 +65,6 @@
             />
           </div>
         </div>
-
         <div class="usa-card__body">
           <p>{! v.cardElement.body }</p>
         </div>
