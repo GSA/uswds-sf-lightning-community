@@ -8,13 +8,9 @@
       "title": "Example Card Wrapper"
     },
     {
-      "title": "Card List",
-      "description": ""
-    },
-    {
       "file": "src/aura/uswdsCardList/uswdsCardListController.js",
       "line": 3,
-      "description": "The uswdsCardList component is responsible for data processing of the cardData, dataMap, and cardType. The component ultimately loops the cardData and implements individual uswdsCardElement components.\n\n`processCardData` loops through all cardData and if a dataMap is present, maps system key values to values expected by the uswdsCardElement component. If the cardType attribute is not present in the cardData array of objects, the function inserts the value provided to the component (defaults to Card with Media). ",
+      "description": "The uswdsCardList component is responsible for data processing of the cardData, dataMap, and cardType. The component ultimately loops the cardData and implements individual uswdsCardElement components.\n\n`processCardData` loops through all cardData and if a dataMap is present, maps system key values to values expected by the uswdsCardElement component. If the cardType attribute is not present in the cardData array of objects, the function inserts the value provided to the component (defaults to Card with Media). Finally, the function calls `helper.validateCardData` function to check that all object keys are present. If not, an error message is displayed as a Toast message.",
       "title": "Card List Data Processor"
     },
     {

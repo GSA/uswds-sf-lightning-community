@@ -25,6 +25,7 @@
       if (!cardData[i].hasOwnProperty("cardType")) {
         cardData[i].cardType = cardType;
       }
+      helper.validateCardData(cardData[i], i, cmp, event, helper);
     }
     // now that all of the cardData is processed, set the attribute
     cmp.set("v.processedCardData", cardData);
