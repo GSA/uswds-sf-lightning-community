@@ -15,10 +15,13 @@
         var cardToString = Object.keys(cardData)
           .map((card) => "'" + card + "' : '" + cardData[card] + "'")
           .join("\n");
+        console.warn(
+          `Error - USWDS Card List. \n Error on card no ${index}. Expecting key '${cardFields[i]}' but it was not found. Instead, the following was presented: \n\n ${cardToString}`
+        );
         component.find("notifLib").showToast({
           title: "Error - USWDS Card List",
-          message: `Validation error, the '${cardFields[i]}' property is missing. Error was found at card index number ${index} of the card object. Attributes: \n\n ${cardToString}`,
-          variant: "error",
+          message: `Validation error, specifics have been logged to the developer console for your review.`,
+          variant: "warning",
           mode: "sticky"
         });
       }

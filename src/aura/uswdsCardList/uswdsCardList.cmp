@@ -13,10 +13,6 @@
 
   <aura:method name="processCardData" action="{!c.processCardData}" />
   <lightning:notificationsLibrary aura:id="notifLib" />
-  <!-- displays nofitication text on multiple lines - https://salesforceboffin.com/display-toast-message-in-multiline-in-lightning/-->
-  <aura:html tag="style">
-    .toastMessage.forceActionsText{ white-space : pre-line !important; }
-  </aura:html>
 
   <ul class="usa-card-group">
     <aura:iteration items="{!v.processedCardData}" var="card">
