@@ -1,0 +1,68 @@
+<aura:component
+  implements="forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <!-- example 1 - Card Data Mapped -->
+  <aura:attribute name="cardDataMapped" type="List" />
+  <!-- example 2 - Card Data with External Map -->
+  <aura:attribute name="cardDataNotMapped" type="List" />
+  <aura:attribute name="dataMap" type="Map" />
+  <!-- example 3 - Card Data No Card Type -->
+  <aura:attribute name="cardDataNoCardType" type="List" />
+
+  <aura:handler name="init" value="this" action="{!c.doInit}"></aura:handler>
+
+  <div class="wrapper">
+    <div class="grid-container">
+      <div class="grid-row">
+        <h1>Card Data Mapped</h1>
+      </div>
+      <div class="grid-row">
+        <c:uswdsCardList cardData="{!v.cardDataMapped}" aura:id="cardList" />
+      </div>
+      <div class="grid-row">
+        <h1>Card Data with External Map</h1>
+      </div>
+      <div class="grid-row">
+        <div class="usa-alert usa-alert--info usa-alert--no-icon">
+          <div class="usa-alert__body">
+            <p class="usa-alert__text">
+              CardData is provided but contains field names which require
+              processing to be mapped to fields that may be consumed by the
+              uswdsCardElement component. In this instance, a `dataMap` must be
+              provided.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-row">
+        <c:uswdsCardList
+          cardData="{!v.cardDataNotMapped}"
+          dataMap="{!v.dataMap}"
+          aura:id="cardListNotMapped"
+        />
+      </div>
+      <div class="grid-row">
+        <h1>Card Data without Card Type Attribute</h1>
+      </div>
+      <div class="grid-row">
+        <div class="usa-alert usa-alert--info usa-alert--no-icon">
+          <div class="usa-alert__body">
+            <p class="usa-alert__text">
+              In this instance, the card data dataset does not include a
+              cardType attribute. Instead, the cardType attribute is provided to
+              the uswdsCardList component directly.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-row">
+        <c:uswdsCardList
+          cardData="{!v.cardDataNoCardType}"
+          cardType="Card with Media"
+          aura:id="cardListNoCardType"
+        />
+      </div>
+    </div>
+  </div>
+</aura:component>

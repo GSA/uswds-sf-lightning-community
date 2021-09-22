@@ -1,0 +1,22 @@
+<aura:component
+  implements="forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds-init.min.js'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+
+  <aura:attribute name="cardData" type="List" />
+  <aura:attribute name="processedCardData" type="List" />
+  <aura:attribute name="dataMap" type="Map" />
+  <aura:attribute name="cardType" type="String" default="Card with Media" />
+
+  <aura:method name="processCardData" action="{!c.processCardData}" />
+  <lightning:notificationsLibrary aura:id="notifLib" />
+
+  <ul class="usa-card-group">
+    <aura:iteration items="{!v.processedCardData}" var="card">
+      <c:uswdsCardElement cardElement="{! card }" />
+    </aura:iteration>
+  </ul>
+</aura:component>
