@@ -4,6 +4,8 @@
         <members>defaultTokens</members>
         <members>fontAwesomeIcon</members>
         <members>uswds404</members>
+        <members>uswdsCardList</members>
+        <members>uswdsCardElement</members>
         <members>uswdsFooterNavMenu</members>
         <members>uswdsFooterNavMenuSmall</members>
         <members>uswdsIdentifier</members>
@@ -32,9 +34,9 @@
         <name>FlexiPage</name>
     </types>
     <types>
-        <members>siteAsset_6defa8943c1147a29c8eb9a3ff4cbc4e</members>
         <members>siteAsset_60bed73cf7234f8ea58510320465d20c</members>
         <members>siteAsset_6269382aeaeb4500860a2db12f34b873</members>
+        <members>siteAsset_6defa8943c1147a29c8eb9a3ff4cbc4e</members>
         <members>uswds_2_x</members>
         <name>StaticResource</name>
     </types>

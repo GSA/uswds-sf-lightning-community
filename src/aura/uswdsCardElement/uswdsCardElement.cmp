@@ -1,0 +1,94 @@
+<aura:component access="global">
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds-init.min.js'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+
+  <aura:attribute
+    name="cardElement"
+    type="Map"
+    description="A JSON object with the following structure {
+    cardType: '',
+    cardsPerRow: '',
+    header: '',
+    body: '',
+    buttonLinkUrl: '',
+    buttonLinkText: '',
+    mediaUrl: '',
+    mediaAltText: ''
+  }"
+  />
+  <aura:handler name="render" value="{!this}" action="{!c.updateCard}" />
+  <!-- regular cards-->
+  <aura:if
+    isTrue="{! equals(v.cardElement.cardType, 'Card') || equals(v.cardElement.cardType, 'Card with Media') || equals(v.cardElement.cardType, 'Media and Header First') || equals(v.cardElement.cardType, 'Inset Media') || equals(v.cardElement.cardType, 'Exdent Media') }"
+  >
+    <li class="tablet:grid-col-4 usa-card" aura:id="uswdsCard-li">
+      <div class="usa-card__container">
+        <div style="display: none">{!v.cardElement.cardType}</div>
+        <header class="usa-card__header" aura:id="uswdsCard-headerTop">
+          <h2 class="usa-card__heading">{! v.cardElement.header }</h2>
+        </header>
+        <div class="usa-card__media" aura:id="uswdsCard-media">
+          <div class="usa-card__img">
+            <img
+              src="{! v.cardElement.mediaUrl }"
+              alt="{! v.cardElement.mediaAltText }"
+            />
+          </div>
+        </div>
+        <header class="usa-card__header" aura:id="uswdsCard-headerLower">
+          <h2 class="usa-card__heading">{! v.cardElement.header }</h2>
+        </header>
+        <div class="usa-card__body">
+          <p>{! v.cardElement.body }</p>
+        </div>
+        <div class="usa-card__footer">
+          <button
+            class="usa-button"
+            onclick="{!c.navigate}"
+            id="{! v.cardElement.buttonLinkUrl }"
+          >
+            {! v.cardElement.buttonLinkText }
+          </button>
+        </div>
+      </div>
+    </li>
+  </aura:if>
+
+  <!-- flag cards -->
+  <aura:if
+    isTrue="{! or(equals(v.cardElement.cardType, 'Flag Right'), equals(v.cardElement.cardType, 'Flag Left')) }"
+  >
+    <li
+      class="tablet:grid-col-6 usa-card usa-card--flag"
+      aura:id="uswdsFlag-li"
+    >
+      <div class="usa-card__container">
+        <div style="display: none">{!v.cardElement.cardType}</div>
+        <header class="usa-card__header">
+          <h2 class="usa-card__heading">{! v.cardElement.header }</h2>
+        </header>
+        <div class="usa-card__media">
+          <div class="usa-card__img">
+            <img
+              src="{! v.cardElement.mediaUrl }"
+              alt="{! v.cardElement.mediaAltText }"
+            />
+          </div>
+        </div>
+        <div class="usa-card__body">
+          <p>{! v.cardElement.body }</p>
+        </div>
+        <div class="usa-card__footer">
+          <button
+            class="usa-button"
+            onclick="{!c.navigate}"
+            id="{! v.cardElement.buttonLinkUrl }"
+          >
+            {! v.cardElement.buttonLinkText }
+          </button>
+        </div>
+      </div>
+    </li>
+  </aura:if>
+</aura:component>
