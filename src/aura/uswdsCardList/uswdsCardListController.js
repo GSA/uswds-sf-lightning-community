@@ -1,5 +1,4 @@
 ({
-  doInit: function (component, event, helper) {},
   processCardData: function (cmp, event, helper) {
     var cardData = cmp.get("v.cardData");
     var cardDataMap = cmp.get("v.dataMap");

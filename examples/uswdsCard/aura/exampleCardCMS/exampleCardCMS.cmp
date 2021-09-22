@@ -1,0 +1,47 @@
+<!--original example from: https://developer.salesforce.com/blogs/2019/11/content-delivery-api-to-extend-or-integrate-content. Since been modified to meet the needs of this example.-->
+<aura:component
+  controller="ManagedContentControllerForLex"
+  implements="forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds-init.min.js'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+  <aura:attribute
+    name="contentList"
+    type="ConnectApi.ManagedContentVersion[]"
+  />
+  <aura:attribute name="language" type="String" />
+  <aura:attribute name="contentType" type="String" default="News" />
+  <aura:attribute name="managedContentIds" type="String" />
+  <aura:attribute name="topicNames" type="String" />
+  <aura:attribute name="cardData" type="List" />
+  <aura:attribute name="dataMap" type="Map" />
+  <lightning:notificationsLibrary aura:id="notifLib" />
+
+  <ui:button
+    aura:id="button"
+    buttonTitle="Click to get Conent"
+    label="Get Content"
+    press="{!c.getContent}"
+    class="usa-button"
+  />
+  <div>
+    <aura:if isTrue="{!v.contentList.length != 0}">
+      <div style="padding: 1rem 0rem">
+        <p style="font-weight: bold">plain text info about records</p>
+        <aura:iteration items="{!v.contentList}" var="record">
+          {!record.title} --- {!record.typeLabel} --- {!record.managedContentId}
+          --- {!record.associations.topics} ---
+          {!record.contentNodes.bannerImage.url}
+          <br />
+        </aura:iteration>
+      </div>
+    </aura:if>
+  </div>
+  <div>
+    <aura:if isTrue="{!v.contentList.length != 0}">
+      <c:uswdsCardList cardData="{!v.cardData}" aura:id="contentCard" />
+    </aura:if>
+  </div>
+</aura:component>

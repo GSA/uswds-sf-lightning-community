@@ -1,0 +1,79 @@
+{
+  "title": "USWDS Card",
+  "steps": [
+    {
+      "directory": "src/aura/uswdsCardElement",
+      "description": "This code tour walks through two core components that combine to render [USWDS Cards](https://designsystem.digital.gov/components/card/). The tour will step through the code from the individual Card Elements, up through Card Lists, and finally moving to the `/examples` directory where two use cases are provided.",
+      "title": "Introduction"
+    },
+    {
+      "file": "src/aura/uswdsCardElement/uswdsCardElement.cmp",
+      "line": 6,
+      "description": "The USWDS Card Element component handles the creation of individual [USWDS Cards](https://designsystem.digital.gov/components/card/). To utilize the component, the `cardElement` expects a JSON object which contains the following keys.\n\n```json\n{\n  \"cardType\": \"\",\n  \"cardsPerRow\": \"\",\n  \"header\": \"\",\n  \"body\": \"\",\n  \"buttonLinkUrl\": \"\",\n  \"buttonLinkText\": \"\",\n  \"mediaUrl\": \"\",\n  \"mediaAltText\": \"\"\n}\n```\n\nThe cardType field expects one of the following values:\n\n- Card\n- Card with Media\n- Media and Header First\n- Inset Media\n- Exdent Media\n- Flag Right\n- Flag Left",
+      "title": "Card Element Attributes"
+    },
+    {
+      "file": "src/aura/uswdsCardElement/uswdsCardElement.cmp",
+      "line": 22,
+      "description": "Two if/ then blocks separate the major card types (Cards v Flags). A hidden div exists on both the Card and Flag card types as a way to help developers inspect the rendered HTML and validate the expected type.\n\nThe remainder of the logic is housed in the Controller and will be explored in the next step.\n",
+      "title": "Card Element Markup"
+    },
+    {
+      "file": "src/aura/uswdsCardElement/uswdsCardElement.cmp",
+      "line": 20,
+      "description": "Upon render, the `c.updateCard` function is fired. This is not done on `doInit` due to the fact that data does not arrive by the time `doInit` fires. `updateCard` handles the remaining addition and removal of CSS classes.\n\n_Note_ The `<header>` tag appears in the Card markup twice but with separate `aura:id`. This function conditionally hides one of the `<header>` sections.\n\nThe next step will dive into the `cardList` component which is a data provider to the `cardElement`.",
+      "title": "Card Element Render"
+    },
+    {
+      "file": "src/aura/uswdsCardList/uswdsCardList.cmp",
+      "line": 1,
+      "description": "The `uswdsCardList` component markup iterates through the data set which informs a list of cards. The component includes a `<lightning:notificationsLibrary aura:id=\"notifLib\" />` which displays validation errors that get thrown during processing by the controller. Note, the notifications will render on your public-facing site if bad data is being provided.",
+      "title": "Card List Intro"
+    },
+    {
+      "file": "src/aura/uswdsCardList/uswdsCardListController.js",
+      "line": 2,
+      "description": "The `uswdsCardList` Controller is responsible for performing three major tasks.\n\n1. If a `dataMap` is present, it maps system field names to keys expected by the `uswdsCardElement` component. This is to accomodate scenarios where object field names are passed as cardData and need to be converted into the appropriate structure. The [exampleCardWrapper](https://github.com/gsa/blob/HEAD/./examples/uswdsCard/aura/aura/exampleCardWrapper/exampleCardWrapper.cmp) provides an example of this scenario.\n2. If the `cardType` attribute is not present in the `cardData` array of objects, the function inserts the value provided to the component (defaults to 'Card with Media').\n3. Finally, the function calls `helper.validateCardData` function which performs two validations of each `cardData` object. If errors are identified, a brief error message is displayed as a Toast message and longer error message is shown in the browser developer console.\n   1. Check that all object keys are present.\n   2. Check that valid cardType is present.",
+      "title": "Card List Controller/ Data Processor"
+    },
+    {
+      "file": "examples/uswdsCard/aura/exampleCardWrapper/exampleCardWrapper.cmp",
+      "line": 15,
+      "description": "When utilizing the Card List component, it is generally best to wrap it in a parent component which ties back to an Apex Class that provides data. This Example Card Wrapper demonstrates three primary ways to implement a `uswdsCardList` component along with dummy data to render cards on the screen.\n\n1. **Card Data Mapped** - cardData is provided into a format which requires no processing.\n2. **Card Data with External Map** - cardData is provided but contains field names which require processing to be mapped to fields that may be consumed by the uswdsCardElement component. In this instance, a `dataMap` must be provided. An example map is below.\n3. **Card Data without Card Type Attribute** - cardData is provided but lacks a `cardType` key. Instead, the `cardType` is passed as a separate attribute to the component.",
+      "title": "Example - Card List Wrapper"
+    },
+    {
+      "file": "examples/uswdsCard/aura/exampleCardCMS/exampleCardCMS.cmp",
+      "line": 1,
+      "description": "While the previous example showed the different card types and ways to pass data, the Example Card CMS component provides a more practical example that connects back to a real data source. The [README](https://github.com/gsa/blob/HEAD/./examples/uswdsCard/README.md) contained within the USWDS Card example directory provides setup instructions.",
+      "selection": {
+        "start": {
+          "line": 34,
+          "character": 1
+        },
+        "end": {
+          "line": 36,
+          "character": 49
+        }
+      },
+      "title": "Example - Card List w/ Salesforce CMS"
+    },
+    {
+      "file": "examples/uswdsCard/aura/exampleCardCMS/exampleCardCMSController.js",
+      "line": 20,
+      "description": "Data is fetched from the Apex contoller, upon successful retrieval, data is passed to the Helper to process and map CMS field names into appropriate USWDS Card keys. `v.cardData` attribute gets set and the `processCardData` function of the `uswdsCardList` component is called so that the data is properly rendered. ",
+      "selection": {
+        "start": {
+          "line": 27,
+          "character": 21
+        },
+        "end": {
+          "line": 27,
+          "character": 36
+        }
+      },
+      "title": "Example - Card List CMS Data from Apex Class"
+    }
+  ],
+  "description": "This code tour walks through two core components that combine to render [USWDS Cards](https://designsystem.digital.gov/components/card/). The tour will step through the code from the individual Card Elements, up through Card Lists, and finally moving to the `/examples` directory where two use cases are provided."
+}

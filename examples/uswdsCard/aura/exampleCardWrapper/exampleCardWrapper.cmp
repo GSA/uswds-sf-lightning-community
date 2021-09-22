@@ -7,7 +7,7 @@
   <!-- example 2 - Card Data with External Map -->
   <aura:attribute name="cardDataNotMapped" type="List" />
   <aura:attribute name="dataMap" type="Map" />
-  <!-- example 1 - Card Data No Card Type -->
+  <!-- example 3 - Card Data No Card Type -->
   <aura:attribute name="cardDataNoCardType" type="List" />
 
   <aura:handler name="init" value="this" action="{!c.doInit}"></aura:handler>
@@ -27,10 +27,10 @@
         <div class="usa-alert usa-alert--info usa-alert--no-icon">
           <div class="usa-alert__body">
             <p class="usa-alert__text">
-              In this instance, the data provided to the cardList component does
-              not leverage keys that can be interpreted by the component. An
-              additional javascript object is passed which maps the fields to
-              cardElement fields.
+              CardData is provided but contains field names which require
+              processing to be mapped to fields that may be consumed by the
+              uswdsCardElement component. In this instance, a `dataMap` must be
+              provided.
             </p>
           </div>
         </div>

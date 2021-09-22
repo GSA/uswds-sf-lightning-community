@@ -3,9 +3,20 @@
   <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds-init.min.js'}" />
   <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
 
-  <aura:attribute name="cardElement" type="Map" />
-  <aura:attribute name="dataMap" type="Map" />
-
+  <aura:attribute
+    name="cardElement"
+    type="Map"
+    description="A JSON object with the following structure {
+    cardType: '',
+    cardsPerRow: '',
+    header: '',
+    body: '',
+    buttonLinkUrl: '',
+    buttonLinkText: '',
+    mediaUrl: '',
+    mediaAltText: ''
+  }"
+  />
   <aura:handler name="render" value="{!this}" action="{!c.updateCard}" />
   <!-- regular cards-->
   <aura:if
