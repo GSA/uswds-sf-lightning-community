@@ -1,10 +1,14 @@
 .THIS .dot {
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   display: inline-block;
-  border: 1px solid black;
+  border: 2px solid black;
 }
+.THIS .BLACK {
+  color: black;
+}
+/* some tokens cannot be used as background-colors */
 .THIS .COLOR_TEXT_DEFAULT {
   color: t(colorTextDefault);
   fill: t(colorTextDefault);
