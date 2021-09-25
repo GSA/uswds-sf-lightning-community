@@ -226,45 +226,53 @@
                 />
               </div>
               <div aura:id="footer_ContactCenter">
-                <h3 class="usa-footer__contact-heading">
-                  {!v.contactCenterName}
-                </h3>
-                <address class="usa-footer__address">
-                  <div class="usa-footer__contact-info grid-row grid-gap">
-                    <aura:if isTrue="{! not(empty(v.contactPhone))}">
-                      <div class="grid-col-auto">
-                        <a href="{!'tel:'+ v.contactPhone}"
-                          >{!v.contactPhone}</a
-                        >
-                      </div>
-                    </aura:if>
-                    <aura:if
-                      isTrue="{! and(not(empty(v.contactEmail)), not(empty(v.contactPhone)))}"
-                    >
-                      |
-                    </aura:if>
-                    <aura:if isTrue="{! not(empty(v.contactEmail))}">
-                      <div class="grid-col-auto">
-                        <a href="{!'mailto:'+v.contactEmail}"
-                          >{!v.contactEmail}</a
-                        >
-                      </div>
-                    </aura:if>
-                    <aura:if
-                      isTrue="{! and(or(not(empty(v.contactEmail)), not(empty(v.contactPhone))), and(not(empty(v.contactLink)), not(empty(v.contactLinkText))))}"
-                    >
-                      |
-                    </aura:if>
-                    <!-- don't display link if ContactLink and ContactLinkText are both empty-->
-                    <aura:if
-                      isTrue="{! and(not(empty(v.contactLink)), not(empty(v.contactLinkText))) }"
-                    >
-                      <div class="grid-col-auto">
-                        <a href="{! v.contactLink }">{! v.contactLinkText }</a>
-                      </div>
-                    </aura:if>
-                  </div>
-                </address>
+                <aura:if isTrue="{! not(empty(v.contactCenterName)) }">
+                  <h3 class="usa-footer__contact-heading">
+                    {!v.contactCenterName}
+                  </h3>
+                </aura:if>
+                <aura:if
+                  isTrue="{! or(not(empty(v.contactEmail)), not(empty(v.contactPhone)), not(empty(v.contactLink)), not(empty(v.contactLinkText)))}"
+                >
+                  <address class="usa-footer__address">
+                    <div class="usa-footer__contact-info grid-row grid-gap">
+                      <aura:if isTrue="{! not(empty(v.contactPhone))}">
+                        <div class="grid-col-auto">
+                          <a href="{!'tel:'+ v.contactPhone}"
+                            >{!v.contactPhone}</a
+                          >
+                        </div>
+                      </aura:if>
+                      <aura:if
+                        isTrue="{! and(not(empty(v.contactEmail)), not(empty(v.contactPhone)))}"
+                      >
+                        |
+                      </aura:if>
+                      <aura:if isTrue="{! not(empty(v.contactEmail))}">
+                        <div class="grid-col-auto">
+                          <a href="{!'mailto:'+v.contactEmail}"
+                            >{!v.contactEmail}</a
+                          >
+                        </div>
+                      </aura:if>
+                      <aura:if
+                        isTrue="{! and(or(not(empty(v.contactEmail)), not(empty(v.contactPhone))), and(not(empty(v.contactLink)), not(empty(v.contactLinkText))))}"
+                      >
+                        |
+                      </aura:if>
+                      <!-- don't display link if ContactLink and ContactLinkText are both empty-->
+                      <aura:if
+                        isTrue="{! and(not(empty(v.contactLink)), not(empty(v.contactLinkText))) }"
+                      >
+                        <div class="grid-col-auto">
+                          <a href="{! v.contactLink }"
+                            >{! v.contactLinkText }</a
+                          >
+                        </div>
+                      </aura:if>
+                    </div>
+                  </address>
+                </aura:if>
               </div>
             </div>
           </div>
