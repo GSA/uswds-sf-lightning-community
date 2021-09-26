@@ -85,7 +85,6 @@
   <!-- END attributes -->
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
-
   <a class="usa-skipnav" href="#mainContent">Skip to Main Content</a>
   <div class="slds-grid">
     <div class="slds-col slds-size_1-of-1">
@@ -99,11 +98,14 @@
             <em class="usa-logo__text">
               <div class="slds-media slds-media_center">
                 <div class="slds-media__figure" aura:id="media-figure">
-                  <span class="slds-avatar slds-avatar_large logoContainer" aura:id="logoContainer">
+                  <span
+                    class="slds-avatar slds-avatar_large logoContainer"
+                    aura:id="logoContainer"
+                  >
                     <a href="{!v.homePath}" title="Home" aria-label="Home">
                       <img
                         class="logoContainer"
-                        alt="{!v.siteName}"
+                        alt="{!v.siteName + 'logo'}"
                         src=""
                         title="Home"
                       />
@@ -111,12 +113,12 @@
                   </span>
                 </div>
                 <aura:if isTrue="{!v.logoType == 'Square'}">
-                <div class="slds-media__body">
-                  <a href="{!v.homePath}" title="Home" aria-label="Home">
-                    {!v.siteName}
-                  </a>
-                </div>
-              </aura:if>
+                  <div class="slds-media__body">
+                    <a href="{!v.homePath}" title="Home" aria-label="Home">
+                      {!v.siteName}
+                    </a>
+                  </div>
+                </aura:if>
               </div>
             </em>
           </div>
