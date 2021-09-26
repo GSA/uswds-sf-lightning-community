@@ -18,6 +18,7 @@
   />
   <design:attribute
     name="logoType"
+    label="Logo Type"
     datasource="Square, Wide"
     default="Square"
     description="Square enables space for a 1:1 ratio image in top left corner of the site along with the Website Name. Wide removes the Website Name in favor of a rectangular logo that can stretch further right in the header."
