@@ -5,12 +5,12 @@
   "main": "",
   "dependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.18.0"
+    "eslint": "^7.32.0"
   },
   "devDependencies": {
-    "axios": "^0.21.1",
-    "prettier": "2.2.1",
-    "prettier-plugin-apex": "1.7.0"
+    "axios": "^0.21.4",
+    "prettier": "2.4.1",
+    "prettier-plugin-apex": "^1.10.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
