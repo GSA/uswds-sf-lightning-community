@@ -9,6 +9,9 @@
   <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
 
   <!-- component drop zones and toggles -->
+  <!-- header image and text options -->
+  <aura:attribute name="logoType" type="String" default="Square" />
+
   <!-- navBar options -->
   <aura:attribute name="navBar" type="Aura.Component[]" required="false" />
   <aura:attribute name="customNavToggle" type="String" default="Off" />
@@ -94,23 +97,28 @@
           <div class="usa-logo" id="extended-logo">
             <em class="usa-logo__text">
               <div class="slds-media slds-media_center">
-                <div class="slds-media__figure">
-                  <span class="slds-avatar slds-avatar_large logoContainer">
+                <div class="slds-media__figure" aura:id="media-figure">
+                  <span
+                    class="slds-avatar slds-avatar_large logoContainer"
+                    aura:id="logoContainer"
+                  >
                     <a href="{!v.homePath}" title="Home" aria-label="Home">
                       <img
                         class="logoContainer"
-                        alt="{!v.siteName}"
+                        alt="{!v.siteName + 'logo'}"
                         src=""
                         title="Home"
                       />
                     </a>
                   </span>
                 </div>
-                <div class="slds-media__body">
-                  <a href="{!v.homePath}" title="Home" aria-label="Home">
-                    {!v.siteName}
-                  </a>
-                </div>
+                <aura:if isTrue="{!v.logoType == 'Square'}">
+                  <div class="slds-media__body">
+                    <a href="{!v.homePath}" title="Home" aria-label="Home">
+                      {!v.siteName}
+                    </a>
+                  </div>
+                </aura:if>
               </div>
             </em>
           </div>
