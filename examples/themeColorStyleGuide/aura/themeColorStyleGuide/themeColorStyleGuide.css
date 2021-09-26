@@ -1,0 +1,98 @@
+.THIS .dot {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid black;
+}
+.THIS .BLACK {
+  color: black;
+}
+/* some tokens cannot be used as background-colors */
+.THIS .COLOR_TEXT_DEFAULT {
+  color: t(colorTextDefault);
+  fill: t(colorTextDefault);
+}
+.THIS .COLOR_TEXT_ERROR {
+  color: t(colorTextError)
+}
+.THIS .DETAIL_TEXT_COLOR {
+  fill: t(colorTextLabel);
+}
+.THIS .COLOR_BRAND {
+  background-color: t(colorBrand);
+}
+.THIS .COLOR_TEXT_LINK {
+  color: t(colorTextLink);
+}
+.THIS .BORDER_COLOR {
+  background-color: t(colorBorder);
+}
+.THIS .ACTION_COLOR {
+  background-color: t(colorBrand);
+}
+.THIS .OVERLAY_TEXT_COLOR {
+  color: t(colorTextInverse);
+}
+.THIS .BRAND_ACCESSIBLE {
+  color: t(brandAccessible);
+  fill: t(brandAccessible);
+}
+.THIS .BRAND_ACCESSIBLE_ACTIVE {
+  color: t(brandAccessibleActive);
+  fill: t(brandAccessibleActive);
+}
+.THIS .BRAND_BACKGROUND_DARK {
+  color: t(brandBackgroundDark);
+  fill: t(brandBackgroundDark);
+}
+
+.THIS .BRAND_BACKGROUND_PRIMARY {
+  color: t(brandBackgroundPrimary);
+  fill: t(brandBackgroundPrimary);
+}
+
+.THIS .BRAND_CONTRAST {
+  color: t(brandContrast);
+  fill: t(brandContrast);
+}
+
+.THIS .BRAND_CONTRAST_ACTIVE {
+  background-color: t(brandContrastActive);
+}
+
+.THIS .BRAND_DARK {
+  background-color: t(brandDark);
+}
+
+.THIS .BRAND_DARK_ACTIVE {
+  background-color: t(brandDarkActive);
+}
+
+.THIS .BRAND_DISABLED {
+  background-color: t(brandDisabled);
+}
+
+.THIS .BRAND_LIGHT {
+  background-color: t(brandContrast);
+}
+
+.THIS .BRAND_LIGHT_ACTIVE {
+  background-color: t(brandContrast);
+}
+
+.THIS .BRAND_PRIMARY {
+  background-color: t(brandContrast);
+}
+
+.THIS .BRAND_PRIMARY_ACTIVE {
+  background-color: t(brandContrast);
+}
+
+.THIS .BRAND_TEXT_LINK {
+  background-color: t(brandContrast);
+}
+
+.THIS .BRAND_TEXT_LINK_ACTIVE {
+  background-color: t(brandContrast);
+}
