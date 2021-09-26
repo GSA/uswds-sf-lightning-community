@@ -23,6 +23,16 @@
       $A.util.addClass(shoppingCart, "grid-offset-10");
     }
 
+    /* logo Type */
+    var logoType = cmp.get("v.logoType");
+    if (logoType == "Wide") {
+      var logoContainer = cmp.find("logoContainer");
+      $A.util.removeClass(logoContainer, "slds-avatar");
+      $A.util.removeClass(logoContainer, "slds-avatar_large");
+      var mediaFigure = cmp.find("media-figure");
+      $A.util.removeClass(mediaFigure, "slds-media__figure");
+    }
+
     /* Container Width */
     var containerWidth = cmp.get("v.containerWidth");
     var mainContent = cmp.find("mainContent");

@@ -17,6 +17,13 @@
     description="Defaults to /s but can be changed if your site uses a longer URI path such as abc.gov/myAppName/s. In which case, your home path would be /myAppName/s"
   />
   <design:attribute
+    name="logoType"
+    label="Logo Type"
+    datasource="Square, Wide"
+    default="Square"
+    description="Square enables space for a 1:1 ratio image in top left corner of the site along with the Website Name. Wide removes the Website Name in favor of a rectangular logo that can stretch further right in the header."
+  />
+  <design:attribute
     name="secondaryNavigationLinkSetId"
     label="Header Secondary Nav Menu Name"
     description="Allows you to add links below the search box such as 'advanced search' or others that may be relevant"
@@ -166,6 +173,6 @@
     name="agencyLogo2"
     label="Second Agency Logo Asset Name"
     default=""
-    description="If choosing a 'Multi' option from Identifier Type, enter name of ContentAsset. Instructions at https://github.com/GSA/uswds-sf-lightning-community/wiki/Theme-Settings"
+    description="If choosing a 'Multi' option from Identifier Type, enter name of ContentAsset. Instructions at https://github.com/GSA/uswds-sf-lightning-community/wiki/Theme-Settings#second-agency-logo-asset-name"
   />
 </design:component>
