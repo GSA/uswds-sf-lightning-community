@@ -1,0 +1,537 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <aura:attribute name="profileMenu" type="Aura.Component[]" required="false" />
+
+  <div class="slds-grid slds-wrap">
+    <div class="slds-text-heading_large">Theme Style Guide</div>
+    <!-- this is a template card-->
+    <!--<div class="slds-col slds-size_1-of-1 slds-p-top_small">
+      <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <a
+                  href="#"
+                  class="slds-card__header-link slds-truncate"
+                  title="Accounts"
+                >
+                  <span>TITLE</span>
+                </a>
+              </h2>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">Card Body</div>
+      </article>
+    </div>-->
+    <!-- END template-->
+    <div class="slds-col slds-size_1-of-1 slds-p-top_small">
+      <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <a
+                  href="#"
+                  class="slds-card__header-link slds-truncate"
+                  title="Accounts"
+                >
+                  <span>Background</span>
+                </a>
+              </h2>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+          <p>
+            The following component is built to help teams identify where
+            branding set colors may impact default colors used by various
+            buttons and inputs. In some instances, the color of text matches the
+            background, Inspect Element from the browser to investigate further
+            if nothing is shown.
+          </p>
+          <p>
+            If icons do not appear in the left hand column, please be sure to
+            add the FontAwesome.js files.
+          </p>
+        </div>
+      </article>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-p-top_small">
+      <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <a
+                  href="#"
+                  class="slds-card__header-link slds-truncate"
+                  title="Accounts"
+                >
+                  <span>Theme Colors</span>
+                </a>
+              </h2>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+          <div class="slds-card__body slds-card__body_inner">
+            <p>
+              This section focuses on the colors that are themeable via branding
+              sets. References:
+              <ul>
+                <li>
+                  <a
+                    href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/tokens_standard_communities.htm"
+                    >https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/tokens_standard_communities.htm</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.lightningdesignsystem.com/design-tokens/#category-text-color"
+                    >https://www.lightningdesignsystem.com/design-tokens/#category-text-color</a
+                  >
+                </li>
+              </ul>
+            </p>
+            <table
+              class="slds-table slds-table_cell-buffer slds-table_bordered"
+            >
+              <thead>
+                <tr>
+                  <th>Color</th>
+                  <th>Theme Branding Name</th>
+                  <th>Maps to these design tokens</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <i
+                      aura:id="faicon"
+                      class="fas fa-circle fa-3x COLOR_TEXT_DEFAULT"
+                    ></i>
+                  </td>
+                  <td>Body text color</td>
+                  <td>
+                    <ul>
+                      <li>t(colorTextDefault)</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i
+                      aura:id="faicon"
+                      class="fas fa-circle fa-3x DETAIL_TEXT_COLOR"
+                    ></i>
+                  </td>
+                  <td><span>Detail Text Color</span></td>
+                  <td>
+                    <ul>
+                      <li>colorTextActionLabel</li>
+                      <li>colorTextLabel</li>
+                      <li>colorTextPlaceholder</li>
+                      <li>colorTextWeak</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="dot ACTION_COLOR"></span>
+                  </td>
+                  <td><span>Action Color</span></td>
+                  <td>
+                    <ul>
+                      <li>colorBackgroundButtonBrand</li>
+                      <li>colorBorderBrand</li>
+                      <li>colorBorderButtonBrand</li>
+                      <li>colorBrand</li>
+                      <li>colorTextBrand</li>
+                      <li>colorTextTabLabelSelected</li>
+                      <li>colorTextActionLabelActive</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="fa-stack fa-2x" style="vertical-align: top"
+                      ><i class="far fa-circle fa-stack-2x BLACK"></i
+                      ><i class="fas fa-circle fa-stack-1x COLOR_TEXT_LINK"></i>
+                    </span>
+                  </td>
+                  <td><span>Link Color</span></td>
+                  <td>
+                    <ul>
+                      <li>colorTextLink</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="fa-stack fa-2x" style="vertical-align: top">
+                      <i class="far fa-circle fa-stack-2x BLACK"></i>
+                      <i
+                        class="fas fa-circle fa-stack-1x OVERLAY_TEXT_COLOR"
+                      ></i>
+                    </span>
+                  </td>
+                  <td><span>Overlay Text Color</span></td>
+                  <td>
+                    <ul>
+                      <li>colorTextButtonBrand</li>
+                      <li>colorTextButtonBrandHover</li>
+                      <li>colorTextInverse</li>
+                    </ul>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <span class="dot BORDER_COLOR"></span>
+                  </td>
+                  <td><span>Border Color</span></td>
+                  <td>
+                    <ul>
+                      <li>colorBorder</li>
+                      <li>colorBorderButtonDefault</li>
+                      <li>colorBorderInput</li>
+                      <li>colorBorderSeparatorAlt</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- Buttons -->
+    <div class="slds-col slds-size_1-of-1 slds-p-top_small">
+      <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <a
+                  href="#"
+                  class="slds-card__header-link slds-truncate"
+                  title="Accounts"
+                >
+                  <span>Buttons</span>
+                </a>
+              </h2>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+          <p>
+            References:
+            <a href="https://www.lightningdesignsystem.com/components/buttons/"
+              >https://www.lightningdesignsystem.com/components/buttons/</a
+            >
+          </p>
+          <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+              <tr>
+                <th>Output</th>
+                <th>Markup</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><button class="slds-button">Button</button></td>
+
+                <td>
+                  <pre>
+                      <code>
+                        &lt;button class="slds-button"&gt;Button&lt;/button&gt; 
+                      </code>
+                    </pre>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="slds-button slds-button_neutral">
+                    Neutral Button
+                  </button>
+                </td>
+
+                <td>
+                  <pre>
+                    <code>
+                      &lt;button class="slds-button slds-button_neutral"&gt;Neutral Button&lt;/button&gt; 
+                    </code>
+                  </pre>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="slds-button slds-button_brand">
+                    Brand Button
+                  </button>
+                </td>
+
+                <td>
+                  <pre>
+                      <code>
+                        &lt;button class="slds-button slds-button_brand"&gt;Brand Button&lt;/button&gt; 
+                      </code>
+                    </pre>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="slds-button slds-button_outline-brand">
+                    Outline Brand Button
+                  </button>
+                </td>
+
+                <td>
+                  <pre>
+                      <code>
+                        &lt;button class="slds-button slds-button_outline-brand"&gt;Outline Brand Button&lt;/button&gt; 
+                      </code>
+                    </pre>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="slds-button slds-button_destructive">
+                    Destructive Button
+                  </button>
+                </td>
+
+                <td>
+                  <pre>
+                      <code>
+                        &lt;button class="slds-button slds-button_destructive"&gt;Destructive Button&lt;/button&gt;
+                      </code>
+                    </pre>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="slds-button slds-button_text-destructive">
+                    Text Destructive Button
+                  </button>
+                </td>
+
+                <td>
+                  <pre>
+                      <code>
+                        &lt;button class="slds-button slds-button_text-destructive"&gt;Text Destructive Button&lt;/button&gt; 
+                      </code>
+                    </pre>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="slds-button slds-button_success">
+                    Success Button
+                  </button>
+                </td>
+
+                <td>
+                  <pre>
+                    <code>
+                      &lt;button class="slds-button slds-button_success"&gt;Success Button&lt;/button&gt;
+                    </code>
+                  </pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </div>
+
+    <!-- Tabs-->
+    <div class="slds-col slds-size_1-of-1 slds-p-top_small">
+      <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <a
+                  href="#"
+                  class="slds-card__header-link slds-truncate"
+                  title="Accounts"
+                >
+                  <span>Tabs</span>
+                </a>
+              </h2>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+          <lightning:tabset
+            aura:id="primarytabs1"
+            variant="scoped"
+            class="slds-tabs_large slds-tabs_card"
+            selectedTabId="tab1"
+          >
+            <lightning:tab id="tab1" label="Tab 1" class="slds-show">
+              <div></div>
+            </lightning:tab>
+            <lightning:tab id="tab2" label="Tab 2">
+              <div></div>
+            </lightning:tab>
+            <lightning:tab id="tab3" label="Tab 3">
+              <div></div>
+            </lightning:tab>
+            <lightning:tab id="tab4" label="Tab 4"> <div></div> </lightning:tab
+          ></lightning:tabset>
+        </div>
+      </article>
+    </div>
+    <div class="slds-col slds-size_1-of-2 slds-p-top_small">
+      <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <a
+                  href="#"
+                  class="slds-card__header-link slds-truncate"
+                  title="Accounts"
+                >
+                  <span>Profile Menu</span>
+                </a>
+              </h2>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+          <h3>User Profile Menu Link</h3>
+          <div data-region-name="profileMenu">
+            <div class="ui-widget" data-priority="">
+              <div
+                class="uiMenu selfServiceUserProfileMenu"
+                data-aura-class="uiMenu selfServiceUserProfileMenu"
+              >
+                <div
+                  id="3:58;a"
+                  class="uiPopupTrigger selfServiceProfileMenuTrigger"
+                  data-aura-class="uiPopupTrigger selfServiceProfileMenuTrigger"
+                  data-interactive-uid="3"
+                >
+                  <div>
+                    <div>
+                      <a
+                        class="trigger-link"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Jane Doe"
+                        href="javascript:void(0);"
+                      >
+                        <img
+                          class="profileIcon"
+                          alt=""
+                          src="/profilephoto/005/T"
+                          title="Jane Doe"
+                        />
+                        <span class="profileName">Jane Doe</span>
+                        <span class="triggerDownArrow down-arrow"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="menuList popupTargetContainer uiPopupTarget uiMenuList uiMenuList--default visible positioned"
+                  data-aura-class="uiPopupTarget uiMenuList uiMenuList--default"
+                >
+                  <div class="menuList" role="menu">
+                    <ul class="scrollable" role="presentation">
+                      <li
+                        class="home uiMenuItem"
+                        role="presentation"
+                        data-aura-class="uiMenuItem"
+                      >
+                        <a
+                          href="javascript:void(0);"
+                          role="menuitem"
+                          aria-disabled="false"
+                          tabindex="0"
+                          title="Home"
+                          >Home</a
+                        >
+                      </li>
+                      <li
+                        class="profile uiMenuItem"
+                        role="presentation"
+                        data-aura-class="uiMenuItem"
+                      >
+                        <a
+                          href="javascript:void(0);"
+                          role="menuitem"
+                          aria-disabled="false"
+                          tabindex="0"
+                          title="My Profile"
+                          >My Profile</a
+                        >
+                      </li>
+                      <li
+                        class="logOut uiMenuItem"
+                        role="presentation"
+                        data-aura-class="uiMenuItem"
+                      >
+                        <a
+                          href="javascript:void(0);"
+                          role="menuitem"
+                          aria-disabled="false"
+                          tabindex="0"
+                          title="Logout"
+                          >Logout</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="slds-col slds-size_1-of-2 slds-p-top_small">
+      <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <a
+                  href="#"
+                  class="slds-card__header-link slds-truncate"
+                  title="Accounts"
+                >
+                  <span>Login Link</span>
+                </a>
+              </h2>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+          <h3>Login Link</h3>
+          <div>
+            <div class="ui-widget">
+              <div
+                class="login-wrapper selfServiceUserProfileMenu"
+                data-aura-class="selfServiceUserProfileMenu"
+              >
+                <div class="login">
+                  <a class="login-link" title="Login" href="javascript:void(0);"
+                    ><span class="linkLabel">Login</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</aura:component>
