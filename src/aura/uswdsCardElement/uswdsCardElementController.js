@@ -12,8 +12,6 @@
     var cardsPerRow = cmp.get("v.cardElement.cardsPerRow");
 
     var cardLi = cmp.find("uswdsCard-li");
-    var cardHeaderTop = cmp.find("uswdsCard-headerTop");
-    var cardHeaderLower = cmp.find("uswdsCard-headerLower");
     var cardMedia = cmp.find("uswdsCard-media");
     var flagLi = cmp.find("uswdsFlag-li");
 
@@ -38,11 +36,8 @@
     if (cardType == "Card") {
       $A.util.addClass(cardMedia, "nodisplay");
     }
-    if (cardType == "Card with Media") {
-      $A.util.addClass(cardHeaderTop, "nodisplay");
-    }
-    if (cardType != "Card with Media") {
-      $A.util.addClass(cardHeaderLower, "nodisplay");
+    if (cardType == "Media and Header First") {
+      $A.util.addClass(cardLi, "usa-card--header-first");
     }
 
     /* Flag Right */
