@@ -14,7 +14,7 @@
   fill: t(colorTextDefault);
 }
 .THIS .COLOR_TEXT_ERROR {
-  color: t(colorTextError)
+  color: t(colorTextError);
 }
 .THIS .DETAIL_TEXT_COLOR {
   fill: t(colorTextLabel);
