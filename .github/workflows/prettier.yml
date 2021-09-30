@@ -1,0 +1,23 @@
+name:
+  Prettier Action
+  # You may pin to the exact commit or the version.
+  # uses: creyD/prettier_action@0b655e298cc5c8477c9df9e60dfb6cd5d79f3055
+  # This action works with pull requests and pushes
+on:
+  pull_request:
+  push:
+    branches:
+      - develop
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # Make sure the actual branch is checked out when running on pull requests
+          ref: ${{ github.head_ref }}
+      - name: Prettify code
+        uses: creyD/prettier_action@v4.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
