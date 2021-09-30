@@ -4,7 +4,8 @@ name:
   # uses: creyD/prettier_action@0b655e298cc5c8477c9df9e60dfb6cd5d79f3055
   # This action works with pull requests and pushes
 on:
-  pull_request:
+  ## this ensures the update runs against the fork branch
+  pull_request_target:
   push:
     branches:
       - develop
@@ -15,7 +16,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
+          # Make sure the actual branch is checked out when running on pull requests
+          ref: ${{ github.head_ref }}
       - name: Prettify code
         uses: creyD/prettier_action@v4.0
         with:
