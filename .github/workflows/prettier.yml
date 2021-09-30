@@ -29,4 +29,4 @@ jobs:
       - name: Prettify code
         uses: creyD/prettier_action@v4.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PAT-USWDS-SF-LIGHTNING-COMMUNITY }}
