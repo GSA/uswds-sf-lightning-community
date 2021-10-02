@@ -1,8 +1,8 @@
-name: Prettier
+name:
+  Prettier
   # You may pin to the exact commit or the version.
   # uses: creyD/prettier_action@0b655e298cc5c8477c9df9e60dfb6cd5d79f3055
   # This action works with pull requests and pushes
-  
 
 on:
   ## this ensures the update runs against the fork branch
@@ -27,5 +27,6 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Prettify code
-        run: npm i
-        run: npx prettier --check .
+        run: |
+          npm i
+          npx prettier --check .
