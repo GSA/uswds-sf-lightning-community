@@ -28,6 +28,8 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Prettify code
-        uses: creyD/prettier_action@v4.0
-        with:
-          github_token: ${{ secrets.PAT-USWDS-SF-LIGHTNING-COMMUNITY }}
+        - uses: actions/setup-node@v2
+          with:
+            node-version: '16'
+        - run: npm i
+        - run: npx prettier --check .
