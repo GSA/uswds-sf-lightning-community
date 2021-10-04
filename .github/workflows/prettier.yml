@@ -27,6 +27,9 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Prettify code
-        run: |
-          npm i
-          npx prettier --write .
+        uses: creyD/prettier_action@v4.0
+        with:
+          prettier_options: --write .
+          only_changed: True
+          # Set your custom token
+          github_token: ${{ secrets.PAT-USWDS-SF-LIGHTNING-COMMUNITY }}
