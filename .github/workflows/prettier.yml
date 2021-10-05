@@ -27,9 +27,13 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Prettify code
-        uses: creyD/prettier_action@v4.0
-        with:
-          prettier_options: --write .
-          only_changed: True
+        run: |
+          npm i
+          npx prettier --check .
+          npx prettier --write .
+          echo `git add -A && git commit -m "Action - Prettified Code"`
           # Set your custom token
-          github_token: ${{ secrets.PAT-USWDS-SF-LIGHTNING-COMMUNITY }}
+          # github_token: ${{ secrets.PAT-USWDS-SF-LIGHTNING-COMMUNITY }}
+          
+          
+
