@@ -29,7 +29,6 @@ jobs:
       - name: Prettify code
         run: |
           npm i
-          npx prettier --check .
           npx prettier --write .
           echo `git add -A && git commit -m "Action - Prettified Code"`
           # Set your custom token
