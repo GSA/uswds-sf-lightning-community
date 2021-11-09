@@ -45,7 +45,7 @@
     <defaultBrandingSet>USWDS_Lightning_Community</defaultBrandingSet>
     <description>A US Web Design System Theme for Lightning Communities. Contribute at https://github.com/GSA/uswds-sf-lightning-community</description>
     <enableExtendedCleanUpOnDelete>true</enableExtendedCleanUpOnDelete>
-    <masterLabel>USWDS Lightning Community</masterLabel>
+    <masterLabel>USWDS v1.4.0</masterLabel>
     <publisher>U.S. GSA</publisher>
     <themeSetting>
         <themeLayout>USWDS_Lightning_Community_themeLayout_Login</themeLayout>
