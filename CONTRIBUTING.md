@@ -36,3 +36,59 @@ When creating a new feature, one should think about the broad variety of uses fo
 ## Establishing a Development Environment
 
 Using Salesforce [Scratch Orgs](https://help.salesforce.com/s/articleView?id=sf.managing_scratch_orgs.htm&type=5) is the easiest way to get up and running with the repository. See [INSTALLATION](INSTALLATION.md#sfdx-instructions) for specific instructions to deploy this code base to a fresh environment with SFDX.
+
+## Testing
+
+Lightning Testing Service is used to run automated Jasmine tests against each component. Tests are captured in the `test/staticresources` directory and named using the following pattern, `uswds_lts_{component name}`.
+
+### Testing Principles
+
+Tests should follow the [Arrange, Act, Assert](https://integralpath.blogs.com/thinkingoutloud/2005/09/principles_of_t.html) principle. As a result, muliple assertions may be present in a given test. For example, the following contains two assertions (`expect()`) within a single test so as to verify all relevant text is present.
+
+```javascript
+describe("USA Banner", function () {
+  it("Displays default banner text", function (done) {
+    $T.createComponent("c:uswdsUSABanner", {}, true).then(function (component) {
+      expect(
+        document.getElementsByClassName("usa-banner__header-text")[0]
+          .textContent
+      ).toContain("An official website of the United States government");
+      expect(
+        document.getElementsByClassName("usa-banner__header-action")[0]
+          .textContent
+      ).toContain("Here’s how you know");
+    });
+  });
+});
+```
+
+### Installing Lightning Testing Service
+
+Lightning Testing Service is no longer maintained. As a result, dependencies are out of date. GSA has forked the repository and it can be used instead.
+
+`sfdx update`
+`sfdx plugins:install plugin-lightning-testing-service`
+Navigate to the local directory where the plugin has been installed. `/Users/yourName/.local/share/sfdx`
+Update package.json
+
+need to figure out how to point folks at GSA's clone of this and install it -- https://remarkablemark.org/blog/2016/09/19/npm-install-from-github/
+
+### Creating New Tests
+
+Test `describe` and `it` statements should read as sentences so as to be readily consumed by a developer or site manager.
+If creating a new component, a brand new static resource needs to be created. SFDX provides a shortcut,
+
+`sfdx force:lightning:test:create -d test/staticresources -n uswds_lts_{component name}`
+
+You can subsequently add the new test to the package.xml
+
+`sfdx force:source:manifest:create --sourcepath test --manifestname test/package.xml`
+
+### Deploying Tests
+
+`sfdx force:source:deploy -p test/ -u {username}`
+
+### Running Tests
+
+At this time, running tests directly in the terminal does not work. The issue is tracked in GitHub at [#108](https://github.com/GSA/uswds-sf-lightning-community/issues/108)
+`sfdx force:org:open -p /c/jasmineTests.app -u {username}`
