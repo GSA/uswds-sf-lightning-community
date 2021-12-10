@@ -32,3 +32,7 @@ In the interest of making it easier for our contributors to manage site issues, 
 We use Prettier as the default formatter for our code. This ensures a consistent product across all files an enhances readability. More information about Prettier can be found at [https://prettier.io/](https://prettier.io/).
 
 When creating a new feature, one should think about the broad variety of uses for a given component and design it in such a way that the end user can adjust via Experience Builder as needed. If making changes to the theme itself, `uswdsTheme`, provide the ability to toggle a component on/off or have it collapse down to zero height if not in use.
+
+## Establishing a Development Environment
+
+Using Salesforce [Scratch Orgs](https://help.salesforce.com/s/articleView?id=sf.managing_scratch_orgs.htm&type=5) is the easiest way to get up and running with the repository. See [INSTALLATION](INSTALLATION.md#sfdx-instructions) for specific instructions to deploy this code base to a fresh environment with SFDX.
