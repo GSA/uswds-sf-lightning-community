@@ -26,22 +26,26 @@
           <h1>{!v.pageContent.heading}</h1>
 
           <!-- Explain what caused the error in the lead text -->
-          <p class="usa-intro"> {!v.pageContent.intro} </p>
+          <p class="usa-intro">{!v.pageContent.intro}</p>
 
           <!-- Provide instructions how the user can address or fix the error -->
           <p>
             {!v.pageContent.instructions}&nbsp;
             <strong>{!v.urlPattern}</strong>.
           </p>
-          <p> {!v.pageContent.additionalInstructions} </p>
+          <p>{!v.pageContent.additionalInstructions}</p>
 
           <!-- Use buttons for main actions user can take, such as visiting the homepage or a contact page -->
           <div class="margin-y-5">
             <ul class="usa-button-group">
               <li class="usa-button-group__item">
-                <a href="javascript:void();" class="usa-button">
+                <button
+                  class="usa-button"
+                  type="button"
+                  onclick="{!c.gotoHome}"
+                >
                   {!v.pageContent.homePageText}
-                </a>
+                </button>
               </li>
               <aura:if isTrue="{! not(empty(v.formName))}">
                 <li class="usa-button-group__item">
@@ -81,9 +85,9 @@
             </ul>
           </aura:if>
           <!-- Error code if appropriate -->
-          <p class="text-base"
-            ><strong>{!v.pageContent.errorCodeText}</strong> 404</p
-          >
+          <p class="text-base">
+            <strong>{!v.pageContent.errorCodeText}</strong> 404
+          </p>
         </div>
       </div>
     </div>
