@@ -1,0 +1,20 @@
+{
+  "packageDirectories": [
+    {
+      "path": "examples",
+      "default": true
+    },
+    {
+      "path": "src",
+      "default": true
+    },
+    {
+      "path": "test",
+      "default": true
+    }
+  ],
+  "name": "uswds-lightning-community-theme",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "48.0"
+}

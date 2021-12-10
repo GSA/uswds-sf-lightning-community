@@ -37,7 +37,7 @@ When creating a new feature, one should think about the broad variety of uses fo
 
 Lightning Testing Service is used to run automated Jasmine tests against each component. Tests are captured in the `test/staticresources` directory and named using the following pattern, `uswds_lts_{component name}`.
 
-Testing instructions are written with using commands from the SFDX CLI as it saves a number of steps. That being said, regular ANT commands will still work to deploy tests. 
+Testing instructions are written with using commands from the SFDX CLI as it saves a number of steps. That being said, regular ANT commands will still work to deploy tests.
 
 ### Testing Principles
 
@@ -59,9 +59,10 @@ describe("USA Banner", function () {
   });
 });
 ```
+
 ### Deploying Tests
 
-`sfdx force:source:deploy -p test/ -u {username}`
+`sfdx force:mdapi:deploy -d test/ -u {username} -w 50`
 
 ### Running Tests
 
@@ -71,7 +72,8 @@ At this time, running tests directly in the terminal does not work. The issue is
 
 ### Creating New Tests
 
-Test `describe` and `it` statements should read as sentences so as to be readily consumed by a developer or site manager. 
+Test `describe` and `it` statements should read as sentences so as to be readily consumed by a developer or site manager.
+
 If creating a new component, a brand new static resource needs to be created. SFDX provides a shortcut,
 
 `sfdx force:lightning:test:create -d test/staticresources -n uswds_lts_{component name}`
