@@ -2,6 +2,17 @@
 
 Installation of this repository requires a working knowledge of the Salesforce Ant Migration Tool. More details can be found at [https://help.salesforce.com/articleView?id=sf.code_tools_ant_using.htm&type=5](https://help.salesforce.com/articleView?id=sf.code_tools_ant_using.htm&type=5).
 
+- [Installation](#installation)
+  - [Dependencies](#dependencies)
+  - [SFDX Instructions](#sfdx-instructions)
+    - [Pre-Requisites](#pre-requisites)
+    - [Steps](#steps)
+  - [ANT Instructions](#ant-instructions)
+    - [Experience Builder Setup](#experience-builder-setup)
+      - [Navigation Menu Setup](#navigation-menu-setup)
+      - [Change Theme Layout and Settings](#change-theme-layout-and-settings)
+      - [Add Font Awesome JS](#add-font-awesome-js)
+
 ## Dependencies
 
 - Font Awesome
@@ -9,7 +20,20 @@ Installation of this repository requires a working knowledge of the Salesforce A
   - Register with Font Awesome to create icon kits, [https://fontawesome.com/start](https://fontawesome.com/start). You'll receive a JS snippet to include in your site. Hold onto that for later.
 - Ant-salesforce.jar >49.0
 
-## Instructions
+## SFDX Instructions
+
+### Pre-Requisites
+
+- SFDX CLI Tools
+- Salesforce Dev Hub Org
+
+### Steps
+
+- `sfdx force:org:create -f config/scratch-def.json -a {scratchOrgName}`
+- `sfdx force:mdapi:deploy -d src/ -u {scratchOrgName} -w 100`
+- `sfdx force:org:open -u {scratchOrgName}`
+
+## ANT Instructions
 
 - Clone this repository
 - Enable Communities in your Salesforce org (Setup > Digital Experiences > Settings. Select Enable Digital Experiences.)

@@ -82,3 +82,6 @@ build.xml
 retrieveUnpackaged/
 retrieveUnpackagedstatic/
 static/
+
+# Zip files
+*.zip
