@@ -66,7 +66,7 @@ describe("USA Banner", function () {
 
 ### Deploying Tests
 
-`sfdx force:source:deploy -p test/ -u {username}`
+`sfdx force:mdapi:deploy -d test/ -u {username} -w 50`
 
 ### Running Tests
 
@@ -77,6 +77,7 @@ At this time, running tests directly in the terminal does not work. The issue is
 ### Creating New Tests
 
 Test `describe` and `it` statements should read as sentences so as to be readily consumed by a developer or site manager.
+
 If creating a new component, a brand new static resource needs to be created. SFDX provides a shortcut,
 
 `sfdx force:lightning:test:create -d test/staticresources -n uswds_lts_{component name}`
