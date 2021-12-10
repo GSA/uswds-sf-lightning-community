@@ -39,7 +39,11 @@
           <div class="margin-y-5">
             <ul class="usa-button-group">
               <li class="usa-button-group__item">
-                <button class="usa-button" onclick="{!c.gotoHome}">
+                <button
+                  class="usa-button"
+                  type="button"
+                  onclick="{!c.gotoHome}"
+                >
                   {!v.pageContent.homePageText}
                 </button>
               </li>
