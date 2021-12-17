@@ -1,16 +1,16 @@
 {
   "packageDirectories": [
     {
-      "path": "examples",
-      "default": true
-    },
-    {
       "path": "src",
       "default": true
     },
     {
+      "path": "examples",
+      "default": false
+    },
+    {
       "path": "test",
-      "default": true
+      "default": false
     }
   ],
   "name": "uswds-lightning-community-theme",
