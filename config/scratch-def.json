@@ -6,10 +6,12 @@
     "communitiesSettings": {
       "enableNetworksEnabled": true
     },
+    "experienceBundleSettings": {
+      "enableExperienceBundleMetadata": true
+    },
     "securitySettings": {
       "sessionSettings": {
         "lockerServiceNext": false
       }
-    }
   }
 }
