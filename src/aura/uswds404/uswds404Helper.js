@@ -2,7 +2,7 @@
   getContent: function (value) {
     var content = {
       English: {
-        heading: "Page Note Found",
+        heading: "Page not found",
         intro:
           "We’re sorry, we can’t find the page you're looking for. It might have been removed, changed its name, or is otherwise unavailable.",
         instructions:

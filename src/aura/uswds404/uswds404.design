@@ -10,7 +10,8 @@
   <design:attribute
     name="urlPattern"
     label="URL Pattern"
-    description="Enter a typical URL pattern that is used for this site e.g. '/s/my-page/00100000acdEF'"
+    description="Enter a typical URL pattern that is used for this site e.g. 'example.gov/s/my-page/00100000acdEF'"
+    placeholder="example.gov/s/"
   />
   <design:attribute
     name="formName"
