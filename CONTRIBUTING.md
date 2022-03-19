@@ -2,6 +2,17 @@
 
 We're so glad you're thinking about contributing to a U.S. Government open source project! If you're unsure about anything, just ask -- or submit the issue or pull request anyway. The worst that can happen is you'll be politely asked to change something. We love all friendly contributions.
 
+- [How to contribute to this project](#how-to-contribute-to-this-project)
+- [Public domain](#public-domain)
+- [Issue Guidelines](#issue-guidelines)
+- [Code Guidelines](#code-guidelines)
+- [Establishing a Development Environment](#establishing-a-development-environment)
+- [Testing](#testing)
+  - [Testing Principles](#testing-principles)
+  - [Deploying Tests](#deploying-tests)
+  - [Running Tests](#running-tests)
+  - [Creating New Tests](#creating-new-tests)
+
 ## How to contribute to this project
 
 - We want to ensure a welcoming environment for all of our projects. Our staff follows this [Code of Conduct](CODE_OF_CONDUCT.md) and all contributors should do the same.
@@ -82,6 +93,8 @@ If creating a new component, a brand new static resource needs to be created. SF
 
 `sfdx force:lightning:test:create -d test/staticresources -n uswds_lts_{component name}`
 
-Once the test has been created, a reference to it needs to be added to the jasmineTests.app file. Additionally, the new staticresource should be added to package.xml which can be taken care of by the following sfdx command. This command also supports the removal of files.
+Once the test has been created, it should be referenced in `test/aura/jasmineTests/jasmineTests.app`.
+
+Additionally, the new staticresource should be added to package.xml which can be taken care of by the following sfdx command. This command also supports the removal of files.
 
 `sfdx force:source:manifest:create --sourcepath test --manifestname test/package.xml`
