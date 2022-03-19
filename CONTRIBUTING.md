@@ -2,6 +2,17 @@
 
 We're so glad you're thinking about contributing to a U.S. Government open source project! If you're unsure about anything, just ask -- or submit the issue or pull request anyway. The worst that can happen is you'll be politely asked to change something. We love all friendly contributions.
 
+- [How to contribute to this project](#how-to-contribute-to-this-project)
+- [Public domain](#public-domain)
+- [Issue Guidelines](#issue-guidelines)
+- [Code Guidelines](#code-guidelines)
+- [Establishing a Development Environment](#establishing-a-development-environment)
+- [Testing](#testing)
+  - [Testing Principles](#testing-principles)
+  - [Deploying Tests](#deploying-tests)
+  - [Running Tests](#running-tests)
+  - [Creating New Tests](#creating-new-tests)
+
 ## How to contribute to this project
 
 - We want to ensure a welcoming environment for all of our projects. Our staff follows this [Code of Conduct](CODE_OF_CONDUCT.md) and all contributors should do the same.
@@ -36,3 +47,54 @@ When creating a new feature, one should think about the broad variety of uses fo
 ## Establishing a Development Environment
 
 Using Salesforce [Scratch Orgs](https://help.salesforce.com/s/articleView?id=sf.managing_scratch_orgs.htm&type=5) is the easiest way to get up and running with the repository. See [INSTALLATION](INSTALLATION.md#sfdx-instructions) for specific instructions to deploy this code base to a fresh environment with SFDX.
+
+## Testing
+
+Lightning Testing Service is used to run automated Jasmine tests against each component. Tests are captured in the `test/staticresources` directory and named using the following pattern, `uswds_lts_{component name}`.
+
+Testing instructions are written with using commands from the SFDX CLI as it saves a number of steps. That being said, regular ANT commands will still work to deploy tests.
+
+### Testing Principles
+
+Tests should follow the [Arrange, Act, Assert](https://integralpath.blogs.com/thinkingoutloud/2005/09/principles_of_t.html) principle. As a result, muliple assertions may be present in a given test. For example, the following contains two assertions (`expect()`) within a single test so as to verify all relevant text is present.
+
+```javascript
+describe("USA Banner", function () {
+  it("Displays default banner text", function (done) {
+    $T.createComponent("c:uswdsUSABanner", {}, true).then(function (component) {
+      expect(
+        document.getElementsByClassName("usa-banner__header-text")[0]
+          .textContent
+      ).toContain("An official website of the United States government");
+      expect(
+        document.getElementsByClassName("usa-banner__header-action")[0]
+          .textContent
+      ).toContain("Here’s how you know");
+    });
+  });
+});
+```
+
+### Deploying Tests
+
+`sfdx force:mdapi:deploy -d test/ -u {username} -w 50`
+
+### Running Tests
+
+At this time, running tests directly in the terminal does not work. The issue is tracked in GitHub at [#108](https://github.com/GSA/uswds-sf-lightning-community/issues/108). Instead, output of the tests can be seen in the org at {orgURL}/c/jasmineTests.app. With SFDX, you can go straight there by entering the following into your terminal.
+
+`sfdx force:org:open -p /c/jasmineTests.app -u {username}`
+
+### Creating New Tests
+
+Test `describe` and `it` statements should read as sentences so as to be readily consumed by a developer or site manager.
+
+If creating a new component, a brand new static resource needs to be created. SFDX provides a shortcut,
+
+`sfdx force:lightning:test:create -d test/staticresources -n uswds_lts_{component name}`
+
+Once the test has been created, it should be referenced in `test/aura/jasmineTests/jasmineTests.app`.
+
+Additionally, the new staticresource should be added to package.xml which can be taken care of by the following sfdx command. This command also supports the removal of files.
+
+`sfdx force:source:manifest:create --sourcepath test --manifestname test/package.xml`

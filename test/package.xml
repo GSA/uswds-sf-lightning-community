@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>jasmineTests</members>
+        <members>lts_jasmineRunner</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>lts_jasmine</members>
+        <members>lts_jasmineboot</members>
+        <members>lts_testutil</members>
+        <members>uswds_lts_search</members>
+        <members>uswds_lts_usaBanner</members>
+        <members>uswds_lts_uswdsTheme</members>
+        <name>StaticResource</name>
+    </types>
+    <version>53.0</version>
+</Package>

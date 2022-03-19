@@ -70,9 +70,6 @@ typings/
 *.swo
 *.swp
 
-# code.gov plugins
-/src/components/plugins
-
 # .DS_Store
 .DS_Store
 
@@ -82,6 +79,7 @@ build.xml
 retrieveUnpackaged/
 retrieveUnpackagedstatic/
 static/
+.sfdx
 
 # Zip files
 *.zip
