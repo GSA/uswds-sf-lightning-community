@@ -8,6 +8,10 @@
     {
       "files": "*.{cmp,page,component,design,auradoc}",
       "options": { "parser": "html" }
+    },
+    {
+      "files": "test/staticresources/*.resource",
+      "options": { "parser": "babel" }
     }
   ]
 }
