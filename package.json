@@ -13,6 +13,10 @@
     "prettier-plugin-apex": "^1.10.0",
     "sfdx-cli": "^7.142.0"
   },
+  "engines": {
+    "node": ">=16.15.1",
+    "npm": ">=8.12.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
