@@ -14,9 +14,7 @@ on:
 jobs:
   prettier:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
+    timeout-minutes: 10
     steps:
       - name: Set date
         id: date
