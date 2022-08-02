@@ -9,8 +9,13 @@
   },
   "devDependencies": {
     "axios": "^0.21.2",
-    "prettier": "2.4.1",
-    "prettier-plugin-apex": "^1.10.0"
+    "prettier": "^2.6.2",
+    "prettier-plugin-apex": "^1.10.0",
+    "sfdx-cli": "^7.162.0"
+  },
+  "engines": {
+    "node": ">=16.15.1",
+    "npm": ">=8.12.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,0 +1,10 @@
+{
+  "orgName": "USWDS Lightning Community Theme",
+  "edition": "Enterprise",
+  "features": ["Communities"],
+  "settings": {
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    }
+  }
+}

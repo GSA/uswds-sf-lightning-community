@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "test/staticresources/*.resource": "javascript",
+        "test/staticresources/*.resource-meta.xml": "xml"
+    }
+}
