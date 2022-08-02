@@ -19,7 +19,10 @@ jobs:
       - name: Set date
         id: date
         run: echo "::set-output name=date::$(date +'%Y%m%d')"
-      - uses: actions/checkout@v3
+      - name: Checkout repository using git
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.LIGHTNING_COMMUNITY_REPO }}
       - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
