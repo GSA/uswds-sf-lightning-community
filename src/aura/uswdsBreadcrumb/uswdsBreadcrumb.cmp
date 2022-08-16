@@ -34,7 +34,7 @@
         <!-- iterate-->
         <aura:iteration items="{!v.menuItems}" var="item" indexVar="index">
           <li
-            class="usa-breadcrubm__list-item"
+            class="usa-breadcrumb__list-item"
             property="itemListElement"
             typeof="ListItem"
           >

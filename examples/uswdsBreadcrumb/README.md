@@ -18,7 +18,7 @@ A selection of example wrapper components that utilize and pass data to the `usw
 - Create new community
 - Create new page > type: Object Page > Account
 
-- Insert Account records
+- Open Salesforce Developer Console > Execute Anonymous > insert Account records
 
 ```apex
 Account[] accts = new List<Account>();
