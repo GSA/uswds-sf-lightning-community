@@ -1,6 +1,7 @@
 ({
   doInit: function (component, event, helper) {
-    const wrapClass = component.get("v.wrap") ? "usa-breadcrumb--wrap" : "";
+    const wrapClass =
+      component.get("v.wrap") == "Yes" ? "usa-breadcrumb--wrap" : "";
     component.set("v.wrapClass", wrapClass);
   },
   onClick: function (component, event, helper) {

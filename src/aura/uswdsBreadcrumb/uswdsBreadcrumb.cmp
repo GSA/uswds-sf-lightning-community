@@ -8,24 +8,23 @@
   <aura:attribute
     name="navigationLinkSetId"
     type="String"
-    description="Accepts navigationLinkSetId or Developer Name of the corresponding Navigation Menu. This component expects a single-tiered menu, no sub-menu items."
+    description="Accepts navigationLinkSetId or Developer Name of the corresponding Navigation Menu. This component expects a multi-tiered menu, menu and sub-menu items."
   />
+
   <!-- components set via Component Edit Menu-->
-  <aura:attribute name="rdfa" type="boolean" />
-  <aura:attribute name="wrap" type="boolean" />
+  <aura:attribute name="rdfa" type="String" />
+  <aura:attribute name="wrap" type="String" />
   <aura:attribute name="pageName" type="String" />
 
   <!-- components set via controller -->
   <aura:attribute name="wrapClass" type="String" />
-  <aura:attribute name="rdfaOlAttributes" type="String" />
-  <aura:attribute name="breadcrumbAriaLabelList" type="String" />
 
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
   <!-- default -->
   <nav class="{! 'usa-breadcrumb ' + v.wrapClass}" aria-label="Breadcrumbs,,">
     <!-- rdfa -->
-    <aura:if isTrue="{!v.rdfa}">
+    <aura:if isTrue="{!v.rdfa == 'Yes'}">
       <ol
         class="usa-breadcrumb__list"
         vocab="http://schema.org/"
@@ -59,6 +58,7 @@
           <meta property="position" content="2" />
         </li>
       </ol>
+      <!-- non-rdfa list-->
       <aura:set attribute="else">
         <ol class="usa-breadcrumb__list" onclick="{!c.onClick}">
           <!-- iterate-->

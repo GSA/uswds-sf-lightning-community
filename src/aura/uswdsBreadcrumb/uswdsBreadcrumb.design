@@ -4,5 +4,19 @@
     default="Default_Navigation"
     label="Navigation Menu"
     required="true"
-  ></design:attribute>
+  />
+  <design:attribute
+    name="rdfa"
+    label="Structured Data"
+    datasource="Yes, No"
+    default="Yes"
+    description="Enables RDFa tags in the breadcrumb to increase consumption of site via search engines."
+  />
+  <design:attribute
+    name="wrap"
+    label="Text Wrap"
+    datasource="Yes, No"
+    default="Yes"
+    description="Wrap text if breadcrumb titles are lengthy"
+  />
 </design:component>
