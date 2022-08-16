@@ -1,0 +1,8 @@
+<design:component label="Breadcrumb">
+  <design:attribute
+    name="navigationLinkSetId"
+    default="Default_Navigation"
+    label="Navigation Menu"
+    required="true"
+  ></design:attribute>
+</design:component>
