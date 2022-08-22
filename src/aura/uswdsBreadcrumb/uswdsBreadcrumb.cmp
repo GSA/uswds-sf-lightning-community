@@ -11,69 +11,43 @@
     description="Accepts navigationLinkSetId or Developer Name of the corresponding Navigation Menu. This component expects a multi-tiered menu, menu and sub-menu items."
   />
 
-  <!-- components set via Component Edit Menu-->
-  <aura:attribute name="rdfa" type="String" />
+  <!-- attributes set via Component Edit Menu-->
   <aura:attribute name="wrap" type="String" />
-  <aura:attribute name="pageName" type="String" />
+  <aura:attribute name="pageTitle" type="String" />
 
-  <!-- components set via controller -->
+  <!-- attributes set via controller -->
   <aura:attribute name="wrapClass" type="String" />
+  <aura:attribute name="breadcrumbList" type="String" default="" />
 
+  <!-- handlers -->
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-
+  <aura:handler
+    name="childInit"
+    event="c:uswdsBreadcrumb_InitEvent"
+    action="{!c.handleChildComponentInitEvent}"
+  />
+  <aura:handler
+    name="clickEvent"
+    event="c:uswdsBreadcrumb_ClickEvent"
+    action="{!c.handleChildComponentClickEvent}"
+  />
   <!-- default -->
-  <nav class="{! 'usa-breadcrumb ' + v.wrapClass}" aria-label="Breadcrumbs,,">
-    <!-- rdfa -->
-    <aura:if isTrue="{!v.rdfa == 'Yes'}">
-      <ol
-        class="usa-breadcrumb__list"
-        vocab="http://schema.org/"
-        typeof="BreadcrumbList"
-        onclick="{!c.onClick}"
-      >
-        <!-- iterate-->
-        <aura:iteration items="{!v.menuItems}" var="item" indexVar="index">
-          <li
-            class="usa-breadcrumb__list-item"
-            property="itemListElement"
-            typeof="ListItem"
-          >
-            <a
-              class="usa-breadcrumb__link"
-              data-menu-item-id="{!item.id}"
-              property="item"
-              typeof="WebPage"
-              ><span>{!item.label}</span></a
-            >
-            <meta property="position" content="{!index}" />
-          </li>
-        </aura:iteration>
-        <li
-          class="usa-breadcrumb__list-item usa-current"
-          aria-current="page"
-          property="item"
-          typeof="WebPage"
-        >
-          <span>{!v.pageName}</span>
-          <meta property="position" content="2" />
-        </li>
-      </ol>
-      <!-- non-rdfa list-->
-      <aura:set attribute="else">
-        <ol class="usa-breadcrumb__list" onclick="{!c.onClick}">
-          <!-- iterate-->
-          <aura:iteration items="{!v.menuItems}" var="item" indexVar="index">
-            <li class="usa-breadcrubm__list-item">
-              <a class="usa-breadcrumb__link" data-menu-item-id="{!item.id}"
-                ><span>{!item.label}</span></a
-              >
-            </li>
-          </aura:iteration>
-          <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
-            <span>{!v.pageName}</span>
-          </li>
-        </ol>
-      </aura:set>
-    </aura:if>
+  <nav
+    class="{! 'usa-breadcrumb ' + v.wrapClass}"
+    aria-label="{!v.breadcrumbList}"
+  >
+    <ol class="usa-breadcrumb__list" aura:id="orderedList">
+      <!-- iterate-->
+      <aura:iteration items="{!v.menuItems}" var="item" indexVar="index">
+        <c:uswdsBreadcrumbElement
+          label="{!item.label}"
+          id="{!item.id}"
+          index="{!item.index}"
+        />
+      </aura:iteration>
+      <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
+        <span>{!v.pageTitle}</span>
+      </li>
+    </ol>
   </nav>
 </aura:component>

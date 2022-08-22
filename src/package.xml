@@ -5,6 +5,9 @@
         <members>fontAwesomeIcon</members>
         <members>uswds404</members>
         <members>uswdsBreadcrumb</members>
+        <members>uswdsBreadcrumbElement</members>
+        <members>uswdsBreadcrumb_InitEvent</members>
+        <members>uswdsBreadcrumb_ClickEvent</members>
         <members>uswdsCardList</members>
         <members>uswdsCardElement</members>
         <members>uswdsFooterNavMenu</members>

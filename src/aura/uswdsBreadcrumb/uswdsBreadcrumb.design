@@ -6,17 +6,15 @@
     required="true"
   />
   <design:attribute
-    name="rdfa"
-    label="Structured Data"
-    datasource="Yes, No"
-    default="Yes"
-    description="Enables RDFa tags in the breadcrumb to increase consumption of site via search engines."
-  />
-  <design:attribute
     name="wrap"
     label="Text Wrap"
     datasource="Yes, No"
     default="Yes"
     description="Wrap text if breadcrumb titles are lengthy"
+  />
+  <design:attribute
+    name="pageTitle"
+    label="Current Page Title"
+    description="Title of the current page"
   />
 </design:component>
