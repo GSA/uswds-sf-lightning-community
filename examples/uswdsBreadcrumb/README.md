@@ -15,18 +15,11 @@ The following example fetches Account records and inserts the Account Name into 
 
   `sfdx force:mdapi:deploy -d examples/uswdsBreadcrumb/ -w 100 -u {orgname}`
 
-- Open Salesforce Developer Console > Execute Anonymous > insert Account records
+- Run Apex code to add Account records
 
-```apex
-Account[] accts = new List<Account>();
-    accts.add(new Account(Name='Marietta Rocking Chairs',
-                            BillingCity='Marietta'));
-    accts.add(new Account(Name='Brunswick Stew Company',
-                            BillingCity='Brunswick'));
-    accts.add(new Account(Name='Georgia Peach Traders',
-                            BillingCity='Peachtree City'));
-insert accts;
-```
+  `sfdx force:apex:execute -f examples/uswdsBreadcrumb/createAccounts.apex -u {orgname}`
+
+  - If SFDX is not available, copy code from apex file and run anonymously in Dev Console. Open Salesforce Developer Console > Execute Anonymous > insert Account records
 
 - Navigate to Salesforce Setup
 - Create new community, Setup > Digital Experiences > All Sites > New
