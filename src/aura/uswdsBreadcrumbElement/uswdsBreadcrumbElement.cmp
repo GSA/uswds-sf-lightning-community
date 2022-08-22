@@ -1,4 +1,5 @@
 <aura:component>
+  <!-- this is a child element of uswdsBreadcrumb -->
   <aura:attribute name="label" type="String" />
   <aura:attribute name="id" type="String" />
   <aura:attribute name="index" type="Integer" />

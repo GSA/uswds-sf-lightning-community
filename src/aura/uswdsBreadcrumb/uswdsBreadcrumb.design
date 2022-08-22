@@ -1,4 +1,4 @@
-<design:component label="Breadcrumb">
+<design:component label="Breadcrumb - USWDS">
   <design:attribute
     name="navigationLinkSetId"
     default="Default_Navigation"
@@ -14,7 +14,7 @@
   />
   <design:attribute
     name="pageTitle"
-    label="Current Page Title"
+    label="Page Title"
     description="Title of the current page"
   />
 </design:component>
