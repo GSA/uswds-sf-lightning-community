@@ -2,16 +2,18 @@
 
 We're so glad you're thinking about contributing to a U.S. Government open source project! If you're unsure about anything, just ask -- or submit the issue or pull request anyway. The worst that can happen is you'll be politely asked to change something. We love all friendly contributions.
 
-- [How to contribute to this project](#how-to-contribute-to-this-project)
-- [Public domain](#public-domain)
-- [Issue Guidelines](#issue-guidelines)
-- [Code Guidelines](#code-guidelines)
-- [Establishing a Development Environment](#establishing-a-development-environment)
-- [Testing](#testing)
-  - [Testing Principles](#testing-principles)
-  - [Deploying Tests](#deploying-tests)
-  - [Running Tests](#running-tests)
-  - [Creating New Tests](#creating-new-tests)
+- [Welcome](#welcome)
+  - [How to contribute to this project](#how-to-contribute-to-this-project)
+  - [Public domain](#public-domain)
+  - [Issue Guidelines](#issue-guidelines)
+  - [Code Guidelines](#code-guidelines)
+  - [Establishing a Development Environment](#establishing-a-development-environment)
+  - [Creating a new Component](#creating-a-new-component)
+  - [Testing](#testing)
+    - [Testing Principles](#testing-principles)
+    - [Deploying Tests](#deploying-tests)
+    - [Running Tests](#running-tests)
+    - [Creating New Tests](#creating-new-tests)
 
 ## How to contribute to this project
 
@@ -48,6 +50,10 @@ When creating a new feature, one should think about the broad variety of uses fo
 
 Using Salesforce [Scratch Orgs](https://help.salesforce.com/s/articleView?id=sf.managing_scratch_orgs.htm&type=5) is the easiest way to get up and running with the repository. See [INSTALLATION](INSTALLATION.md#sfdx-instructions) for specific instructions to deploy this code base to a fresh environment with SFDX.
 
+## Creating a new Component
+
+`sfdx force:lightning:component:create -d src/aura -n {component name}`
+
 ## Testing
 
 Lightning Testing Service is used to run automated Jasmine tests against each component. Tests are captured in the `test/staticresources` directory and named using the following pattern, `uswds_lts_{component name}`.
@@ -77,7 +83,7 @@ describe("USA Banner", function () {
 
 ### Deploying Tests
 
-`sfdx force:mdapi:deploy -d test/ -u {username} -w 50`
+`sfdx force:mdapi:deploy -d test/ -w 50 -u {username}`
 
 ### Running Tests
 

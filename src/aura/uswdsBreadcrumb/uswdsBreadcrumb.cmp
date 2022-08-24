@@ -1,0 +1,43 @@
+<aura:component
+  extends="forceCommunity:navigationMenuBase"
+  implements="forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds-init.min.js'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+  <aura:attribute
+    name="navigationLinkSetId"
+    type="String"
+    description="Accepts navigationLinkSetId or Developer Name of the corresponding Navigation Menu. This component expects a multi-tiered menu, menu and sub-menu items."
+  />
+
+  <!-- attributes set via Component Edit Menu-->
+  <aura:attribute name="wrap" type="String" />
+  <aura:attribute name="pageTitle" type="String" />
+
+  <!-- attributes set via controller -->
+  <aura:attribute name="wrapClass" type="String" />
+
+  <!-- handlers -->
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <nav class="{! 'usa-breadcrumb ' + v.wrapClass}" aria-label="Breadcrumb">
+    <ol
+      class="usa-breadcrumb__list"
+      aura:id="orderedList"
+      onclick="{!c.onClick}"
+    >
+      <!-- iterate-->
+      <aura:iteration items="{!v.menuItems}" var="item" indexVar="index">
+        <li class="usa-breadcrumb__list-item" data-menu-item-id="{!item.id}">
+          <a class="usa-breadcrumb__link" data-menu-item-id="{!item.id}"
+            ><span data-menu-item-id="{!item.id}">{!item.label}</span></a
+          >
+        </li>
+      </aura:iteration>
+      <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
+        <span>{!v.pageTitle}</span>
+      </li>
+    </ol>
+  </nav>
+</aura:component>
