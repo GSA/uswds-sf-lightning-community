@@ -4,8 +4,18 @@ A selection of example wrapper components that utilize and pass data to the `usw
 
 ## Installation
 
-- Install parent uswds-sf-lightning-community package `ant deployCode -Dsf.deployRoot /src`
-- Install package `ant deployCode -Dsf.deployRoot /examples/uswdsCard`
+- Install parent uswds-sf-lightning-community package
+
+  `ant deployCode -Dsf.deployRoot /src`
+
+  `sfdx force:mdapi:deploy -d src -w 100 -u {orgname}`
+
+- Install this example package
+
+  `ant deployCode -Dsf.deployRoot /examples/uswdsCard`
+
+  `sfdx force:mdapi:deploy -d examples/uswdsCard/ -w 100 -u {orgname}`
+
 - Assign `ManagedContentControllerForLex` to the guest user profile of the test community
 
 ### Create CMS Content

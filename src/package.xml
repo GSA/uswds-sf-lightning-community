@@ -4,6 +4,7 @@
         <members>defaultTokens</members>
         <members>fontAwesomeIcon</members>
         <members>uswds404</members>
+        <members>uswdsBreadcrumb</members>
         <members>uswdsCardList</members>
         <members>uswdsCardElement</members>
         <members>uswdsFooterNavMenu</members>

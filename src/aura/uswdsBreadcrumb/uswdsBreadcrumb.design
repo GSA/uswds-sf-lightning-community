@@ -1,0 +1,20 @@
+<design:component label="Breadcrumb - USWDS">
+  <design:attribute
+    name="navigationLinkSetId"
+    default="Default_Navigation"
+    label="Navigation Menu"
+    required="true"
+  />
+  <design:attribute
+    name="wrap"
+    label="Text Wrap"
+    datasource="Yes, No"
+    default="Yes"
+    description="Wrap text if breadcrumb titles are lengthy"
+  />
+  <design:attribute
+    name="pageTitle"
+    label="Page Title"
+    description="Title of the current page"
+  />
+</design:component>

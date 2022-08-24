@@ -1,0 +1,28 @@
+<aura:component
+  implements="flexipage:availableForRecordHome, force:hasRecordId, forceCommunity:availableForAllPageTypes"
+  extends="forceCommunity:navigationMenuBase"
+>
+  <aura:attribute name="record" type="Object" />
+  <aura:attribute name="simpleRecord" type="Object" />
+  <aura:attribute name="recordError" type="String" />
+  <aura:attribute name="recordId" type="String" />
+  <aura:attribute
+    name="fields"
+    type="String[]"
+    default="['Name','BillingCity','Id']"
+  />
+  <force:recordData
+    aura:id="recordLoader"
+    recordId="{!v.recordId}"
+    targetFields="{!v.simpleRecord}"
+    targetError="{!v.recordError}"
+    recordUpdated="{!c.handleRecordUpdated}"
+    fields="{!v.fields}"
+  />
+
+
+  <c:uswdsBreadcrumb
+    navigationLinkSetId="accounts"
+    pageTitle="{!v.simpleRecord.Name}"
+  />
+</aura:component>
