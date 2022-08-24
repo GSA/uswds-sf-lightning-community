@@ -1,9 +1,0 @@
-<!--How to pass values from child to parent lightning aura component with Component Event _ Lightning Web Components, Aura Components
-https://www.salesforcepoint.com/2020/12/how-to-pass-values-from-child-to-parent.html
--->
-<aura:event
-  type="COMPONENT"
-  description="Event to pass values back to parent upon init"
->
-  <aura:attribute name="label" type="String" />
-</aura:event>

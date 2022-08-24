@@ -18,33 +18,22 @@
 
   <!-- attributes set via controller -->
   <aura:attribute name="wrapClass" type="String" />
-  <aura:attribute name="breadcrumbList" type="String" default="" />
 
   <!-- handlers -->
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-  <aura:handler
-    name="childInit"
-    event="c:uswdsBreadcrumb_InitEvent"
-    action="{!c.handleChildComponentInitEvent}"
-  />
-  <aura:handler
-    name="clickEvent"
-    event="c:uswdsBreadcrumb_ClickEvent"
-    action="{!c.handleChildComponentClickEvent}"
-  />
-
-  <nav
-    class="{! 'usa-breadcrumb ' + v.wrapClass}"
-    aria-label="{!v.breadcrumbList}"
-  >
-    <ol class="usa-breadcrumb__list" aura:id="orderedList">
+  <nav class="{! 'usa-breadcrumb ' + v.wrapClass}" aria-label="Breadcrumb">
+    <ol
+      class="usa-breadcrumb__list"
+      aura:id="orderedList"
+      onclick="{!c.onClick}"
+    >
       <!-- iterate-->
       <aura:iteration items="{!v.menuItems}" var="item" indexVar="index">
-        <c:uswdsBreadcrumbElement
-          label="{!item.label}"
-          id="{!item.id}"
-          index="{!item.index}"
-        />
+        <li class="usa-breadcrumb__list-item" data-menu-item-id="{!item.id}">
+          <a class="usa-breadcrumb__link" data-menu-item-id="{!item.id}"
+            ><span data-menu-item-id="{!item.id}">{!item.label}</span></a
+          >
+        </li>
       </aura:iteration>
       <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
         <span>{!v.pageTitle}</span>
