@@ -83,7 +83,7 @@ describe("USA Banner", function () {
 
 ### Deploying Tests
 
-`sfdx force:mdapi:deploy -d test/ -u {username} -w 50`
+`sfdx force:mdapi:deploy -d test/ -w 50 -u {username}`
 
 ### Running Tests
 
