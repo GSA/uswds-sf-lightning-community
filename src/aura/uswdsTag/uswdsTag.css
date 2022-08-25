@@ -1,0 +1,113 @@
+/* colors map to grade 50 colors in the USWDS Vivid palette https://designsystem.digital.gov/design-tokens/color/system-tokens/ 
+all color combinations result in a "magic number" of 50 since the text is pure white*/
+
+/*red-cool-50v*/
+.THIS.red-cool-vivid {
+  background-color: #e41d3d;
+  color: #fff;
+}
+/*red-warm-50v*/
+.THIS.red-warm-vivid {
+  background-color: #d54309;
+  color: #fff;
+}
+/*red-50v*/
+.THIS.red-vivid {
+  background-color: #e52207;
+  color: #fff;
+}
+/*orange-warm-50v*/
+.THIS.orange-warm-vivid {
+  background-color: #cf4900;
+  color: #fff;
+}
+/*orange-50v*/
+.THIS.orange-vivid {
+  background-color: #c05600;
+  color: #fff;
+}
+/*gold-50v*/
+.THIS.gold-vivid {
+  background-color: #936f38;
+  color: #fff;
+}
+/*yellow-50v*/
+.THIS.yellow-vivid {
+  background-color: #947100;
+  color: #fff;
+}
+/*green-warm-50v*/
+.THIS.green-warm-vivid {
+  background-color: #6a7d00;
+  color: #fff;
+}
+/*green-50v*/
+.THIS.green-vivid {
+  background-color: #538200;
+  color: #fff;
+}
+/*green-cool-50v*/
+.THIS.green-cool-vivid {
+  background-color: #008817;
+  color: #fff;
+}
+/*mint-50v*/
+.THIS.mint-vivid {
+  background-color: #008659;
+  color: #fff;
+}
+/*mint-cool-50v*/
+.THIS.mint-cool-vivid {
+  background-color: #008480;
+  color: #fff;
+}
+/*cyan-50v*/
+.THIS.cyan-vivid {
+  background-color: #0081a1;
+  color: #fff;
+}
+/*blue-cool-50v*/
+.THIS.blue-cool-vivid {
+  background-color: #0d7ea2;
+  color: #fff;
+}
+/*blue-50v*/
+.THIS.blue-vivid {
+  background-color: #0076d6;
+  color: #fff;
+}
+/*blue-warm-50v*/
+.THIS.blue-warm-vivid {
+  background-color: #2672de;
+  color: #fff;
+}
+/*indigo-cool-50v*/
+.THIS.indigo-cool-vivid {
+  background-color: #4866ff;
+  color: #fff;
+}
+/*indigo-50v*/
+.THIS.indigo-vivid {
+  background-color: #656bd7;
+  color: #fff;
+}
+/*indigo-warm-50v*/
+.THIS.indigo-warm-vivid {
+  background-color: #745fe9;
+  color: #fff;
+}
+/*violet-50v*/
+.THIS.violet-vivid {
+  background-color: #9355dc;
+  color: #fff;
+}
+/*violet-warm-50v*/
+.THIS.violet-warm-vivid {
+  background-color: #be32d0;
+  color: #fff;
+}
+/*magenta-50v*/
+.THIS.magenta-vivid {
+  background-color: #d72d79;
+  color: #fff;
+}

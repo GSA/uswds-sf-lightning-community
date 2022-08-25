@@ -1,0 +1,88 @@
+<aura:component
+  extends="forceCommunity:navigationMenuBase"
+  implements="forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds-init.min.js'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+  <h1>USWDS Tags</h1>
+  <p class="usa-prose">
+    Colors correspond to the USWDS System Color Tokens, Vivid color palette.
+    Specifically, each value has a grade of 50.
+    <a
+      href="https://designsystem.digital.gov/design-tokens/color/system-tokens/"
+      >https://designsystem.digital.gov/design-tokens/color/system-tokens/</a
+    >
+  </p>
+  <br />
+  <c:uswdsTag title="default" color="default" size="" />
+  <c:uswdsTag title="default" color="default" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="red cool" color="red cool" size="" />
+  <c:uswdsTag title="red cool" color="red cool" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="red warm" color="red warm" size="" />
+  <c:uswdsTag title="red warm" color="red warm" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="red" color="red" size="" />
+  <c:uswdsTag title="red" color="red" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="orange warm" color="orange warm" size="" />
+  <c:uswdsTag title="orange warm" color="orange warm" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="orange" color="orange" size="" />
+  <c:uswdsTag title="orange" color="orange" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="gold" color="gold" size="" />
+  <c:uswdsTag title="gold" color="gold" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="yellow" color="yellow" size="" />
+  <c:uswdsTag title="yellow" color="yellow" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="green warm" color="green warm" size="" />
+  <c:uswdsTag title="green warm" color="green warm" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="green" color="green" size="" />
+  <c:uswdsTag title="green" color="green" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="green cool" color="green cool" size="" />
+  <c:uswdsTag title="green cool" color="green cool" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="mint" color="mint" size="" />
+  <c:uswdsTag title="mint" color="mint" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="mint cool" color="mint cool" size="" />
+  <c:uswdsTag title="mint cool" color="mint cool" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="cyan" color="cyan" size="" />
+  <c:uswdsTag title="cyan" color="cyan" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="blue cool" color="blue cool" size="" />
+  <c:uswdsTag title="blue cool" color="blue cool" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="blue" color="blue" size="" />
+  <c:uswdsTag title="blue" color="blue" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="blue warm" color="blue warm" size="" />
+  <c:uswdsTag title="blue warm" color="blue warm" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="indigo cool" color="indigo cool" size="" />
+  <c:uswdsTag title="indigo cool" color="indigo cool" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="indigo" color="indigo" size="" />
+  <c:uswdsTag title="indigo" color="indigo" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="indigo warm" color="indigo warm" size="" />
+  <c:uswdsTag title="indigo warm" color="indigo warm" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="violet" color="violet" size="" />
+  <c:uswdsTag title="violet" color="violet" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="violet warm" color="violet warm" size="" />
+  <c:uswdsTag title="violet warm" color="violet warm" size="Big" />
+  <br /><br />
+  <c:uswdsTag title="magenta" color="magenta" size="" />
+  <c:uswdsTag title="magenta" color="magenta" size="Big" />
+  <br /><br />
+</aura:component>
