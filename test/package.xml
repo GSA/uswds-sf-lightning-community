@@ -10,9 +10,10 @@
         <members>lts_jasmineboot</members>
         <members>lts_testutil</members>
         <members>uswds_lts_search</members>
+        <members>uswds_lts_tag</members>
         <members>uswds_lts_usaBanner</members>
         <members>uswds_lts_uswdsTheme</members>
         <name>StaticResource</name>
     </types>
-    <version>53.0</version>
+    <version>48.0</version>
 </Package>

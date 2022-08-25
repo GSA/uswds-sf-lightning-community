@@ -7,7 +7,7 @@
   <aura:attribute name="size" type="String" />
   <aura:attribute name="sizeClass" type="String" />
 
-  <aura:attribute name="color" type="String" />
+  <aura:attribute name="color" type="String" default="default" />
   <aura:attribute name="colorClass" type="String" />
 
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
