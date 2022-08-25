@@ -17,6 +17,7 @@
         <members>uswdsProfileMenu</members>
         <members>uswdsSearch</members>
         <members>uswdsSocialMediaNavMenu</members>
+        <members>uswdsTag</members>
         <members>uswdsTheme</members>
         <members>uswdsUSABanner</members>
         <members>uswdsVerticalNavigation</members>
