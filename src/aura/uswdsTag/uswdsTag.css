@@ -1,14 +1,11 @@
 /* colors map to grade 50 colors in the USWDS Vivid palette https://designsystem.digital.gov/design-tokens/color/system-tokens/ 
 all color combinations result in a "magic number" of 50 since the text is pure white*/
-.THIS {
-}
 
 /*red-cool-50v*/
 .THIS.red-cool-vivid {
   background-color: #e41d3d;
   color: #fff;
 }
-
 /*red-warm-50v*/
 .THIS.red-warm-vivid {
   background-color: #d54309;
