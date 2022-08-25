@@ -11,9 +11,9 @@ We're so glad you're thinking about contributing to a U.S. Government open sourc
   - [Creating a new Component](#creating-a-new-component)
   - [Testing](#testing)
     - [Testing Principles](#testing-principles)
+    - [Creating New Tests](#creating-new-tests)
     - [Deploying Tests](#deploying-tests)
     - [Running Tests](#running-tests)
-    - [Creating New Tests](#creating-new-tests)
 
 ## How to contribute to this project
 
@@ -58,8 +58,6 @@ Using Salesforce [Scratch Orgs](https://help.salesforce.com/s/articleView?id=sf.
 
 Lightning Testing Service is used to run automated Jasmine tests against each component. Tests are captured in the `test/staticresources` directory and named using the following pattern, `uswds_lts_{component name}`.
 
-Testing instructions are written with using commands from the SFDX CLI as it saves a number of steps. That being said, regular ANT commands will still work to deploy tests.
-
 ### Testing Principles
 
 Tests should follow the [Arrange, Act, Assert](https://integralpath.blogs.com/thinkingoutloud/2005/09/principles_of_t.html) principle. As a result, muliple assertions may be present in a given test. For example, the following contains two assertions (`expect()`) within a single test so as to verify all relevant text is present.
@@ -81,16 +79,6 @@ describe("USA Banner", function () {
 });
 ```
 
-### Deploying Tests
-
-`sfdx force:mdapi:deploy -d test/ -w 50 -u {username}`
-
-### Running Tests
-
-At this time, running tests directly in the terminal does not work. The issue is tracked in GitHub at [#108](https://github.com/GSA/uswds-sf-lightning-community/issues/108). Instead, output of the tests can be seen in the org at {orgURL}/c/jasmineTests.app. With SFDX, you can go straight there by entering the following into your terminal.
-
-`sfdx force:org:open -p /c/jasmineTests.app -u {username}`
-
 ### Creating New Tests
 
 Test `describe` and `it` statements should read as sentences so as to be readily consumed by a developer or site manager.
@@ -104,3 +92,13 @@ Once the test has been created, it should be referenced in `test/aura/jasmineTes
 Additionally, the new staticresource should be added to package.xml which can be taken care of by the following sfdx command. This command also supports the removal of files.
 
 `sfdx force:source:manifest:create --sourcepath test --manifestname test/package.xml`
+
+### Deploying Tests
+
+`sfdx force:mdapi:deploy -d test/ -w 50 -u {username}`
+
+### Running Tests
+
+At this time, running tests directly in the terminal does not work. The issue is tracked in GitHub at [#108](https://github.com/GSA/uswds-sf-lightning-community/issues/108). Instead, output of the tests can be seen in the org at {orgURL}/c/jasmineTests.app. With SFDX, you can go straight there by entering the following into your terminal.
+
+`sfdx force:org:open -p /c/jasmineTests.app -u {username}`

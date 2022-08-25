@@ -1,0 +1,20 @@
+<aura:component access="global">
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds-init.min.js'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+
+  <aura:attribute name="title" type="String" />
+  <aura:attribute name="size" type="String" />
+  <aura:attribute name="sizeClass" type="String" />
+
+  <aura:attribute name="color" type="String" default="default" />
+  <aura:attribute name="colorClass" type="String" />
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+  <lightning:notificationsLibrary aura:id="notifLib" />
+
+  <span class="{! 'usa-tag ' + v.sizeClass + ' ' + v.colorClass}"
+    >{!v.title}</span
+  >
+</aura:component>
