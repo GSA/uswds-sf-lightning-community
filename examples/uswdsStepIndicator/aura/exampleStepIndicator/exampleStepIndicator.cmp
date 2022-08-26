@@ -1,0 +1,25 @@
+<aura:component
+  implements="flexipage:availableForRecordHome, forceCommunity:availableForAllPageTypes"
+>
+  <c:uswdsStepIndicator />
+
+  <c:uswdsStepIndicatorHeading
+    language="English"
+    currentStep="2"
+    totalSteps="5"
+    headingText="This is the heading!"
+  />
+  <c:uswdsStepIndicatorHeading
+    language="Spanish"
+    currentStep="2"
+    totalSteps="5"
+    headingText="¡Hola!"
+  />
+
+  <c:uswdsStepIndicatorHeading
+    language="Deutsch"
+    currentStep="5"
+    totalSteps="2"
+    headingText="¡Hola!"
+  />
+</aura:component>
