@@ -10,6 +10,9 @@
         <members>lts_jasmineboot</members>
         <members>lts_testutil</members>
         <members>uswds_lts_search</members>
+        <members>uswds_lts_stepIndicator</members>
+        <members>uswds_lts_stepIndicatorHeading</members>
+        <members>uswds_lts_stepIndicatorSegment</members>
         <members>uswds_lts_tag</members>
         <members>uswds_lts_usaBanner</members>
         <members>uswds_lts_uswdsTheme</members>
