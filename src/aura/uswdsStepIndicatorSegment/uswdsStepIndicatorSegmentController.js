@@ -3,7 +3,6 @@
     const segment = component.get("v.stepIndicatorSegment");
     var status = "";
     if (segment.status.toLowerCase() === "current") {
-      status = "";
       component.set(
         "v.currentStatusClass",
         "usa-step-indicator__segment--current"
