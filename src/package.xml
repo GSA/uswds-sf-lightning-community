@@ -18,6 +18,7 @@
         <members>uswdsSearch</members>
         <members>uswdsSocialMediaNavMenu</members>
         <members>uswdsStepIndicator</members>
+        <members>uswdsStepIndicatorSegment</members>
         <members>uswdsStepIndicatorHeading</members>
         <members>uswdsTag</members>
         <members>uswdsTheme</members>
