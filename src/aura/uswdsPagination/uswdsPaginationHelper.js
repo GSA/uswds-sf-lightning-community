@@ -157,10 +157,10 @@
           body.push(li);
           cmp.set("v.body", body);
         } else if (status === "INCOMPLETE") {
-          console.log("No response from server or client is offline.");
+          console.warn("No response from server or client is offline.");
           // Show offline error
         } else if (status === "ERROR") {
-          console.log("Error: " + errorMessage);
+          console.error("Error: " + errorMessage);
           // Show error message
         }
       }

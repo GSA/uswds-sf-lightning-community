@@ -1,0 +1,29 @@
+<aura:component
+  implements="forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds-init.min.js'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+  <aura:attribute name="language" type="String" />
+  <aura:attribute name="languageContent" type="Map" />
+
+  <aura:attribute name="currentStep" type="Integer" />
+  <aura:attribute name="totalSteps" type="Integer" />
+  <aura:attribute name="headingText" type="String" />
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <lightning:notificationsLibrary aura:id="notifLib" />
+
+  <div class="usa-step-indicator__header">
+    <h4 class="usa-step-indicator__heading">
+      <span class="usa-step-indicator__heading-counter"
+        ><span class="usa-sr-only">{!v.languageContent.step}</span>
+        <span class="usa-step-indicator__current-step">{!v.currentStep}</span>
+        <span class="usa-step-indicator__total-steps"
+          >{!' ' + v.languageContent.of + ' ' + v.totalSteps}</span
+        > </span
+      ><span class="usa-step-indicator__heading-text">{!v.headingText}</span>
+    </h4>
+  </div>
+</aura:component>

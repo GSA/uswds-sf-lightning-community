@@ -6,7 +6,6 @@
     }
   },
   handleMenuSelect: function (component, event, helper) {
-    console.log("handling menu select");
     var selectedMenuItemValue = event.getParam("value");
     if (selectedMenuItemValue) {
       component.getSuper().navigate(selectedMenuItemValue);

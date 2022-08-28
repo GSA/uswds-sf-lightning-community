@@ -5,8 +5,8 @@
         <members>fontAwesomeIcon</members>
         <members>uswds404</members>
         <members>uswdsBreadcrumb</members>
-        <members>uswdsCardList</members>
         <members>uswdsCardElement</members>
+        <members>uswdsCardList</members>
         <members>uswdsFooterNavMenu</members>
         <members>uswdsFooterNavMenuSmall</members>
         <members>uswdsIdentifier</members>
@@ -17,6 +17,9 @@
         <members>uswdsProfileMenu</members>
         <members>uswdsSearch</members>
         <members>uswdsSocialMediaNavMenu</members>
+        <members>uswdsStepIndicator</members>
+        <members>uswdsStepIndicatorSegment</members>
+        <members>uswdsStepIndicatorHeading</members>
         <members>uswdsTag</members>
         <members>uswdsTheme</members>
         <members>uswdsUSABanner</members>

@@ -1,0 +1,20 @@
+<aura:component>
+  <aura:attribute name="stepIndicatorSegment" type="Map" />
+  <!--
+        stepIndicatorSegment = {type:["default"], counters: false, complete:false, current:false, labels:false}
+    -->
+  <aura:attribute name="status" type="String" />
+  <aura:attribute name="currentStatusClass" type="String" />
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <lightning:notificationsLibrary aura:id="notifLib" />
+
+  <li class="{! 'usa-step-indicator__segment ' + v.currentStatusClass}">
+    <span class="usa-step-indicator__segment-label"
+      >{!v.stepIndicatorSegment.label}
+      <aura:if isTrue="{!v.status !=''}">
+        <span class="usa-sr-only">{!v.status}</span>
+      </aura:if>
+    </span>
+  </li>
+</aura:component>

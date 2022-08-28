@@ -1,0 +1,46 @@
+<aura:component>
+  <aura:attribute
+    name="language"
+    type="String"
+    default="English"
+    description=""
+  />
+  <aura:attribute
+    name="stepIndicatorType"
+    type="String"
+    default="Default"
+    description="Types based on options presented in https://designsystem.digital.gov/components/step-indicator/. Valid options include: Default, No Labels, Centered, Counters, Small Counters"
+  />
+
+  <aura:attribute name="stepIndicatorSegments" type="Map[]" />
+  <aura:attribute name="displayHeading" type="String" default="Yes" />
+  <!-- controller set attributes -->
+  <aura:attribute name="stepIndicatorTypeClass" type="String" default="" />
+  <aura:attribute name="currentStep" type="Integer" />
+  <aura:attribute name="totalSteps" type="Integer" />
+  <aura:attribute name="headingText" type="String" />
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <lightning:notificationsLibrary aura:id="notifLib" />
+
+  <div
+    class="{! 'usa-step-indicator ' + v.stepIndicatorTypeClass }"
+    aria-label="progress"
+  >
+    <ol class="usa-step-indicator__segments">
+      <aura:if isTrue="{! !empty(v.stepIndicatorSegments)}">
+        <aura:iteration items="{!v.stepIndicatorSegments}" var="segment">
+          <c:uswdsStepIndicatorSegment stepIndicatorSegment="{!segment}" />
+        </aura:iteration>
+      </aura:if>
+    </ol>
+    <aura:if isTrue="{!v.displayHeading == 'Yes'}">
+      <c:uswdsStepIndicatorHeading
+        language="{!v.language}"
+        currentStep="{!v.currentStep}"
+        totalSteps="{!v.totalSteps}"
+        headingText="{!v.headingText}"
+      />
+    </aura:if>
+  </div>
+</aura:component>
