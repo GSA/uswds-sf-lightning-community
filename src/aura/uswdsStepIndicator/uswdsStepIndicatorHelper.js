@@ -19,7 +19,6 @@
   },
   getCounts: function (component) {
     const stepIndicatorSegments = component.get("v.stepIndicatorSegments");
-    console.log("stepIndicator 0 ", stepIndicatorSegments[0]);
     var totalSteps = stepIndicatorSegments.length;
     var currentStep;
     stepIndicatorSegments.forEach((segment, index) => {
@@ -28,7 +27,6 @@
         component.set("v.headingText", segment.label);
       }
     });
-    console.log("total, current", totalSteps, currentStep);
     component.set("v.totalSteps", totalSteps);
     component.set("v.currentStep", currentStep);
   }

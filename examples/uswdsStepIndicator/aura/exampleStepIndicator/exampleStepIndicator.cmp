@@ -1,8 +1,66 @@
 <aura:component
   implements="flexipage:availableForRecordHome, forceCommunity:availableForAllPageTypes"
 >
-  <aura:attribute name="stepIndicatorSegments" type="Map[]" />
-  <aura:attribute name="stepIndicatorSegmentsLong" type="Map[]" />
+  <aura:attribute
+    name="stepIndicatorSegments"
+    type="Map[]"
+    default="[
+  {
+    label: 'Pick Size',
+    status: 'Completed'
+  },
+  {
+    label: 'Pick Crust',
+    status: 'Completed'
+  },
+  {
+    label: 'Select Toppings',
+    status: 'Completed'
+  },
+  {
+    label: 'Review Order',
+    status: 'Current'
+  },
+  {
+    label: 'Ordered',
+    status: 'Not Complete'
+  }
+]"
+  />
+  <aura:attribute
+    name="stepIndicatorSegmentsLong"
+    type="Map[]"
+    default="[
+      {
+        label: 'Step 1',
+        status: 'Completed'
+      },
+      {
+        label: 'Step 2',
+        status: 'Completed'
+      },
+      {
+        label: 'Step 3',
+        status: 'Current'
+      },
+      {
+        label: 'Step 4 with longer description',
+        status: 'Not Complete'
+      },
+      {
+        label: 'Step 5',
+        status: 'Not Complete'
+      },
+      {
+        label: 'Step 6',
+        status: 'Not Complete'
+      },
+      {
+        label: 'Step 7 ',
+        status: 'Not Complete'
+      }
+    ]"
+  />
 
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 

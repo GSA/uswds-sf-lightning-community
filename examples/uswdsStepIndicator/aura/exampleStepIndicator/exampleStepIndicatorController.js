@@ -22,7 +22,7 @@
         status: "Not Complete"
       }
     ];
-    component.set("v.stepIndicatorSegments", stepIndicatorSegments);
+    //component.set("v.stepIndicatorSegments", stepIndicatorSegments);
 
     const stepIndicatorSegmentsLong = [
       {
@@ -54,6 +54,6 @@
         status: "Not Complete"
       }
     ];
-    component.set("v.stepIndicatorSegmentsLong", stepIndicatorSegmentsLong);
+    //component.set("v.stepIndicatorSegmentsLong", stepIndicatorSegmentsLong);
   }
 });
