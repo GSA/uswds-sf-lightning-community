@@ -39,10 +39,6 @@
     });
     return summarySegmentData;
   },
-  setCounts: function (component, summarySegmentData) {
-    component.set("v.totalSteps", summarySegmentData.totalSteps);
-    component.set("v.currentStep", summarySegmentData.currentStep);
-  },
   validate: function (component, summarySegmentData) {
     this.validateMultipleCurrentSegments(component, summarySegmentData);
     this.validateOneCurrentSegmentIfNotComplete(component, summarySegmentData);
