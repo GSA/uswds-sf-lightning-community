@@ -27,6 +27,7 @@
   }
 ]"
   />
+
   <aura:attribute
     name="stepIndicatorSegmentsLong"
     type="Map[]"
