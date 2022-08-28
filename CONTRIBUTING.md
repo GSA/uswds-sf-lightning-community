@@ -54,6 +54,10 @@ Using Salesforce [Scratch Orgs](https://help.salesforce.com/s/articleView?id=sf.
 
 `sfdx force:lightning:component:create -d src/aura -n {component name}`
 
+Add the new component to the src/package.xml
+
+`sfdx force:source:manifest:create --sourcepath src --manifestname src/package.xml`
+
 ## Testing
 
 Lightning Testing Service is used to run automated Jasmine tests against each component. Tests are captured in the `test/staticresources` directory and named using the following pattern, `uswds_lts_{component name}`.

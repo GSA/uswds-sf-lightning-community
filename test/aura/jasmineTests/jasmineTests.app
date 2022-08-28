@@ -2,6 +2,9 @@
   <c:lts_jasmineRunner
     testFiles="{!join(',', 
       $Resource.uswds_lts_search,
+      $Resource.uswds_lts_stepIndicator,
+      $Resource.uswds_lts_stepIndicatorHeading,
+      $Resource.uswds_lts_stepIndicatorSegment,
       $Resource.uswds_lts_tag,
       $Resource.uswds_lts_usaBanner,
       $Resource.uswds_lts_uswdsTheme

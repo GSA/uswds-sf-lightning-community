@@ -1,0 +1,166 @@
+<aura:component
+  implements="flexipage:availableForRecordHome, forceCommunity:availableForAllPageTypes"
+>
+  <aura:attribute
+    name="stepIndicatorSegments"
+    type="Map[]"
+    default="[
+  {
+    label: 'Pick Size',
+    status: 'Completed'
+  },
+  {
+    label: 'Pick Crust',
+    status: 'Completed'
+  },
+  {
+    label: 'Select Toppings',
+    status: 'Completed'
+  },
+  {
+    label: 'Review Order',
+    status: 'Current'
+  },
+  {
+    label: 'Ordered',
+    status: 'Not Complete'
+  }
+]"
+  />
+
+  <aura:attribute
+    name="stepIndicatorSegmentsLong"
+    type="Map[]"
+    default="[
+      {
+        label: 'Step 1',
+        status: 'Completed'
+      },
+      {
+        label: 'Step 2',
+        status: 'Completed'
+      },
+      {
+        label: 'Step 3',
+        status: 'Current'
+      },
+      {
+        label: 'Step 4 with longer description',
+        status: 'Not Complete'
+      },
+      {
+        label: 'Step 5',
+        status: 'Not Complete'
+      },
+      {
+        label: 'Step 6',
+        status: 'Not Complete'
+      },
+      {
+        label: 'Step 7 ',
+        status: 'Not Complete'
+      }
+    ]"
+  />
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+  <div class="usa-prose margin-bottom-105">
+    <h2>Step Indicator Component</h2>
+
+    <p>
+      Each stepIndicatorType is presented below along with a handful of
+      variations. Additional guidance can be found at
+      <a
+        href="https://designsystem.digital.gov/components/step-indicator/#step-indicator-guidance"
+        >https://designsystem.digital.gov/components/step-indicator/#step-indicator-guidance</a
+      >
+    </p>
+
+    <h3 class="">Default</h3>
+  </div>
+  <c:uswdsStepIndicator
+    language="English"
+    stepIndicatorType="Default"
+    stepIndicatorSegments="{!v.stepIndicatorSegments}"
+  />
+  <div class="usa-prose margin-top-205 margin-bottom-105">
+    <h3>No Labels</h3>
+  </div>
+  <c:uswdsStepIndicator
+    language="English"
+    stepIndicatorType="No Labels"
+    stepIndicatorSegments="{!v.stepIndicatorSegments}"
+  />
+
+  <div class="usa-prose margin-top-205 margin-bottom-105">
+    <h3>Centered</h3>
+  </div>
+  <c:uswdsStepIndicator
+    language="English"
+    stepIndicatorType="Centered"
+    stepIndicatorSegments="{!v.stepIndicatorSegments}"
+  />
+
+  <div class="usa-prose margin-top-205 margin-bottom-105">
+    <h3>Counters</h3>
+  </div>
+  <c:uswdsStepIndicator
+    language="English"
+    stepIndicatorType="Counters"
+    stepIndicatorSegments="{!v.stepIndicatorSegments}"
+  />
+  <div class="usa-prose margin-top-205 margin-bottom-105">
+    <h3>Small Counters</h3>
+  </div>
+  <c:uswdsStepIndicator
+    language="English"
+    stepIndicatorType="Small Counters"
+    stepIndicatorSegments="{!v.stepIndicatorSegments}"
+  />
+
+  <div class="usa-prose margin-top-205 margin-bottom-105">
+    <h3>Counters - No Heading</h3>
+    <p>Instance has a stepIndicatortype = Counters and displayHeadings = No</p>
+  </div>
+  <c:uswdsStepIndicator
+    language="English"
+    stepIndicatorType="Counters"
+    stepIndicatorSegments="{!v.stepIndicatorSegments}"
+    displayHeading="No"
+  />
+
+  <div class="usa-prose margin-top-205 margin-bottom-105">
+    <h3>Counters - 7 step process</h3>
+    <p>Instance has a stepIndicatortype = Counters</p>
+  </div>
+  <c:uswdsStepIndicator
+    language="English"
+    stepIndicatorType="Counters"
+    stepIndicatorSegments="{!v.stepIndicatorSegmentsLong}"
+    displayHeading="Yes"
+  />
+
+  <hr />
+  <div class="usa-prose margin-top-205 margin-bottom-105">
+    <h2>Step Indicator Heading Component</h2>
+
+    <h3>English</h3>
+    <c:uswdsStepIndicatorHeading
+      language="English"
+      currentStep="2"
+      totalSteps="5"
+      headingText="This is the heading!"
+    />
+  </div>
+
+  <div class="usa-prose margin-top-205 margin-bottom-105">
+    <h3>Spanish</h3>
+    <c:uswdsStepIndicatorHeading
+      language="Spanish"
+      currentStep="2"
+      totalSteps="5"
+      headingText="¡Hola!"
+    />
+  </div>
+</aura:component>
