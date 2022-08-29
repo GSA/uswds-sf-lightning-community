@@ -64,7 +64,7 @@ Lightning Testing Service is used to run automated Jasmine tests against each co
 
 ### Testing Principles
 
-Tests should follow the [Arrange, Act, Assert](https://integralpath.blogs.com/thinkingoutloud/2005/09/principles_of_t.html) principle. As a result, muliple assertions may be present in a given test. For example, the following contains two assertions (`expect()`) within a single test so as to verify all relevant text is present.
+Tests should follow the [Arrange, Act, Assert](https://integralpath.blogs.com/thinkingoutloud/2005/09/principles_of_t.html) principle. Test `describe` and `it` statements should read as sentences so as to be readily consumed by a developer or site manager. Muliple assertions may be present in a given test. For example, the following contains two assertions (`expect()`) within a single test so as to verify all relevant text is present.
 
 ```javascript
 describe("USA Banner", function () {
@@ -85,17 +85,19 @@ describe("USA Banner", function () {
 
 ### Creating New Tests
 
-Test `describe` and `it` statements should read as sentences so as to be readily consumed by a developer or site manager.
+1. Tests are stored in staticResources, create a new file,
 
-If creating a new component, a brand new static resource needs to be created. SFDX provides a shortcut,
+   `sfdx force:lightning:test:create -d test/staticresources -n uswds_lts_{component name}`
 
-`sfdx force:lightning:test:create -d test/staticresources -n uswds_lts_{component name}`
+1. The prior command creates a bare test. Copy in the contents of test/testTemplate to get up and running a bit faster.
 
-Once the test has been created, it should be referenced in `test/aura/jasmineTests/jasmineTests.app`.
+   `cp test/testTemplate test/staticresources/uswds_lts_{component name}`
 
-Additionally, the new staticresource should be added to package.xml which can be taken care of by the following sfdx command. This command also supports the removal of files.
+1. Once the test has been created, it should be referenced in `test/aura/jasmineTests/jasmineTests.app`.
 
-`sfdx force:source:manifest:create --sourcepath test --manifestname test/package.xml`
+1. Add the new staticresource to package.xml. This command also supports the removal of files.
+
+   `sfdx force:source:manifest:create --sourcepath test --manifestname test/package.xml`
 
 ### Deploying Tests
 
