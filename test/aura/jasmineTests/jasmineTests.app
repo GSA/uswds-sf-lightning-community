@@ -1,6 +1,7 @@
 <aura:application>
   <c:lts_jasmineRunner
     testFiles="{!join(',', 
+      $Resource.uswds_lts_builderNotification,
       $Resource.uswds_lts_search,
       $Resource.uswds_lts_stepIndicator,
       $Resource.uswds_lts_stepIndicatorHeading,

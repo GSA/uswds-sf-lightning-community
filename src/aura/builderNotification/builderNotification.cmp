@@ -1,0 +1,39 @@
+<aura:component>
+  <aura:method
+    name="addNotification"
+    action="{!c.addNotification}"
+    access="public"
+  >
+    <aura:attribute name="value" type="Map[]" />
+  </aura:method>
+  <aura:attribute name="builderNotificationArray" type="Map[]" />
+
+  <aura:iteration
+    items="{!v.builderNotificationArray}"
+    var="item"
+    indexVar="index"
+  >
+    <div class="slds-notify_container slds-is-relative">
+      <div
+        class="slds-notify slds-notify_toast slds-theme_warning"
+        role="status"
+      >
+        <div class="slds-p-right_large">
+          <lightning:icon
+            iconName="utility:warning"
+            variant="warning"
+            size="small"
+          />
+        </div>
+        <div class="slds-notify__content">
+          <h2
+            class="slds-text-title_caps slds-p-bottom_small slds-text-color_default"
+          >
+            {!item.title}
+          </h2>
+          <p>{!item.message}</p>
+        </div>
+      </div>
+    </div>
+  </aura:iteration>
+</aura:component>

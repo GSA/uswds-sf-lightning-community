@@ -91,7 +91,7 @@ describe("USA Banner", function () {
 
 1. The prior command creates a bare test. Copy in the contents of test/testTemplate to get up and running a bit faster.
 
-   `cp test/testTemplate test/staticresources/uswds_lts_{component name}`
+   `cp test/testTemplate test/staticresources/uswds_lts_{component name}.resource`
 
 1. Once the test has been created, it should be referenced in `test/aura/jasmineTests/jasmineTests.app`.
 

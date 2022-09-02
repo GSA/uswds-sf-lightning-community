@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>builderNotification</members>
         <members>defaultTokens</members>
         <members>fontAwesomeIcon</members>
         <members>uswds404</members>
@@ -18,8 +19,8 @@
         <members>uswdsSearch</members>
         <members>uswdsSocialMediaNavMenu</members>
         <members>uswdsStepIndicator</members>
-        <members>uswdsStepIndicatorSegment</members>
         <members>uswdsStepIndicatorHeading</members>
+        <members>uswdsStepIndicatorSegment</members>
         <members>uswdsTag</members>
         <members>uswdsTheme</members>
         <members>uswdsUSABanner</members>
