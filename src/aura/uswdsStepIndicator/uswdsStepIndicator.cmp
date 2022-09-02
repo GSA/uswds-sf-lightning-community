@@ -21,7 +21,7 @@
   <aura:attribute name="headingText" type="String" />
 
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-  <lightning:notificationsLibrary aura:id="notifLib" />
+  <c:builderNotification aura:id="builderNotification" />
 
   <div
     class="{! 'usa-step-indicator ' + v.stepIndicatorTypeClass }"

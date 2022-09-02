@@ -51,30 +51,26 @@
       summarySegmentData.countCurrentSteps == 0 &&
       summarySegmentData.countCompletedSteps != summarySegmentData.totalSteps
     ) {
-      const toastContent = {
+      const builderNotificationContent = {
         title: "Error - USWDS Step Indicator",
-        message: `One segment must be marked as Current if all segments are not complete.`,
-        variant: "warning",
-        mode: "sticky"
+        message: `One segment must be marked as Current if all segments are not complete.`
       };
-      const consoleWarningArray = [toastContent.title, toastContent.message];
-      this.createToast(component, toastContent, consoleWarningArray);
+      component
+        .find("builderNotification")
+        .addNotification(builderNotificationContent);
     }
   },
   validateMultipleCurrentSegments: function (component, summarySegmentData) {
     if (summarySegmentData.countCurrentSteps > 1) {
-      const toastContent = {
-        title: "Error - USWDS Step Indicator",
-        message: `More than one segment is listed as current. At most one segment should be identified as the current step.`,
-        variant: "warning",
-        mode: "sticky"
-      };
-      const consoleWarningArray = [toastContent.title, toastContent.message];
-      this.createToast(component, toastContent, consoleWarningArray);
+      const builderNotificationContent = [
+        {
+          title: "Error - USWDS Step Indicator",
+          message: `More than one segment is listed as current. At most one segment should be identified as the current step.`
+        }
+      ];
+      component
+        .find("builderNotification")
+        .addNotification(builderNotificationContent);
     }
-  },
-  createToast: function (component, toastObject, consoleWarningArray) {
-    component.find("notifLib").showToast(toastObject);
-    console.warn(...consoleWarningArray);
   }
 });

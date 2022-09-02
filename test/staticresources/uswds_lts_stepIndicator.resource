@@ -1,5 +1,8 @@
 describe("Step Indicator", function () {
-  var stepIndicatorSegments, stepIndicatorSegmentsLong;
+  var stepIndicatorSegments,
+    stepIndicatorSegmentsLong,
+    stepIndicatorSegmentsTwoCurrent,
+    stepIndicatorSegmentsNoCurrent;
   beforeEach(function () {
     stepIndicatorSegments = [
       {
@@ -50,6 +53,50 @@ describe("Step Indicator", function () {
       },
       {
         label: "Step 7 ",
+        status: "Not Complete"
+      }
+    ];
+    stepIndicatorSegmentsTwoCurrent = [
+      {
+        label: "Pick Size",
+        status: "Completed"
+      },
+      {
+        label: "Pick Crust",
+        status: "Completed"
+      },
+      {
+        label: "Select Toppings",
+        status: "Current"
+      },
+      {
+        label: "Review Order",
+        status: "Current"
+      },
+      {
+        label: "Ordered",
+        status: "Not Complete"
+      }
+    ];
+    stepIndicatorSegmentsNoCurrent = [
+      {
+        label: "Pick Size",
+        status: "Completed"
+      },
+      {
+        label: "Pick Crust",
+        status: "Completed"
+      },
+      {
+        label: "Select Toppings",
+        status: "Not Complete"
+      },
+      {
+        label: "Review Order",
+        status: "Not Complete"
+      },
+      {
+        label: "Ordered",
         status: "Not Complete"
       }
     ];
@@ -249,6 +296,57 @@ describe("Step Indicator", function () {
             "usa-sr-only"
           )[0].textContent
         ).toContain("paso");
+        done();
+      })
+      .catch(function (e) {
+        done.fail(e);
+      });
+  });
+
+  it("Two segments marked as 'Current' - expect error to be thrown", function (done) {
+    $T.createComponent(
+      "c:uswdsStepIndicator",
+      {
+        language: "English",
+        stepIndicatorType: "Small Counters",
+        stepIndicatorSegments: stepIndicatorSegmentsTwoCurrent
+      },
+      true
+    )
+      .then(function (component) {
+        expect(
+          document.getElementsByClassName("cBuilderNotification").length
+        ).toEqual(1);
+        expect(
+          document.querySelectorAll(".slds-notify__content", "p")[0].textContent
+        ).toContain(
+          "More than one segment is listed as current. At most one segment should be identified as the current step."
+        );
+        done();
+      })
+      .catch(function (e) {
+        done.fail(e);
+      });
+  });
+  it("No segments marked as 'Current' - expect error to be thrown", function (done) {
+    $T.createComponent(
+      "c:uswdsStepIndicator",
+      {
+        language: "English",
+        stepIndicatorType: "Counters",
+        stepIndicatorSegments: stepIndicatorSegmentsNoCurrent
+      },
+      true
+    )
+      .then(function (component) {
+        expect(
+          document.getElementsByClassName("cBuilderNotification").length
+        ).toEqual(1);
+        expect(
+          document.querySelectorAll(".slds-notify__content", "p")[0].textContent
+        ).toContain(
+          "One segment must be marked as Current if all segments are not complete."
+        );
         done();
       })
       .catch(function (e) {
