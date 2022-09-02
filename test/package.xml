@@ -9,6 +9,7 @@
         <members>lts_jasmine</members>
         <members>lts_jasmineboot</members>
         <members>lts_testutil</members>
+        <members>uswds_lts_builderNotification</members>
         <members>uswds_lts_search</members>
         <members>uswds_lts_stepIndicator</members>
         <members>uswds_lts_stepIndicatorHeading</members>
