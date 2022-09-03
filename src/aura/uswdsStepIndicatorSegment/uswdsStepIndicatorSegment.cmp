@@ -7,7 +7,7 @@
   <aura:attribute name="currentStatusClass" type="String" />
 
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-  <lightning:notificationsLibrary aura:id="notifLib" />
+  <c:builderNotification aura:id="builderNotification" />
 
   <li class="{! 'usa-step-indicator__segment ' + v.currentStatusClass}">
     <span class="usa-step-indicator__segment-label"
