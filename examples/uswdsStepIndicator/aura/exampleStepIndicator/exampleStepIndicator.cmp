@@ -23,7 +23,7 @@
   },
   {
     label: 'Ordered',
-    status: 'Not Complete'
+    status: 'Not Completed'
   }
 ]"
   />
@@ -46,19 +46,46 @@
       },
       {
         label: 'Step 4 with longer description',
-        status: 'Not Complete'
+        status: 'Not Completed'
       },
       {
         label: 'Step 5',
-        status: 'Not Complete'
+        status: 'Not Completed'
       },
       {
         label: 'Step 6',
-        status: 'Not Complete'
+        status: 'Not Completed'
       },
       {
         label: 'Step 7 ',
-        status: 'Not Complete'
+        status: 'Not Completed'
+      }
+    ]"
+  />
+
+  <aura:attribute
+    name="testvar"
+    type="Map[]"
+    default="[
+      {
+        label: 'Pick Size',
+        status: 'Completed'
+      },
+      {
+        label: 'Pick Crust',
+        status: 'Completed'
+      },
+      {
+        label: 'Select Toppings',
+        status: 'Not Completed'
+      },
+      {
+        label: 'Review Order',
+        status: 'Not Completed'
+      },
+      {
+        label: 'Ordered',
+        status: 'Not Completed'
       }
     ]"
   />
@@ -139,6 +166,15 @@
     stepIndicatorType="Counters"
     stepIndicatorSegments="{!v.stepIndicatorSegmentsLong}"
     displayHeading="Yes"
+  />
+
+  <div class="usa-prose margin-top-205 margin-bottom-105">
+    <h3>Step Indicator with Validation Error</h3>
+  </div>
+  <c:uswdsStepIndicator
+    language="English"
+    stepIndicatorType="Default"
+    stepIndicatorSegments="{!v.testvar}"
   />
 
   <hr />

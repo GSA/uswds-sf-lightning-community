@@ -23,7 +23,7 @@ describe("Step Indicator", function () {
       },
       {
         label: "Ordered",
-        status: "Not Complete"
+        status: "Not Completed"
       }
     ];
     stepIndicatorSegmentsLong = [
@@ -41,19 +41,19 @@ describe("Step Indicator", function () {
       },
       {
         label: "Step 4 with longer description",
-        status: "Not Complete"
+        status: "Not Completed"
       },
       {
         label: "Step 5",
-        status: "Not Complete"
+        status: "Not Completed"
       },
       {
         label: "Step 6",
-        status: "Not Complete"
+        status: "Not Completed"
       },
       {
         label: "Step 7 ",
-        status: "Not Complete"
+        status: "Not Completed"
       }
     ];
     stepIndicatorSegmentsTwoCurrent = [
@@ -75,7 +75,7 @@ describe("Step Indicator", function () {
       },
       {
         label: "Ordered",
-        status: "Not Complete"
+        status: "Not Completed"
       }
     ];
     stepIndicatorSegmentsNoCurrent = [
@@ -89,15 +89,15 @@ describe("Step Indicator", function () {
       },
       {
         label: "Select Toppings",
-        status: "Not Complete"
+        status: "Not Completed"
       },
       {
         label: "Review Order",
-        status: "Not Complete"
+        status: "Not Completed"
       },
       {
         label: "Ordered",
-        status: "Not Complete"
+        status: "Not Completed"
       }
     ];
   });
