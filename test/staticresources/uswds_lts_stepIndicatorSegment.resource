@@ -1,5 +1,9 @@
 describe("Step Indicator Segment", function () {
-  var segmentComplete, segmentCurrent, segmentNotComplete;
+  var segmentComplete,
+    segmentCurrent,
+    segmentNotComplete,
+    segmentLabelBlank,
+    segmentBadStatus;
   beforeEach(function () {
     segmentComplete = {
       label: "Pick Size",
@@ -11,7 +15,15 @@ describe("Step Indicator Segment", function () {
     };
     segmentNotComplete = {
       label: "Ordered",
-      status: "Not Complete"
+      status: "Not Completed"
+    };
+    segmentLabelBlank = {
+      label: "",
+      status: "Not Completed"
+    };
+    segmentBadStatus = {
+      label: "Doing Stuff",
+      status: "Have we started?"
     };
   });
   afterEach(function () {
@@ -19,7 +31,7 @@ describe("Step Indicator Segment", function () {
     // so we need to clear that div out at the end of each spec.
     $T.clearRenderedTestComponents();
   });
-  it("Completed Segment", function (done) {
+  it("Completed Segment displays as expected", function (done) {
     $T.createComponent(
       "c:uswdsStepIndicatorSegment",
       {
@@ -50,7 +62,7 @@ describe("Step Indicator Segment", function () {
         done.fail(e);
       });
   });
-  it("Current Segment", function (done) {
+  it("Current Segment displays as expected", function (done) {
     $T.createComponent(
       "c:uswdsStepIndicatorSegment",
       {
@@ -80,7 +92,7 @@ describe("Step Indicator Segment", function () {
         done.fail(e);
       });
   });
-  it("Not Complete Segment", function (done) {
+  it("Not Complete Segment displays as expected", function (done) {
     $T.createComponent(
       "c:uswdsStepIndicatorSegment",
       {
@@ -103,6 +115,46 @@ describe("Step Indicator Segment", function () {
             ".usa-sr-only"
           )[0].textContent
         ).toContain(segmentComplete.status);
+        done();
+      })
+      .catch(function (e) {
+        done.fail(e);
+      });
+  });
+  it("Blank label throws validation error", function (done) {
+    $T.createComponent(
+      "c:uswdsStepIndicatorSegment",
+      {
+        stepIndicatorSegment: segmentLabelBlank
+      },
+      true
+    )
+      .then(function (component) {
+        expect(
+          document.querySelectorAll(".slds-notify__content", "p")[0].textContent
+        ).toContain(
+          "Segment Label should contain a value, regardless of whether or not it is shown on the page."
+        );
+        done();
+      })
+      .catch(function (e) {
+        done.fail(e);
+      });
+  });
+  it("Invalid status option throws validation error", function (done) {
+    $T.createComponent(
+      "c:uswdsStepIndicatorSegment",
+      {
+        stepIndicatorSegment: segmentBadStatus
+      },
+      true
+    )
+      .then(function (component) {
+        expect(
+          document.querySelectorAll(".slds-notify__content", "p")[0].textContent
+        ).toContain(
+          "Segment Status should be one of: 'completed', 'not completed', or 'current'."
+        );
         done();
       })
       .catch(function (e) {
