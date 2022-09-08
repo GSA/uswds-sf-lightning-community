@@ -18,7 +18,7 @@
   <aura:attribute name="language" type="String" default="English" />
   <aura:attribute name="languageMap" type="Map" />
   <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
-  <lightning:notificationsLibrary aura:id="notifLib" />
+  <c:builderNotification aura:id="builderNotification" />
 
   <aura:if isTrue="{!v.showPagination}">
     <nav aria-label="{! v.paginationAria }" class="usa-pagination">
