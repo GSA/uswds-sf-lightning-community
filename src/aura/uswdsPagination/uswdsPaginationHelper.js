@@ -129,7 +129,7 @@
             "aria-label": page.isLast
               ? language.lastPage + " " + String(page.content)
               : language.page + " " + String(page.content),
-            "aria-current": page.isCurrent ? "Page" : "",
+            "aria-current": page.isCurrent ? language.page : "",
             class: page.isCurrent
               ? "usa-pagination__button usa-current"
               : "usa-pagination__button",
@@ -190,15 +190,15 @@
   validation: function (cmp) {
     var ariaLabel = cmp.get("v.paginationAria");
     if (ariaLabel == "") {
-      console.warn(
-        `Error - USWDS Pagination. \n Error on Pagination component. Without a paginationAria value, screen readers will lack appropriate descriptive text. For more details see .`
-      );
-      cmp.find("notifLib").showToast({
-        title: "Error - USWDS Pagination",
-        message: `Validation error, paginationAria is blank and requires input. Additional details are logged to the developer console for your review.`,
-        variant: "warning",
-        mode: "sticky"
-      });
+      const builderNotificationContent = [
+        {
+          title: "Error - USWDS Pagination",
+          message: `Validation error, paginationAria is blank and requires input. Without a paginationAria value, screen readers will lack appropriate descriptive text and users who rely on Aria will have difficulty navigating.`
+        }
+      ];
+      cmp
+        .find("builderNotification")
+        .addNotification(builderNotificationContent);
     }
   }
 });
