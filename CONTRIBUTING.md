@@ -9,6 +9,7 @@ We're so glad you're thinking about contributing to a U.S. Government open sourc
   - [Code Guidelines](#code-guidelines)
   - [Establishing a Development Environment](#establishing-a-development-environment)
   - [Creating a new Component](#creating-a-new-component)
+    - [Handling in-component validation & builder feedback](#handling-in-component-validation--builder-feedback)
   - [Testing](#testing)
     - [Testing Principles](#testing-principles)
     - [Creating New Tests](#creating-new-tests)
@@ -57,6 +58,35 @@ Using Salesforce [Scratch Orgs](https://help.salesforce.com/s/articleView?id=sf.
 Add the new component to the src/package.xml
 
 `sfdx force:source:manifest:create --sourcepath src --manifestname src/package.xml`
+
+### Handling in-component validation & builder feedback
+
+The `builderNotification` component provides a means by which validation messages and feedback for developers or site builders can be shared within Experience Builder. Messages that appear in Experience Builder are meant to serve as bowling lane bumpers to steer the individual back on track. If a site builder publishes a page while a message is displayed, it will be shown to end users.
+
+Implementing `builderNotification` relies on updates to the component and controller or helper. The standard practice is to give the component an `aura:id` of `builderNotification` but that naming convention is not explicitly required.
+
+The `addNotification` method expects an object or array of objects containing a title and message. A simplified example is below. For a more detailed example see the [Step Indicator component](https://github.com/GSA/uswds-sf-lightning-community/blob/develop/src/aura/uswdsStepIndicator/uswdsStepIndicatorHelper.js).
+
+```html
+<!-- mycomponent.cmp -->
+<aura:attribute name="firstName" type="String" />
+<!-- component must be implemented with an aura:id="builderNotification" -->
+<c:builderNotification aura:id="builderNotification" />
+<h1>Hi {!v.firstName}</h1>
+```
+
+```js
+/* mycomponentController.js */
+validateFirstName: function(component, event, helper) {
+  if ({!v.firstName}) {
+    const builderNotificationContent = [{
+        title: "Error - My Component",
+        message: "First name is blank and a value is expected"
+      }];
+    component.find("builderNotification").addNotification(builderNotificationContent);
+  }
+}
+```
 
 ## Testing
 
