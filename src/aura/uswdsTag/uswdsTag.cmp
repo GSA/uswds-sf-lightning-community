@@ -4,7 +4,7 @@
   <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
 
   <aura:attribute name="title" type="String" />
-  <aura:attribute name="size" type="String" />
+  <aura:attribute name="size" type="String" default="" />
   <aura:attribute name="sizeClass" type="String" />
 
   <aura:attribute name="color" type="String" default="default" />
@@ -12,7 +12,7 @@
 
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
-  <lightning:notificationsLibrary aura:id="notifLib" />
+  <c:builderNotification aura:id="builderNotification" />
 
   <span class="{! 'usa-tag ' + v.sizeClass + ' ' + v.colorClass}"
     >{!v.title}</span

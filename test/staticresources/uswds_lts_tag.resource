@@ -5,7 +5,7 @@ describe("USWDS Tag", function () {
     $T.clearRenderedTestComponents();
   });
 
-  it("properly renders with default settings", function (done) {
+  it("Properly renders with default settings", function (done) {
     $T.createComponent("c:uswdsTag", { title: "my tag" }, true)
       .then(function (component) {
         expect(
@@ -20,7 +20,7 @@ describe("USWDS Tag", function () {
       });
   });
 
-  it("adds the appropriate class when size = Big.", function (done) {
+  it("Adds the appropriate class when size = Big.", function (done) {
     $T.createComponent("c:uswdsTag", { title: "my tag", size: "Big" }, true)
       .then(function (component) {
         expect(
@@ -34,7 +34,7 @@ describe("USWDS Tag", function () {
       });
   });
 
-  it("allows for a valid color to be chosen.", function (done) {
+  it("Properly displays a valid color option", function (done) {
     $T.createComponent("c:uswdsTag", { title: "my tag", color: "indigo" }, true)
       .then(function (component) {
         expect(
@@ -47,5 +47,40 @@ describe("USWDS Tag", function () {
         done.fail(e);
       });
   });
-  /* A test for an invalid color does not result in a decisive test. The lightning:notificationsLibrary component does not properly render in an automated test which results in a callback error*/
+
+  it("Properly displays color and size variants regardless of case", function (done) {
+    $T.createComponent(
+      "c:uswdsTag",
+      { title: "my tag", color: "Red Cool", size: "big" },
+      true
+    )
+      .then(function (component) {
+        expect(
+          document.getElementsByClassName("usa-tag usa-tag--big red-cool-vivid")
+            .length
+        ).toEqual(1);
+        // end this spec successfully
+        done();
+      })
+      .catch(function (e) {
+        done.fail(e);
+      });
+  });
+
+  it("Displays error when an invalid color is provided", function (done) {
+    $T.createComponent("c:uswdsTag", { title: "my tag", color: "garnet" }, true)
+      .then(function (component) {
+        expect(document.getElementsByClassName("usa-tag").length).toEqual(1);
+        expect(
+          document.querySelectorAll(".slds-notify__content", "p")[0].textContent
+        ).toContain(
+          `Provided color value "garnet" does not exist for this component. The default color will be displayed. A list of valid values are logged to the developer console.`
+        );
+        // end this spec successfully
+        done();
+      })
+      .catch(function (e) {
+        done.fail(e);
+      });
+  });
 });
