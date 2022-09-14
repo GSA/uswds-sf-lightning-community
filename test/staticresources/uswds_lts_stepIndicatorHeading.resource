@@ -64,4 +64,54 @@ describe("Step Indicator Heading", function () {
         done.fail(e);
       });
   });
+
+  it("Displays error message when an invalid language is provided", function (done) {
+    $T.createComponent(
+      "c:uswdsStepIndicatorHeading",
+      {
+        language: "Deutsch",
+        currentStep: "1",
+        totalSteps: "4",
+        headingText: "stepindicator heading"
+      },
+      true
+    )
+      .then(function (component) {
+        expect(
+          document.querySelectorAll(".slds-notify__content", "p")[0].textContent
+        ).toContain(
+          `Provided language value "Deutsch" does not exist for this component. The default language, English, will be displayed. A list of valid values are logged to the developer console.`
+        );
+        // end this spec successfully
+        done();
+      })
+      .catch(function (e) {
+        done.fail(e);
+      });
+  });
+
+  it("Displays error message when the currentStep value is higher than the totalStep value", function (done) {
+    $T.createComponent(
+      "c:uswdsStepIndicatorHeading",
+      {
+        language: "English",
+        currentStep: "5",
+        totalSteps: "4",
+        headingText: "stepindicator heading"
+      },
+      true
+    )
+      .then(function (component) {
+        expect(
+          document.querySelectorAll(".slds-notify__content", "p")[0].textContent
+        ).toContain(
+          `The current step value is higher than the total step value.`
+        );
+        // end this spec successfully
+        done();
+      })
+      .catch(function (e) {
+        done.fail(e);
+      });
+  });
 });
