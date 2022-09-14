@@ -12,7 +12,7 @@
   <aura:attribute name="cardType" type="String" default="Card with Media" />
 
   <aura:method name="processCardData" action="{!c.processCardData}" />
-  <lightning:notificationsLibrary aura:id="notifLib" />
+  <c:builderNotification aura:id="builderNotification" />
 
   <ul class="usa-card-group">
     <aura:iteration items="{!v.processedCardData}" var="card">
