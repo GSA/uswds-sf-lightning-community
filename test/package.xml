@@ -9,6 +9,7 @@
         <members>lts_jasmine</members>
         <members>lts_jasmineboot</members>
         <members>lts_testutil</members>
+        <members>uswds_lts_404</members>
         <members>uswds_lts_builderNotification</members>
         <members>uswds_lts_cardList</members>
         <members>uswds_lts_pagination</members>
