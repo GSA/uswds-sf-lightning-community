@@ -47,7 +47,9 @@
                   {!v.pageContent.homePageText}
                 </button>
               </li>
-              <aura:if isTrue="{! not(empty(v.formName))}">
+              <aura:if
+                isTrue="{! and(not(empty(v.formName)),not(empty(v.formUrl)))}"
+              >
                 <li class="usa-button-group__item">
                   <button
                     class="usa-button usa-button--outline"
