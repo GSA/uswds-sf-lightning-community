@@ -14,20 +14,22 @@
     if (content.hasOwnProperty(language)) {
       return content[language];
     } else {
-      const toastContent = {
+      const builderNotificationContent = {
         title: "Error - USWDS Step Indicator",
-        message: `Provided language value "${language}" does not exist for this component. The default language, English, will be displayed. A list of valid values are logged to the developer console.`,
-        variant: "warning",
-        mode: "sticky"
+        message: `Provided language value "${language}" does not exist for this component. The default language, English, will be displayed. A list of valid values are logged to the developer console.`
       };
       const validValues = Object.keys(content);
 
       const consoleWarningArray = [
-        toastContent.title,
-        toastContent.message,
+        builderNotificationContent.title,
+        builderNotificationContent.message,
         validValues
       ];
-      this.createToast(component, toastContent, consoleWarningArray);
+      this.createNotification(
+        component,
+        builderNotificationContent,
+        consoleWarningArray
+      );
       return content.English;
     }
   },
@@ -36,18 +38,29 @@
     const totalSteps = component.get("v.totalSteps");
 
     if (currentStep > totalSteps) {
-      const toastContent = {
+      const builderNotificationContent = {
         title: "Error - USWDS Step Indicator",
-        message: `The current step value is higher than the total step value.`,
-        variant: "warning",
-        mode: "sticky"
+        message: `The current step value is higher than the total step value.`
       };
-      const consoleWarningArray = [toastContent.title, toastContent.message];
-      this.createToast(component, toastContent, consoleWarningArray);
+      const consoleWarningArray = [
+        builderNotificationContent.title,
+        builderNotificationContent.message
+      ];
+      this.createNotification(
+        component,
+        builderNotificationContent,
+        consoleWarningArray
+      );
     }
   },
-  createToast: function (component, toastObject, consoleWarningArray) {
-    component.find("notifLib").showToast(toastObject);
+  createNotification: function (
+    component,
+    builderNotificationContent,
+    consoleWarningArray
+  ) {
+    component
+      .find("builderNotification")
+      .addNotification(builderNotificationContent);
     console.warn(...consoleWarningArray);
   }
 });

@@ -1,5 +1,6 @@
 ({
   getColor: function (component, color) {
+    const colorLowercase = color.toLowerCase();
     const colorMap = {
       default: "",
       "red cool": "red-cool-vivid",
@@ -25,14 +26,12 @@
       "violet warm": "violet-warm-vivid",
       magenta: "magenta-vivid"
     };
-    if (colorMap.hasOwnProperty(color)) {
-      return colorMap[color];
+    if (colorMap.hasOwnProperty(colorLowercase)) {
+      return colorMap[colorLowercase];
     } else {
-      component.find("notifLib").showToast({
+      component.find("builderNotification").addNotification({
         title: "Error - USWDS Tag",
-        message: `Provided color value "${color}" does not exist for this component. The default color will be displayed. A list of valid values are logged to the developer console.`,
-        variant: "warning",
-        mode: "sticky"
+        message: `Provided color value "${colorLowercase}" does not exist for this component. The default color will be displayed. A list of valid values are logged to the developer console.`
       });
       //{Object.keys(colorMap).map((x) => x + "\n"
       const validValues = Object.keys(colorMap);

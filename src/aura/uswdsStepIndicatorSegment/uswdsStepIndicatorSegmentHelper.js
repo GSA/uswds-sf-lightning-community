@@ -22,18 +22,28 @@
   validateLabelHasValue: function (component) {
     const label = component.get("v.stepIndicatorSegment.label");
     if (label == "") {
-      const toastContent = {
+      const builderNotificationContent = {
         title: "Error - USWDS Step Indicator Segment",
-        message: `Segment Label should contain a value, regardless of whether or not it is shown on the page.`,
-        variant: "warning",
-        mode: "sticky"
+        message: `Segment Label should contain a value, regardless of whether or not it is shown on the page.`
       };
-      this.createToast(component, toastContent);
+      component
+        .find("builderNotification")
+        .addNotification(builderNotificationContent);
     }
   },
-  createToast: function (component, toastObject) {
-    component.find("notifLib").showToast(toastObject);
-    const consoleWarningArray = [toastObject.title, toastObject.message];
-    console.warn(...consoleWarningArray);
+  validateSegmentStatus: function (component) {
+    const regex = /(completed|not completed|current)/i;
+    const status = component.get("v.stepIndicatorSegment.status");
+    // the regex must be wrapped in  parens in order for the not, !, operator to evaluate correctly
+    // prettier-ignore
+    if (!(regex.test(status))) {
+      const builderNotificationContent = {
+        title: "Error - USWDS Step Indicator Segment",
+        message: `Segment Status should be one of: 'completed', 'not completed', or 'current'.`
+      };
+      component
+        .find("builderNotification")
+        .addNotification(builderNotificationContent);
+    }
   }
 });
