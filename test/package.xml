@@ -12,6 +12,8 @@
         <members>uswds_lts_404</members>
         <members>uswds_lts_builderNotification</members>
         <members>uswds_lts_cardList</members>
+        <members>uswds_lts_collectionElement</members>
+        <members>uswds_lts_collectionList</members>
         <members>uswds_lts_pagination</members>
         <members>uswds_lts_search</members>
         <members>uswds_lts_stepIndicator</members>
