@@ -1,0 +1,87 @@
+<aura:component>
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds-init.min.js'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+
+  <aura:attribute name="collectionElement" type="Map" />
+  <aura:attribute name="longformDate" type="String" default="" />
+  <aura:attribute name="monthAbbreviation" type="String" default="" />
+  <aura:attribute name="day" type="String" default="" />
+
+  <aura:handler name="init" value="this" action="{!c.doInit}" />
+  <c:builderNotification aura:id="builderNotification" />
+  <li class="usa-collection__item">
+    <aura:if
+      isTrue="{! equals(v.collectionElement.collectionType, 'thumbnail')}"
+    >
+      <img
+        class="usa-collection__img"
+        src="{!v.collectionElement.imgSrc}"
+        alt="{!v.collectionElement.imgAltText}"
+      />
+    </aura:if>
+    <aura:if
+      isTrue="{! equals(v.collectionElement.collectionType, 'calendar')}"
+    >
+      <div class="usa-collection__calendar-date">
+        <time datetime="{!v.collectionElement.metaPublishingDate}"
+          ><span class="usa-collection__calendar-date-month"
+            >{!v.monthAbbreviation}</span
+          >
+          <span class="usa-collection__calendar-date-day">{!v.day}</span></time
+        >
+      </div>
+    </aura:if>
+    <div class="usa-collection__body">
+      <h3 class="usa-collection__heading">
+        <a class="usa-link" href="{!v.collectionElement.headingUrl}"
+          >{!v.collectionElement.headingContent}</a
+        >
+      </h3>
+      <!-- heading more information-->
+      <aura:if
+        isTrue="{! and(equals(v.collectionElement.collectionType, 'heading'), not(equals(v.collectionElement.metaTitle, '')))}"
+      >
+        <ul class="usa-collection__meta" aria-label="More information">
+          <li class="usa-collection__meta-item position-relative">
+            <!-- this must be an SVG - using img tag messes up the css-->
+
+            <!--http://spring-16.lightningdesignsystem.com/resources/lightning-svg-icon-component-helper/-->
+            <c:uswdsSvgIcon
+              svgPath="{!$Resource.uswds_2_x+'/img/sprite.svg#public'}"
+              class="usa-icon position-relative bottom-2px"
+              assistiveText="Globe icon indicating the link resides outside the current domain."
+            />
+            &nbsp;{!v.collectionElement.metaTitle}
+          </li>
+        </ul>
+      </aura:if>
+      <p class="usa-collection__description">
+        {!v.collectionElement.description}
+      </p>
+      <aura:if
+        isTrue="{! not(equals(v.collectionElement.collectionType, 'calendar'))}"
+      >
+        <ul class="usa-collection__meta" aria-label="More information">
+          <li class="usa-collection__meta-item">
+            {!v.collectionElement.metaAuthor}
+          </li>
+          <li class="usa-collection__meta-item">
+            <time datetime="{!v.collectionElement.metaPublishingDate}"
+              >{!v.longformDate}</time
+            >
+          </li>
+        </ul>
+      </aura:if>
+      <ul class="usa-collection__meta" aria-label="Topics">
+        <aura:iteration items="{!v.collectionElement.tags}" var="tag">
+          <li
+            class="{! concat('usa-collection__meta-item usa-tag ', (tag.new) ? ' usa-tag--new' : '')}"
+          >
+            {!tag.title}
+          </li>
+        </aura:iteration>
+      </ul>
+    </div>
+  </li>
+</aura:component>
