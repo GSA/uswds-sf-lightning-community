@@ -4,6 +4,8 @@
       $Resource.uswds_lts_404,
       $Resource.uswds_lts_builderNotification,
       $Resource.uswds_lts_cardList,
+      $Resource.uswds_lts_collectionElement,
+      $Resource.uswds_lts_collectionList,
       $Resource.uswds_lts_pagination,
       $Resource.uswds_lts_search,
       $Resource.uswds_lts_stepIndicator,

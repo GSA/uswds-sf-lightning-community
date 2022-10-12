@@ -8,6 +8,8 @@
         <members>uswdsBreadcrumb</members>
         <members>uswdsCardElement</members>
         <members>uswdsCardList</members>
+        <members>uswdsCollectionElement</members>
+        <members>uswdsCollectionList</members>
         <members>uswdsFooterNavMenu</members>
         <members>uswdsFooterNavMenuSmall</members>
         <members>uswdsIdentifier</members>
@@ -21,6 +23,7 @@
         <members>uswdsStepIndicator</members>
         <members>uswdsStepIndicatorHeading</members>
         <members>uswdsStepIndicatorSegment</members>
+        <members>uswdsSvgIcon</members>
         <members>uswdsTag</members>
         <members>uswdsTheme</members>
         <members>uswdsUSABanner</members>
