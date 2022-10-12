@@ -1,0 +1,12 @@
+<aura:component>
+  <aura:attribute name="collectionData" type="Map[]" />
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds-init.min.js'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+
+  <ul class="usa-collection">
+    <aura:iteration items="{!v.collectionData}" var="element">
+      <c:uswdsCollectionElement collectionElement="{! element }" />
+    </aura:iteration>
+  </ul>
+</aura:component>
