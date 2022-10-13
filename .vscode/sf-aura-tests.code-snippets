@@ -1,0 +1,94 @@
+{
+  "Lightning Component Test": {
+    "prefix": ["LtngTestDescribe"],
+    "body": [
+      "describe('$1', function () {",
+      "  // declare any variables that need to be available in each test",
+      "  var ${2:varA};",
+      "  beforeEach(function () {",
+      "    ${2:varA} = \"$3\";",
+      "  });",
+      "  afterEach(function () {",
+      "    // Each spec (test) renders its components into the same div,",
+      "    // so we need to clear that div out at the end of each spec.",
+      "    \\$T.clearRenderedTestComponents();",
+      "  });",
+      "  it('$4', function (done) {",
+      "    /**",
+      "     * createComponent - generates a component for testing",
+      "     * param - string - component reference \"c:componentName\"",
+      "     * param - object - component parameters {attributeA: \"\", ",
+      "attributeB:\"\"}",
+      "     * param - boolean - whether or not the component needs to be ",
+      "rendered)",
+      "     */",
+      "    \\$T.createComponent(",
+      "      \"c:${5:componentName}\",",
+      "      {${6:attribute}:${7:value}}",
+      "      true",
+      "    )",
+      "      .then(function (component) {",
+      "        expect(",
+      "         ${8:selector}",
+      "        ).toContain(${9:value});",
+      "        done();",
+      "      })",
+      "      .catch(function (e) {",
+      "        done.fail(e);",
+      "      });",
+      "  });",
+      "});"
+    ],
+    "description": "A full Jasmine test block with describe(), it(), beforeEach(), afterEach(),and expect() blocks"
+  },
+  "Lightning Component Test it()": {
+    "prefix": ["LtngTestIt"],
+    "body": [
+      "  it('$1', function (done) {",
+      "    /**",
+      "     * createComponent - generates a component for testing",
+      "     * param - string - component reference \"c:componentName\"",
+      "     * param - object - component parameters {attributeA: \"\", ",
+      "attributeB:\"\"}",
+      "     * param - boolean - whether or not the component needs to be ",
+      "rendered)",
+      "     */",
+      "",
+      "    \\$T.createComponent(",
+      "      \"c:${2:componentName}\",",
+      "      {${3:attribute}:${4:value}}",
+      "      true",
+      "    )",
+      "      .then(function (component) {",
+      "        expect(",
+      "         ${5:selector}",
+      "        ).toContain(${6:value});",
+      "        done();",
+      "      })",
+      "      .catch(function (e) {",
+      "        done.fail(e);",
+      "      });",
+      "  });"
+    ],
+    "description": "Creates an it() statement for use within Jasmine tests"
+  },
+  "Lightning Component Test then()": {
+    "prefix": ["LtngTestThen"],
+    "body": [
+      "      .then(function (component) {",
+      "        expect($1).toEqual($2);"
+    ],
+    "description": "Creates a .then() statement for use within Jasmine tests"
+  },
+  "Lightning Component Test createComponent()": {
+    "prefix": ["LtngTestCreateComponent"],
+    "body": [
+      "    \\$T.createComponent(",
+      "      'c:${1:componentName}',",
+      "      {${2:attribute}:${3:value}}",
+      "      true",
+      "    )"
+    ],
+    "description": "Creates a $T.createComponent() statement for use within Jasmine tests"
+  }
+}
