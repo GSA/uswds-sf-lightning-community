@@ -24,7 +24,7 @@
       "     */",
       "    \\$T.createComponent(",
       "      \"c:${5:componentName}\",",
-      "      {${6:attribute}:${7:value}}",
+      "      {${6:attribute}:${7:value}},",
       "      true",
       "    )",
       "      .then(function (component) {",
