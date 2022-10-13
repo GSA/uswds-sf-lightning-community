@@ -119,7 +119,10 @@ describe("USA Banner", function () {
 
    `sfdx force:lightning:test:create -d test/staticresources -n uswds_lts_{component name}`
 
-1. The prior command creates a bare test. Copy in the contents of test/testTemplate to get up and running a bit faster.
+1. The prior command creates a bare test.
+
+   1. If you are using VSCode, tests can be quickly scaffolded using [snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets). Open the new file and start typing `LtngTest`, pick the describe option.
+   2. If not using VSCode, copy in the contents of `test/testTemplate`.
 
    `cp test/testTemplate test/staticresources/uswds_lts_{component name}.resource`
 
