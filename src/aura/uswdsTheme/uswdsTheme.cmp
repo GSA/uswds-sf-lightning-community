@@ -240,7 +240,7 @@
                   </h3>
                 </aura:if>
                 <aura:if
-                  isTrue="{! or(not(empty(v.contactEmail)), not(empty(v.contactPhone)), not(empty(v.contactLink)), not(empty(v.contactLinkText)))}"
+                  isTrue="{! not(empty(v.contactEmail)) ||not(empty(v.contactPhone)) || not(empty(v.contactLink)) || not(empty(v.contactLinkText))}"
                 >
                   <address class="usa-footer__address">
                     <div class="usa-footer__contact-info grid-row grid-gap">

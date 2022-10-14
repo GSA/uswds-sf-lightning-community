@@ -80,6 +80,7 @@ retrieveUnpackaged/
 retrieveUnpackagedstatic/
 static/
 .sfdx
+.sf/
 
 # Zip files
 *.zip
