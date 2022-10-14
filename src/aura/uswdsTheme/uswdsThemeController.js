@@ -41,6 +41,11 @@
       Standard: "grid-container",
       Wide: "grid-container-widescreen"
     };
-    $A.util.addClass(mainContent, containerToClasses[containerWidth]);
+    $A.util.addClass(
+      mainContent,
+      containerToClasses[containerWidth] != undefined
+        ? containerToClasses[containerWidth]
+        : containerToClasses.Standard
+    );
   }
 });
