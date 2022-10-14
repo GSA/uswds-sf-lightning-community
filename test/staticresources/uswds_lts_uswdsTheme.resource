@@ -135,4 +135,49 @@ describe("USWDS Theme", function () {
         });
     });
   });
+  describe("Footer Email Signup Toggle", function () {
+    afterEach(function () {
+      // Each spec (test) renders its components into the same div,
+      // so we need to clear that div out at the end of each spec.
+      $T.clearRenderedTestComponents();
+    });
+    it("remains hidden when in default (Off) state", function (done) {
+      $T.createComponent("c:uswdsTheme", {}, true)
+        .then(function (component) {
+          expect(
+            document
+              .querySelectorAll(
+                ".usa-footer__secondary-section > div > div > div"
+              )[0]
+              .getAttribute("class")
+          ).toEqual("usa-footer__contact-links mobile-lg:grid-col-12");
+          done();
+        })
+        .catch(function (e) {
+          done.fail(e);
+        });
+    });
+    it('is displayed when set to "On"', function (done) {
+      $T.createComponent(
+        "c:uswdsTheme",
+        { footerEmailSignUpToggle: "On" },
+        true
+      )
+        .then(function (component) {
+          expect(
+            document
+              .querySelectorAll(
+                ".usa-footer__secondary-section > div > div > div"
+              )[0]
+              .getAttribute("class")
+          ).toContain(
+            "card:grid-col-12 margin-top-3 mobile-lg:margin-top-0 mobile-lg:grid-col-6"
+          );
+          done();
+        })
+        .catch(function (e) {
+          done.fail(e);
+        });
+    });
+  });
 });
