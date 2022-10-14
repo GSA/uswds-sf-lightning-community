@@ -56,7 +56,7 @@
       "",
       "    \\$T.createComponent(",
       "      \"c:${2:componentName}\",",
-      "      {${3:attribute}:${4:value}}",
+      "      {${3:attribute}:${4:value}},",
       "      true",
       "    )",
       "      .then(function (component) {",
