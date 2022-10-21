@@ -50,7 +50,7 @@
             <img
               class="usa-banner__icon usa-media-block__img"
               src="{!$Resource.uswds_2_x+'/img/icon-dot-gov.svg'}"
-              alt="" 
+              alt=""
               role="img"
               aria-hidden="true"
             />
