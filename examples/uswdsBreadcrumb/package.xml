@@ -4,5 +4,5 @@
         <members>exampleBreadcrumb</members>
         <name>AuraDefinitionBundle</name>
     </types>
-    <version>48.0</version>
+    <version>56.0</version>
 </Package>
