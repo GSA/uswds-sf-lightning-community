@@ -15,6 +15,7 @@ We're so glad you're thinking about contributing to a U.S. Government open sourc
     - [Creating New Tests](#creating-new-tests)
     - [Deploying Tests](#deploying-tests)
     - [Running Tests](#running-tests)
+  - [Updating package.xml version](#updating-packagexml-version)
 
 ## How to contribute to this project
 
@@ -141,3 +142,19 @@ describe("USA Banner", function () {
 At this time, running tests directly in the terminal does not work. The issue is tracked in GitHub at [#108](https://github.com/GSA/uswds-sf-lightning-community/issues/108). Instead, output of the tests can be seen in the org at {orgURL}/c/jasmineTests.app. With SFDX, you can go straight there by entering the following into your terminal.
 
 `sfdx force:org:open -p /c/jasmineTests.app -u {username}`
+
+## Updating package.xml version
+
+- Deploy code from `src/` as is to fresh org
+- Update package.xml to desired mdapi version within `src/`
+- Pull the code that was just deployed back down to your local machine but using the new mdapi version
+- `sfdx force:mdapi:retrieve -r newmdapi/ -k src/package.xml --unzip -u {username}`
+- copy contents of `newmdapi/` and paste into `src/`.
+- Run prettier against files to resolve whitespace differences caused by mdapi:retrieve.
+- `npx prettier --write "src/"`
+- Review remaining files that are in a git dirty state. `flexipage` and `communityThemeDefinition` files may change structure since they are xml-based.
+- deploy updated metadata back to org `sfdx force:mdapi:deploy -d src/ -w 100 -u {username}`
+- deploy tests to org `sfdx force:mdapi:deploy -d test/ -w 100 -u {username}`
+- run tests `sfdx aura-test:run -a jasmineTests -u {username}`
+- upon successful test run, perform same metadata api update as above but for the `test/` directory
+- deploy and run tests again
