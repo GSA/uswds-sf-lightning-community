@@ -9,21 +9,24 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <appendable>disabled</appendable>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>maxAutoCompleteResults</name>
-                <value>5</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>searchLabel</name>
-                <value>Search...</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>searchObjects</name>
-                <value>[{&quot;name&quot;:&quot;KnowledgeArticleVersion&quot;,&quot;isPublic&quot;:true},{&quot;name&quot;:&quot;Case&quot;,&quot;isPublic&quot;:false},{&quot;name&quot;:&quot;ContentDocument&quot;,&quot;isPublic&quot;:true}]</value>
-            </componentInstanceProperties>
-            <componentName>forceCommunity:globalSearchInput</componentName>
-        </componentInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>maxAutoCompleteResults</name>
+                    <value>5</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>searchLabel</name>
+                    <value>Search...</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>searchObjects</name>
+                    <value>[{&quot;name&quot;:&quot;KnowledgeArticleVersion&quot;,&quot;isPublic&quot;:true},{&quot;name&quot;:&quot;Case&quot;,&quot;isPublic&quot;:false},{&quot;name&quot;:&quot;ContentDocument&quot;,&quot;isPublic&quot;:true}]</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:globalSearchInput</componentName>
+                <identifier>forceCommunity_globalSearchInput</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>search</name>
         <prependable>disabled</prependable>
         <replaceable>disabled</replaceable>
@@ -31,69 +34,72 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <appendable>disabled</appendable>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>accountManagementLabel</name>
-                <value>Account Management</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>communityBuilderLabel</name>
-                <value>Experience Builder</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>communitySetupLabel</name>
-                <value>Salesforce Setup</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>contactSupportLabel</name>
-                <value>Contact Support</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>filterName</name>
-                <value>MyCases</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>homeLabel</name>
-                <value>Home</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>includeContactSupport</name>
-                <value>false</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>includeMessages</name>
-                <value>false</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>loginLabel</name>
-                <value>Login</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>logoutLabel</name>
-                <value>Logout</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>myAccountLabel</name>
-                <value>My Account</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>showAccountManagement</name>
-                <value>false</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>showUserSettings</name>
-                <value>false</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>userSettingsLabel</name>
-                <value>My Settings</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>viewProfileLabel</name>
-                <value>My Profile</value>
-            </componentInstanceProperties>
-            <componentName>selfService:userProfileMenu</componentName>
-        </componentInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>accountManagementLabel</name>
+                    <value>Account Management</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>communityBuilderLabel</name>
+                    <value>Experience Builder</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>communitySetupLabel</name>
+                    <value>Salesforce Setup</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>contactSupportLabel</name>
+                    <value>Contact Support</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>filterName</name>
+                    <value>MyCases</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>homeLabel</name>
+                    <value>Home</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>includeContactSupport</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>includeMessages</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>loginLabel</name>
+                    <value>Login</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>logoutLabel</name>
+                    <value>Logout</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>myAccountLabel</name>
+                    <value>My Account</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>showAccountManagement</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>showUserSettings</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>userSettingsLabel</name>
+                    <value>My Settings</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>viewProfileLabel</name>
+                    <value>My Profile</value>
+                </componentInstanceProperties>
+                <componentName>selfService:userProfileMenu</componentName>
+                <identifier>selfService_userProfileMenu</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>profileMenu</name>
         <prependable>disabled</prependable>
         <replaceable>disabled</replaceable>
@@ -101,20 +107,23 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <appendable>disabled</appendable>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>NavigationMenuEditorRefresh</name>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>hideAppLauncher</name>
-                <value>true</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>hideHomeText</name>
-                <value>false</value>
-            </componentInstanceProperties>
-            <componentName>forceCommunity:globalNavigation</componentName>
-        </componentInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>NavigationMenuEditorRefresh</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hideAppLauncher</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hideHomeText</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentName>forceCommunity:globalNavigation</componentName>
+                <identifier>forceCommunity_globalNavigation</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>navBar</name>
         <prependable>disabled</prependable>
         <replaceable>disabled</replaceable>

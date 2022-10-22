@@ -27,7 +27,7 @@
           start="{! v.startNumber }"
         >
           <aura:if isTrue="{!item.subMenu}">
-            <li class="usa-sidenav__item" style="padding: 0.5rem 1rem;">
+            <li class="usa-sidenav__item" style="padding: 0.5rem 1rem">
               {!item.label}
             </li>
             <ul class="usa-sidenav__sublist">
