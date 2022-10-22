@@ -15,6 +15,8 @@ We're so glad you're thinking about contributing to a U.S. Government open sourc
     - [Creating New Tests](#creating-new-tests)
     - [Deploying Tests](#deploying-tests)
     - [Running Tests](#running-tests)
+      - [CLI](#cli)
+      - [Browser](#browser)
   - [Updating package.xml version](#updating-packagexml-version)
 
 ## How to contribute to this project
@@ -139,9 +141,21 @@ describe("USA Banner", function () {
 
 ### Running Tests
 
-At this time, running tests directly in the terminal does not work. The issue is tracked in GitHub at [#108](https://github.com/GSA/uswds-sf-lightning-community/issues/108). Instead, output of the tests can be seen in the org at {orgURL}/c/jasmineTests.app. With SFDX, you can go straight there by entering the following into your terminal.
+Tests can be run via the CLI or directly within the browser. Per issue [#108](https://github.com/GSA/uswds-sf-lightning-community/issues/108), a fork of Salesforce's Lightning Test Service Plugin was created.
 
-`sfdx force:org:open -p /c/jasmineTests.app -u {username}`
+#### CLI
+
+- Install forked version of Salesforces Lightning Test Service plugin
+- `sfdx plugins:install @mvogelgesang/plugin-lightning-testing-service`
+- Verify installation via `sfdx plugins`
+- Deploy source and test to org following steps above
+- Run tests `sfdx aura-test:run -a jasmineTests -u {username}`
+- A browser window will launch and test results will be printed to the terminal
+
+#### Browser
+
+- Deploy tests and navigate straight to the test suite:
+- `sfdx force:org:open -p /c/jasmineTests.app -u {username}`
 
 ## Updating package.xml version
 
