@@ -2,6 +2,6 @@
 <StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
     <cacheControl>Public</cacheControl>
     <contentType>application/zip</contentType>
-    <description>uswds v2.12.1
-https://github.com/uswds/uswds/releases/tag/v2.12.1</description>
+    <description>uswds v2.13.2
+https://github.com/uswds/uswds/releases/tag/v2.13.2</description>
 </StaticResource>
