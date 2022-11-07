@@ -5,8 +5,7 @@
   "main": "",
   "dependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.32.0",
-    "latest": "^0.2.0"
+    "eslint": "^7.32.0"
   },
   "devDependencies": {
     "axios": "^0.21.2",
