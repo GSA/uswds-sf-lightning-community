@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CommunityThemeDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
     <bundlesInfo>
-        <description>Header section allows for OOTB Salesforce Nav, User Profile, and Search as well as custom overrides for each.</description>
+        <description>Header section allows for OOTB Salesforce Nav, User Profile, and Search as well
+            as custom overrides for each.</description>
         <order>1</order>
         <title>Dynamic Header</title>
         <type>Highlight</type>
     </bundlesInfo>
     <bundlesInfo>
-        <description>Builds off mobile styling from US Web Design System and provides users a mobile first experience.</description>
+        <description>Builds off mobile styling from US Web Design System and provides users a mobile
+            first experience.</description>
         <order>2</order>
         <title>Mobile Ready</title>
         <type>Highlight</type>
     </bundlesInfo>
     <bundlesInfo>
-        <description>The Identifier component helps agencies clearly denote ownership of the site as well as providing links to key resources such as Privacy Policy, FOIA Requests, Accessibility statements, and USA.gov. https://designsystem.digital.gov/components/identifier/</description>
+        <description>The Identifier component helps agencies clearly denote ownership of the site as
+            well as providing links to key resources such as Privacy Policy, FOIA Requests,
+            Accessibility statements, and USA.gov.
+            https://designsystem.digital.gov/components/identifier/</description>
         <order>3</order>
         <title>Identifier</title>
         <type>Highlight</type>
     </bundlesInfo>
     <bundlesInfo>
-        <description>Starting from a mobile-first base, the desktop experience can be adjusted to provide standard page width (936px), widescreen (1312px), or full width.</description>
+        <description>Starting from a mobile-first base, the desktop experience can be adjusted to
+            provide standard page width (936px), widescreen (1312px), or full width.</description>
         <order>4</order>
         <title>Widescreen View</title>
         <type>Highlight</type>
@@ -43,9 +49,10 @@
         <type>PreviewImage</type>
     </bundlesInfo>
     <defaultBrandingSet>USWDS_Lightning_Community</defaultBrandingSet>
-    <description>A US Web Design System Theme for Lightning Communities. Contribute at https://github.com/GSA/uswds-sf-lightning-community</description>
+    <description>A US Web Design System Theme for Lightning Communities. Contribute at
+        https://github.com/GSA/uswds-sf-lightning-community</description>
     <enableExtendedCleanUpOnDelete>true</enableExtendedCleanUpOnDelete>
-    <masterLabel>USWDS v1.4.2</masterLabel>
+    <masterLabel>USWDS v2.0.0</masterLabel>
     <publisher>U.S. GSA</publisher>
     <themeSetting>
         <themeLayout>USWDS_Lightning_Community_themeLayout_Login</themeLayout>
