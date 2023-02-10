@@ -1,3 +1,37 @@
-<aura:component>
+<aura:component
+  implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <aura:attribute name="heading" type="string" description="" />
+  <aura:attribute name="headingAlt" type="string" description="" />
+  <aura:attribute name="headingBody" type="string" description="" />
+  <aura:attribute name="callToAction" type="string" description="" />
+  <aura:attribute name="callToActionLink" type="string" description="" />
+  <aura:attribute name="heroImgName" type="string" description="" default="" />
+  <aura:attribute name="heroReference" type="string" description="" />
 
-</aura:component>	
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+  <section
+    class="usa-hero"
+    aria-label="Introduction"
+    style="{!'background-image: url(' + v.heroReference + ')'}"
+  >
+    <div class="grid-container">
+      <div class="usa-hero__callout">
+        <h1 class="usa-hero__heading">
+          <aura:if isTrue="{! not(empty(v.headingAlt)) }">
+            <span class="usa-hero__heading--alt">{!v.headingAlt}</span>
+          </aura:if>
+          {!v.heading}
+        </h1>
+        <p>
+          <aura:unescapedHtml value="{!v.headingBody}"></aura:unescapedHtml>
+        </p>
+        <a class="usa-button margin-top-2" href="{!v.callToActionLink}"
+          >{!v.callToAction}</a
+        >
+      </div>
+    </div>
+  </section>
+</aura:component>

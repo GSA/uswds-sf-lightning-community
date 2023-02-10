@@ -1,3 +1,27 @@
-<design:component >
-
+<design:component label="Hero - USWDS">
+  <design:attribute
+    name="heroImgName"
+    label="Hero Image Name"
+    description="Provide the name of the Asset File which will serve as the background image. For best results, choose an image with a size of at least 2048x820px."
+  />
+  <design:attribute name="heading" label="Heading" default="" description="" />
+  <design:attribute
+    name="headingAlt"
+    label="Heading Lead"
+    default=""
+    description=""
+  />
+  <design:attribute name="headingBody" label="Body" default="" description="" />
+  <design:attribute
+    name="callToAction"
+    label="Call to Action Name"
+    default=""
+    description=""
+  />
+  <design:attribute
+    name="callToActionLink"
+    label="Call to Action Link"
+    default=""
+    description=""
+  />
 </design:component>
