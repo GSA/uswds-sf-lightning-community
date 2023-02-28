@@ -1,0 +1,53 @@
+<aura:component
+  implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <ltng:require styles="{!$Resource.uswds_2_x+'/css/uswds.min.css'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds-init.min.js'}" />
+  <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
+  <aura:attribute name="heading" type="string" description="" />
+  <aura:attribute name="headingAlt" type="string" description="" />
+  <aura:attribute name="headingBody" type="string" description="" />
+  <aura:attribute name="callToAction" type="string" description="" />
+  <aura:attribute name="callToActionLink" type="string" description="" />
+  <aura:attribute name="heroImgName" type="string" description="" default="" />
+  <aura:attribute
+    name="heroImgAltText"
+    type="string"
+    description=""
+    default="Introduction"
+  />
+  <aura:attribute
+    name="heroReference"
+    type="string"
+    description=""
+    default=""
+  />
+  <aura:attribute name="style" type="string" />
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <c:builderNotification aura:id="builderNotification" />
+
+  <section
+    class="usa-hero"
+    aria-label="{!v.heroImgAltText}"
+    style="{! v.style + '(' + v.heroReference + ')'}"
+  >
+    <div class="grid-container">
+      <div class="usa-hero__callout">
+        <h1 class="usa-hero__heading">
+          <aura:if isTrue="{! not(empty(v.headingAlt)) }">
+            <span class="usa-hero__heading--alt">{!v.headingAlt}</span>
+          </aura:if>
+          {!v.heading}
+        </h1>
+        <p>{!v.headingBody}</p>
+        <aura:if isTrue="{! not(empty(v.callToAction)) }">
+          <a class="usa-button margin-top-2" href="{!v.callToActionLink}"
+            >{!v.callToAction}</a
+          >
+        </aura:if>
+      </div>
+    </div>
+  </section>
+</aura:component>

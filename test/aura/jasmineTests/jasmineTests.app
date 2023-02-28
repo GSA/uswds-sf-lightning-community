@@ -6,6 +6,7 @@
       $Resource.uswds_lts_cardList,
       $Resource.uswds_lts_collectionElement,
       $Resource.uswds_lts_collectionList,
+      $Resource.uswds_lts_hero,
       $Resource.uswds_lts_pagination,
       $Resource.uswds_lts_search,
       $Resource.uswds_lts_stepIndicator,

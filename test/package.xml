@@ -14,6 +14,7 @@
         <members>uswds_lts_cardList</members>
         <members>uswds_lts_collectionElement</members>
         <members>uswds_lts_collectionList</members>
+        <members>uswds_lts_hero</members>
         <members>uswds_lts_pagination</members>
         <members>uswds_lts_search</members>
         <members>uswds_lts_stepIndicator</members>
@@ -24,5 +25,5 @@
         <members>uswds_lts_uswdsTheme</members>
         <name>StaticResource</name>
     </types>
-    <version>56.0</version>
+    <version>57.0</version>
 </Package>
