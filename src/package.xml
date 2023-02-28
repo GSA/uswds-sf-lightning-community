@@ -52,5 +52,5 @@
         <members>uswds_pagination</members>
         <name>StaticResource</name>
     </types>
-    <version>56.0</version>
+    <version>57.0</version>
 </Package>
