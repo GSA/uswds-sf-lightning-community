@@ -1,4 +1,4 @@
-describe("uswds_lts_hero", function () {
+describe("Hero", function () {
   // declare any variables that need to be available in each test
   var testData;
   beforeEach(function () {
@@ -32,6 +32,10 @@ describe("uswds_lts_hero", function () {
             .getElementsByClassName("usa-hero")[0]
             .getAttribute("aria-label")
         ).toContain("Introduction");
+        // style will contain () by default due to the text interpolation rules with Salesforce
+        expect(
+          document.querySelectorAll(".usa-hero")[0].getAttribute("style")
+        ).toEqual("()");
         done();
       })
       .catch(function (e) {
