@@ -9,7 +9,7 @@ We're so glad you're thinking about contributing to a U.S. Government open sourc
   - [Code Guidelines](#code-guidelines)
   - [Establishing a Development Environment](#establishing-a-development-environment)
   - [Creating a new Component](#creating-a-new-component)
-    - [Handling in-component validation & builder feedback](#handling-in-component-validation--builder-feedback)
+    - [Handling in-component validation \& builder feedback](#handling-in-component-validation--builder-feedback)
   - [Testing](#testing)
     - [Testing Principles](#testing-principles)
     - [Creating New Tests](#creating-new-tests)
@@ -17,6 +17,7 @@ We're so glad you're thinking about contributing to a U.S. Government open sourc
     - [Running Tests](#running-tests)
       - [CLI](#cli)
       - [Browser](#browser)
+        - [Known Issues](#known-issues)
   - [Updating package.xml version](#updating-packagexml-version)
 
 ## How to contribute to this project
@@ -156,6 +157,10 @@ Tests can be run via the CLI or directly within the browser. Per issue [#108](ht
 
 - Deploy tests and navigate straight to the test suite:
 - `sfdx force:org:open -p /c/jasmineTests.app -u {username}`
+
+##### Known Issues
+
+- As of Salesforce v57.0 (Spring '23), Salesforce introduced [Lightning Web Security for Lightning web components (GA) and Aura components (Beta)](https://help.salesforce.com/s/articleView?id=release-notes.rn_lc_lws.htm&release=242&type=5) which is enabled by default on new and scratch orgs. Enabling this feature causes the Jasmine test suite to error out by not recognizing the global `$T` variable. To turn this off, go to `Setup > Session Settings > Lightning Web Security` and uncheck `Use Lightning Web Security for Lightning web components (GA) and Aura components (Beta)`. Since turning this off is only to execute tests, suggest toggling off the setting, validating tests, and turning it back on.
 
 ## Updating package.xml version
 
