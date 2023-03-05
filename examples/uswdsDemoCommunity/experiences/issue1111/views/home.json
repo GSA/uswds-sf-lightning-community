@@ -1,38 +1,22 @@
 {
   "appPageId" : "6466fef4-f420-4d80-a0bc-62712435cc7b",
-  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "componentName" : "siteforce:sldsOneColLayout",
   "dataProviders" : [ ],
   "id" : "5871ea44-95ab-43e0-9a23-0d3751dd48c2",
   "label" : "Home",
   "regions" : [ {
     "components" : [ {
       "componentAttributes" : {
-        "richTextValue" : "<img class='sfdcCbImage' src='/sfsites/c/img/community/cpt/cpt-home-banner.png'             style='width:100%;'/>"
+        "callToAction" : "Call to action",
+        "callToActionLink" : "/register",
+        "heading" : "Bring attention to a project priority",
+        "headingAlt" : "Hero callout:",
+        "headingBody" : "Support the callout with some short explanatory text. You don’t need more than a couple of sentences.",
+        "heroImgAltText" : "Introduction",
+        "heroImgName" : ""
       },
-      "componentName" : "forceCommunity:richTextInline",
-      "id" : "4e553e80-1935-40e0-81ed-df82fab97242",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    }, {
-      "componentAttributes" : {
-        "bannerBackgroundColor" : "",
-        "bannerPosition" : "top",
-        "bannerSizePercent" : 35,
-        "borderRadius" : 20,
-        "boxShadow" : true,
-        "haveBanner" : false,
-        "iconBackgroundColor" : "rgb(255,255,255)",
-        "iconSize" : "medium",
-        "noImageColor" : "rgb(212, 212, 212)",
-        "overlay" : "rgba(0,0,0,0.01)",
-        "templateType" : "default",
-        "titleColor" : "",
-        "titleFontSize" : "medium",
-        "titleHorizontalAlign" : "center"
-      },
-      "componentName" : "community_navigation:tileMenu",
-      "id" : "5783080e-ec73-4e59-9ace-4cd5f02cfe4a",
+      "componentName" : "c:uswdsHero",
+      "id" : "64734e9b-abaf-4788-ba80-78428d3f0020",
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
       "type" : "component"
@@ -43,23 +27,10 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
-        "enableInlineEdit" : true,
-        "filterName" : "MyOpenCases",
-        "layout" : "STANDARD",
-        "pageSize" : 5,
-        "scope" : "Case",
-        "showActionBar" : true,
-        "showChartsPanel" : true,
-        "showDisplay" : "showall",
-        "showFilterPanel" : true,
-        "showImageIcon" : true,
-        "showManualRefreshButton" : true,
-        "showObjectName" : true,
-        "showPinnedList" : true,
-        "showSearchBar" : true
+        "richTextValue" : "<div\n  class=\"usa-summary-box\"\n>\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3 class=\"usa-summary-box__heading font-alt-2xl\" id=\"summary-box-key-information\">\n      Using this example site\n    </h3>\n    <div class=\"usa-summary-box__text\">\n        <p>On each page, you'll find a Summary Box (this) which highlights key features, components used, and additional resources. </p>\n      <ul class=\"usa-list\">\n        <li>\n          If you are under a winter storm warning,\n          <a class=\"usa-summary-box__link\" href=\"\">find shelter</a> right away.\n        </li>\n        <li>\n          Sign up for\n          <a class=\"usa-summary-box__link\" href=\"\"\n            >your community’s warning system</a\n          >.\n        </li>\n        <li>\n          Learn the signs of, and basic treatments for,\n          <a class=\"usa-summary-box__link\" href=\"\">frostbite</a> and\n          <a class=\"usa-summary-box__link\" href=\"\">hypothermia</a>.\n        </li>\n        <li>\n          Gather emergency supplies for your\n          <a class=\"usa-summary-box__link\" href=\"\">home</a> and your\n          <a class=\"usa-summary-box__link\" href=\"\">car</a>.\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>"
       },
-      "componentName" : "forceCommunity:objectHome",
-      "id" : "5142e4a5-2e6f-44e3-8166-2ec4e4cda48b",
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "341177ef-d78d-4f6a-977a-c97d81d40ea4",
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
       "type" : "component"
@@ -68,35 +39,6 @@
     "regionName" : "content",
     "type" : "region"
   }, {
-    "components" : [ {
-      "componentAttributes" : {
-        "deleteButtonText" : "Delete",
-        "pageSize" : 10,
-        "resumeButtonAlign" : "right",
-        "resumeButtonLabel" : "Resume",
-        "showDeleteButton" : false,
-        "showNumberInTitle" : true,
-        "showOwnerName" : false,
-        "showPauseReason" : true,
-        "showPauseStep" : true,
-        "showPauseTime" : true,
-        "title" : "Paused Flows"
-      },
-      "componentName" : "forceCommunity:pausedInterviewCard",
-      "id" : "17c14d1b-b4d9-451d-b265-e2d41fd7342f",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    }, {
-      "componentAttributes" : {
-        "richTextValue" : "             <p><b style=\"font-size: 16px;\">Quick Links</b></p>             <p><br></p>             <p><a href=\"http://www.salesforce.com/\" target=\"_blank\">Link 1</a></p>             <p><br></p>             <p><a href=\"http://www.salesforce.com/\" target=\"_blank\">Link 2</a></p>             <p><br></p>             <p><a href=\"http://www.salesforce.com/\" target=\"_blank\">Link 3</a></p>             <p><br></p>             <p><a href=\"http://www.salesforce.com/\" target=\"_blank\">Link 4</a></p>         "
-      },
-      "componentName" : "forceCommunity:richTextInline",
-      "id" : "0f6c0cf9-7130-4a0d-8166-0a2c2fd40830",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    } ],
     "id" : "9d014e24-5b33-40bc-a354-12dcfe922ff1",
     "regionName" : "sidebar",
     "type" : "region"

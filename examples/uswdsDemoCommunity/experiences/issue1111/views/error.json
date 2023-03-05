@@ -11,10 +11,15 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
-        "richTextValue" : " <div class='slds-grid slds-grid--vertical slds-align--absolute-center slds-container--large'>   <div class='slds-align-middle slds-m-bottom--xx-large slds-m-top--xx-large' alt='Page not available'>      <img src='/sfsites/c/img/community/slds/messaging/illustration-page-not-found.png' class='slds-p-horizontal--large'/>   </div>   <h4 class='slds-text-align--center slds-text-heading--large slds-text-color--weak slds-m-bottom--small'>Page not available</h4>    <p class='slds-text-align--center slds-text-heading--medium slds-text-color--weak'>Maybe the page was deleted, the URL is incorrect, or something else went wrong. If you know the page exists but you still can’t get to it, please ask the community administrator for help.</p>  </div>"
+        "contactEmail" : "sayhi@gsa.gov",
+        "contactPhone" : "555-999-2222",
+        "formName" : "",
+        "formUrl" : "",
+        "language" : "English",
+        "urlPattern" : "examplesite.gov/s/"
       },
-      "componentName" : "forceCommunity:htmlBlock",
-      "id" : "f64e14d2-d4f3-4ac8-a2a2-ff130d6770fc",
+      "componentName" : "c:uswds404",
+      "id" : "2332c5ca-296d-4c05-85ee-6a0a118770e8",
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
       "type" : "component"
