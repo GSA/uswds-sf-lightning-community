@@ -25,6 +25,14 @@
       "componentName" : "forceCommunity:section",
       "id" : "958ca075-8956-4512-b1a1-369efdf015e1",
       "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:examplePaginationWrapper",
+          "id" : "ae052159-062c-468b-b3d5-a4ee19c935e6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
         "id" : "3b0b2483-c921-4e99-82df-2ed5694099a9",
         "regionLabel" : "Column 1",
         "regionName" : "1",
