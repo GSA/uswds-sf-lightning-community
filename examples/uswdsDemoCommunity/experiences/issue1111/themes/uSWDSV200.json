@@ -5,6 +5,7 @@
   "id" : "f86bf52f-0462-465a-ac6e-cbd3a14e1807",
   "label" : "USWDS v2.0.0",
   "layouts" : {
+    "4D5HJh1kGoJXexcn3sUHVffaEiZ3QL" : "f8979ee0-cd49-47e4-bec9-3c410d643ebf",
     "Inner" : "f216cef5-f2ef-42cb-8291-57abd1acfc98",
     "Login" : "58f8fa29-6b8f-47d4-b61c-c5c12a1be035",
     "ServiceNotAvailable" : "f45de43f-7693-4545-aac2-0b366f6233b0"
@@ -154,7 +155,7 @@
       "displayLogin" : "Yes",
       "footerEmailSignUpToggle" : "Off",
       "footerMenuNavigationLinkSetId" : "footer",
-      "footerNavType" : "Big",
+      "footerNavType" : "Small",
       "homePath" : "/s",
       "identifierType" : "English",
       "identityDomain" : "examplesite.gsa.gov",
@@ -298,6 +299,152 @@
     }, {
       "id" : "e1725ddd-0350-4f98-82a9-0bf2bd1bc642",
       "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "agencyLogo2" : "",
+      "agencyName" : "US General Services Administration",
+      "agencyName2" : "",
+      "agencyURL" : "https://gsa.gov",
+      "agencyURL2" : "",
+      "bannerType" : "Gov English",
+      "boilerplateLinkNavigationLinkSetId" : "boilerplate",
+      "contactCenterName" : "Contact Us",
+      "contactEmail" : "sayhi@gsa.gov",
+      "contactLink" : "",
+      "contactLinkText" : "",
+      "contactPhone" : "555-999-5555",
+      "containerWidth" : "Full",
+      "customNavToggle" : "On",
+      "customSearchToggle" : "Off",
+      "customUserProfileToggle" : "Off",
+      "displayLogin" : "Yes",
+      "footerEmailSignUpToggle" : "Off",
+      "footerMenuNavigationLinkSetId" : "footer",
+      "footerNavType" : "Small",
+      "homePath" : "/s",
+      "identifierType" : "English",
+      "identityDomain" : "examplesite.gsa.gov",
+      "logoType" : "Square",
+      "secondaryNavigationLinkSetId" : "",
+      "siteName" : "example.gov",
+      "socialMediaNavigationLinkSetId" : "social"
+    },
+    "componentName" : "c:uswdsTheme",
+    "id" : "f8979ee0-cd49-47e4-bec9-3c410d643ebf",
+    "label" : "Wide",
+    "regions" : [ {
+      "id" : "8b413593-0cd7-4d43-a13a-9eb221944f7d",
+      "regionName" : "customHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "maxAutoCompleteResults" : 5,
+          "searchLabel" : "Search...",
+          "searchObjects" : [ {
+            "isPublic" : true,
+            "name" : "KnowledgeArticleVersion"
+          }, {
+            "isPublic" : false,
+            "name" : "Case"
+          }, {
+            "isPublic" : true,
+            "name" : "ContentDocument"
+          } ]
+        },
+        "componentName" : "forceCommunity:globalSearchInput",
+        "id" : "928d3f7c-2c15-4f31-85c9-ef788f6fc743",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "44fd7142-3788-4f9b-a3a6-1e4b43f6a9be",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Experience Builder",
+          "communitySetupLabel" : "Salesforce Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : false,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : false,
+          "showUserSettings" : false,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "fc6e30eb-fe64-4959-bdc9-63eee5fda841",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "465c7fbb-4f85-48eb-8371-50019e45cc9a",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : true,
+          "hideHomeText" : false
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "0a3decaf-be1f-486d-9078-5c13f5a57339",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "5f3d1ca7-675a-42ac-985b-49c6973b6316",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "id" : "5a8d4e86-d1c3-4f5d-a993-0597cdcb1600",
+      "regionName" : "customRegion",
+      "type" : "region"
+    }, {
+      "id" : "59e96ba3-e801-47eb-b7c2-1a1b91420212",
+      "regionName" : "footer",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "navigationLinkSetId" : ""
+        },
+        "componentName" : "c:uswdsMegaMenu",
+        "id" : "2278e942-a166-47cc-9d18-3eef32b30c75",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "d3b0ffc6-de78-4263-9ec7-ac2d9124c394",
+      "regionName" : "customNavBar",
+      "type" : "region"
+    }, {
+      "id" : "0125d0c8-f821-490a-bef3-9c0ae9b8b9d1",
+      "regionName" : "customUserProfile",
+      "type" : "region"
+    }, {
+      "id" : "e18aaf6c-1840-4645-b7fb-d7155106fd72",
+      "regionName" : "customSearch",
+      "type" : "region"
+    }, {
+      "id" : "58162f67-fb3e-4787-9770-d5dcfb7810be",
+      "regionName" : "footerEmailSignUp",
+      "type" : "region"
+    }, {
+      "id" : "a2433d45-e4cb-4382-91da-c1098c242cd6",
+      "regionName" : "shoppingCart",
+      "type" : "region"
+    }, {
+      "id" : "16f99d49-1410-4bc0-bdc5-87db1a36753b",
+      "regionName" : "announcementBanner",
       "type" : "region"
     } ],
     "type" : "view"

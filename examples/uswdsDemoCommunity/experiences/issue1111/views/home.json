@@ -1,6 +1,6 @@
 {
   "appPageId" : "6466fef4-f420-4d80-a0bc-62712435cc7b",
-  "componentName" : "siteforce:sldsOneColLayout",
+  "componentName" : "siteforce:sldsThreeCol363Layout",
   "dataProviders" : [ ],
   "id" : "5871ea44-95ab-43e0-9a23-0d3751dd48c2",
   "label" : "Home",
@@ -61,8 +61,12 @@
     "id" : "d7d8bc2b-b4ee-47da-b478-622720b1ea6a",
     "regionName" : "sfdcHiddenRegion",
     "type" : "region"
+  }, {
+    "id" : "2a1a6f44-4054-4030-ad5a-6bc6ca395e32",
+    "regionName" : "sidebarAlt",
+    "type" : "region"
   } ],
-  "themeLayoutType" : "Inner",
+  "themeLayoutType" : "4D5HJh1kGoJXexcn3sUHVffaEiZ3QL",
   "type" : "view",
   "viewType" : "home"
 }

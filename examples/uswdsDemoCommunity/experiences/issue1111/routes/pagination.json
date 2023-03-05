@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "51055569-160f-4099-bcea-feb147650be1",
+  "appPageId" : "6466fef4-f420-4d80-a0bc-62712435cc7b",
+  "configurationTags" : [ ],
+  "id" : "55c95a65-c434-490f-ac17-feffe043fb50",
+  "label" : "Pagination",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-pagination",
+  "type" : "route",
+  "urlPrefix" : "components/pagination"
+}

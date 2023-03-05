@@ -4,22 +4,44 @@
     <containerType>Network</containerType>
     <label>Default Navigation</label>
     <navigationMenuItem>
-        <label>Knowledge Center</label>
+        <label>Example Components</label>
         <position>1</position>
-        <publiclyAvailable>false</publiclyAvailable>
-        <target>/toparticles</target>
-        <type>InternalLink</type>
-    </navigationMenuItem>
-    <navigationMenuItem>
-        <label>Support</label>
-        <position>2</position>
-        <publiclyAvailable>false</publiclyAvailable>
-        <target>/contactsupport</target>
-        <type>InternalLink</type>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Card</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/components/cards</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Collection</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/components/collection</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Pagination</label>
+                <position>2</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/components/pagination</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Step Indicator</label>
+                <position>3</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/components/step-indicator</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
     </navigationMenuItem>
     <navigationMenuItem>
         <label>Error Page</label>
-        <position>3</position>
+        <position>2</position>
         <publiclyAvailable>true</publiclyAvailable>
         <target>/error</target>
         <type>InternalLink</type>

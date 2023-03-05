@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "dca41bac-2920-48e2-ab47-58fcb0fadf38",
+  "appPageId" : "6466fef4-f420-4d80-a0bc-62712435cc7b",
+  "configurationTags" : [ ],
+  "id" : "31eb403e-2794-4b08-b3f8-ce5f343183c0",
+  "label" : "Collection",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-collection",
+  "type" : "route",
+  "urlPrefix" : "components/collection"
+}

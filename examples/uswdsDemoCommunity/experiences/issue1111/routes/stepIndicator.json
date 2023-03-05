@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "64714541-fe12-4923-8c2b-20cfc8f83ffd",
+  "appPageId" : "6466fef4-f420-4d80-a0bc-62712435cc7b",
+  "configurationTags" : [ ],
+  "id" : "69bd2c12-3094-4f8e-b92f-ea4c4e99b346",
+  "label" : "Step Indicator",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-step-indicator",
+  "type" : "route",
+  "urlPrefix" : "components/step-indicator"
+}
