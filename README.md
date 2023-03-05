@@ -14,3 +14,9 @@ See [INSTALLATION](https://github.com/GSA/uswds-sf-lightning-community/blob/mast
 ## Accessibility
 
 This template follows the US Web Design System markup as much as possible within the Salesforce interface. Where deviations from the original are required, Salesforce Lightning Design system is sought as a first alternative.
+
+## Licenses and Attribution
+
+A few parts of this project are not in the public domain. Attribution and licensing information for those parts are described in detail in [LICENSE.md](LICENSE.md).
+
+The rest of this project is in the worldwide public domain, released under the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
