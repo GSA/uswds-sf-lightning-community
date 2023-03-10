@@ -26,6 +26,15 @@
       "id" : "579a2d09-276a-45cc-b221-0b18aa217448",
       "regions" : [ {
         "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div\n  class=\"usa-summary-box\">\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3 class=\"usa-summary-box__heading font-alt-2xl\" id=\"summary-box-key-information\">\n      Collection\n    </h3>\n    <div class=\"usa-summary-box__text\">\n        <ul>\n          <li>Collection components offer a succinct way to share information about articles or upcoming events and link to the larger content. A number of variants are available to incorporate dates, icons/images, or just headlines.</li>\n          <li>The example below leverages hard coded values in the controller of the component but could easily be updated to read in content from a Salesforce object or CMS records. This example can be found at the <a href=\"https://github.com/GSA/uswds-sf-lightning-community/tree/develop/examples/uswdsCollection\">examples/uswdsCollection</a> portion of this repository. </li>\n          <li>Further details about the Collection component may be found at <a href=\"https://designsystem.digital.gov/components/collection/\">https://designsystem.digital.gov/components/collection/</a>.</li>\n        </ul>\n    </div>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "53c0bd98-eabf-44d7-ab02-898f4bed8927",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
           "componentAttributes" : { },
           "componentName" : "c:exampleCardWrapper",
           "id" : "5128ca48-0c62-4c64-88f9-8afffc48ad4b",

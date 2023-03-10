@@ -4,22 +4,29 @@
     <containerType>Network</containerType>
     <label>footer</label>
     <navigationMenuItem>
-        <label>Components</label>
+        <label>About</label>
         <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/about</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Components</label>
+        <position>2</position>
         <publiclyAvailable>true</publiclyAvailable>
         <target>/components</target>
         <type>InternalLink</type>
     </navigationMenuItem>
     <navigationMenuItem>
         <label>Error Page</label>
-        <position>2</position>
+        <position>3</position>
         <publiclyAvailable>true</publiclyAvailable>
-        <target>/about</target>
+        <target>/error</target>
         <type>InternalLink</type>
     </navigationMenuItem>
     <navigationMenuItem>
         <label>More Resources</label>
-        <position>3</position>
+        <position>4</position>
         <publiclyAvailable>true</publiclyAvailable>
         <target>https://github.com/GSA/uswds-sf-lightning-community/wiki/USWDS-Components</target>
         <type>ExternalLink</type>

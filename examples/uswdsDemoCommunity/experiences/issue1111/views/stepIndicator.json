@@ -26,6 +26,15 @@
       "id" : "87321dfb-6db2-4dce-aa3f-344b514aae92",
       "regions" : [ {
         "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div\n  class=\"usa-summary-box\">\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3 class=\"usa-summary-box__heading font-alt-2xl\" id=\"summary-box-key-information\">\n      Step Indicator\n    </h3>\n    <div class=\"usa-summary-box__text\">\n        <ul>\n          <li>Step Indicator as a capability can be tough to implement while also taking into consideration mobile friendliness and accessibility. </li>\n          <li>The example below simply pages through a list of county names in Georgia along with their population figures. This example can be found at the <a href=\"https://github.com/GSA/uswds-sf-lightning-community/tree/develop/examples/uswdsStepIndicator\">examples/uswdsStepIndicator</a> portion of this repository. </li>\n          <li>Further details about the Step Indicator component may be found at <a href=\"https://designsystem.digital.gov/components/step-indicator/\">https://designsystem.digital.gov/components/step-indicator/</a>.</li>\n        </ul>\n    </div>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "7bdb0317-0771-44ea-81b2-6dd8b0dbe172",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
           "componentAttributes" : { },
           "componentName" : "c:exampleStepIndicator",
           "id" : "a5198c5d-c2e4-42ca-b141-25e7a1f57d26",

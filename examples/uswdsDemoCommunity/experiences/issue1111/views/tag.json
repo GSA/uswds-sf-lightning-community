@@ -1,0 +1,77 @@
+{
+  "appPageId" : "6466fef4-f420-4d80-a0bc-62712435cc7b",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "94184ae3-774b-4797-b284-ca1ac845d9cd",
+  "label" : "Tag",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "603ccad0-cf9a-4271-8e5f-c9fbc4f2d8b1",
+          "columns" : [ {
+            "UUID" : "2dad0f56-c161-4c63-992d-e9e772d0380e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "603ccad0-cf9a-4271-8e5f-c9fbc4f2d8b1",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div\n  class=\"usa-summary-box\">\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3 class=\"usa-summary-box__heading font-alt-2xl\" id=\"summary-box-key-information\">\n      Tags\n    </h3>\n    <div class=\"usa-summary-box__text\">\n        <ul>\n          <li>Step Indicator as a capability can be tough to implement while also taking into consideration mobile friendliness and accessibility. </li>\n          <li>The example below simply pages through a list of county names in Georgia along with their population figures. This example can be found at the <a href=\"https://github.com/GSA/uswds-sf-lightning-community/tree/develop/examples/uswdsTag\">examples/uswdsTag</a> portion of this repository. </li>\n          <li>Further details about the Step Indicator component may be found at <a href=\"https://designsystem.digital.gov/components/tag/\">https://designsystem.digital.gov/components/tag/</a>.</li>\n        </ul>\n    </div>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "cf849595-82db-44ed-a0c7-12d6689b3fdd",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "c:exampleTag",
+          "id" : "ae9124fa-8f17-482a-bf5f-6c8ed95aa3b4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2dad0f56-c161-4c63-992d-e9e772d0380e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b6502c89-cf29-467e-8970-9c9a0f434f44",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Tag"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "0e19ab91-bbee-451f-9036-9bda7ea1bb03",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b9702241-74b0-4f3a-a571-dc3d8b3419e8",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-tag"
+}

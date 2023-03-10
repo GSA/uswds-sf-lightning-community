@@ -132,6 +132,14 @@
       "id" : "2fe17229-f8f9-4be4-944d-f324459f6d98",
       "regionName" : "header",
       "type" : "region"
+    }, {
+      "id" : "ad40944d-8cf1-4115-b7d4-c01d8365883d",
+      "regionName" : "shoppingCart",
+      "type" : "region"
+    }, {
+      "id" : "d0217ebe-49f3-43c9-b95b-39eb6f4e4200",
+      "regionName" : "announcementBanner",
+      "type" : "region"
     } ],
     "type" : "view"
   }, {

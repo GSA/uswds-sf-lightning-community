@@ -26,6 +26,15 @@
       "id" : "958ca075-8956-4512-b1a1-369efdf015e1",
       "regions" : [ {
         "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div\n  class=\"usa-summary-box\">\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3 class=\"usa-summary-box__heading font-alt-2xl\" id=\"summary-box-key-information\">\n      Pagination\n    </h3>\n    <div class=\"usa-summary-box__text\">\n        <ul>\n          <li>Pagination as a capability can be tough to implement while also taking into consideration mobile friendliness and accessibility. </li>\n          <li>The example below simply pages through a list of county names in Georgia along with their population figures. This example can be found at the <a href=\"https://github.com/GSA/uswds-sf-lightning-community/tree/develop/examples/uswdsPagination\">examples/uswdsPagination</a> portion of this repository. </li>\n          <li>Further details about the Pagination component may be found at <a href=\"https://designsystem.digital.gov/components/pagination/\">https://designsystem.digital.gov/components/pagination/</a>.</li>\n        </ul>\n    </div>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "8efe76d5-30cc-4d5c-99df-3f3382f5ce4e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
           "componentAttributes" : { },
           "componentName" : "c:examplePaginationWrapper",
           "id" : "ae052159-062c-468b-b3d5-a4ee19c935e6",

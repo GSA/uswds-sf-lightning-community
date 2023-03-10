@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "9636cf08-3bc4-4eaf-8a7f-55611d2acd93",
+  "appPageId" : "6466fef4-f420-4d80-a0bc-62712435cc7b",
+  "configurationTags" : [ ],
+  "id" : "94b1658a-0dec-4ca1-b577-7a4f8462eefc",
+  "label" : "Breadcrumb",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-breadcrumb",
+  "type" : "route",
+  "urlPrefix" : "components/breadcrumb"
+}

@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "94184ae3-774b-4797-b284-ca1ac845d9cd",
+  "appPageId" : "6466fef4-f420-4d80-a0bc-62712435cc7b",
+  "configurationTags" : [ ],
+  "id" : "dfff4039-ce2f-4cb7-976b-a43078dd8df6",
+  "label" : "Tag",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-tag",
+  "type" : "route",
+  "urlPrefix" : "components/tag"
+}

@@ -7,9 +7,26 @@ An implementation of the US Web Design System for Salesforce Lightning Communiti
 
 ![US Web Design System Salesforce Community Template Example](img/desktop.png "US Web Design System Salesforce Community Theme Example")
 
+- [US Web Design System Salesforce Lightning Community Theme](#us-web-design-system-salesforce-lightning-community-theme)
+  - [Implementing this Theme](#implementing-this-theme)
+  - [Installation Instructions](#installation-instructions)
+  - [Contributing](#contributing)
+  - [Accessibility](#accessibility)
+  - [Licenses and Attribution](#licenses-and-attribution)
+
+## Implementing this Theme
+
+If you have not utilized the theme before, deploying the Demo Community to a sandbox or scratch org is a great place to start. The Demo Community is a full site implementation enabling you to see various features quickly.
+
+In addition to the Demo Community, a [wiki](https://github.com/GSA/uswds-sf-lightning-community/wiki) is maintained to highlight [components](https://github.com/GSA/uswds-sf-lightning-community/wiki/USWDS-Components), [theme settings](https://github.com/GSA/uswds-sf-lightning-community/wiki/Theme-Settings), and more.
+
 ## Installation Instructions
 
 See [INSTALLATION](https://github.com/GSA/uswds-sf-lightning-community/blob/master/INSTALLATION.md)
+
+## Contributing
+
+See [CONTRIBUTING](https://github.com/GSA/uswds-sf-lightning-community/blob/master/CONTRIBUTING.md)
 
 ## Accessibility
 

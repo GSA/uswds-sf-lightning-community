@@ -5,29 +5,13 @@
   "id" : "5871ea44-95ab-43e0-9a23-0d3751dd48c2",
   "label" : "Home",
   "regions" : [ {
-    "components" : [ {
-      "componentAttributes" : {
-        "callToAction" : "Call to action",
-        "callToActionLink" : "/register",
-        "heading" : "Bring attention to a project priority",
-        "headingAlt" : "Hero callout:",
-        "headingBody" : "Support the callout with some short explanatory text. You don’t need more than a couple of sentences.",
-        "heroImgAltText" : "Introduction",
-        "heroImgName" : ""
-      },
-      "componentName" : "c:uswdsHero",
-      "id" : "64734e9b-abaf-4788-ba80-78428d3f0020",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    } ],
     "id" : "06cdc919-58a5-43a0-ba31-94acf9a014ed",
     "regionName" : "header",
     "type" : "region"
   }, {
     "components" : [ {
       "componentAttributes" : {
-        "richTextValue" : "<div\n  class=\"usa-summary-box\"\n>\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3 class=\"usa-summary-box__heading font-alt-2xl\" id=\"summary-box-key-information\">\n      Using this example site\n    </h3>\n    <div class=\"usa-summary-box__text\">\n        <p>On each page, you'll find a Summary Box (this) which highlights key features, components used, and additional resources. </p>\n      <ul class=\"usa-list\">\n        <li>\n          If you are under a winter storm warning,\n          <a class=\"usa-summary-box__link\" href=\"\">find shelter</a> right away.\n        </li>\n        <li>\n          Sign up for\n          <a class=\"usa-summary-box__link\" href=\"\"\n            >your community’s warning system</a\n          >.\n        </li>\n        <li>\n          Learn the signs of, and basic treatments for,\n          <a class=\"usa-summary-box__link\" href=\"\">frostbite</a> and\n          <a class=\"usa-summary-box__link\" href=\"\">hypothermia</a>.\n        </li>\n        <li>\n          Gather emergency supplies for your\n          <a class=\"usa-summary-box__link\" href=\"\">home</a> and your\n          <a class=\"usa-summary-box__link\" href=\"\">car</a>.\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>"
+        "richTextValue" : "<div\n  class=\"usa-summary-box\"\n>\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3 class=\"usa-summary-box__heading font-alt-2xl\" id=\"summary-box-key-information\">\n      Using this example site\n    </h3>\n    <div class=\"usa-summary-box__text\">\n        <p>On each page, you'll find a Summary Box (this) which highlights key features, components used, and additional resources. Below are some additional resources:</p>\n      <ul class=\"usa-list\">\n        <li>\n          \n          <a class=\"usa-summary-box__link\" href=\"https://github.com/GSA/uswds-sf-lightning-community/wiki\">USWDS SF Lightning Community Wiki</a>\n        </li>\n        <li>\n          <a class=\"usa-summary-box__link\" href=\"https://github.com/GSA/uswds-sf-lightning-community/wiki/Accessibility\"\n            >Information</a\n          > about how this theme is tested for compliance with Section 508 &amp; WCAG AA Accessibility standards.\n        </li>\n        <li>\n            Find a bug, have a feature request, want to contribute? \n          <a class=\"usa-summary-box__link\" href=\"https://github.com/GSA/uswds-sf-lightning-community/issues\">GitHub Issues</a>\n        </li>\n      </ul>\n        <p>Finally, a numbrer of pages are deployed with this example but not all are built out. Anything that has been built specifically for the USWDS theme is linked above. Feel free to experiment with other pages in Community Builder. </p>\n    </div>\n  </div>\n</div>"
       },
       "componentName" : "forceCommunity:htmlBlock",
       "id" : "341177ef-d78d-4f6a-977a-c97d81d40ea4",
@@ -43,6 +27,22 @@
     "regionName" : "sidebar",
     "type" : "region"
   }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "callToAction" : "View the Components",
+        "callToActionLink" : "/components",
+        "heading" : "USWDS Salesforce Lightning Community Theme",
+        "headingAlt" : "Welcome:",
+        "headingBody" : "Here you will find information about how to use the theme and related resources.",
+        "heroImgAltText" : "Introduction",
+        "heroImgName" : ""
+      },
+      "componentName" : "c:uswdsHero",
+      "id" : "64734e9b-abaf-4788-ba80-78428d3f0020",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
     "id" : "b2de9ed0-ab7b-4277-a5f4-718002f7132f",
     "regionName" : "footer",
     "type" : "region"

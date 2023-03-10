@@ -16,7 +16,13 @@
             "UUID" : "f15486b1-1438-4a75-bab4-98a7c16ef604",
             "columnKey" : "1",
             "columnName" : "Column 1",
-            "columnWidth" : "12",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "958f0988-da60-4678-89f9-a9feffa256c6",
+            "columnKey" : "6d533",
+            "columnName" : "Column 2",
+            "columnWidth" : "8",
             "seedComponents" : [ ]
           } ]
         },
@@ -25,9 +31,37 @@
       "componentName" : "forceCommunity:section",
       "id" : "06ece3af-696a-4595-80b7-e8e871b26154",
       "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "navigationLinkSetId" : "componentList",
+            "sectionTitle" : "",
+            "startNumber" : 1
+          },
+          "componentName" : "c:uswdsVerticalNavigation",
+          "id" : "9e522e12-25d4-4855-8144-d8f4de3f4ebe",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
         "id" : "f15486b1-1438-4a75-bab4-98a7c16ef604",
         "regionLabel" : "Column 1",
         "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div\n  class=\"usa-summary-box\">\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3 class=\"usa-summary-box__heading font-alt-2xl\" id=\"summary-box-key-information\">\n      Example Components\n    </h3>\n    <div class=\"usa-summary-box__text\">\n      <p>Example are provided for a number of components which require that they be wrapped in a larger component and provided data. The underlying example component code is meant to be a starting point for larger implementations.\n        </p>\n    </div>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "0bf6314c-d2f6-4137-abba-86934b8fe54a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "958f0988-da60-4678-89f9-a9feffa256c6",
+        "regionLabel" : "Column 2",
+        "regionName" : "6d533",
         "renditionMap" : { },
         "type" : "region"
       } ],

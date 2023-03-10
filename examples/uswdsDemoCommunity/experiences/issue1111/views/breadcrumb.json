@@ -1,0 +1,81 @@
+{
+  "appPageId" : "6466fef4-f420-4d80-a0bc-62712435cc7b",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "9636cf08-3bc4-4eaf-8a7f-55611d2acd93",
+  "label" : "Breadcrumb",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "6243eff8-5fe8-4e59-b7d2-1d82afdd4660",
+          "columns" : [ {
+            "UUID" : "b92af50c-9c27-4668-9490-fe259613ad32",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6243eff8-5fe8-4e59-b7d2-1d82afdd4660",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div\n  class=\"usa-summary-box\">\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3 class=\"usa-summary-box__heading font-alt-2xl\" id=\"summary-box-key-information\">\n      Breadcrumb\n    </h3>\n    <div class=\"usa-summary-box__text\">\n        <ul>\n          <li>Breadcrumbs utilize Navigation Menu's to establish a heirarchy of pages. In this example, we set the final value manually</li>\n          <li>A more advanced use case with Objects and programmatically setting values can be found in the <a href=\"https://github.com/GSA/uswds-sf-lightning-community/tree/develop/examples/uswdsBreadcrumb\">examples/uswdsBreadcrumb</a> portion of this repository. </li>\n          <li>Further details about the breadcrumb component may be found at <a href=\"https://designsystem.digital.gov/components/breadcrumb/\">https://designsystem.digital.gov/components/breadcrumb/</a>.</li>\n        </ul>\n    </div>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "5f5dfc73-8fd2-4250-8b42-1fdab7656afa",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "navigationLinkSetId" : "components",
+            "pageTitle" : "Breadcrumb",
+            "wrap" : "Yes"
+          },
+          "componentName" : "c:uswdsBreadcrumb",
+          "id" : "5dcbfabd-57e9-4152-bac8-4dc5d28ccdb2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b92af50c-9c27-4668-9490-fe259613ad32",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7634969d-7cbb-432e-93cb-f000617ae88c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Breadcrumb"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "884d6350-08b3-429d-86dd-9831bba861f5",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e65d364c-00b0-44d5-a2b6-577fa128bfea",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-breadcrumb"
+}

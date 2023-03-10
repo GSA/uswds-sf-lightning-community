@@ -6,13 +6,6 @@
   "label" : "Login",
   "regions" : [ {
     "components" : [ {
-      "componentAttributes" : { },
-      "componentName" : "salesforceIdentity:communityLogo2",
-      "id" : "b78a3d2f-4454-4e50-89ed-27cce7178445",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    }, {
       "componentAttributes" : {
         "forgotPasswordLabel" : "Forgot your password?",
         "forgotPasswordUrl" : "/ForgotPassword",
