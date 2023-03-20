@@ -41,5 +41,21 @@
         "<strong>https://</strong> significa que usted se conectó de forma segura a un sitio web .mil. Comparta información sensible sólo en sitios web oficiales y seguros.";
     }
     return content;
+  },
+  updateHidden: function (cmp) {
+    if (cmp.get("v.hiddenBanner")) {
+      var hiddenBanner = $A.util.getBooleanValue(cmp.get("v.hiddenBanner"));
+      var bannerAccordion = cmp.find("bannerAccordion");
+      if (bannerAccordion) {
+        var element = bannerAccordion.getElement();
+        if (element) {
+          if (hiddenBanner) {
+            element.setAttribute("hidden", "true");
+          } else {
+            element.removeAttribute("hidden");
+          }
+        }
+      }
+    }
   }
 });
