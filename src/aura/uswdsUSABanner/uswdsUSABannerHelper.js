@@ -50,7 +50,7 @@
         var element = bannerAccordion.getElement();
         if (element) {
           if (hiddenBanner) {
-            element.setAttribute("hidden", "true");
+            element.setAttribute("hidden", "");
           } else {
             element.removeAttribute("hidden");
           }
