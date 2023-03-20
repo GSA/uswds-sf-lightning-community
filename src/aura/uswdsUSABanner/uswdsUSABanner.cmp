@@ -6,6 +6,7 @@
   <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds-init.min.js'}" />
   <ltng:require scripts="{!$Resource.uswds_2_x+'/js/uswds.min.js'}" />
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <aura:handler name="render" value="{!this}" action="{!c.onRender}" />
   <aura:attribute
     name="siteName"
     type="String"
@@ -13,6 +14,7 @@
   />
   <aura:attribute name="bannerType" type="String" default="Gov English" />
   <aura:attribute name="bannerContent" type="Map" />
+  <aura:attribute name="hiddenBanner" type="Boolean" default="true" />
 
   <section class="usa-banner" aria-label="{!v.siteName}">
     <div class="usa-accordion">
@@ -45,6 +47,7 @@
       <div
         class="usa-banner__content usa-accordion__content"
         id="gov-banner-demo"
+        aura:id="bannerAccordion"
       >
         <div class="grid-row grid-gap-lg">
           <div class="usa-banner__guidance tablet:grid-col-6">
