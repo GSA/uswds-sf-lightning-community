@@ -7,7 +7,7 @@
     "ActionColor" : "rgb(204, 204, 204)",
     "BorderColor" : "rgb(212, 212, 212)",
     "CardBackgroundColor" : "rgba(255, 255, 255, 0)",
-    "CompanyLogo" : "/file-asset/logo?v=1&height=300&width=300",
+    "CompanyLogo" : "/file-asset/logo?v=1&amp;height=300&amp;width=300",
     "DetailTextColor" : "rgb(90, 90, 90)",
     "ErrorFontColor" : "#ff9e9e",
     "HeaderBackgroundColor" : "#FFFFFF",

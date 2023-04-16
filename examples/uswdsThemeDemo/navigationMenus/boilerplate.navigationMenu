@@ -4,6 +4,13 @@
     <containerType>Network</containerType>
     <label>boilerplate</label>
     <navigationMenuItem>
+        <label>About</label>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/about</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
         <label>Accessibility</label>
         <position>2</position>
         <publiclyAvailable>true</publiclyAvailable>

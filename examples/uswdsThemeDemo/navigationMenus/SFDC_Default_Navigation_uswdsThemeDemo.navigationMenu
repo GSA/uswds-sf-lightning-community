@@ -4,17 +4,25 @@
     <containerType>Network</containerType>
     <label>Default Navigation</label>
     <navigationMenuItem>
-        <label>Knowledge Center</label>
-        <position>0</position>
-        <publiclyAvailable>false</publiclyAvailable>
-        <target>/toparticles</target>
-        <type>InternalLink</type>
+        <label>Example Components</label>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Collection</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/components/collection</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
     </navigationMenuItem>
     <navigationMenuItem>
-        <label>Support</label>
-        <position>1</position>
-        <publiclyAvailable>false</publiclyAvailable>
-        <target>/contactsupport</target>
+        <label>Error Page</label>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/error</target>
         <type>InternalLink</type>
     </navigationMenuItem>
 </NavigationMenu>
