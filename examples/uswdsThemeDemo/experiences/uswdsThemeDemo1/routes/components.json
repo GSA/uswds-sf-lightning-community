@@ -4,7 +4,7 @@
   "configurationTags" : [ ],
   "id" : "86539914-bbfc-4f59-a7f5-7d8456f14443",
   "label" : "Components",
-  "pageAccess" : "UseParent",
+  "pageAccess" : "Public",
   "routeType" : "custom-components",
   "type" : "route",
   "urlPrefix" : "components"

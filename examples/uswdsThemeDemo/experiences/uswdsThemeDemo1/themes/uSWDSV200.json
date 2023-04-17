@@ -146,7 +146,7 @@
       "contactLink" : "https://example.gov/contact",
       "contactLinkText" : "Reach Out",
       "contactPhone" : "222-555-9999",
-      "containerWidth" : "Wide",
+      "containerWidth" : "Standard",
       "customNavToggle" : "On",
       "customSearchToggle" : "Off",
       "customUserProfileToggle" : "Off",
@@ -243,6 +243,15 @@
       "regionName" : "footer",
       "type" : "region"
     }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "navigationLinkSetId" : ""
+        },
+        "componentName" : "c:uswdsMegaMenu",
+        "id" : "a7ab69f1-97ca-4693-ace8-06d5759cd52d",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
       "id" : "01eacb87-f1c4-4684-a4ed-340e3f402ada",
       "regionName" : "customNavBar",
       "type" : "region"

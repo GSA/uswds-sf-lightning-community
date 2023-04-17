@@ -25,6 +25,23 @@
       "componentName" : "forceCommunity:section",
       "id" : "1cc5da40-ac2a-4cab-99d5-f1692c4ddc76",
       "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"usa-summary-box\">\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3\n      class=\"usa-summary-box__heading font-alt-2xl\"\n      id=\"summary-box-key-information\"\n    >\n      Collection\n    </h3>\n    <div class=\"usa-summary-box__text\">\n      <ul>\n        <li>\n          Collection components offer a succinct way to share information about\n          articles or upcoming events and link to the larger content. A number\n          of variants are available to incorporate dates, icons/images, or just\n          headlines.\n        </li>\n        <li>\n          The example below leverages hard coded values in the controller of the\n          component but could easily be updated to read in content from a\n          Salesforce object or CMS records. This example can be found at the\n          <a\n            href=\"https://github.com/GSA/uswds-sf-lightning-community/tree/develop/examples/uswdsCollection\"\n            >examples/uswdsCollection</a\n          >\n          portion of this repository.\n        </li>\n        <li>\n          Further details about the Collection component may be found at\n          <a href=\"https://designsystem.digital.gov/components/collection/\"\n            >https://designsystem.digital.gov/components/collection/</a\n          >.\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "ba1437f0-2aa8-4600-be84-617c3418bc20",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "c:exampleCollection",
+          "id" : "f0f2593a-8d08-4ffa-ad41-5044c6d0a514",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
         "id" : "29c96afd-93ae-4a00-b0be-88648c87b18f",
         "regionLabel" : "Column 1",
         "regionName" : "1",

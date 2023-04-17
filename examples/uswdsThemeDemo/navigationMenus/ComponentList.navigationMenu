@@ -4,10 +4,45 @@
     <containerType>Network</containerType>
     <label>ComponentList</label>
     <navigationMenuItem>
-        <label>Collection</label>
+        <label>Breadcrumb</label>
         <position>1</position>
         <publiclyAvailable>true</publiclyAvailable>
+        <target>/components/breadcrumb</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Card</label>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/components/card</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Collection</label>
+        <position>3</position>
+        <publiclyAvailable>true</publiclyAvailable>
         <target>/components/collection</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Pagination</label>
+        <position>4</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/components/pagination</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Step Indicator</label>
+        <position>5</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/components/step-indicator</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Tag</label>
+        <position>6</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/components/tag</target>
         <type>InternalLink</type>
     </navigationMenuItem>
 </NavigationMenu>
