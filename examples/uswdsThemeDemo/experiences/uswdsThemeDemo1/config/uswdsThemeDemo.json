@@ -13,6 +13,12 @@
     "trustedSiteName" : "dap.digitalgov.gov",
     "trustedSiteUrl" : "https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js",
     "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "16ec145f-e11c-450a-8b2c-a6d00859803c",
+    "isActive" : true,
+    "trustedSiteName" : "www.google-analytics.com",
+    "trustedSiteUrl" : "https://www.google-analytics.com/analytics.js",
+    "type" : "trustedSitesForScripts"
   } ],
   "type" : "site"
 }

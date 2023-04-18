@@ -6,6 +6,10 @@
     </types>
     <types>
         <members>*</members>
+        <name>CspTrustedSite</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>CustomSite</name>
     </types>
     <types>
