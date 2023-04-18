@@ -1,11 +1,18 @@
 {
   "forgotPasswordRouteId" : "3b216ed5-42fa-45b3-957e-52035863dffd",
-  "isAvailableToGuests" : false,
+  "isAvailableToGuests" : true,
   "isFilteredComponentsView" : false,
   "isProgressiveRenderingEnabled" : false,
   "loginAppPageId" : "9bfe09a3-f301-459b-ba92-fc003f94b175",
   "mainAppPageId" : "766b1ec5-3b8c-4acb-b73d-01ac8a7cb69a",
   "preferredDomain" : "none",
   "selfRegistrationRouteId" : "93d37a24-66d4-4954-9223-49144bc7a80f",
+  "trustedSitesForScript" : [ {
+    "id" : "71587716-690f-468d-857f-41928b24f1a3",
+    "isActive" : true,
+    "trustedSiteName" : "dap.digitalgov.gov",
+    "trustedSiteUrl" : "https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js",
+    "type" : "trustedSitesForScripts"
+  } ],
   "type" : "site"
 }

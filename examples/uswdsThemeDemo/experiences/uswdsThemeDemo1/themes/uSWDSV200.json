@@ -7,7 +7,8 @@
   "layouts" : {
     "Inner" : "2e7aa616-9cc1-4be1-b3ce-19e89aacff22",
     "Login" : "92f089f2-4f16-4709-ae36-1f2a96c0ddb3",
-    "ServiceNotAvailable" : "81491161-a0f7-49b0-8ed9-860181ce7cf7"
+    "ServiceNotAvailable" : "81491161-a0f7-49b0-8ed9-860181ce7cf7",
+    "yBoTr13mQiduHTKnBESTs1USAp58ib" : "f64bcd72-b320-4acb-a040-8dccef7bec05"
   },
   "type" : "theme",
   "views" : [ {
@@ -151,7 +152,7 @@
       "customSearchToggle" : "Off",
       "customUserProfileToggle" : "Off",
       "displayLogin" : "Yes",
-      "footerEmailSignUpToggle" : "Off",
+      "footerEmailSignUpToggle" : "On",
       "footerMenuNavigationLinkSetId" : "footer",
       "footerNavType" : "Big",
       "homePath" : "/s",
@@ -172,7 +173,7 @@
       "components" : [ {
         "componentAttributes" : {
           "maxAutoCompleteResults" : 5,
-          "searchLabel" : "Search...",
+          "searchLabel" : "Search by keyword",
           "searchObjects" : [ {
             "isPublic" : true,
             "name" : "KnowledgeArticleVersion"
@@ -264,6 +265,15 @@
       "regionName" : "customSearch",
       "type" : "region"
     }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<div class=\"usa-prose\">\n    <p>Signup to receive e-mail updates from example.gov</p>\n    <form>\n        <label class=\"usa-label\" for=\"email\">E-mail</label><input class=\"usa-input\" id=\"email\" type=\"text\" placeholder=\"\"/>\n        <button type=\"\" class=\"usa-button margin-top-2\">Submit</button>\n    </form>\n</div>"
+        },
+        "componentName" : "forceCommunity:htmlBlock",
+        "id" : "2b7d05f7-a915-4652-8684-feae9c9deab8",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
       "id" : "5f42cb7c-3d6a-4354-bb12-07adf2ae9953",
       "regionName" : "footerEmailSignUp",
       "type" : "region"
@@ -297,6 +307,161 @@
     }, {
       "id" : "8ad2f21e-3d81-4875-a026-55ca12d6444a",
       "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "agencyLogo2" : "",
+      "agencyName" : "General Services Administration",
+      "agencyName2" : "",
+      "agencyURL" : "",
+      "agencyURL2" : "",
+      "bannerType" : "Gov English",
+      "boilerplateLinkNavigationLinkSetId" : "boilerplate",
+      "contactCenterName" : "Contact Us",
+      "contactEmail" : "contact@example.gov",
+      "contactLink" : "https://example.gov/contact",
+      "contactLinkText" : "Reach Out",
+      "contactPhone" : "222-555-9999",
+      "containerWidth" : "Full",
+      "customNavToggle" : "On",
+      "customSearchToggle" : "Off",
+      "customUserProfileToggle" : "Off",
+      "displayLogin" : "Yes",
+      "footerEmailSignUpToggle" : "On",
+      "footerMenuNavigationLinkSetId" : "footer",
+      "footerNavType" : "Big",
+      "homePath" : "/s",
+      "identifierType" : "English",
+      "identityDomain" : "example.gov",
+      "logoType" : "Square",
+      "secondaryNavigationLinkSetId" : "",
+      "siteName" : "USWDS Theme Demo",
+      "socialMediaNavigationLinkSetId" : "social"
+    },
+    "componentName" : "c:uswdsTheme",
+    "id" : "f64bcd72-b320-4acb-a040-8dccef7bec05",
+    "label" : "Home (full width)",
+    "regions" : [ {
+      "id" : "df1695fc-b0b2-4cec-9d4d-22f714822bf2",
+      "regionName" : "customHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "maxAutoCompleteResults" : 5,
+          "searchLabel" : "Search...",
+          "searchObjects" : [ {
+            "isPublic" : true,
+            "name" : "KnowledgeArticleVersion"
+          }, {
+            "isPublic" : false,
+            "name" : "Case"
+          }, {
+            "isPublic" : true,
+            "name" : "ContentDocument"
+          } ]
+        },
+        "componentName" : "forceCommunity:globalSearchInput",
+        "id" : "95229270-5a1c-4ddc-944f-b60e26e85204",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "f270d881-4469-4b3a-9245-c937a2c714c1",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Experience Builder",
+          "communitySetupLabel" : "Salesforce Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : false,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : false,
+          "showUserSettings" : false,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "88f2076d-a5b5-47a7-ac32-a0f847f385dc",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "4dd83201-ba30-4bd4-ba82-324ee8aa73d2",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : true,
+          "hideHomeText" : false
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "4346c702-84ab-4b20-ac6c-eeb1b1195914",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "44ddd18d-1fba-4f1e-ade9-61840835831b",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "id" : "46a5864e-7152-453b-8c4a-de5ddd067798",
+      "regionName" : "customRegion",
+      "type" : "region"
+    }, {
+      "id" : "59a6c766-ad51-4731-80f3-618ecd410bc7",
+      "regionName" : "footer",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "navigationLinkSetId" : ""
+        },
+        "componentName" : "c:uswdsMegaMenu",
+        "id" : "17b1c0a7-c1b9-4a4f-b6d5-fc6898f424c1",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "c13f3a7d-8dd3-421c-b237-61b0713adbf4",
+      "regionName" : "customNavBar",
+      "type" : "region"
+    }, {
+      "id" : "3edb1eec-3111-4788-a36e-797b815fffd6",
+      "regionName" : "customUserProfile",
+      "type" : "region"
+    }, {
+      "id" : "9314188d-2d2c-4ecc-bdff-98567473508c",
+      "regionName" : "customSearch",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<div class=\"usa-prose\">\n    <p>Signup to receive e-mail updates from example.gov</p>\n    <form>\n        <label class=\"usa-label\" for=\"email\">E-mail</label><input class=\"usa-input\" id=\"email\" type=\"text\" placeholder=\"\"/>\n        <button type=\"\" class=\"usa-button margin-top-2\">Submit</button>\n    </form>\n</div>"
+        },
+        "componentName" : "forceCommunity:htmlBlock",
+        "id" : "05526872-d516-4cb3-ba74-30c47426a0eb",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "c2a054ce-7064-4375-91ef-fb7dd3701b81",
+      "regionName" : "footerEmailSignUp",
+      "type" : "region"
+    }, {
+      "id" : "a9e10a9b-3518-48ad-8d09-db3672309822",
+      "regionName" : "shoppingCart",
+      "type" : "region"
+    }, {
+      "id" : "94cf5acb-af2d-4196-ac65-ca245ee4fcf6",
+      "regionName" : "announcementBanner",
       "type" : "region"
     } ],
     "type" : "view"

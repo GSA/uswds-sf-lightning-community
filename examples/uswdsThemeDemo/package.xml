@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>ex_uswdsDemoSite_logo</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
         <members>*</members>
         <name>CustomSite</name>
     </types>
