@@ -1,125 +1,141 @@
 # Installation
 
-Installation of this repository requires a working knowledge of the Salesforce Ant Migration Tool. More details can be found at [https://help.salesforce.com/articleView?id=sf.code_tools_ant_using.htm&type=5](https://help.salesforce.com/articleView?id=sf.code_tools_ant_using.htm&type=5).
+Installation instructions are written for users of the [SFDX CLI](https://developer.salesforce.com/tools/sfdxcli). The use of scratch orgs is assumed but not required. If not using a scratch org, setup a sandbox environment via SFDX and point to that instance.
+
+Deployments via the [Salesforce Ant Migration Tool](https://help.salesforce.com/articleView?id=sf.code_tools_ant_using.htm&type=5) will also work but are not tested regularly.
 
 - [Installation](#installation)
   - [Dependencies](#dependencies)
-  - [SFDX Instructions](#sfdx-instructions)
-    - [Pre-Requisites](#pre-requisites)
+  - [Demo Implmentation](#demo-implmentation)
     - [Steps](#steps)
-  - [ANT Instructions](#ant-instructions)
-    - [Experience Builder Setup](#experience-builder-setup)
-      - [Navigation Menu Setup](#navigation-menu-setup)
-      - [Change Theme Layout and Settings](#change-theme-layout-and-settings)
-      - [Add Font Awesome JS](#add-font-awesome-js)
+  - [First Time Install](#first-time-install)
+    - [1.0 Configure Org](#10-configure-org)
+      - [Scratch Orgs](#scratch-orgs)
+      - [Sandboxes](#sandboxes)
+    - [2. Deploy Code](#2-deploy-code)
+      - [SFDX](#sfdx)
+      - [Ant](#ant)
+    - [3. Create Community](#3-create-community)
+      - [SFDX](#sfdx-1)
+      - [Sandbox](#sandbox)
+    - [4. Activate Theme](#4-activate-theme)
+    - [5. Additional Steps](#5-additional-steps)
+  - [Upgrading Theme](#upgrading-theme)
+  - [Additional Community Setup Information](#additional-community-setup-information)
 
 ## Dependencies
 
-- Font Awesome
-  - **Required For** fontAwesomeIcon and socialMediaNavMenu components.
-  - Register with Font Awesome to create icon kits, [https://fontawesome.com/start](https://fontawesome.com/start). You'll receive a JS snippet to include in your site. Hold onto that for later.
-- Ant-salesforce.jar >49.0
+- [SFDX CLI](https://developer.salesforce.com/tools/sfdxcli)
 
-## SFDX Instructions
+## Demo Implmentation
 
-### Pre-Requisites
+A demo site is included within this repository to enable teams to quickly deploy a copy of the theme along with navigable pages. This is a great way to get a feel for the theme without having to do a lot of setup.
 
-- SFDX CLI Tools
-- Salesforce Dev Hub Org
+For ease of deployment, set an environment variable in terminal before executing additional commands. For example:
+
+`orgname="uswdsThemeDemoOrg"` 
 
 ### Steps
 
-- `sfdx force:org:create -f config/scratch-def.json -a {scratchOrgName}`
-- `sfdx force:mdapi:deploy -d src/ -w 100 -u {scratchOrgName}`
-- `sfdx force:org:open -u {scratchOrgName}`
+1. Create a new scratch org
 
-## ANT Instructions
+`sfdx force:org:create -f config/scratch-def.json -a $orgname`
 
-- Clone this repository
-- Enable Communities in your Salesforce org (Setup > Digital Experiences > Settings. Select Enable Digital Experiences.)
-- Set local build.properties to point at sandbox.
-- Deploy `ant deployCode`
-  - Example files can also be deployed by entering, `ant deployCode -Dsf.deployRoot="/example"`
+2. Deploy main USWDS Theme source to org
+
+`sfdx force:mdapi:deploy -d src/ -w 100 -u $orgname`
+
+3. Create a new community named "uswdsThemeDemo using the Customer Account Portal template
+
+`sfdx force:community:create --name "uswdsThemeDemo" --templatename "Customer Account Portal" --urlpathprefix uswdsThemeDemo -o $orgname`
+
+4. Deploy example components to org (6 examples)
+
+`sfdx force:mdapi:deploy -d examples/uswdsBreadcrumb -w 100 -u $orgname`
+
+`sfdx force:mdapi:deploy -d examples/uswdsCard -w 100 -u $orgname`
+
+`sfdx force:mdapi:deploy -d examples/uswdsCollection -w 100 -u $orgname`
+
+`sfdx force:mdapi:deploy -d examples/uswdsPagination -w 100 -u $orgname`
+
+`sfdx force:mdapi:deploy -d examples/uswdsStepIndicator -w 100 -u $orgname`
+
+`sfdx force:mdapi:deploy -d examples/uswdsTag -w 100 -u $orgname`
+
+5. ⚠️⚠️ Open newly created org and verify community has been created. If you do not see "uswdsThemeDemo" on this page, continue to refresh until it appears.
+
+`sfdx force:org:open -u $orgname -p lightning/setup/SetupNetworks/home`
+
+6. Once the community appears, proceed to next step.
+
+`sfdx force:mdapi:deploy -d examples/uswdsThemeDemo -w 100 -u $orgname`
+
+## First Time Install
+
+Depending on your development workflow and tools available, varying instructions are required. For each step of the installation process, SFDX and Ant instructions are provided
+
+### 1.0 Configure Org
+
+#### Scratch Orgs
+
+Create a scratch org with communities enabled.
+`sfdx force:org:create -f config/scratch-def.json -a {scratchOrgName}`
+
+#### Sandboxes
+
+Enable Communities in your Salesforce org (Setup > Digital Experiences > Settings. Select Enable Digital Experiences.)
+
+### 2. Deploy Code
+
+#### SFDX
+
+`sfdx force:mdapi:deploy -d src/ -w 100 -u {scratchOrgName}`
+
+`sfdx force:org:open -u {scratchOrgName}`
+
+#### Ant
+
+Set local build.properties to point at sandbox.
+
+`ant deployCode`
+
+Example files can also be deployed by entering (always deploy `src/` folder before deploying examples)
+
+`ant deployCode -Dsf.deployRoot="/examples/uswdsTag"`
+
+### 3. Create Community
+
+#### SFDX
+
+`sfdx force:community:create --name {community name} --templatename "Customer Account Portal" --urlpathprefix {path prefix if any} -o {scratchOrgName}`
+
+#### Sandbox
+
 - For new communities
-  - Create new community (Setup > Digital Experiences > All Sites > New > Select Customer Account Portal
+  - Create new community (Setup > Digital Experiences > All Sites > New > Select Customer Account Portal)
   - Provide Name > Builder > Theme
   - Select USWDS Lightning Community
 - For existing communities
   - (Setup > Digital Experiences > All Communities > Builder > Theme)
   - Select USWDS Lightning Community
 - Enter name of community and a community specific url (if desired)
-- From Workspaces, navigate to Administration
-  - Login & Registration
-    - Update Logo to use Agency-specific logo
-    - Update Footer text. Note, US Government agencies do not hold copyright, see [Government Works](https://www.usa.gov/government-works). Entering © My Agency is improper. Instead, just enter the agency name.
-    - Set Logout Page URL
-    - Save
-  - Update other settings as needed.
 
-### Experience Builder Setup
+### 4. Activate Theme
 
-Navigate to Experience Builder by clicking Administration in the top left, and clicking Builder
+- Setup > Digital Experiences > All Sites > {name of your community} > Builder
+- Click brush icon on left-hand menu
+- Click Change Theme
+- Select USWDS v2.1.0
 
-#### Navigation Menu Setup
+### 5. Additional Steps
 
-This theme relies on five navigation menus:
+See [Additional Community Setup Information](#additional-community-setup-information)
 
-- Main Navigation
-- Header Secondary Navigation - below Search
-  - Limit this nav to three or fewer entries
-- Main Footer Nav
-- Footer Secondary Nav
-  - Many agencies require standard links on every website such as Privacy Policy, Accessibility, SORN, etc.
-- Social Media Nav
+## Upgrading Theme
 
-#### Change Theme Layout and Settings
+Read the [Release Notes](https://github.com/GSA/uswds-sf-lightning-community/releases) for each version between your current and desired version. The notes will highlight any breaking changes or destructive packages that are required for deployment. Deploy each minor version in succession until reaching current.
 
-- Settings > Theme > Configure
-- Change Theme Layout Component for the Default and Login Theme Layouts to USWDS Theme Layout. Accept alert and click OK.
-  - Add Theme Images
-    - Navigate to Theme (paint brush)
-    - Update Images
-      - Upload your organization logo under Company Logo. Update Login Page Background Image if desired.
-        - A logo with transparent background is best as the header and footer are different colors.
-    - Update Theme Settings
-      - Work down the list of theme settings. As you tab through, the underlying page will update after each field.
-      - If you created a community specific URL ...force.com/blah, update the Path to Home Page section to include beginning of URI path
-      - Enter navigation menu names for each Nav Menu Name section
-      - If you plan to override a particular section, toggle the section on to reveal an Aura.Component[] drop zone
-    - Update Theme Colors
-      - This repository ships with base theme colors but can be customized to specific needs. While not comprehensive, the following maps color settings to components in the community.
-        - Action Color
-          - Tab Component (specifically active tab)
-          - Tile Menu
-        - Overlay Text Color
-          - User Profile Menu
-        - Detail Text Color
-          - Tabs (inactive)
+## Additional Community Setup Information
 
-#### Add Font Awesome JS
-
-Fontawsome needs to be a trusted site for both scripts and other resources. There are two sites that need to be defined by Salesforce:
-
-1. Under Salesforce Setup (Not in Experience Builder) search for CSP Trusted Sites.
-1. Click New Trusted Site.
-   1. Trusted Site Name: kitfreefontawsome
-   1. Trusted Site URL: [https://kit-free.fontawesome.com](https://kit-free.fontawesome.com)
-   1. Context: Communities
-   1. Leave all other boxes checked
-1. Click Save
-
-Back in Experience Builder > Settings > Security.
-
-1. Change the Content Secuirty Policy (CSP) to "Allow Inline Scripts and Script Access to Whitelisted Third-party Hosts
-1. Click + Add Trusted Site.
-   1. Name: fontawesome
-   1. URL: [https://kit.fontawesome.com](https://kit.fontawesome.com)
-
-Enter the header script Tag:
-From Settings>Advanced.
-
-1. Click Edit Head Markup.
-1. Paste the script tag.
-1. Click Save
-
-When saved you should not get any CSP errors.
+We have a [wiki](https://github.com/GSA/uswds-sf-lightning-community/wiki/Community-Setup) which contains more information about customizing the theme and getting started.
