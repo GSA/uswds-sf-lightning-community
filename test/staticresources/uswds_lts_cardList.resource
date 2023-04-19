@@ -1,6 +1,6 @@
 describe("Card List", function () {
   // declare any variables that need to be available in each test
-  var validCardData, invalidCardType, missingCardField;
+  var validCardData, invalidCardType, missingAltText, missingCardField;
   beforeEach(function () {
     validCardData = [
       {
@@ -14,8 +14,31 @@ describe("Card List", function () {
         mediaAltText: "A placeholder image"
       }
     ];
-    invalidCardType = validCardData;
-    invalidCardType[0].cardType = "blah";
+    invalidCardType = [
+      {
+        cardType: "blah",
+        cardsPerRow: "3",
+        header: "Card",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        buttonLinkUrl: "/contactsupport",
+        buttonLinkText: "Contact Support",
+        mediaUrl: "",
+        mediaAltText: "A placeholder image"
+      }
+    ];
+
+    missingAltText = [
+      {
+        cardType: "Card with Media",
+        cardsPerRow: "3",
+        header: "Card",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        buttonLinkUrl: "/contactsupport",
+        buttonLinkText: "Contact Support",
+        mediaUrl: "",
+        mediaAltText: ""
+      }
+    ];
 
     missingCardField = [
       {
@@ -60,6 +83,23 @@ describe("Card List", function () {
           document.querySelectorAll(".slds-notify__content", "p")[0].textContent
         ).toContain(
           `Validation error, cardData did not provide all expected object keys. Specifics have been logged to the developer console for  review.`
+        );
+        // end this spec successfully
+        done();
+      })
+      .catch(function (e) {
+        done.fail(e);
+      });
+  });
+  it("Displays an error message if alt text is missing from a card", function (done) {
+    $T.createComponent("c:uswdsCardList", { cardData: missingAltText }, true)
+      .then(function (component) {
+        component.processCardData();
+
+        expect(
+          document.querySelectorAll(".slds-notify__content", "p")[0].textContent
+        ).toContain(
+          `Alt Text is missing for the image on card no 0. Here is more info about how to write great alt text, https://www.w3.org/TR/WCAG20-TECHS/H37.html`
         );
         // end this spec successfully
         done();

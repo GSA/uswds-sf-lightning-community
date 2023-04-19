@@ -30,6 +30,32 @@
         );
       }
     }
+
+    // ensure alt text is set
+    var cardsWithMedia = [
+      "Card with Media",
+      "Media and Header First",
+      "Inset Media",
+      "Exdent Media",
+      "Flag Right",
+      "Flag Left"
+    ];
+    if (
+      cardData.mediaAltText === "" &&
+      cardsWithMedia.includes(cardData.cardType)
+    ) {
+      this.createNotification(
+        component,
+        {
+          title: "Error - USWDS Card List",
+          message: `Alt Text is missing for the image on card no ${index}. Here is more info about how to write great alt text, https://www.w3.org/TR/WCAG20-TECHS/H37.html`
+        },
+        [
+          `Error - USWDS Card List. \n Error on card no ${index}. Expecting key alt text for image but it was not found. Here is more info about how to write great alt text, https://www.w3.org/TR/WCAG20-TECHS/H37.html`
+        ]
+      );
+    }
+
     // Check to see that the cardType value is valid
     var validCardTypes = [
       "Card",

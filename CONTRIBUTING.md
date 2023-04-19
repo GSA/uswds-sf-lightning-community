@@ -10,6 +10,9 @@ We're so glad you're thinking about contributing to a U.S. Government open sourc
   - [Establishing a Development Environment](#establishing-a-development-environment)
   - [Creating a new Component](#creating-a-new-component)
     - [Handling in-component validation \& builder feedback](#handling-in-component-validation--builder-feedback)
+  - [Accessibility](#accessibility)
+    - [Testing Accessibility](#testing-accessibility)
+    - [Validation](#validation)
   - [Testing](#testing)
     - [Testing Principles](#testing-principles)
     - [Creating New Tests](#creating-new-tests)
@@ -18,7 +21,7 @@ We're so glad you're thinking about contributing to a U.S. Government open sourc
       - [CLI](#cli)
       - [Browser](#browser)
         - [Known Issues](#known-issues)
-  - [Updating package.xml version](#updating-packagexml-version)
+  - [Updating package.xml version number](#updating-packagexml-version-number)
 
 ## How to contribute to this project
 
@@ -47,13 +50,15 @@ In the interest of making it easier for our contributors to manage site issues, 
 
 ## Code Guidelines
 
-We use Prettier as the default formatter for our code. This ensures a consistent product across all files an enhances readability. More information about Prettier can be found at [https://prettier.io/](https://prettier.io/).
+When creating a new feature, one should think about the broad variety of uses for a given component and design it in such a way that the end user can adjust via Experience Builder as needed. Fields expecting long text strings tend to result in a poor builder experience as they cannot view all of the content at once in the editing pane. For that reason, this theme has opted away from such experiences.
 
-When creating a new feature, one should think about the broad variety of uses for a given component and design it in such a way that the end user can adjust via Experience Builder as needed. If making changes to the theme itself, `uswdsTheme`, provide the ability to toggle a component on/off or have it collapse down to zero height if not in use.
+If making changes to the theme itself, `uswdsTheme`, provide the ability to toggle a component on/off or have it collapse down to zero height if not in use.
+
+We use Prettier as the default formatter for our code. This ensures a consistent product across all files an enhances readability. More information about Prettier can be found at [https://prettier.io/](https://prettier.io/).
 
 ## Establishing a Development Environment
 
-Using Salesforce [Scratch Orgs](https://help.salesforce.com/s/articleView?id=sf.managing_scratch_orgs.htm&type=5) is the easiest way to get up and running with the repository. See [INSTALLATION](INSTALLATION.md#sfdx-instructions) for specific instructions to deploy this code base to a fresh environment with SFDX.
+Using Salesforce [Scratch Orgs](https://help.salesforce.com/s/articleView?id=sf.managing_scratch_orgs.htm&type=5) is the easiest way to get up and running with the repository. See [INSTALLATION](INSTALLATION.md#first-time-install) for specific instructions to deploy this code base to a fresh environment with SFDX.
 
 ## Creating a new Component
 
@@ -91,6 +96,24 @@ validateFirstName: function(component, event, helper) {
   }
 }
 ```
+
+## Accessibility
+
+The US Web Design System and Salesforce Lightning Design System have been built with acessibility in mind. Overviews of their policies can be found at [USWDS Accessibility](https://designsystem.digital.gov/documentation/accessibility/) ahd [Lightning Design System Accessibility](https://www.lightningdesignsystem.com/accessibility/overview/)
+
+This theme aims to build upon the foundation provided by the USWDS and SLDS to provide a set of accessible components. Automated accessibility tests as well as validations should be incorporated into the workflow of any updates.
+
+### Testing Accessibility
+
+New or updated components should be tested using the Web Content Accessibility Guidelines (WCAG) 2 Level AA standard. The easiest way to test components in an automated fashion is to use the [Google Lighthouse NPM package](https://www.npmjs.com/package/lighthouse) and point at a published community page containing just the component. Similarly, one can run Lighthouse from within the Chrome browser and select the accessibility checkbox For example:
+
+`npx lighthouse https://inspiration-ability-2765.scratch.my.site.com/issue111/s/ --only-categories=accessibility --view --output html`
+
+The resulting HTML file will contain details about any accessibility issues present in the component. When in doubt, it is best to consult a resource trained in web accessibility.
+
+### Validation
+
+Whenever images are utilized in a component, alt text should be an editable attribute. Validating that alt text is not blank and providing a Builder Notification warning to the user is preferred. For example, the USWDS Hero component will issue this warning to users if alt text is blank, "Alt Text is missing for the background image. Here is more info about how to write great alt text, [https://www.w3.org/TR/WCAG20-TECHS/H37.html](https://www.w3.org/TR/WCAG20-TECHS/H37.html)." This is not foolproof but attempts to steer the user back on track.
 
 ## Testing
 
@@ -162,7 +185,7 @@ Tests can be run via the CLI or directly within the browser. Per issue [#108](ht
 
 - As of Salesforce v57.0 (Spring '23), Salesforce introduced [Lightning Web Security for Lightning web components (GA) and Aura components (Beta)](https://help.salesforce.com/s/articleView?id=release-notes.rn_lc_lws.htm&release=242&type=5) which is enabled by default on new and scratch orgs. Enabling this feature causes the Jasmine test suite to error out by not recognizing the global `$T` variable. To turn this off, go to `Setup > Session Settings > Lightning Web Security` and uncheck `Use Lightning Web Security for Lightning web components (GA) and Aura components (Beta)`. Since turning this off is only to execute tests, suggest toggling off the setting, validating tests, and turning it back on.
 
-## Updating package.xml version
+## Updating package.xml version number
 
 - Deploy code from `src/` as is to fresh org
 - Update package.xml to desired mdapi version within `src/`
