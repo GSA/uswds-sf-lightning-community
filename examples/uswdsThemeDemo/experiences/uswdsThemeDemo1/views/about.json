@@ -1,0 +1,70 @@
+{
+  "appPageId" : "766b1ec5-3b8c-4acb-b73d-01ac8a7cb69a",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "1625f602-3505-46a8-8350-a15f313be78d",
+  "label" : "About",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "3afe2bad-cc10-48ff-9110-5c6b412f6c59",
+          "columns" : [ {
+            "UUID" : "7dbdbb26-0dec-4301-bb2f-25187c048720",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3afe2bad-cc10-48ff-9110-5c6b412f6c59",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"usa-prose\">\n  <h1>About Pages</h1>\n  <p>\n    About pages should be included on each site and are used to describe the\n    program/ service supported by the site, how it fits into the larger agency,\n    and any specific guidance or policies for the site.\n    <a\n      href=\"https://digital.gov/resources/required-web-content-and-links/#about-page\"\n      >Digital.gov's</a\n    >\n    About Page Reference contains greater detail and should be considered the\n    canonical source of information.\n  </p>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "0145311f-6037-43e4-bb62-542da30bd251",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7dbdbb26-0dec-4301-bb2f-25187c048720",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b6e48269-77f0-4107-ba35-402090fca1c6",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "About"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "fecf493c-6ff1-40aa-9642-6c13cfa9f3f1",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d8a7e33b-ce76-4dc2-ae81-79971b106e62",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-about"
+}

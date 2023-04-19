@@ -1,0 +1,77 @@
+{
+  "appPageId" : "766b1ec5-3b8c-4acb-b73d-01ac8a7cb69a",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "92a2e3d7-f405-425c-9d87-a52c2acb6088",
+  "label" : "Card",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "fd9366ac-b32a-4688-9521-f5e8e088992c",
+          "columns" : [ {
+            "UUID" : "12dd48f9-b29f-4be4-bfc1-6b7869d9e1ae",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "fd9366ac-b32a-4688-9521-f5e8e088992c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"usa-summary-box\">\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3\n      class=\"usa-summary-box__heading font-alt-2xl\"\n      id=\"summary-box-key-information\"\n    >\n      Card\n    </h3>\n    <div class=\"usa-summary-box__text\">\n      <ul>\n        <li>\n          Card components offer a succinct way to share information about\n          articles or upcoming events and link to the larger content. Cards should be used when there is an action for users to take (clicking the button).\n        </li>\n        <li>\n          The example below leverages hard coded values in the controller of the\n          component but could easily be updated to read in content from a\n          Salesforce object or CMS records. This example can be found at the\n          <a\n            href=\"https://github.com/GSA/uswds-sf-lightning-community/tree/develop/examples/uswdsCard\"\n            >examples/uswdsCard</a\n          >\n          portion of this repository.\n        </li>\n        <li>\n          Further details about the Collection component may be found at\n          <a href=\"https://designsystem.digital.gov/components/card/\"\n            >https://designsystem.digital.gov/components/card/</a\n          >.\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "a9497b67-fc73-4e22-bd14-5d0d19445029",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "c:exampleCardWrapper",
+          "id" : "2d6ad447-d0e8-44a6-af06-b6a10abdc9a6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "12dd48f9-b29f-4be4-bfc1-6b7869d9e1ae",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3a16c408-edd9-4d5c-869a-60533ab82e6a",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Card"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "8b492b68-3510-4183-8691-d0f957b9e3df",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "99cf9a5f-bf3c-44e2-960a-ff8c8c264245",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-card"
+}

@@ -1,0 +1,72 @@
+{
+  "appPageId" : "766b1ec5-3b8c-4acb-b73d-01ac8a7cb69a",
+  "componentName" : "siteforce:sldsThreeCol363Layout",
+  "dataProviders" : [ ],
+  "id" : "8a4706cc-45eb-42de-99c0-96d67929939b",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "callToAction" : "View the Components",
+        "callToActionLink" : "/components",
+        "heading" : "USWDS Salesforce Lightning Community Theme",
+        "headingAlt" : "Welcome:",
+        "headingBody" : "Here you will find information about how to use the theme and related resources.",
+        "heroImgAltText" : "Introduction",
+        "heroImgName" : ""
+      },
+      "componentName" : "c:uswdsHero",
+      "id" : "07536c4e-8792-4ad7-b32f-469ee0bb2838",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "032d7b27-49b6-42a1-9206-09c931436d04",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<div class=\"usa-summary-box\">\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3\n      class=\"usa-summary-box__heading font-alt-2xl\"\n      id=\"summary-box-key-information\"\n    >\n      Using this example site\n    </h3>\n    <div class=\"usa-summary-box__text\">\n      <p>\n        On each page, you'll find a Summary Box (this) which highlights key\n        features, components used, and additional resources. Below are some\n        additional resources:\n      </p>\n      <ul class=\"usa-list\">\n        <li>\n          <a\n            class=\"usa-summary-box__link\"\n            href=\"https://github.com/GSA/uswds-sf-lightning-community/wiki\"\n            >USWDS SF Lightning Community Wiki</a\n          >\n        </li>\n        <li>\n          <a\n            class=\"usa-summary-box__link\"\n            href=\"https://github.com/GSA/uswds-sf-lightning-community/wiki/Accessibility\"\n            >Information</a\n          >\n          about how this theme is tested for compliance with Section 508 &amp;\n          WCAG AA Accessibility standards.\n        </li>\n        <li>\n          Find a bug, have a feature request, want to contribute?\n          <a\n            class=\"usa-summary-box__link\"\n            href=\"https://github.com/GSA/uswds-sf-lightning-community/issues\"\n            >GitHub Issues</a\n          >\n        </li>\n      </ul>\n      <p>\n        Finally, a numbrer of pages are deployed with this example but not all\n        are built out. Anything that has been built specifically for the USWDS\n        theme is linked above. Feel free to experiment with other pages in\n        Community Builder.\n      </p>\n    </div>\n  </div>\n</div>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "286732b1-0957-428c-8d4e-b0426a9b1812",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "89aad517-79ce-40a9-a65f-17ee7943e2c5",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "719db245-e05b-4c5c-844c-1e36e26fc195",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "17381e42-f7c1-46d3-9b4d-26bae45385c5",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c4ab553d-ab00-465f-92dd-0dc8cc90f22c",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "db826e4d-bdeb-4dfb-80c2-fcd3a151805c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "id" : "307ffe8d-eb47-4f4c-b6e2-9ca7c4d4aaa2",
+    "regionName" : "sidebarAlt",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "yBoTr13mQiduHTKnBESTs1USAp58ib",
+  "type" : "view",
+  "viewType" : "home"
+}
