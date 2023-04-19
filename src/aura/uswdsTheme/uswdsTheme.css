@@ -1,3 +1,39 @@
+/* calculating height of #mainContent per issue-182 
+opted to not use AuraTokens performing calculations with the tokens proved problematic
+
+| USWDS Width Name | Size    | Banner & Header Height | Footer, Identifier, OSS Height |
+| ---------------- | ------- | ---------------------- | ------------------------------ |
+| Smallest         | ≥0px    | 96.461px               | 472.8px                        |
+| Mobile large     | ≥480px  | 96.461px               | 478.818px                      |
+| Tablet           | ≥640px  | 70.07px                | 351.5px                        |
+| Desktop          | ≥1024px | 204.464px              | 327.606px                      |
+*/
+
+@media (min-width: 0px) {
+  .THIS .mainContent {
+    min-height: calc(100vh - 96.5px - 472.8px);
+    min-height: calc(100dvh - 96.5px - 472.8px);
+  }
+}
+@media (min-width: 480px) {
+  .THIS .mainContent {
+    min-height: calc(100vh - 96.5px - 472.8px);
+    min-height: calc(100dvh - 96.5px - 472.8px);
+  }
+}
+@media (min-width: 640px) {
+  .THIS .mainContent {
+    min-height: calc(100vh - 70.1px - 351.5px);
+    min-height: calc(100dvh - 70.1px - 351.5px);
+  }
+}
+@media (min-width: 1024px) {
+  .THIS .mainContent {
+    min-height: calc(100vh - 204.5px - 327.6px);
+    min-height: calc(100dvh - 204.5px - 327.6px);
+  }
+}
+
 .THIS .logoContainer {
   border-radius: 0rem;
 }

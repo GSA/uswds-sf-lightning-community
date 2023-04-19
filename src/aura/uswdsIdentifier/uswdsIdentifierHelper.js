@@ -131,6 +131,7 @@
     } else if (identifierType == "No Logo Spanish") {
       identifierType = "Spanish";
     }
+
     return content[identifierType];
   }
 });

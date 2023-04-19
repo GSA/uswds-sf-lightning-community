@@ -63,7 +63,7 @@ describe("USWDS Theme", function () {
         .then(function (component) {
           expect(
             document.getElementById("mainContent").getAttribute("class")
-          ).toEqual("cUswdsTheme");
+          ).toEqual("mainContent ");
           done();
         })
         .catch(function (e) {

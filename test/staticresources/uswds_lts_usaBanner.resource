@@ -139,4 +139,19 @@ describe("USA Banner", function () {
         done.fail(e);
       });
   });
+  it("adds the hidden attribute to the banner, ensuring that it is collapsed", function (done) {
+    $T.createComponent("c:uswdsUSABanner", {}, true)
+      .then(function (component) {
+        // attribute should be set and will have a blank value
+        expect(
+          document.getElementById("gov-banner-demo").getAttribute("hidden")
+        ).toBe("");
+
+        // end this spec successfully
+        done();
+      })
+      .catch(function (e) {
+        done.fail(e);
+      });
+  });
 });

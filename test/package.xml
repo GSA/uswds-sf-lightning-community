@@ -15,6 +15,7 @@
         <members>uswds_lts_collectionElement</members>
         <members>uswds_lts_collectionList</members>
         <members>uswds_lts_hero</members>
+        <members>uswds_lts_identifier</members>
         <members>uswds_lts_pagination</members>
         <members>uswds_lts_search</members>
         <members>uswds_lts_stepIndicator</members>
