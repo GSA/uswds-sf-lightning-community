@@ -3,3 +3,5 @@ node_modules
 .sfdx
 .sonarlint
 .vscode
+# ignore auto-generated json files for community
+examples/**/*.json
