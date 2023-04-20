@@ -1,0 +1,42 @@
+<design:component label="Hero - USWDS">
+  <design:attribute
+    name="heroImgName"
+    label="Hero Image Name"
+    description="Provide the name of the Asset File which will serve as the background image. For best results, choose an image with a size of at least 2048x820px."
+  />
+  <design:attribute
+    name="heroImgAltText"
+    label="Hero Image Alt Text"
+    description="Provide alt-text describing the image as it relates to the action being requested"
+  />
+  <design:attribute
+    name="heading"
+    label="Heading"
+    default=""
+    description="A catchy title to grab attention."
+  />
+  <design:attribute
+    name="headingAlt"
+    label="Heading Lead"
+    default=""
+    description="Serves as an initial call out placed before the main heading. "
+  />
+  <design:attribute
+    name="headingBody"
+    label="Body"
+    default=""
+    description="Body text, roughly 160 characters or less describing the action you'd like the user to take."
+  />
+  <design:attribute
+    name="callToAction"
+    label="Call to Action Name"
+    default=""
+    description="Content that will be rendered inside the button"
+  />
+  <design:attribute
+    name="callToActionLink"
+    label="Call to Action Link"
+    default=""
+    description="Relative URL of page containing the next action for the user."
+  />
+</design:component>

@@ -2,6 +2,12 @@
   implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
   access="global"
 >
+  <ltng:require scripts="{!$Resource.fontawesome_5_x+'/js/brands.min.js'}" />
+  <ltng:require scripts="{!$Resource.fontawesome_5_x+'/js/solid.min.js'}" />
+  <ltng:require
+    scripts="{!$Resource.fontawesome_5_x+'/js/fontawesome.min.js'}"
+  />
+
   <aura:attribute
     name="prefix"
     type="String"

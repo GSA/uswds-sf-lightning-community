@@ -1,0 +1,77 @@
+{
+  "appPageId" : "766b1ec5-3b8c-4acb-b73d-01ac8a7cb69a",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "35527a15-0729-49b7-a4f8-4f7925e13b3d",
+  "label" : "Pagination",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "2de4697f-e300-4142-8e47-b24a5819220c",
+          "columns" : [ {
+            "UUID" : "2ba5f206-efc0-45a3-aa3e-f65fcb598a76",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2de4697f-e300-4142-8e47-b24a5819220c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"usa-summary-box\">\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3\n      class=\"usa-summary-box__heading font-alt-2xl\"\n      id=\"summary-box-key-information\"\n    >\n      Pagination\n    </h3>\n    <div class=\"usa-summary-box__text\">\n      <ul>\n        <li>\n          Pagination as a capability can be tough to implement while also taking\n          into consideration mobile friendliness and accessibility.\n        </li>\n        <li>\n          The example below simply pages through a list of county names in\n          Georgia along with their population figures. This example can be found\n          at the\n          <a\n            href=\"https://github.com/GSA/uswds-sf-lightning-community/tree/develop/examples/uswdsPagination\"\n            >examples/uswdsPagination</a\n          >\n          portion of this repository.\n        </li>\n        <li>\n          Further details about the Pagination component may be found at\n          <a href=\"https://designsystem.digital.gov/components/pagination/\"\n            >https://designsystem.digital.gov/components/pagination/</a\n          >.\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "f34c8762-b135-4897-b184-45fa4f66a4d4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "c:examplePaginationWrapper",
+          "id" : "0db9f026-1cd8-4615-9f9a-4e19710a187d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2ba5f206-efc0-45a3-aa3e-f65fcb598a76",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "bde04d32-91ad-4068-974b-fc8116dce3fe",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Pagination"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "d6565f28-c4a4-4dc2-9605-3dd5131968da",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c123e8e9-35f1-4269-9fd2-539c84ff2627",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-pagination"
+}

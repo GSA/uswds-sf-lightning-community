@@ -81,6 +81,7 @@ retrieveUnpackagedstatic/
 static/
 .sfdx
 .sf/
+unpackaged/
 
 # Zip files
 *.zip

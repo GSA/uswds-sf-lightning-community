@@ -15,9 +15,12 @@
         <type>Highlight</type>
     </bundlesInfo>
     <bundlesInfo>
-        <description>The Identifier component helps agencies clearly denote ownership of the site as
+        <description>The Identifier component helps agencies clearly denote ownership of the site as <<<<<<< HEAD
+                well
+                as providing links to key policies such as privacy.=======
             well as providing links to key resources such as Privacy Policy, FOIA Requests,
             Accessibility statements, and USA.gov.
+>>>>>>> main
             https://designsystem.digital.gov/components/identifier/</description>
         <order>3</order>
         <title>Identifier</title>
@@ -52,7 +55,7 @@
     <description>A US Web Design System Theme for Lightning Communities. Contribute at
         https://github.com/GSA/uswds-sf-lightning-community</description>
     <enableExtendedCleanUpOnDelete>true</enableExtendedCleanUpOnDelete>
-    <masterLabel>USWDS v2.0.0</masterLabel>
+    <masterLabel>USWDS v2.1.0</masterLabel>
     <publisher>U.S. GSA</publisher>
     <themeSetting>
         <themeLayout>USWDS_Lightning_Community_themeLayout_Login</themeLayout>

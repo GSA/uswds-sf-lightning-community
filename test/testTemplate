@@ -34,7 +34,8 @@ describe("{{component name}}", function () {
           document.getElementsByClassName("{{my specific class}}").length
         ).toEqual(5);
         expect(
-          document.getElementsByClassName("{{my specific class")[0].textContent
+          document.getElementsByClassName("{{my specific class}}")[0]
+            .textContent
         ).toContain(varA);
         done();
       })

@@ -1,0 +1,94 @@
+{
+  "appPageId" : "766b1ec5-3b8c-4acb-b73d-01ac8a7cb69a",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "7593f9ac-1a96-4c87-bbbd-97ee8beccf08",
+  "label" : "Components",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "bd854ceb-6cfc-40b4-851f-3c8a22d978ec",
+          "columns" : [ {
+            "UUID" : "203a1e44-5c12-4f55-9cb0-1bf939c7911e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "71929002-8329-4f20-9675-c05c08f19a16",
+            "columnKey" : "7f6a1",
+            "columnName" : "Column 2",
+            "columnWidth" : "9",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "bd854ceb-6cfc-40b4-851f-3c8a22d978ec",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "navigationLinkSetId" : "ComponentList",
+            "sectionTitle" : "Components",
+            "startNumber" : 1
+          },
+          "componentName" : "c:uswdsVerticalNavigation",
+          "id" : "110bed1c-5acf-457f-8854-ddba5306a87e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "203a1e44-5c12-4f55-9cb0-1bf939c7911e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"usa-summary-box\">\n  <div class=\"usa-summary-box__body usa-prose\">\n    <h3\n      class=\"usa-summary-box__heading font-alt-2xl\"\n      id=\"summary-box-key-information\"\n    >\n      Example Components\n    </h3>\n    <div class=\"usa-summary-box__text\">\n      <p>\n        Example are provided for a number of components which require that they\n        be wrapped in a larger component and provided data. The underlying\n        example component code is meant to be a starting point for larger\n        implementations.\n      </p>\n    </div>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "779ec591-587d-4237-9098-d1e65309b44d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "71929002-8329-4f20-9675-c05c08f19a16",
+        "regionLabel" : "Column 2",
+        "regionName" : "7f6a1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7ceb6acd-12de-474b-8430-ac558579be5b",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Components"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "054a068e-796b-4dc8-9abe-f619aea08351",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "841959fc-57a6-4524-9c91-4dbc7c034243",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-components"
+}

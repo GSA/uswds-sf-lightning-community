@@ -1,6 +1,6 @@
 {
   "name": "uswds-sf-lightning-community",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A Salesforce Lightning Community Theme and related components built upon US Web Design System",
   "main": "",
   "dependencies": {
@@ -11,11 +11,11 @@
     "axios": "^0.21.2",
     "prettier": "^2.7.1",
     "prettier-plugin-apex": "^1.11.0",
-    "sfdx-cli": "^7.176.1"
+    "sfdx-cli": "^7.196.6"
   },
   "engines": {
-    "node": ">=16.15.1",
-    "npm": ">=8.12.1"
+    "node": ">=16.16.0",
+    "npm": ">=8.11.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,0 +1,11 @@
+{
+  "cmsSettings" : { },
+  "currentThemeId" : "521b029c-5315-402b-8780-3508f6847bc6",
+  "headMarkup" : "<script\n  async=\"\"\n  type=\"text/javascript\"\n  src=\"https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA&amp;pua=ua-33523145-2\"\n  id=\"_fed_an_ua_tag\"\n></script>\n<meta name=\"theme-color\" content=\"#003C71\" />",
+  "id" : "766b1ec5-3b8c-4acb-b73d-01ac8a7cb69a",
+  "isLockerServiceEnabled" : true,
+  "isRelaxedCSPLevel" : true,
+  "label" : "main",
+  "templateName" : "CPT Community Template",
+  "type" : "appPage"
+}
