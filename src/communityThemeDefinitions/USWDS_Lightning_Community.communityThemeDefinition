@@ -15,8 +15,12 @@
         <type>Highlight</type>
     </bundlesInfo>
     <bundlesInfo>
-        <description>The Identifier component helps agencies clearly denote ownership of the site as
-            well as providing links to key policies such as privacy.
+        <description>The Identifier component helps agencies clearly denote ownership of the site as <<<<<<< HEAD
+                well
+                as providing links to key policies such as privacy.=======
+            well as providing links to key resources such as Privacy Policy, FOIA Requests,
+            Accessibility statements, and USA.gov.
+>>>>>>> main
             https://designsystem.digital.gov/components/identifier/</description>
         <order>3</order>
         <title>Identifier</title>
