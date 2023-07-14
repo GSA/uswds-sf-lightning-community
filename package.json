@@ -11,7 +11,7 @@
     "axios": "^0.21.2",
     "prettier": "^2.7.1",
     "prettier-plugin-apex": "^1.11.0",
-    "sfdx-cli": "^7.196.6"
+    "sfdx-cli": "^7.209.6"
   },
   "engines": {
     "node": ">=16.16.0",
