@@ -1,13 +1,16 @@
 {
   "name": "uswds-sf-lightning-community",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "A Salesforce Lightning Community Theme and related components built upon US Web Design System",
   "main": "",
   "dependencies": {
+    "@sa11y/jest": "^6.1.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0"
   },
   "devDependencies": {
+    "@salesforce/sfdx-lwc-jest": "^3.1.0",
+    "@uswds/uswds": "^3.7.0",
     "axios": "^0.21.2",
     "prettier": "^2.7.1",
     "prettier-plugin-apex": "^1.11.0",
@@ -18,21 +21,26 @@
     "npm": ">=8.11.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "org:create": "sf org create scratch -f config/scratch-def.json -a $(date '+%Y%m%d')_$(git branch --show-current) -w 10 -y 30 && sf config set target-org=$(date '+%Y%m%d')_$(git branch --show-current)",
+    "uswds:latest": "npm install @uswds/uswds@latest",
+    "uswds:sync": "rsync -Rr node_modules/@uswds/uswds/*.md node_modules/@uswds/uswds/dist/css/*.min.css* node_modules/@uswds/uswds/dist/scss/* node_modules/@uswds/uswds/dist/fonts/*/*.{ttf,woff} node_modules/@uswds/uswds/dist/img/** node_modules/@uswds/uswds/dist/js/*.min.js* force-app/main/default/staticresources/uswds_3_x &&  mv force-app/main/default/staticresources/uswds_3_x/node_modules/@uswds/uswds/*.md force-app/main/default/staticresources/uswds_3_x && mv force-app/main/default/staticresources/uswds_3_x/node_modules/@uswds/uswds/dist force-app/main/default/staticresources/uswds_3_x && rm -rf force-app/main/default/staticresources/uswds_3_x/node_modules",
+    "test:unit": "sfdx-lwc-jest",
+    "test:unit:debug": "sfdx-lwc-jest --debug",
+    "test:unit:watch": "sfdx-lwc-jest --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GSA/uswds-sf-lightning-community.git"
+    "url": "git+https://github.com/mvogelgesang/uswds-sf-lightning-community.git"
   },
   "keywords": [
     "salesforce",
     "salesforce-community-theme",
     "uswds"
   ],
-  "author": "U.S. General Services Administration",
+  "author": "Mark Vogelgesang",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/GSA/uswds-sf-lightning-community/issues"
+    "url": "https://github.com/mvogelgesang/uswds-sf-lightning-community/issues"
   },
-  "homepage": "https://github.com/GSA/uswds-sf-lightning-community#readme"
+  "homepage": "https://github.com/mvogelgesang/uswds-sf-lightning-community#readme"
 }

@@ -73,6 +73,9 @@ typings/
 # .DS_Store
 .DS_Store
 
+# __MACOSX
+__MACOSX/
+
 # Salesforce
 *.properties
 build.xml

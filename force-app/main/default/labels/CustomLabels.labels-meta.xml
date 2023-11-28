@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>uswdsBanner_headerAction</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_headerAction</shortDescription>
+        <value>Here’s how you know</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_headerText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_headerText</shortDescription>
+        <value>An official website of the United States government</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_lock</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_lock</shortDescription>
+        <value>Lock</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_lockedPadlockIcon</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_lockedPadlockIcon</shortDescription>
+        <value>Locked padlock icon</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_officialContent_gov</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_officialContent_gov</shortDescription>
+        <value>A &lt;strong&gt;.gov&lt;/strong&gt; website belongs to an official government organization in the United States.</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_officialContent_mil</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_officialContent_mil</shortDescription>
+        <value>A &lt;strong&gt;.mil&lt;/strong&gt; website belongs to an official U.S. Department of Defense organization.</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_officialTop_gov</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_officialTop_gov</shortDescription>
+        <value>Official websites use .gov</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_officialTop_mil</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_officialTop_mil</shortDescription>
+        <value>Official websites use .mil</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_secureContentEnd_gov</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_secureContentEnd_gov</shortDescription>
+        <value>or &lt;strong&gt;https://&lt;/strong&gt; means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_secureContentEnd_mil</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_secureContentEnd_mil</shortDescription>
+        <value>or &lt;strong&gt;https://&lt;/strong&gt; means you’ve safely connected to the .mil website. Share sensitive information only on official, secure websites.</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_secureContentStart</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_secureContentStart</shortDescription>
+        <value>A &lt;strong&gt;lock&lt;/strong&gt;</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_secureContent_gov</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_secureContent_gov</shortDescription>
+        <value>&lt;strong&gt;https://&lt;/strong&gt; means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_secureContent_mil</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_secureContent_mil</shortDescription>
+        <value>&lt;strong&gt;https://&lt;/strong&gt; means you’ve safely connected to the .mil website. Share sensitive information only on official, secure websites.</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_secureTop_gov</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_secureTop_gov</shortDescription>
+        <value>Secure .gov websites use HTTPS</value>
+    </labels>
+    <labels>
+        <fullName>uswdsBanner_secureTop_mil</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>uswdsBanner_secureTop_mil</shortDescription>
+        <value>Secure .mil websites use HTTPS</value>
+    </labels>
+</CustomLabels>
